@@ -1,0 +1,35 @@
+contentDir = "docs.bomnipotent/content"
+baseURL = 'https://docs.bomnipotent.wwh-soft.com/'
+languageCode = 'en-us'
+title = 'BOMnipotent'
+theme = 'relearn'
+
+[params]
+themeVariantAuto = ['wwh-light', 'wwh-dark']
+[[params.themeVariant]]
+identifier = 'auto'
+
+[[params.themeVariant]]
+identifier = 'wwh-light'
+name = 'Light'
+
+[[params.themeVariant]]
+identifier = 'wwh-dark'
+name = 'Dark'
+
+defaultContentLanguage = 'en'
+
+[[menu.shortcuts]]
+  name = 'Licenses'
+  pageRef = '/more/licenses/_index.en.md'
+  weight = 30
+
+[languages]
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 1 # Default language needs to be the first in the list
+
+  [languages.de]
+    languageCode = 'de'
+    languageName = 'Deutsch'

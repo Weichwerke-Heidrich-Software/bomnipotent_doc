@@ -1,0 +1,8 @@
+@import "theme-relearn-light.css";
+:root {
+    --PRIMARY-color: rgba(179, 0, 204); /* brand primary color */
+    --SECONDARY-color: rgb(255, 77, 0); /* brand secondary color */
+    --ACCENT-color: rgb(0, 153, 255); /* brand accent color, used for search highlights */
+    --MENU-HEADER-BG-color: rgba(0, 0, 0, 0); /* background color of menu header */
+    --MENU-SECTIONS-BG-color: linear-gradient(180deg, rgba(179, 0, 204) 0%, rgba(255, 77, 0) 100%); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+}
