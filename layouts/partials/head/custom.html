@@ -1,0 +1,18 @@
+{{ if .Params.robots }}
+<meta name="robots" content="{{ .Params.robots }}">
+<meta name="googlebot" content="{{ .Params.robots }}">
+{{ end }}
+
+{{- if .IsHome -}}
+ <meta name="description" content="{{ site.Params.description }}" />
+{{- else -}}
+ <meta name="description" content="{{ .Params.description }}" />
+{{- end }}
+
+{{ if .Params.canonical }}
+  <link rel="canonical" href="{{ .Params.canonical }}" />
+{{ else if site.Params.canonical }}
+  <link rel="canonical" href="{{ site.Params.canonical }}" />
+{{- end }}
+
+<link rel="icon" href="/favicon.ico">
