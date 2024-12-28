@@ -19,11 +19,6 @@ name = 'Dark'
 
 defaultContentLanguage = 'en'
 
-[[menu.shortcuts]]
-  name = 'Licenses'
-  pageRef = '/more/licenses/_index.en.md'
-  weight = 30
-
 [languages]
   [languages.en]
     languageCode = 'en'
