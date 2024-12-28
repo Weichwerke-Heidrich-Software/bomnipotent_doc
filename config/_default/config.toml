@@ -1,6 +1,6 @@
 baseURL = 'https://docs.bomnipotent.wwh-soft.com/'
 languageCode = 'en-us'
-title = 'BOMnipotent Docs'
+title = 'BOMnipotent'
 theme = 'relearn'
 
 [params]

@@ -1,7 +1,7 @@
 +++
 title = "Client"
 type = "chapter"
-weight = 20
+weight = 2
 +++
 
 This is a new chapter.
