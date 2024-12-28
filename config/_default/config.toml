@@ -1,7 +1,7 @@
-contentDir = "docs.bomnipotent/content"
+contentDir = "content"
 baseURL = 'https://docs.bomnipotent.wwh-soft.com/'
 languageCode = 'en-us'
-title = 'BOMnipotent'
+title = 'BOMnipotent Docs'
 theme = 'relearn'
 
 [params]
