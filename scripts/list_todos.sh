@@ -21,3 +21,5 @@ if [ -n "$output" ]; then
 else
     echo "No TODOs found."
 fi
+
+hugo list drafts
