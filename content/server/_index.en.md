@@ -5,4 +5,4 @@ weight = 1
 draft = true
 +++
 
-This is a new chapter.
+This chapter is aimed solely at system admins. It contains instructions how to get the BOMnipotent server up and running, and how to configure it.
