@@ -1,50 +1,57 @@
 :root {
-    --WWH-PURPLE: rgb(179, 0, 204);
-    --WWH-ORANGE: rgb(255, 77, 0);
-    --WWH-LIGHT: rgb(224, 224, 224);
-    --WWH-DARK: rgb(64, 64, 64);
-    --WWH-LIGHT-OPAQUE: rgba(224, 224, 224, 0.5);
+  --WWH-PURPLE: rgb(179, 0, 204);
+  --WWH-ORANGE: rgb(255, 77, 0);
+  --WWH-LIGHT: rgb(224, 224, 224);
+  --WWH-DARK: rgb(64, 64, 64);
+  --WWH-LIGHT-OPAQUE: rgba(224, 224, 224, 0.5);
 
-    --PRIMARY-color: var(--WWH-PURPLE); /* brand primary color */
-    --SECONDARY-color: var(--WWH-PURPLE); /* brand secondary color */
-    --ACCENT-color: var(--WWH-ORANGE); /* brand accent color, used for search highlights */
-  
-    --MAIN-TEXT-color: var(--WWH-DARK); /* text color of content and h1 titles */
-    --MAIN-LINK-HOVER-color: var(--WWH-ORANGE); /* hovered link color of content */
-    --MAIN-BG-color: var(--WWH-LIGHT); /* background color of content */
-    --MAIN-TITLES-TEXT-color: var(--WWH-DARK); /* text color of h2-h6 titles and transparent box titles */
-  
-    --CODE-theme: relearn-light; /* name of the chroma stylesheet file */
-    --CODE-BLOCK-color: rgba(248, 248, 242, 1); /* fallback text color of block code; should be adjusted to your selected chroma style */
-    --CODE-BLOCK-BG-color: rgba(43, 43, 43, 1); /* fallback background color of block code; should be adjusted to your selected chroma style */
-    --CODE-BLOCK-BORDER-color: rgba(71, 71, 71, 1); /* border color of block code */
-    --CODE-INLINE-color: rgb(179, 0, 204); /* text color of inline code */
-    --CODE-INLINE-BG-color: rgba(45, 45, 45, 1); /* background color of inline code */
-    --CODE-INLINE-BORDER-color: rgba(70, 70, 70, 1); /* border color of inline code */
-  
-    --BROWSER-theme: light; /* name of the theme for browser scrollbars of the main section */
-    --MERMAID-theme: default; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
-    --OPENAPI-theme: light; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
-    --OPENAPI-CODE-theme: idea; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
-  
-    --MENU-HOME-LINK-color: var(--WWH-DARK); /* home button color if configured */
-    --MENU-HOME-LINK-HOVER-color: var(--WWH-LIGHT);; /* hovered home button color if configured */
-  
-    --MENU-SEARCH-color: var(--WWH-DARK); /* text and icon color of search box */
-    --MENU-SEARCH-BG-color: var(--WWH-LIGHT); /* background color of search box */
-    --MENU-SEARCH-BORDER-color: var(--WWH-DARK); /* border color of search box */
-  
-    --MENU-SECTIONS-BG-color: rgba(0, 0, 0, 0.1); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
-    --MENU-SECTIONS-LINK-color: var(--WWH-DARK); /* link color of menu topics */
-    --MENU-SECTIONS-LINK-HOVER-color: var(--WWH-PURPLE); /* hovered link color of menu topics */
-    --MENU-SECTIONS-ACTIVE-BG-color: var(--WWH-LIGHT-OPAQUE); /* background color of the active menu section */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: var(--WWH-PURPLE); /* text color of the displayed menu topic */
-    --MENU-SECTION-SEPARATOR-color: var(--WWH-ORANGE); /* separator color between menu sections and menu footer */
-  
-    --MENU-VISITED-color: var(--WWH-PURPLE); /* icon color of visited menu topics if configured */
-  
-    --BOX-CAPTION-color: rgba(240, 240, 240, 1); /* text color of colored box titles */
-    --BOX-BG-color: rgba(20, 20, 20, 1); /* background color of colored boxes */
-    --BOX-TEXT-color: rgba(224, 224, 224, 1); /* text color of colored box content */
-  }
-  
+  --PRIMARY-color: var(--WWH-PURPLE); /* brand primary color */
+  --SECONDARY-color: var(--WWH-PURPLE); /* brand secondary color */
+  --ACCENT-color: var(--WWH-ORANGE); /* brand accent color, used for search highlights */
+
+  --MAIN-TEXT-color: var(--WWH-DARK); /* text color of content and h1 titles */
+  --MAIN-LINK-HOVER-color: var(--WWH-ORANGE); /* hovered link color of content */
+  --MAIN-BG-color: var(--WWH-LIGHT); /* background color of content */
+  --MAIN-TITLES-TEXT-color: var(--WWH-DARK); /* text color of h2-h6 titles and transparent box titles */
+
+  --CODE-theme: relearn-light; /* name of the chroma stylesheet file */
+  --CODE-BLOCK-color: rgba(248, 248, 242, 1); /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BG-color: rgba(43, 43, 43, 1); /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: rgba(71, 71, 71, 1); /* border color of block code */
+  --CODE-INLINE-color: rgb(179, 0, 204); /* text color of inline code */
+  --CODE-INLINE-BG-color: rgba(45, 45, 45, 1); /* background color of inline code */
+  --CODE-INLINE-BORDER-color: rgba(70, 70, 70, 1); /* border color of inline code */
+
+  --BROWSER-theme: light; /* name of the theme for browser scrollbars of the main section */
+  --MERMAID-theme: default; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-theme: light; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
+  --OPENAPI-CODE-theme: idea; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
+
+  --MENU-HOME-LINK-color: var(--WWH-DARK); /* home button color if configured */
+  --MENU-HOME-LINK-HOVER-color: var(--WWH-LIGHT);; /* hovered home button color if configured */
+
+  --MENU-SEARCH-color: var(--WWH-DARK); /* text and icon color of search box */
+  --MENU-SEARCH-BG-color: var(--WWH-LIGHT); /* background color of search box */
+  --MENU-SEARCH-BORDER-color: var(--WWH-DARK); /* border color of search box */
+
+  --MENU-SECTIONS-BG-color: rgba(0, 0, 0, 0.1); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-LINK-color: var(--WWH-DARK); /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: var(--WWH-PURPLE); /* hovered link color of menu topics */
+  --MENU-SECTIONS-ACTIVE-BG-color: var(--WWH-LIGHT-OPAQUE); /* background color of the active menu section */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: var(--WWH-PURPLE); /* text color of the displayed menu topic */
+  --MENU-SECTION-SEPARATOR-color: var(--WWH-ORANGE); /* separator color between menu sections and menu footer */
+
+  --MENU-VISITED-color: var(--WWH-PURPLE); /* icon color of visited menu topics if configured */
+
+  --BOX-CAPTION-color: rgba(240, 240, 240, 1); /* text color of colored box titles */
+  --BOX-BG-color: rgba(20, 20, 20, 1); /* background color of colored boxes */
+  --BOX-TEXT-color: rgba(224, 224, 224, 1); /* text color of colored box content */
+}
+
+body a#R-logo,
+body a#R-logo:hover,
+body #R-logo svg,
+body #R-logo svg * {
+  color: var(--MENU-SEARCH-color);
+  fill: var(--MENU-SEARCH-color) !important;
+}
