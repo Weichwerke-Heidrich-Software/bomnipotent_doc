@@ -1,13 +1,18 @@
 :root {
-    /* relearn-dark */
-    --PRIMARY-color: rgb(179, 0, 204); /* brand primary color */
-    --SECONDARY-color: rgb(179, 0, 204); /* brand secondary color */
-    --ACCENT-color: rgb(255, 77, 0); /* brand accent color, used for search highlights */
+    --WWH-PURPLE: rgb(179, 0, 204);
+    --WWH-ORANGE: rgb(255, 77, 0);
+    --WWH-LIGHT: rgb(224, 224, 224);
+    --WWH-DARK: rgb(64, 64, 64);
+    --WWH-LIGHT-OPAQUE: rgba(224, 224, 224, 0.5);
+
+    --PRIMARY-color: var(--WWH-PURPLE); /* brand primary color */
+    --SECONDARY-color: var(--WWH-PURPLE); /* brand secondary color */
+    --ACCENT-color: var(--WWH-ORANGE); /* brand accent color, used for search highlights */
   
-    --MAIN-TEXT-color: rgb(64, 64, 64); /* text color of content and h1 titles */
-    --MAIN-LINK-HOVER-color: rgb(255, 77, 0); /* hovered link color of content */
-    --MAIN-BG-color: rgb(224, 224, 224); /* background color of content */
-    --MAIN-TITLES-TEXT-color: rgba(64, 64, 64); /* text color of h2-h6 titles and transparent box titles */
+    --MAIN-TEXT-color: var(--WWH-DARK); /* text color of content and h1 titles */
+    --MAIN-LINK-HOVER-color: var(--WWH-ORANGE); /* hovered link color of content */
+    --MAIN-BG-color: var(--WWH-LIGHT); /* background color of content */
+    --MAIN-TITLES-TEXT-color: var(--WWH-DARK); /* text color of h2-h6 titles and transparent box titles */
   
     --CODE-theme: relearn-light; /* name of the chroma stylesheet file */
     --CODE-BLOCK-color: rgba(248, 248, 242, 1); /* fallback text color of block code; should be adjusted to your selected chroma style */
@@ -22,21 +27,21 @@
     --OPENAPI-theme: light; /* name of the default OpenAPI theme for this variant, can be overridden in hugo.toml */
     --OPENAPI-CODE-theme: idea; /* name of the default OpenAPI code theme for this variant, can be overridden in hugo.toml */
   
-    --MENU-HOME-LINK-color: rgb(64, 64, 64); /* home button color if configured */
-    --MENU-HOME-LINK-HOVER-color: rgb(224, 224, 224); /* hovered home button color if configured */
+    --MENU-HOME-LINK-color: var(--WWH-DARK); /* home button color if configured */
+    --MENU-HOME-LINK-HOVER-color: var(--WWH-LIGHT);; /* hovered home button color if configured */
   
-    --MENU-SEARCH-color: rgb(64, 64, 64); /* text and icon color of search box */
-    --MENU-SEARCH-BG-color: rgb(224, 224, 224); /* background color of search box */
-    --MENU-SEARCH-BORDER-color: rgb(64, 64, 64); /* border color of search box */
+    --MENU-SEARCH-color: var(--WWH-DARK); /* text and icon color of search box */
+    --MENU-SEARCH-BG-color: var(--WWH-LIGHT); /* background color of search box */
+    --MENU-SEARCH-BORDER-color: var(--WWH-DARK); /* border color of search box */
   
-    --MENU-SECTIONS-BG-color: rgb(204, 204, 204); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
-    --MENU-SECTIONS-LINK-color: rgb(64, 64, 64); /* link color of menu topics */
-    --MENU-SECTIONS-LINK-HOVER-color: rgb(179, 0, 204); /* hovered link color of menu topics */
-    --MENU-SECTIONS-ACTIVE-BG-color: rgb(214, 214, 214); /* background color of the active menu section */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: rgb(179, 0, 204); /* text color of the displayed menu topic */
-    --MENU-SECTION-SEPARATOR-color: rgb(255, 77, 0); /* separator color between menu sections and menu footer */
+    --MENU-SECTIONS-BG-color: rgba(0, 0, 0, 0.1); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+    --MENU-SECTIONS-LINK-color: var(--WWH-DARK); /* link color of menu topics */
+    --MENU-SECTIONS-LINK-HOVER-color: var(--WWH-PURPLE); /* hovered link color of menu topics */
+    --MENU-SECTIONS-ACTIVE-BG-color: var(--WWH-LIGHT-OPAQUE); /* background color of the active menu section */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: var(--WWH-PURPLE); /* text color of the displayed menu topic */
+    --MENU-SECTION-SEPARATOR-color: var(--WWH-ORANGE); /* separator color between menu sections and menu footer */
   
-    --MENU-VISITED-color: rgb(179, 0, 204); /* icon color of visited menu topics if configured */
+    --MENU-VISITED-color: var(--WWH-PURPLE); /* icon color of visited menu topics if configured */
   
     --BOX-CAPTION-color: rgba(240, 240, 240, 1); /* text color of colored box titles */
     --BOX-BG-color: rgba(20, 20, 20, 1); /* background color of colored boxes */
