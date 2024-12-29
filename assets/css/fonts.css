@@ -8,6 +8,6 @@
   src: url('../../webfonts/Cormorant-Regular.woff2') format('woff2');
 }
 
-body {
-  font-family: 'Cormorant', serif;
+:root {
+  --MAIN-font: 'Cormorant', serif;
 }
