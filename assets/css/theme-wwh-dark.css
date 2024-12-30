@@ -34,7 +34,7 @@
   --MENU-SEARCH-BG-color: var(--WWH-DARK); /* background color of search box */
   --MENU-SEARCH-BORDER-color: var(--WWH-LIGHT); /* border color of search box */
 
-  --MENU-SECTIONS-BG-color: rgba(0, 0, 0, 0.1); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-BG-color: rgba(0, 0, 0, 0.2); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
   --MENU-SECTIONS-LINK-color: var(--WWH-LIGHT); /* link color of menu topics */
   --MENU-SECTIONS-LINK-HOVER-color: var(--WWH-ORANGE); /* hovered link color of menu topics */
   --MENU-SECTIONS-ACTIVE-BG-color: var(--WWH-DARK-OPAQUE); /* background color of the active menu section */
