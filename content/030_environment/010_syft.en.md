@@ -1,6 +1,7 @@
 +++
 title = "SBOM Generation with Syft"
 slug = "syft"
+weight = 10
 draft = true
 +++
 
