@@ -1,5 +1,6 @@
 +++
 title = "OSS Licenses"
+slug = "oss-licenses"
 weight = 10
 +++
 
