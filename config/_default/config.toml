@@ -3,8 +3,16 @@ languageCode = 'en-us'
 title = 'BOMnipotent'
 theme = 'relearn'
 
+[outputs]
+  # activate the feature to print whole chapters
+  home = ['html', 'rss', 'print']
+  section = ['html', 'rss', 'print']
+  page = ['html', 'rss', 'print']
+
 [params]
 themeVariantAuto = ['wwh-light', 'wwh-dark']
+collapsibleMenu = true # Display icon next to expandable menu items
+
 [[params.themeVariant]]
 identifier = 'auto'
 

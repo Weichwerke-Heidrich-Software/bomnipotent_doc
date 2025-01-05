@@ -1,8 +1,8 @@
 +++
 title = "Client"
 type = "chapter"
-weight = 2
+weight = 20
 draft = true
 +++
 
-This is a new chapter.
+TODO

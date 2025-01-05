@@ -1,6 +1,6 @@
 +++
 title = "Legal Stuff"
 type = "chapter"
-weight = 4
+weight = 40
 +++
 
