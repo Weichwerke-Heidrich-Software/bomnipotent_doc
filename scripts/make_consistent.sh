@@ -63,15 +63,27 @@ make_file_consistent() {
     fi
 }
 
+check_index_file_consistency() {
+    file=$1
+    if ! grep "^weight =" $file > /dev/null; then
+        echo "Warning: No line starting with 'weight =' found in $file"
+    fi
+    if grep "^slug =" $file > /dev/null; then
+        echo "Warning: Slug value is ignored in section file $file"
+    fi
+}
+
 make_dir_consistent() {
     dir=$1
-    weight=$2
-    slug=$3
+    slug=$2
+    check_slug_consistency $slug
     for ending in ${fileendings[@]}; do
         if [ -f $dir/_index$ending ]; then
-            make_file_consistent $dir/_index$ending $weight $slug
+            file=$dir/_index$ending
+            check_index_file_consistency $file
         elif [ -f $dir/index$ending ]; then
-            make_file_consistent $dir/index$ending $weight $slug
+            file=$dir/index$ending
+            check_index_file_consistency $file
         fi
     done
 }
@@ -79,14 +91,17 @@ make_dir_consistent() {
 make_consistent() {
     path=$1
     weight=$(get_weight $path)
-    if [ -z $weight ]; then
-        echo "Warning: No weight found for $path"
-        return
-    fi
     if [ -d $path ]; then
+        if [ ! -z $weight ]; then
+            echo "Warning: Weight should not be included in section path $path"
+        fi
         slug=$(get_slug_from_dir $path)
-        make_dir_consistent $path $weight $slug
+        make_dir_consistent $path $slug
     elif [ -f $path ]; then
+        if [ -z $weight ]; then
+            echo "Warning: No weight found for $path"
+            return
+        fi
         slug=$(get_slug_from_file $path)
         make_file_consistent $path $weight $slug
     fi

@@ -1,6 +1,5 @@
 +++
 title = "Server"
-slug = "server"
 type = "chapter"
 weight = 10
 draft = true

@@ -1,6 +1,5 @@
 +++
-title = "Basics"
-slug = "basics"
+title = "Setup"
 weight = 10
 draft = true
 +++
