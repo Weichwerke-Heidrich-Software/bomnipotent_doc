@@ -1,7 +1,7 @@
 +++
 title = "Listing Components"
-slug = "listing-components"
-weight = 30
+slug = "bom-components"
+weight = 20
 draft = true
 +++
 
