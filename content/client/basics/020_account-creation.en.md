@@ -15,7 +15,7 @@ Permissions are linked to user accounts. For more information on how permissions
 
 To create a new user account, run
 ```bash
-bomnipotent_client --domain=<domain of BOMnipotent server> user request <your email address>
+bomnipotent_client --domain=<server> user request <your-email>
 ```
 
 If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your userfolder.
@@ -28,7 +28,7 @@ Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
 Now that your request is made, you need to wait for a user manager of the server to approve it. After that you can start making [authenticated requests](/client/basics/authenticating/).
 
-> If you are said user manager and are looking for how to do that, consult [User Approval](/client/system-manager/user-management/user-approval/).
+> If you are said user manager and are looking for how approve users, consult [User Approval](/client/system-manager/user-management/user-approval/).
 
 ## Reading existing Keys
 
@@ -36,7 +36,9 @@ If you have a key pair stored in the defaul user location (which depends on your
 
 If you would instead like to reuse an existing stored at a different location, you can add the path as a positional argument:
 ```bash
-bomnipotent_client --domain=<domain of server> user request <your email address> <path to your public key>
+bomnipotent_client --domain=<server> user request <your-email> <path/to/key>
 ```
 
 > For this to work the key needs to have been generated using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519), and it needs to be stored in [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format. If you insist on managing keys yourself, or would like to see an example, then the easiest way to generate such a pair is to call `openssl genpkey -algorithm ED25519 -out secret_key.pem` to generate a secret key, and then `openssl pkey -in secret_key.pem -pubout -out public_key.pem` to generate the corresponding public key.
+
+If you accidently specify the path to your *secret* key, BOMnipotent Client will throw an error before sending it to the server.
