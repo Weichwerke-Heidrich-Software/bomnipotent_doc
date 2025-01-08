@@ -2,7 +2,6 @@
 title = "Authenticating"
 slug = "authenticating"
 weight = 30
-draft = true
 +++
 
 > Authentication requires that you have [requested a user account](/client/basics/account-creation/), and that it has [been approved](/client/system-manager/user-management/user-approval/) by a user manager.

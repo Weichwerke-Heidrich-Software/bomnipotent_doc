@@ -2,7 +2,6 @@
 title = "Account Creation"
 slug = "account-creation"
 weight = 20
-draft = true
 +++
 
 Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as [TLP:WHITE](https://www.first.org/tlp/v1/) / [TLP:CLEAR](https://www.first.org/tlp/).
