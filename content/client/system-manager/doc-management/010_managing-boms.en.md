@@ -78,6 +78,69 @@ If you do neither, BOMnipotent will treat any unclassified documents as if they 
 
 ## Modify
 
+In the simplest case, modifying an existing BOM works very much like uploading a new one.
+```bash
+bomnipotent_client bom modify <path/to/bom>
+```
+
+This will infer the name and version from the document, and overwrite the existing content on the server. If the data does not exist on the server, it will return a 404 Not Found error.
+
+### Modifying TLP Label
+
+If a TLP label had previously been assigned to the BOM, a modification of the contents will **not** automatically alter it.
+
+If you want to specify a new TLP label, you can do so via argument:
+
+{{< tabs title="Modify" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> --tlp=<label>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> -t <label>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+If the contents of the document have not changed, you do not need to upload it again. Instead of providing a path to a file, you can specify name and version of the BOM you want to reclassify in that case:
+{{< tabs title="Modify" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom modify --name=<name> --version=<version> --tlp=<label>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom modify -n <name> -v <version> -t <label>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+If you specify "none" or "default" as the TLP label, any existing classification will be removed, and the server falls back to the default TLP of the [server config](/server/configuration/default-tlp/):
+
+{{< tabs title="Modify" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> --tlp=none
+bomnipotent_client bom modify <path/to/bom> --tlp=default # Does the same
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> -t none
+bomnipotent_client bom modify <path/to/bom> -t default # Does the same
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+### Modifying Name or Version
+
+TODO
+
+### Overwriting Name or Version
+
 TODO
 
 ## Delete
