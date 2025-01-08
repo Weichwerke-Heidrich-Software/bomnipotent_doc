@@ -22,11 +22,11 @@ Service is healthy
 bomnipotent_client bom list
 ```
 ```
-+-------------+---------+-------------------------+-----------+----------------------+
-| component   | version | timestamp               | tlp_label | number_of_components |
-+-------------+---------+-------------------------+-----------+----------------------+
-| BOMnipotent | 1.0.0   | 2025-01-03 05:38:03 UTC | Default   | 350                  |
-+-------------+---------+-------------------------+-----------+----------------------+
++-------------+---------+-------------------------+---------+------------+
+| name        | version | timestamp               | tlp     | components |
++-------------+---------+-------------------------+---------+------------+
+| BOMnipotent | 1.0.0   | 2025-01-03 05:38:03 UTC | Default | 350        |
++-------------+---------+-------------------------+---------+------------+
 ```
 
 Or, in case of an error:
@@ -104,7 +104,7 @@ bomnipotent_client -o raw bom list
 {{< /tabs >}}
 
 ```
-[{"component":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp_label":null,"number_of_components":350}]
+[{"name":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp":null,"components":350}]
 ```
 
 The output can then easily be parsed and processed by your program logic.
