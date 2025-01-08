@@ -53,11 +53,28 @@ bomnipotent_client bom upload <path/to/bom> -n <new-name> -v <new-version>
 
 If you do use this option, it is thus recommended that you immediately download the BOM from the server (as described in [BOMs for Consumers](/client/consumer/boms/)) and replace your local file with the result.
 
-### Providing TLP Classification (moderately recommended)
+### Providing TLP Classification (somewhat recommended)
 
-TODO
+For consumers, BOMnipotent manages access to data using the [Traffic Light Protocol (TLP)](https://www.first.org/tlp/). The
+[CycloneDX Format](https://cyclonedx.org/) on the other hand does not currently support document classification.
 
-TODO: Link to server config
+To tell BOMnipotent how to classify a document, you have two options:
+1. Set a default TLP Label in the [server config](/server/configuration/default-tlp/). This will then be used for all BOMs without further specifications.
+2. Provide a tlp classification via command line argument:
+{{< tabs title="Upload" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom upload <path/to/bom> --tlp=<label>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom upload <path/to/bom> -t <label>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+If you do neither, BOMnipotent will treat any unclassified documents as if they were labelled {{< tlp-red >}}, and will log a warning every time it has to do that.
 
 ## Modify
 
