@@ -18,9 +18,18 @@ On some linux systems you may want to change the install path (the very last arg
 ## Usage
 
 Go to your project repository and for example call:
+{{< tabs title="Syft" >}}
+{{% tab title="long" %}}
 ```bash
 syft Cargo.lock --output cyclonedx-json=./lockfile_sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
 ```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+syft Cargo.lock -o cyclonedx-json=./lockfile_sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
+```
+{{% /tab %}}
+{{< /tabs >}}
 Breakdown:
 - `syft` cals the Syft program.
 - `Cargo.lock` tells Syft to analyse the lockfile of the Rust ecosystem.
@@ -34,9 +43,21 @@ Breakdown:
 Syft supports a wide range of ecosystems, which is [listed on their GitHub repo](https://github.com/anchore/syft?tab=readme-ov-file#supported-ecosystems).
 
 If you have a docker container exported as a `.tar` file you can also specify that as a target:
+
+{{< tabs title="Syft" >}}
+{{% tab title="long" %}}
 ```bash
-syft container.tar --output cyclonedx-json=./container_sbom.cdx.json --source-name="" --source-version=1.2.3
+syft container.tar --output cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
 ```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+syft container.tar -o cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
 For compiled languages the results will be vastly different, because most information about the components that went into compilation is lost. On the other hand, this SBOM contains information about the environment that your product may later run in.
 
 It is important to think about the scope: To which extend are you responsible for the security of your product?

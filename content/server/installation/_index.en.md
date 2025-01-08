@@ -1,5 +1,5 @@
 +++
-title = "Setup"
+title = "Installation"
 weight = 10
 draft = true
 +++
