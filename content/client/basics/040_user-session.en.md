@@ -10,7 +10,7 @@ The BOMnipotent Client offers several global optional arguments. To avoid having
 {{< tabs title="Login" >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<server> --email=<your-email> --output-mode=<mode> --secret-key-path=<path/to/key> --trusted-root=<path/to/cert> login
+bomnipotent_client --domain=<server> --email=<your-email> --output=<mode> --secret-key-path=<path/to/key> --trusted-root=<path/to/cert> login
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
@@ -20,7 +20,12 @@ bomnipotent_client -d <server> -e <your-email> -o <mode> -s <path/to/key> -t <pa
 {{% /tab %}}
 {{< /tabs >}}
 
-This will create a file in the local user folder which stores the provided parameters. Whenever you call the BOMnipotent Client from now on, it will use these parameters automatically:
+This will create a file in the local user folder which stores the provided parameters.
+```
+Stored session data in /home/simon/.config/bomnipotent/session.json
+```
+
+Whenever you call the BOMnipotent Client from now on, it will use these parameters automatically:
 
 ```bash
 bomnipotent_client bom list # Will automatically reach out to the provided domain and use your authentication data.
@@ -48,7 +53,7 @@ This can also be used to remove parameters, simply by not providing them:
 {{< tabs title="Login" >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<other-server> --email=<your-email> --output-mode=<mode> login # Will set secret-key-path and trusted-root to none.
+bomnipotent_client --domain=<other-server> --email=<your-email> --output=<mode> login # Will set secret-key-path and trusted-root to none.
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
