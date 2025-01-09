@@ -4,9 +4,6 @@ slug = "uploading-boms"
 weight = 10
 +++
 
-
-> [BOMs for Consumers](/client/consumer/boms/) describes how to list and download the BOMs on the server.
-
 > For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/system-manager/user-management/) describes how it is granted.
 
 
@@ -19,7 +16,11 @@ BOMnipotent expects its BOMs in the structured [CycloneDX](https://cyclonedx.org
 
 > Consult the [Syft tutorial](/environment/syft) to learn how to generate a Bill of Materials (BOM) for your product.
 
-The BOMnipotent Client will read the file at the provided path and upload its content. To add it to the database, it has to have some additional information: name, version, and possibly a TLP label. The identifiers name and version can either be inferred (recommended), or overwritten, as described below.
+The BOMnipotent Client will read the file at the provided path and upload its content. It can then be viewed by the consumers with appropriate permissions.
+
+> [BOMs for Consumers](/client/consumer/boms/) describes how to list and download the BOMs on the server.
+
+To add a BOM to the database, the BOMnipotent Client has to have some additional information: a name, a version, and optionally a TLP label. The identifiers name and version can either be inferred (recommended), or overwritten, as described below.
 
 ## Name and Version
 
