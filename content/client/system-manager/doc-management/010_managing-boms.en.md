@@ -137,11 +137,48 @@ bomnipotent_client bom modify <path/to/bom> -t default # Does the same
 
 ### Modifying Name or Version
 
-TODO
+If the document you are uploading has a different name or version than the data it shall modify, you need to provide that information to the BOMnipotent Client using command line arguments:
+{{< tabs title="Modify" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> -n <old-name> -v <old-version>
+```
+{{% /tab %}}
+{{< /tabs >}}
 
-### Overwriting Name or Version
+BOMnipotent will infer the new data from the document you provide and change the database entries accordingly.
 
-TODO
+### Overwriting Name or Version (not recommended)
+
+As with uploading, it is possible to overwrite the name and/or version stored in the local document:
+
+```bash
+bomnipotent_client bom modify <path/to/bom> --name-overwrite=<new-name> --version-overwrite=<new-version>
+```
+
+**Important:** As with uploading, this modifies the JSON data before uploading to the server! The same caveats apply.
+
+If the data on the server has a different name and/or version, you can combine the specification with an overwrite of the data:
+
+{{< tabs title="Modify" >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version> --name-overwrite=<new-name> --version-overwrite=<new-version>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client bom modify <path/to/bom> -n <old-name> -v <old-version> --name-overwrite=<new-name> --version-overwrite=<new-version>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+Changing name and/or version without providing the complete document is not supported.
 
 ## Delete
 
