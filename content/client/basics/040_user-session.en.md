@@ -7,7 +7,7 @@ weight = 40
 ## Login
 
 The BOMnipotent Client offers several global optional arguments. To avoid having to provide these time and time again, you can use the login command to store them in a user session:
-{{< tabs title="Login" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --domain=<server> --email=<your-email> --output=<mode> --secret-key-path=<path/to/key> --trusted-root=<path/to/cert> login
@@ -34,7 +34,7 @@ bomnipotent_client bom list # Will automatically reach out to the provided domai
 ## Overwriting Parameters
 
 If you are logged in and provide any of the global optional parameters to a BOMnipotent Client call, it will use these instead:
-{{< tabs title="Call" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --domain=<other-server> bom list # Will contact other-server
@@ -50,7 +50,7 @@ bomnipotent_client -d <other-server> bom list # Will contact other-server
 To permanently change the data stored in the session, simply login again with the new parameters.
 
 This can also be used to remove parameters, simply by not providing them:
-{{< tabs title="Login" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --domain=<other-server> --email=<your-email> --output=<mode> login # Will set secret-key-path and trusted-root to none.

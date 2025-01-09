@@ -38,7 +38,7 @@ To avoid any complications, it is recommended that you specify a name and versio
 {{% tab title="Overwriting (not particularly recommended)" %}}
 
 If for some reason your BOM lacks a name or version, or if it is incorrect, the BOMnipotent Client offers to remedy that via command line arguments:
-{{< tabs title="Upload" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom upload <path/to/bom> --name-overwrite=<new-name> --version-overwrite=<new-version>
@@ -67,7 +67,7 @@ For consumers, BOMnipotent manages access to data using the [Traffic Light Proto
 To tell BOMnipotent how to classify a document, you have two options:
 1. Set a default TLP Label in the [server config](/server/configuration/default-tlp/). This will then be used for all BOMs without further specifications.
 2. Provide a tlp classification via command line argument:
-{{< tabs title="Upload" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom upload <path/to/bom> --tlp=<label>

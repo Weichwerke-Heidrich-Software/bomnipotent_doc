@@ -13,7 +13,7 @@ Permissions are linked to user accounts. For more information on how permissions
 ## Creating a new Account
 
 To create a new user account, run
-{{< tabs title="User Request" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --domain=<server> user request <your-email>
@@ -43,7 +43,7 @@ Now that your request is made, you need to wait for a user manager of the server
 If you have a key pair stored in the defaul user location (which depends on your platform), BOMnipotent Client will automatically read and use it.
 
 If you would instead like to reuse an existing stored at a different location, you can add the path as a positional argument:
-{{< tabs title="User Request" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --domain=<server> user request <your-email> <path/to/key>

@@ -18,7 +18,7 @@ On some linux systems you may want to change the install path (the very last arg
 ## Usage
 
 Go to your project repository and for example call:
-{{< tabs title="Syft" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 syft Cargo.lock --output cyclonedx-json=./lockfile_sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
@@ -44,7 +44,7 @@ Syft supports a wide range of ecosystems, which is [listed on their GitHub repo]
 
 If you have a docker container exported as a `.tar` file you can also specify that as a target:
 
-{{< tabs title="Syft" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 syft container.tar --output cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3

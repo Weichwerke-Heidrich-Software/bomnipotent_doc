@@ -19,7 +19,7 @@ If a TLP label had previously been assigned to the BOM, a modification of the co
 
 If you want to specify a new TLP label, you can do so via argument:
 
-{{< tabs title="Modify" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom modify <path/to/bom> --tlp=<label>
@@ -33,7 +33,7 @@ bomnipotent_client bom modify <path/to/bom> -t <label>
 {{< /tabs >}}
 
 If the contents of the document have not changed, you do not need to upload it again. Instead of providing a path to a file, you can specify name and version of the BOM you want to reclassify in that case:
-{{< tabs title="Modify" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom modify --name=<name> --version=<version> --tlp=<label>
@@ -48,7 +48,7 @@ bomnipotent_client bom modify -n <name> -v <version> -t <label>
 
 If you specify "none" or "default" as the TLP label, any existing classification will be removed, and the server falls back to the default TLP of the [server config](/server/configuration/default-tlp/):
 
-{{< tabs title="Modify" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom modify <path/to/bom> --tlp=none
@@ -66,7 +66,7 @@ bomnipotent_client bom modify <path/to/bom> -t default # Does the same
 ## Modifying Name or Version
 
 If the document you are uploading has a different name or version than the data it shall modify, you need to provide that information to the BOMnipotent Client using command line arguments:
-{{< tabs title="Modify" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version>
@@ -93,7 +93,7 @@ bomnipotent_client bom modify <path/to/bom> --name-overwrite=<new-name> --versio
 
 If the data on the server has a different name and/or version, you can combine the specification with an overwrite of the data:
 
-{{< tabs title="Modify" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version> --name-overwrite=<new-name> --version-overwrite=<new-version>

@@ -38,7 +38,7 @@ Error: "No approved and currently valid public keys were found for user admin@ww
 ## Verbose
 
 The verbose mode prints some additional information which may be of interest for debugging:
-{{< tabs title="Health" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --output=verbose health
@@ -58,7 +58,7 @@ Service is healthy
 ## Code
 
 The code output prints only the [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) of the response.
-{{< tabs title="Health" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --output=code health
@@ -90,7 +90,7 @@ Note that there is no newline or carriage return character at the end of the out
 
 For calls to BOMnipotent Client that access some structured data, the raw output prints that data in json format instead of parsing and processing it.
 
-{{< tabs title="BOM List" >}}
+{{< tabs >}}
 {{% tab title="long" %}}
 ```bash
 bomnipotent_client --output=raw bom list
