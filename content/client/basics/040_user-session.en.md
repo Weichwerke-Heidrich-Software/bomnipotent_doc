@@ -10,7 +10,7 @@ The BOMnipotent Client offers several global optional arguments. To avoid having
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<server> --email=<your-email> --output=<mode> --secret-key-path=<path/to/key> --trusted-root=<path/to/cert> login
+bomnipotent_client --domain=<server> --email=<your-email> --output=<mode> --secret-key=<path/to/key> --trusted-root=<path/to/cert> login
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
@@ -53,12 +53,12 @@ This can also be used to remove parameters, simply by not providing them:
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<other-server> --email=<your-email> --output=<mode> login # Will set secret-key-path and trusted-root to none.
+bomnipotent_client --domain=<other-server> --email=<your-email> --output=<mode> login # Will set secret-key and trusted-root to none.
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client -d <other-server> -e <your-email> -o <mode> login # Will set secret-key-path and trusted-root to none.
+bomnipotent_client -d <other-server> -e <your-email> -o <mode> login # Will set secret-key and trusted-root to none.
 ```
 {{% /tab %}}
 {{< /tabs >}}

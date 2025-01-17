@@ -28,7 +28,7 @@ If you are not storing your keys in the default user location, you have to tell 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<server> --email=<your-email> --secret-key-path=<path/to/key> <command>
+bomnipotent_client --domain=<server> --email=<your-email> --secret-key=<path/to/key> <command>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
