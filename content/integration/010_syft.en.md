@@ -2,7 +2,6 @@
 title = "SBOM Generation with Syft"
 slug = "syft"
 weight = 10
-draft = true
 +++
 
 A Software Bill of Material (SBOM) is a list of all software components used in your product. In the contex of supply chain security, it serves as a machine-readable list of items to compare to whenever a new vulnerability surfaces.
@@ -61,3 +60,7 @@ syft container.tar -o cyclonedx-json=./container_sbom.cdx.json --source-name="BO
 For compiled languages the results will be vastly different, because most information about the components that went into compilation is lost. On the other hand, this SBOM contains information about the environment that your product may later run in.
 
 It is important to think about the scope: To which extend are you responsible for the security of your product?
+
+Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](//client/system-manager/doc-management/uploading-boms/).
+
+After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype).
