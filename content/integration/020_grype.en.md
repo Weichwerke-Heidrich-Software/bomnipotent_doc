@@ -15,8 +15,35 @@ The official [Grype GitHub repo](https://github.com/anchore/grype#installation) 
 ## Usage
 
 With an SBOM at hand, scanning for vulnerabilities is very easy:
+
+{{< tabs >}}
+{{% tab title="long" %}}
 ```bash
 grype sbom:./sbom.cdx.json --fail-on low
 ```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+grype sbom:./sbom.cdx.json -f low
+```
+{{% /tab %}}
+{{< /tabs >}}
 
-When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The option specifies that it exits with a non-zero error code if any with severity low or higher is discovered.
+
+When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The fail-on option specifies that it exits with a non-zero error code if any with severity low or higher is discovered.
+
+The syntax to export a vulnerability report consumable by BOMnipotent is similar to Syft:
+
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```bash
+grype sbom:./sbom.cdx.json --output cyclonedx-json=./vuln.cdx.json
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
+```
+{{% /tab %}}
+{{< /tabs >}}
