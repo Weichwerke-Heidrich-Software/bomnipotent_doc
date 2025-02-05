@@ -4,7 +4,7 @@ slug = "uploading-boms"
 weight = 10
 +++
 
-> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/system-manager/user-management/) describes how it is granted.
+> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/manager/user-management/) describes how it is granted.
 
 
 To upload a BOM, call:

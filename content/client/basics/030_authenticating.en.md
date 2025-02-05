@@ -4,7 +4,7 @@ slug = "authenticating"
 weight = 30
 +++
 
-> Authentication requires that you have [requested a user account](/client/basics/account-creation/), and that it has [been approved](/client/system-manager/user-management/user-approval/) by a user manager.
+> Authentication requires that you have [requested a user account](/client/basics/account-creation/), and that it has [been approved](/client/manager/user-management/user-approval/) by a user manager.
 
 Once your account (meaning your email and public key) is approved, you can provide your email to Bomnipotent Client to make a request that can be authenticated by the server:
 {{< tabs >}}

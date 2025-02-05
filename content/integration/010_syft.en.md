@@ -61,6 +61,6 @@ For compiled languages the results will be vastly different, because most inform
 
 It is important to think about the scope: To which extend are you responsible for the security of your product?
 
-Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](//client/system-manager/doc-management/uploading-boms/).
+Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](//client/manager/doc-management/uploading-boms/).
 
 After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype).

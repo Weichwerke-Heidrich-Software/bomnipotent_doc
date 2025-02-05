@@ -4,7 +4,7 @@ slug = "modifying-boms"
 weight = 20
 +++
 
-> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/system-manager/user-management/) describes how it is granted.
+> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/manager/user-management/) describes how it is granted.
 
 In the simplest case, modifying an existing BOM works very much like uploading a new one.
 ```bash

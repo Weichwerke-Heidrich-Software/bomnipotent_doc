@@ -1,5 +1,5 @@
 +++
-title = "For System Managers"
+title = "For Managers"
 weight = 30
 draft = true
 +++

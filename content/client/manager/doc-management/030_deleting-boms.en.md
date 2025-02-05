@@ -4,7 +4,7 @@ slug = "deleting-boms"
 weight = 30
 +++
 
-> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/system-manager/user-management/) describes how it is granted.
+> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/manager/user-management/) describes how it is granted.
 
 Deleting a BOM is very straightforward:
 ```bash
