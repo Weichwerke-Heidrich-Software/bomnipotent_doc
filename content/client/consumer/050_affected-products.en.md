@@ -1,7 +1,7 @@
 +++
 title = "Affected Products"
 slug = "affected-products"
-weight = 40
+weight = 50
 draft = true
 +++
 

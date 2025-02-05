@@ -1,7 +1,7 @@
 +++
 title = "CSAF Documents"
 slug = "csaf-docs"
-weight = 30
+weight = 40
 draft = true
 +++
 

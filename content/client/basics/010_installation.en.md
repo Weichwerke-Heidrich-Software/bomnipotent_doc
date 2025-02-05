@@ -2,16 +2,11 @@
 title = "Installing the Client"
 slug = "installation"
 weight = 10
-draft = true
 +++
 
 To manually download BOMnipotent Client, go to [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/downloads/), select your platform and version, and click on the download button.
 
 To automate this process further, you can access the download link directly:
-```
-wget https://www.bomnipotent.de/downloads/raw/latest/debian-glibc/bomnipotent_client
-```
-
 {{< tabs >}}
 {{% tab title="Windows" %}}
 ```powershell
