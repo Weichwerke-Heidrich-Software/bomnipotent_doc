@@ -2,7 +2,6 @@
 title = "BOMs"
 slug = "boms"
 weight = 10
-draft = true
 +++
 
 ## List
@@ -26,8 +25,30 @@ will list all BOMs accessible to you:
 
 BOMs with label {{<tlp-white>}} / {{<tlp-clear>}} are visible to everyone. In this example, your account has access to one BOM with label {{<tlp-amber>}}.
 
-TODO
-
 ## Download
 
-TODO
+To create a local copy of all boms the server exposes to you, run:
+```bash
+bomnipotent_client bom download ./boms
+```
+```
+Storing BOMs under ./boms
+```
+
+This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder if it does not already exist. The BOMs are stored under files following the naming scheme `{product name}_{product version}.cdx.json`.
+
+Before requesting files for download, BOMnipotent Client makes an inventory of the already presend SBOMs in the folder, and downloads only the missing ones.
+
+```bash
+tree ./boms/
+```
+```
+./boms/
+├── BOMnipotent_1.0.0.cdx.json
+├── BOMnipotent_1.0.1.cdx.json
+└── vulny_0.1.0.cdx.json
+
+1 directory, 3 files
+
+```
+
