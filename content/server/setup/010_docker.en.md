@@ -91,6 +91,7 @@ A completely ready to deploy compose file looks like this:
 {{< tabs >}}
 {{% tab title="annotated" %}}
 ```yaml
+# TODO: Annotate
 name: bomnipotent_server_containers
 
 networks:
