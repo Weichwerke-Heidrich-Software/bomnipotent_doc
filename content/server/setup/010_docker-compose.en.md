@@ -1,8 +1,7 @@
 +++
-title = "Setup via Docker Compose"
-slug = "docker"
+title = "Via Docker Compose"
+slug = "docker-compose"
 weight = 10
-draft = true
 +++
 
 The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/).
@@ -138,6 +137,7 @@ services:
       # Start period before the first health check
       start_period: 10s
     # Use the specified PostgreSQL image
+    # You may ddjust the container tag at will
     image: postgres:17-alpine3.20
     logging:
       # Use the local logging driver
@@ -183,7 +183,7 @@ services:
       retries: 5
       # Start period before the first health check
       start_period: 10s
-    # Use the specified server image
+    # This is the official docker image running a BOMnipotent Server instance.
     image: wwhsoft/bomnipotent_server:latest
     logging:
       # Use the local logging driver
