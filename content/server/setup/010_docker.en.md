@@ -44,8 +44,6 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 
 An almost minimal configuration looks like this:
 ```toml
-# Make port 8080 accept unencrypted connections for the local healthcheck
-allow_http = true
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 db_url = "postgres://bomnipotent_user:<your-database-password>@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
@@ -174,8 +172,9 @@ services:
           memory: "512M"
     healthcheck:
       # Check if the server is healthy
-      # Note that this call is the sole reason for allwoing http connections in the server config.
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      # Your TLS certificate is most likely not valid for "localhost"
+      # Hence the --insecure flag
+      test: ["CMD-SHELL", "curl --fail --insecure https://localhost:8443/health || exit 1"]
       # Interval between health checks
       interval: 60s
       # Timeout for each health check
@@ -272,7 +271,7 @@ services:
           cpus: "0.5"
           memory: "512M"
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      test: ["CMD-SHELL", "curl --fail --insecure https://localhost:8443/health || exit 1"]
       interval: 60s
       timeout: 10s
       retries: 5
