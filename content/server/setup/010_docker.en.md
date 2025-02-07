@@ -93,84 +93,129 @@ A completely ready to deploy compose file looks like this:
 {{< tabs >}}
 {{% tab title="annotated" %}}
 ```yaml
-# TODO: Annotate
+# Giving the setup a name is optional, it will be derived by docker otherwise.
 name: bomnipotent_server_containers
 
+# The docker containers need to communicate, and they need a network for that.
 networks:
+  # This network needs a reference
   bomnipotent_network:
+    # Since the containers are on the same docker host, "bridge" is a reasonable driver choice.
     driver: bridge
+    # Giving the network the same name as the reference is ok.
     name: bomnipotent_network
+
+volumes:
+  # Define the volume for persistent data storage
+  bomnipotent_data:
+    driver: local
 
 services:
   bomnipotent_db:
+    # Name of the database container
     container_name: bomnipotent_db
     deploy:
       resources:
+        # Limit the CPU usage to 0.5 cores
         limits:
           cpus: "0.5"
+        # Limit the memory usage to 512MB
           memory: "512M"
     environment:
+      # Set the database name
       POSTGRES_DB: bomnipotent_db
+      # Set the database user
       POSTGRES_USER: bomnipotent_user
+      # Set the database password from the .env file variable
       POSTGRES_PASSWORD: ${BOMNIPOTENT_DB_PW}
     healthcheck:
+      # Check if the database is ready
       test: ["CMD-SHELL", "pg_isready -U bomnipotent_user -d bomnipotent_db"]
+      # Interval between health checks
       interval: 60s
+      # Timeout for each health check
       timeout: 10s
+      # Number of retries before considering the container unhealthy
       retries: 5
+      # Start period before the first health check
       start_period: 10s
+    # Use the specified PostgreSQL image
     image: postgres:17-alpine3.20
     logging:
+      # Use the local logging driver
       driver: local
       options:
+        # Limit the log size to 10MB
         max-size: "10m"
+        # Keep a maximum of 3 log files
         max-file: "3"
     networks:
+      # Connect to the specified network
       - bomnipotent_network
-    restart: unless-stopped
+    # Restart the container if it has stopped for some reason other than a user command
+    restart: always
     volumes:
+      # Mount the volume for persistent data storage
       - bomnipotent_data:/var/lib/postgresql/data
 
   bomnipotent_server:
+    # Name of the server container
     container_name: bomnipotent_server
     depends_on:
+      # Ensure the database service is healthy before starting the server
       bomnipotent_db:
         condition: service_healthy
     deploy:
       resources:
+        # Limit the CPU usage to 0.5 cores
         limits:
           cpus: "0.5"
+        # Limit the memory usage to 512MB
           memory: "512M"
     healthcheck:
+      # Check if the server is healthy
+      # Note that this call is the sole reason for allwoing http connections in the server config.
       test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      # Interval between health checks
       interval: 60s
+      # Timeout for each health check
       timeout: 10s
+      # Number of retries before considering the container unhealthy
       retries: 5
+      # Start period before the first health check
       start_period: 10s
+    # Use the specified server image
     image: wwhsoft/bomnipotent_server:latest
     logging:
+      # Use the local logging driver
       driver: local
       options:
+        # Limit the log size to 10MB
         max-size: "10m"
+        # Keep a maximum of 3 log files
         max-file: "3"
     networks:
+      # Connect to the specified network
       - bomnipotent_network
     ports:
+      # Map port 443 on the host to port 8443 on the container
+      # This allows to connect to it via encrypted communication from the internet
+      # Note that docker implicitly prevents unencrypted communication here,
+      # by not mapping to container port 8080.
       - "443:8443"
-    restart: unless-stopped
+    # Restart the container if it has stopped for some reason other than a user command
+    restart: always
     volumes:
+      # Mount the host
       - type: bind
         source: ./bomnipotent_config
         target: /etc/bomnipotent_server/configs/
         read_only: true
+      # Bind mount the SSL directory
       - type: bind
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
-
-volumes:
-  bomnipotent_data:
-    driver: local
 ```
 {{% /tab %}}
 {{% tab title="not annotated" %}}
@@ -182,6 +227,10 @@ networks:
     driver: bridge
     name: bomnipotent_network
 
+volumes:
+  bomnipotent_data:
+    driver: local
+
 services:
   bomnipotent_db:
     container_name: bomnipotent_db
@@ -208,7 +257,7 @@ services:
         max-file: "3"
     networks:
       - bomnipotent_network
-    restart: unless-stopped
+    restart: always
     volumes:
       - bomnipotent_data:/var/lib/postgresql/data
 
@@ -238,7 +287,7 @@ services:
       - bomnipotent_network
     ports:
       - "443:8443"
-    restart: unless-stopped
+    restart: always
     volumes:
       - type: bind
         source: ./bomnipotent_config
@@ -248,10 +297,6 @@ services:
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
-
-volumes:
-  bomnipotent_data:
-    driver: local
 ```
 {{% /tab %}}
 {{< /tabs >}}
