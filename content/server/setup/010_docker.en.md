@@ -44,6 +44,8 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 
 An almost minimal configuration looks like this:
 ```toml
+# Make port 8080 accept unencrypted connections for the local healthcheck
+allow_http = true
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 db_url = "postgres://bomnipotent_user:<your-database-password>@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
@@ -127,32 +129,7 @@ services:
       - bomnipotent_network
     restart: unless-stopped
     volumes:
-      - bomnipname: bomnipotent_server_containers
-
-networks:
-  bomnipotent_network:
-    driver: bridge
-    name: bomnipotent_network
-
-services:
-  bomnipotent_db:
-    container_name: bomnipotent_db
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "512M"
-    environment:
-      POSTGRES_DB: bomnipotent_db
-      POSTGRES_USER: bomnipotent_user
-      POSTGRES_PASSWORD: ${BOMNIPOTENT_DB_PW}
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U bomnipotent_user -d bomnipotent_db"]
-      interval: 60s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
-    image: posotent_data:/var/lib/postgresql/data
+      - bomnipotent_data:/var/lib/postgresql/data
 
   bomnipotent_server:
     container_name: bomnipotent_server
@@ -178,6 +155,8 @@ services:
         max-file: "3"
     networks:
       - bomnipotent_network
+    ports:
+      - "443:8443"
     restart: unless-stopped
     volumes:
       - type: bind
@@ -190,8 +169,6 @@ services:
         read_only: true
 
 volumes:
-  subscription_data:
-    driver: local
   bomnipotent_data:
     driver: local
 ```
@@ -233,32 +210,7 @@ services:
       - bomnipotent_network
     restart: unless-stopped
     volumes:
-      - bomnipname: bomnipotent_server_containers
-
-networks:
-  bomnipotent_network:
-    driver: bridge
-    name: bomnipotent_network
-
-services:
-  bomnipotent_db:
-    container_name: bomnipotent_db
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "512M"
-    environment:
-      POSTGRES_DB: bomnipotent_db
-      POSTGRES_USER: bomnipotent_user
-      POSTGRES_PASSWORD: ${BOMNIPOTENT_DB_PW}
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U bomnipotent_user -d bomnipotent_db"]
-      interval: 60s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
-    image: posotent_data:/var/lib/postgresql/data
+      - bomnipotent_data:/var/lib/postgresql/data
 
   bomnipotent_server:
     container_name: bomnipotent_server
@@ -284,6 +236,8 @@ services:
         max-file: "3"
     networks:
       - bomnipotent_network
+    ports:
+      - "443:8443"
     restart: unless-stopped
     volumes:
       - type: bind
@@ -296,8 +250,6 @@ services:
         read_only: true
 
 volumes:
-  subscription_data:
-    driver: local
   bomnipotent_data:
     driver: local
 ```
