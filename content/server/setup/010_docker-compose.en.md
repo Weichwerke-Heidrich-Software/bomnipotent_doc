@@ -44,7 +44,8 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 An almost minimal configuration looks like this:
 ```toml
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
-db_url = "postgres://bomnipotent_user:<your-database-password>@bomnipotent_db:5432/bomnipotent_db"
+# Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
+db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
 domain = "https://<your-domain>.<top-level>"
 # Possible values: error, warning, info, debug, trace
@@ -170,6 +171,9 @@ services:
           cpus: "0.5"
         # Limit the memory usage to 512MB
           memory: "512M"
+    environment:
+      # Pass the database password on to the server.
+      BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
     healthcheck:
       # Check if the server is healthy
       # Your TLS certificate is most likely not valid for "localhost"
@@ -269,6 +273,8 @@ services:
         limits:
           cpus: "0.5"
           memory: "512M"
+    environment:
+      BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
     healthcheck:
       test: ["CMD-SHELL", "curl --fail --insecure https://localhost:8443/health || exit 1"]
       interval: 60s
