@@ -199,9 +199,8 @@ services:
     ports:
       # Map port 443 on the host to port 8443 on the container
       # This allows to connect to it via encrypted communication from the internet
-      # Note that docker implicitly prevents unencrypted communication here,
-      # by not mapping to container port 8080.
-      - "443:8443"
+      - target: 8443
+        published: 443
     # Restart the container if it has stopped for some reason other than a user command
     restart: always
     volumes:
@@ -285,7 +284,8 @@ services:
     networks:
       - bomnipotent_network
     ports:
-      - "443:8443"
+      - target: 8443
+        published: 443
     restart: always
     volumes:
       - type: bind
