@@ -35,11 +35,10 @@ bomnipotent_client bom download ./boms
 [INFO] Storing BOMs under ./boms
 ```
 
-This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder if it does not already exist. The BOMs are stored under files following the naming scheme `{product name}_{product version}.cdx.json`.
+This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder structure if it does not already exist. The BOMs are stored in files following the naming scheme `{product name}_{product version}.cdx.json`.
 
-> To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted to lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. BOMnipotent will display an error before it silently overwrites a file.
+> To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display an error instead of silently overwriting a file.
 
-Before requesting files for download, BOMnipotent Client makes an inventory of the already presend SBOMs in the folder, and downloads only the missing ones.
 
 ```bash
 tree ./boms/
@@ -53,3 +52,4 @@ tree ./boms/
 1 directory, 3 files
 ```
 
+Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.
