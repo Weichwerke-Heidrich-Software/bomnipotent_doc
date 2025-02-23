@@ -42,7 +42,7 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 > The name of the file is arbitrary in principle, but the ready-to-deploy BOMnipotent Server docker container is set up to look for "config.toml".
 
 An almost minimal configuration looks like this:
-```toml
+```toml {wrap="false" title="config.toml"}
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 # Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"

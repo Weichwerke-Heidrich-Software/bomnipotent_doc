@@ -9,7 +9,7 @@ The purpose of a Bill of Materials is to catalogue components of a product. BOMn
 ```bash
 bomnipotent_client component list vulny 0.1.0
 ```
-```
+``` {wrap="false" title="output"}
 ╭──────────────┬─────────┬─────────┬───────────────────────────┬───────────────────────────╮
 │ Name         │ Version │ Type    │ CPE                       │ PURL                      │
 ├──────────────┼─────────┼─────────┼───────────────────────────┼───────────────────────────┤

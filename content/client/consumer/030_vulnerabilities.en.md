@@ -10,7 +10,7 @@ To dispaly a list of known vulnerabilities affecting a product, call "vulnerabil
 bomnipotent_client vulnerability list vulny 0.1.0
 ```
 
-```
+``` {wrap="false" title="output"}
 ╭─────────┬─────────┬─────────────────────┬───────────────────────────┬───────┬──────────┬─────────┬─────────────────╮
 │ Product │ Version │ Vulnerability       │ Description               │ Score │ Severity │ TLP     │ CSAF Assessment │
 ├─────────┼─────────┼─────────────────────┼───────────────────────────┼───────┼──────────┼─────────┼─────────────────┤

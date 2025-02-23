@@ -13,7 +13,7 @@ Running
 bomnipotent_client bom list
 ```
 will list all BOMs accessible to you:
-```
+``` {wrap="false" title="output"}
 ╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
 │ Product     │ Version │ Timestamp               │ TLP       │ Components │
 ├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
@@ -43,7 +43,7 @@ This will store the BOMs in the provided folder ("./boms", in this example). It 
 ```bash
 tree ./boms/
 ```
-```
+``` {wrap="false" title="output"}
 ./boms/
 ├── bomnipotent_1.0.0.cdx.json
 ├── bomnipotent_1.0.1.cdx.json

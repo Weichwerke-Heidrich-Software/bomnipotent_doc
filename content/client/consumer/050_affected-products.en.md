@@ -10,7 +10,7 @@ To see exactly which products are covered by a CSAF advisory, run:
 ./bomnipotent_client product list
 ```
 
-```
+``` {wrap="false" title="output"}
 ╭───────────────────────────┬────────────────┬────────────────┬───────────────┬───────────╮
 │ Product                   │ Vulnerability  │ Status         │ CSAF ID       │ TLP       │
 ├───────────────────────────┼────────────────┼────────────────┼───────────────┼───────────┤

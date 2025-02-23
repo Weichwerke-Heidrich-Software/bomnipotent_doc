@@ -21,7 +21,7 @@ bomnipotent_client -d <server> -e <your-email> -o <mode> -s <path/to/key> -t <pa
 {{< /tabs >}}
 
 This will create a file in the local user folder which stores the provided parameters.
-```
+``` {wrap="false" title="output"}
 [INFO] Storing session data in /home/simon/.config/bomnipotent/session.toml
 ```
 

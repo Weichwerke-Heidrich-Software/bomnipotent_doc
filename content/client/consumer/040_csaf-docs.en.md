@@ -18,7 +18,7 @@ Running
 
 will give you a list of all CSAF documents accessible to you.
 
-```
+``` {wrap="false" title="output"}
 ╭───────────────┬───────────────────────────┬──────────────────────┬──────────────────────┬────────┬───────────╮
 │ ID            │ Title                     │ Initial Release      │ Current Release      │ Status │ TLP       │
 ├───────────────┼───────────────────────────┼──────────────────────┼──────────────────────┼────────┼───────────┤
@@ -36,7 +36,7 @@ To locally mirror all CSAF documents accessible to you, run
 ```bash
 bomnipotent_client csaf download ./csaf
 ```
-```
+``` {wrap="false" title="output"}
 [INFO] Storing CSAF documents under ./csaf
 ```
 
@@ -49,7 +49,7 @@ This will store th CSAF documents in the provided folder ("./csaf", in this exam
 tree ./csaf/
 ```
 
-```
+``` {wrap="false" title="output"}
 ./csaf/
 └── white
     └── 2022

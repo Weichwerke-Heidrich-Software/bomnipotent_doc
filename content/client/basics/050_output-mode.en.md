@@ -22,14 +22,14 @@ The default output mode is info. It prints some information, but does not overwh
 ``` bash
 bomnipotent_client health
 ```
-```
+``` {wrap="false" title="output"}
 Service is healthy
 ```
 
 ``` bash
 bomnipotent_client bom list
 ```
-```
+``` {wrap="false" title="output"}
 ╭─────────────┬─────────┬─────────────────────────┬─────────┬────────────╮
 │ Product     │ Version │ Timestamp               │ TLP     │ Components │
 ├─────────────┼─────────┼─────────────────────────┼─────────┼────────────┤
@@ -38,7 +38,7 @@ bomnipotent_client bom list
 ```
 
 Or, in case of an error:
-```
+``` {wrap="false" title="output"}
 Received response status: 401 Unauthorized
 Error: "No approved and currently valid public keys were found for user admin@wwh-soft.com"
 ```
@@ -59,7 +59,7 @@ bomnipotent_client -o debug health
 {{% /tab %}}
 {{< /tabs >}}
 
-```
+``` {wrap="false" title="output"}
 [DEBUG] Looking for session data in /home/simon/.config/bomnipotent/session.toml
 [DEBUG] Looking for secret key
 [DEBUG] The provided key is a path: /home/simon/git/bomnipotent/test_cryptofiles/admin
@@ -85,7 +85,7 @@ bomnipotent_client -o trace health
 {{% /tab %}}
 {{< /tabs >}}
 
-```
+``` {wrap="false" title="output"}
 [bomnipotent_client::session_data] [DEBUG] Looking for session data in /home/simon/.config/bomnipotent/session.toml
 [bomnipotent_client::keys] [DEBUG] Looking for secret key
 [bomnipotent_client::keys] [DEBUG] The provided key is a path: /home/simon/git/bomnipotent/test_cryptofiles/admin
@@ -122,7 +122,7 @@ bomnipotent_client -o code health
 {{% /tab %}}
 {{< /tabs >}}
 
-```
+``` {wrap="false" title="output"}
 200
 ```
 
@@ -154,7 +154,7 @@ bomnipotent_client -o raw bom list
 {{% /tab %}}
 {{< /tabs >}}
 
-```
+``` {wrap="false" title="output"}
 [{"name":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp":null,"components":350}]
 ```
 
