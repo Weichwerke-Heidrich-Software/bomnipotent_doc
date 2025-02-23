@@ -32,10 +32,12 @@ To create a local copy of all boms the server exposes to you, run:
 bomnipotent_client bom download ./boms
 ```
 ```
-Storing BOMs under ./boms
+[INFO] Storing BOMs under ./boms
 ```
 
 This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder if it does not already exist. The BOMs are stored under files following the naming scheme `{product name}_{product version}.cdx.json`.
+
+> To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted to lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. BOMnipotent will display an error before it silently overwrites a file.
 
 Before requesting files for download, BOMnipotent Client makes an inventory of the already presend SBOMs in the folder, and downloads only the missing ones.
 
@@ -44,11 +46,10 @@ tree ./boms/
 ```
 ```
 ./boms/
-├── BOMnipotent_1.0.0.cdx.json
-├── BOMnipotent_1.0.1.cdx.json
+├── bomnipotent_1.0.0.cdx.json
+├── bomnipotent_1.0.1.cdx.json
 └── vulny_0.1.0.cdx.json
 
 1 directory, 3 files
-
 ```
 

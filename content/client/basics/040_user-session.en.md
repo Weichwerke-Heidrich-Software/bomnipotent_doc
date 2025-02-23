@@ -22,7 +22,7 @@ bomnipotent_client -d <server> -e <your-email> -o <mode> -s <path/to/key> -t <pa
 
 This will create a file in the local user folder which stores the provided parameters.
 ```
-Stored session data in /home/simon/.config/bomnipotent/session.json
+[INFO] Storing session data in /home/simon/.config/bomnipotent/session.toml
 ```
 
 Whenever you call the BOMnipotent Client from now on, it will use these parameters automatically:
