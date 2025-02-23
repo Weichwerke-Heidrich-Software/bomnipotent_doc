@@ -14,7 +14,7 @@ The suggested file structure in the favourite directory of your server looks lik
 ├── bomnipotent_config
 │   ├── config.toml
 │   └── config.toml.default
-├── compose.yaml
+└── compose.yaml
 ```
 
 This tutorial will walk through the files and explain them one by one.
