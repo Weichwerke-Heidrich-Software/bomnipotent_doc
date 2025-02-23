@@ -11,3 +11,13 @@
 :root {
   --MAIN-font: 'Cormorant', serif;
 }
+
+h1 {
+  font-family: var(--MAIN-font);
+  font-weight: bold;
+}
+
+.logo-title {
+  font-family: var(--MAIN-font);
+  font-weight: bold;
+}
