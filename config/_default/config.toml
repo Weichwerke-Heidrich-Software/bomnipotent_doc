@@ -1,11 +1,24 @@
-contentDir = "docs.bomnipotent/content"
 baseURL = 'https://docs.bomnipotent.wwh-soft.com/'
 languageCode = 'en-us'
 title = 'BOMnipotent'
 theme = 'relearn'
 
+[frontmatter]
+lastmod = ["lastmod", ":fileModTime"]
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  # activate the feature to print whole chapters
+  home = ['html', 'rss', 'print']
+  section = ['html', 'rss', 'print']
+  page = ['html', 'rss', 'print']
+
 [params]
 themeVariantAuto = ['wwh-light', 'wwh-dark']
+collapsibleMenu = true # Display icon next to expandable menu items
+
 [[params.themeVariant]]
 identifier = 'auto'
 
@@ -19,11 +32,6 @@ name = 'Dark'
 
 defaultContentLanguage = 'en'
 
-[[menu.shortcuts]]
-  name = 'Licenses'
-  pageRef = '/more/licenses/_index.en.md'
-  weight = 30
-
 [languages]
   [languages.en]
     languageCode = 'en'
@@ -33,3 +41,9 @@ defaultContentLanguage = 'en'
   [languages.de]
     languageCode = 'de'
     languageName = 'Deutsch'
+
+# Render HTML code in Markdown.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
