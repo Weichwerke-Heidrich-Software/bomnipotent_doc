@@ -28,3 +28,5 @@ bomnipotent_client component list vulny 0.1.0
 ```
 
 This output is primarily meant to be human-readable. Using the `--output=raw` option makes it machine-readable in principle, but [downloading the complete BOM](client/consumer/boms/) is most likely preferable to parsing this table output.
+
+A vendor of a product should periodically scan the BOM of a product for vulnerabilities, for example by using tools like [grype](/integration/grype/). The [next section](/client/consumer/vulnerabilities/) explains how you as the user of a product can access these list.
