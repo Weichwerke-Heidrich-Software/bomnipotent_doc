@@ -12,7 +12,7 @@ weight = 30
 
 We are Weichwerke Heidrich Software ("**Company**", "**we**", "**us**", "**our**").
 
-We operate [docs.bomnipotent.de](https://docs.bomnipotent.de), as well as any other related products and services that refer or link to these legal terms (the "**Legal Terms**") (collectively, the "**Services**").
+We operate [doc.bomnipotent.de](https://doc.bomnipotent.de), as well as any other related products and services that refer or link to these legal terms (the "**Legal Terms**") (collectively, the "**Services**").
 
 You can contact us by email at [info@wwh-soft.com](mailto:info@wwh-soft.com) or by mail to Weichwerke Heidrich Software, Im Hirschmorgen 32, 69181 Leimen, Germany.
 

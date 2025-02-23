@@ -5,4 +5,4 @@ Disallow: {{ .RelPermalink }}
 {{- end -}}
 {{ end }}
 
-Sitemap: https://docs.bomnipotent.wwh-soft.com/sitemap.xml
+Sitemap: https://doc.bomnipotent.wwh-soft.com/sitemap.xml

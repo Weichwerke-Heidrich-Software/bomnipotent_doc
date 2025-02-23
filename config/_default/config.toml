@@ -1,4 +1,4 @@
-baseURL = 'https://docs.bomnipotent.wwh-soft.com/'
+baseURL = 'https://doc.bomnipotent.wwh-soft.com/'
 languageCode = 'en-us'
 title = 'BOMnipotent'
 theme = 'relearn'

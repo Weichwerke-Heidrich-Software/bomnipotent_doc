@@ -9,7 +9,7 @@ weight = 20
 **Last updated February 23, 2025**
 
 This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**our**'), describes how and why we might access, collect, store, use, and/or share ('**process**') your personal information when you use our services ('***Services**'), including when you:
-* Visit our website at [docs.bomnipotent.de](https://docs.bomnipotent.de), or any website of ours that links to this Pricacy Notice
+* Visit our website at [doc.bomnipotent.de](https://doc.bomnipotent.de), or any website of ours that links to this Pricacy Notice
 * Engage with us in other related ways, including any sales, marketing or events
 **Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at [info@wwh-soft.com](mailto:info@wwh-soft.com).
 
