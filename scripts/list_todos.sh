@@ -5,6 +5,15 @@ set -e
 # Change to git root directory
 cd "$(git rev-parse --show-toplevel)"
 
+echo
+echo "Drafts:"
+hugo list drafts
+echo
+
+echo
+./scripts/missing_translations.sh
+echo
+
 SCRIPT=$(readlink -f "$0")
 
 output=$(grep -rinI todo * \
@@ -20,7 +29,3 @@ if [ -n "$output" ]; then
 else
     echo "No TODOs found."
 fi
-
-echo
-echo "Drafts:"
-hugo list drafts
