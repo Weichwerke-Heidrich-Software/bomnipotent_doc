@@ -1,10 +1,10 @@
 +++
-title = "Output Mode"
+title = "Ausgabemodus"
 slug = "output-mode"
 weight = 50
 +++
 
-The BOMnipotent client offers several output modes which can be chosen by a global optional argument:
+Der BOMnipotent-Client bietet mehrere Ausgabemodi, die über ein globales optionales Argument ausgewählt werden können:
 - code
 - raw
 - error
@@ -13,11 +13,11 @@ The BOMnipotent client offers several output modes which can be chosen by a glob
 - debug
 - trace
 
-Output modes [code](/client/basics/output-mode/#code) and [raw](/client/basics/output-mode/#raw) have special behaviour treated below. Choosing modes error, warn, info, debug or trace makes BOMnipotent print all messages up to that log level.
+Die Ausgabemodi [code](/de/client/basics/output-mode/#code) und [raw](/de/client/basics/output-mode/#raw) haben ein besonderes Verhalten, welches weiter unten behandelt wird. Wenn die Modi error, warn, info, debug oder trace ausgewählt werden, gibt BOMnipotent alle Meldungen bis zu diesem Protokollierungslevel aus.
 
-## Info, Warn and Error
+## Info, Warn und Error
 
-The default output mode is info. It prints some information, but does not overwhelm the user.
+Der Standard-Ausgabemodus ist info. Er gibt einige Informationen aus, überflutet den Benutzer jedoch nicht mit Nachrichten.
 
 ``` bash
 bomnipotent_client health
@@ -37,7 +37,7 @@ bomnipotent_client bom list
 ╰─────────────┴─────────┴─────────────────────────┴─────────┴────────────╯
 ```
 
-Or, in case of an error:
+Oder, falls ein Fehler auftritt:
 ``` {wrap="false" title="output"}
 Received response status: 401 Unauthorized
 Error: "No approved and currently valid public keys were found for user admin@wwh-soft.com"
@@ -45,14 +45,14 @@ Error: "No approved and currently valid public keys were found for user admin@ww
 
 ## Debug
 
-The debug output mode prints some additional information which may be of interest when looking for the cause of an error in the input or setup:
+Der Debug-Ausgabemodus gibt zusätzliche Informationen aus, die bei der Fehlersuche in der Eingabe oder Konfiguration nützlich sein können:
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --output=debug health
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -o debug health
 ```
@@ -71,14 +71,14 @@ Service is healthy
 
 ## Trace
 
-In output mode trace, BOMnipotent additionally prints the module where the log message originated. This is mainly interesting for finding the cause of an error in the program itself.
+Im trace-Modus gibt BOMnipotent zusätzlich das Modul aus, aus dem die Protokollnachricht stammt. Dies ist besonders nützlich, um Fehler im Programm selbst zu identifizieren.
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --output=trace health
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -o trace health
 ```
@@ -108,14 +108,14 @@ Service is healthy
 
 ## Code
 
-The code output prints only the [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) of the response.
+Der code-Modus gibt nur den [HTTP Statuscode](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) der Antwort aus.
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --output=code health
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -o code health
 ```
@@ -126,7 +126,7 @@ bomnipotent_client -o code health
 200
 ```
 
-This can come in handy if you want to use BOMnipotent Client in scripts:
+Das ist besonders nützlich, wenn BOMnipotent-Client in Skripten verwendet wird:
 ```bash
 code=$(./bomnipotent_client --domain=$domain --output=code health)
 if (( code != 200 )); then
@@ -135,19 +135,21 @@ if (( code != 200 )); then
 fi
 ```
 
-Note that there is no newline or carriage return character at the end of the output.
+Beachten Sie, dass am Ende der Ausgabe kein Zeilenumbruch oder Wagenrücklaufzeichen steht.
+
+> "Wagenrücklaufzeichen" ist tatsächlich die deutsche Übersetzung von "carriage return". Abgefahren.
 
 ## Raw
 
-For calls to BOMnipotent Client that access some structured data, the raw output prints that data in json format **instead** of parsing and processing it.
+Für Aufrufe, die auf strukturierte Daten zugreifen, gibt der raw-Modus die Daten im JSON-Format aus, **anstatt** sie zu analysieren und zu verarbeiten.
 
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --output=raw bom list
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -o raw bom list
 ```
@@ -158,6 +160,6 @@ bomnipotent_client -o raw bom list
 [{"name":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp":null,"components":350}]
 ```
 
-The output can then easily be parsed and processed by your program logic.
+Die Ausgabe kann dann einfach von der Programmlogik analysiert und weiterverarbeitet werden.
 
-Note that there is no newline or carriage return character at the end of the output.
+Beachten Sie, dass am Ende der Ausgabe kein Zeilenumbruch oder Wagenrücklaufzeichen steht.

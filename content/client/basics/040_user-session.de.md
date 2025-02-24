@@ -1,6 +1,6 @@
 +++
 title = "Benutzersitzung"
-slug = "benutzersitzung"
+slug = "user-session"
 weight = 40
 +++
 
