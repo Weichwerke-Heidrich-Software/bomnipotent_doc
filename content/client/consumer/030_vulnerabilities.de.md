@@ -1,10 +1,10 @@
 +++
-title = "Listing Vulnerabilities"
+title = "Sicherheitslücken"
 slug = "vulnerabilities"
 weight = 30
 +++
 
-To dispaly a list of known vulnerabilities affecting a product, call "vulnerability", "list" and then name and version of the product:
+Um eine Liste bekannter Sicherheitslücken anzuzeigen, die ein Produkt betreffen, rufen Sie "vulnerability", "list" sowie den Namen und die Version des Produkts auf:
 
 ```bash
 bomnipotent_client vulnerability list vulny 0.1.0
@@ -21,6 +21,6 @@ bomnipotent_client vulnerability list vulny 0.1.0
 
 ```
 
-The output contains an ID for the vulnerability, a description, and a [CVSS value](https://www.first.org/cvss/) and/or severity if available. It also contains a [TLP Classification](https://www.first.org/tlp/) derived from that of the affected product, and ideally a [CSAF Assessment](https://www.csaf.io/) by the vendor.
+Die Ausgabe enthält eine ID für die Schwachstelle, eine Beschreibung sowie, und, falls verfügbar, einen  [CVSS Wert](https://www.first.org/cvss/) und/oder eine Schweregrad-Einstufung. Zudem enthält sie eine [TLP Klassifizierung](https://www.first.org/tlp/), welche sich von der des betroffenen Produkts ableitet, und idealerweise eine [CSAF Bewertung](https://www.csaf.io/) durch den Anbieter.
 
-The CSAF document is a crucial part, because it tells you, the user of the product, how you should react to this supply chain vulnerability. Read the [next section](/client/consumer/csaf-docs/) to find out how to access them.
+Das CSAF-Dokument ist ein entscheidender Bestandteil, da es Ihnen als Nutzer des Produkts mitteilt, wie Sie auf diese Schwachstelle in der Lieferkette reagieren sollten. Lesen Sie den [nächsten Abschnitt](/de/client/consumer/csaf-docs/), um herauszufinden, wie Sie darauf zugreifen können.
