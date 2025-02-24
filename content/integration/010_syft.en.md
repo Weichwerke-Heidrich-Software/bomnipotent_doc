@@ -6,7 +6,7 @@ weight = 10
 
 A Software Bill of Material (SBOM) is a list of all software components used in your product. In the contex of supply chain security, it serves as a machine-readable list of items to compare to whenever a new vulnerability surfaces.
 
-Several tools exist to automatically generate such an SBOM. This tutorial focuses on Anchore's Syft. It is an open source command line tool.
+Several tools exist to automatically generate such an SBOM. This tutorial focuses on Anchore's Syft, an open source command line tool.
 
 ## Setup
 
@@ -50,11 +50,24 @@ Breakdown:
 - Likewise '--source-version="1.0.0"' tells Syft the current version of your project.
   - If you do not provide a version, BOMnipotent will try to use the timestamp as a version string instead.
 
-Syft supports a wide range of ecosystems, which is [listed on their GitHub repo](https://github.com/anchore/syft?tab=readme-ov-file#supported-ecosystems).
+Syft supports a wide range of ecosystems, which is listed on their [GitHub repo](https://github.com/anchore/syft?tab=readme-ov-file#supported-ecosystems).
 
 ### Directory
 
 Letting Syft loose on a whole directory is possible, but overdoes it in most situations. It will go through all subdirectories and collect everything that looks remotely like a lockfile, including all your test dependencies, development scripts and GitHub Actions.
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```bash
+syft . --output cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+syft . -o cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 ### Container
 
@@ -80,6 +93,6 @@ For compiled languages the results will be vastly different, because most inform
 
 When deciding on a target, it is important to think about the scope of your application: What do you ship to the customer? Up to which extend are you responsible for the supply chain of your product? If in doubt, there's no harm in uploading more than one variant of a BOM, as long as product name or version are different.
 
-Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](//client/manager/doc-management/uploading-boms/).
+Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](/client/manager/doc-management/uploading-boms/).
 
 After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype).
