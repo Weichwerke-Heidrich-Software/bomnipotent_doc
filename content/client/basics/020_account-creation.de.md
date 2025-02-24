@@ -1,0 +1,60 @@
++++
+title = "Account Erstellung"
+slug = "account-creation"
+weight = 20
++++
+
+Die meisten Interaktion mit BOMnipotent benötigen eine Berechtigung. Die einzige Ausnahme ist der Zugriff auf Daten, welche als {{< tlp-white >}} / {{< tlp-clear >}} klassifiziert wurden.
+
+Berechtigungen sind an Nutzeraccounts gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
+
+## Erstellung eine neuen Accounts
+
+Einen neuen Account erstellen Sie per
+{{< tabs >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client --domain=<server> user request <Ihre-email>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client -d <server> user request <Ihre-email>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://en.wikipedia.org/wiki/Public-key_cryptography) mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generieren. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
+
+> Der geheime Schlüssel wird auch häufig "privater Schlüssel" genannt. Der Autor glaubt aber, dass "geheimer Schlüssel" eine treffendere Beschreibung ist, und außerdem, vor allem im Englischen, die Chance auf Verwechslung mit dem öffentlichen Schlüssel verringert.
+
+Der öffentliche Schlüssel kann, im Prinzip, mit jeder beliebigen Person geteilt werden. Der "user request" Befehl schickt ihn an den BOMnipotent server. Der geheime Schlüssel hingegen sollte wie ein Passwort behandelt werden!
+
+Alle nun folgenden Aufrufe vom BOMnipotent Client werden das existierende Schlüsselpaar wiederverwenden.
+
+Jetzt, da Ihre Anfrage gestellt ist, müssen Sie darauf warten, dass ein Nutzermanager sie bestätigt. Danach können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
+
+> Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerbestätigung](/de/client/manager/user-management/user-approval/).
+
+## Gespeicherte Schlüssel nutzen
+
+Falls Sie ein Schlüsselpaar im üblichen Nutzerordner (welcher auf Ihre Platform ankommt) gespeichert haben, wird BOMnipotent Client ihn automatisch lesen und nutzen.
+
+Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wollen, der an einem anderen Ord gespeichert ist, dann können Sie den Pfad als positionales Argument angeben:
+{{< tabs >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client --domain=<server> user request <Ihre-email> <Pfad/zum/Schlüssel>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client -d <server> user request <Ihre-email> <Pfad/zum/Schlüssel>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+> Damit dies funktioniert muss der Schlüssel mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generiert worden und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein. Falls Sie darauf bestehen, Ihre Schlüssel selber zu verwalten, oder falls Sie ein Beispiel sehen möchten, dann können Sie ein solches Paar am einfachsten wie folgt generieren: Rufen Sie `openssl genpkey -algorithm ED25519 -out secret_key.pem` um einen geheimen Schlüssel zu generieren, und dann `openssl pkey -in secret_key.pem -pubout -out public_key.pem` um den zugehörigen öffentlichen Schlüssel zu erstellen.
+
+Falls Sie hier aus Versehen den Pfad zu ihrem *geheimen* Schlüssel angeben wirft BOMnipotent Client eine Fehlermeldung anstatt ihn zum Server zu schicken.

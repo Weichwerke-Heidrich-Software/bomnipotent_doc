@@ -4,7 +4,7 @@ slug = "installation"
 weight = 10
 +++
 
-Um BOMnipotent Client manuell herunterzuladen, gehen Sie zu [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/downloads/), wählen Sie Ihre Platform und Version, und klicken Sie auf den Download Button.
+Um BOMnipotent Client manuell herunterzuladen, gehen Sie zu [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/de/downloads/), wählen Sie Ihre Platform und Version, und klicken Sie auf den Download Button.
 
 Um den Prozess weiter zu automatisieren, können Sie den Download Link direkt nutzen:
 {{< tabs >}}
