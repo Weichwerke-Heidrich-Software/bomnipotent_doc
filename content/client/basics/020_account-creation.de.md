@@ -14,12 +14,12 @@ Einen neuen Account erstellen Sie per
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<server> user request <Ihre-email>
+bomnipotent_client --domain=<Server> user request <Ihre-Email>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client -d <server> user request <Ihre-email>
+bomnipotent_client -d <Server> user request <Ihre-Email>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -44,12 +44,12 @@ Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wolle
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<server> user request <Ihre-email> <Pfad/zum/Schlüssel>
+bomnipotent_client --domain=<Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client -d <server> user request <Ihre-email> <Pfad/zum/Schlüssel>
+bomnipotent_client -d <Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
 ```
 {{% /tab %}}
 {{< /tabs >}}
