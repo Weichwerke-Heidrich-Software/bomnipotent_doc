@@ -37,12 +37,12 @@ If you are logged in and provide any of the global optional parameters to a BOMn
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client --domain=<other-server> bom list # Will contact other-server
+bomnipotent_client --domain=<other-server> bom list # Will contact the other server
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client -d <other-server> bom list # Will contact other-server
+bomnipotent_client -d <other-server> bom list # Will contact the other server
 ```
 {{% /tab %}}
 {{< /tabs >}}

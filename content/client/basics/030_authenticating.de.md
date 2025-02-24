@@ -8,12 +8,12 @@ weight = 30
 
 Sobald Ihr Account (also ihre Email und ihr öffentlicher Schlüssel) bestätigt ist, können Sie BOMnipotent Client Ihre Email mitgeben um eine authentifizierte Anfrage an den Server zu stellen:
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --domain=<Server> --email=<Ihre-Email> <Kommando>
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -d <Server> -e <Ihre-Email> <Kommando>
 ```
@@ -26,12 +26,12 @@ BOMnipotent Client ließt dann automatisch Ihren geheimen Schlüssel und nutzt i
 
 Falls Sie Ihren Schlüssel nicht im üblichen Nutzerordner speichern, müssen Sie BOMnipotent Client den Pfad per Kommandozeilenoption angeben:
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 bomnipotent_client --domain=<Server> --email=<Ihre-Email> --secret-key=<Pfad/zum/Schlüssel> <Kommando>
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 bomnipotent_client -d <Server> -e <Ihre-Email> -s <Pfad/zum/Schlüssel> <Kommando>
 ```

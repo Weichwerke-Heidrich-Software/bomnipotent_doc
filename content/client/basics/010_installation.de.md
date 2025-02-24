@@ -25,7 +25,7 @@ wget https://www.bomnipotent.de/downloads/raw/latest/debian-glibc/bomnipotent_cl
 chmod +x bomnipotent_client
 ```
 {{% /tab %}}
-{{% tab title="Linux (statically linked)" %}}
+{{% tab title="Linux (statisch gelinkt)" %}}
 ```bash
 wget https://www.bomnipotent.de/downloads/raw/latest/linux-musl/bomnipotent_client;
 chmod +x bomnipotent_client
