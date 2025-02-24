@@ -1,5 +1,5 @@
 +++
-title = "Legales Zeugs"
+title = "Rechtliches"
 weight = 40
 +++
 
