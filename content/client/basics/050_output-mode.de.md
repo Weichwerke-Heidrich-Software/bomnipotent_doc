@@ -13,7 +13,7 @@ Der BOMnipotent-Client bietet mehrere Ausgabemodi, die über ein globales option
 - debug
 - trace
 
-Die Ausgabemodi [code](/de/client/basics/output-mode/#code) und [raw](/de/client/basics/output-mode/#raw) haben ein besonderes Verhalten, welches weiter unten behandelt wird. Wenn die Modi error, warn, info, debug oder trace ausgewählt werden, gibt BOMnipotent alle Meldungen bis zu diesem Protokollierungslevel aus.
+Die Ausgabemodi [code](#code) und [raw](#raw) haben ein besonderes Verhalten, welches weiter unten behandelt wird. Wenn die Modi error, warn, info, debug oder trace ausgewählt werden, gibt BOMnipotent alle Meldungen bis zu diesem Protokollierungslevel aus.
 
 ## Info, Warn und Error
 

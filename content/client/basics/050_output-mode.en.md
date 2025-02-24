@@ -13,7 +13,7 @@ The BOMnipotent client offers several output modes which can be chosen by a glob
 - debug
 - trace
 
-Output modes [code](/client/basics/output-mode/#code) and [raw](/client/basics/output-mode/#raw) have special behaviour treated below. Choosing modes error, warn, info, debug or trace makes BOMnipotent print all messages up to that log level.
+Output modes [code](#code) and [raw](#raw) have special behaviour treated below. Choosing modes error, warn, info, debug or trace makes BOMnipotent print all messages up to that log level.
 
 ## Info, Warn and Error
 
