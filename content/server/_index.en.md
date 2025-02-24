@@ -1,6 +1,5 @@
 +++
 title = "Server"
-type = "chapter"
 weight = 10
 draft = true
 +++

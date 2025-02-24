@@ -1,11 +1,10 @@
 +++
-title = "OSS Licenses"
+title = "OSS Lizenzen"
 slug = "oss-licenses"
 weight = 10
 +++
 
-BOMnipotent is based on numerous open source software projects. Several of these are licensesd under terms requiring that the full license text be listed in the documentation. This page serves to fulfil that promise.
-
+BOMnipotent basiert auf vielerlei Open Source Software Projekten. Mehrere davon haben eine Lizenz, welche verlangt, dass der volle Lizenztext in der Dokumentation gelistet wird. Diese Seite erfüllt dieses Versprechen.
 
 {{< expand title="Apache License 2.0" expanded="false" expanded="false" >}}
 <iframe src="https://spdx.org/licenses/Apache-2.0.html" style="width: 100%; height: 80vh; border: none;"></iframe>

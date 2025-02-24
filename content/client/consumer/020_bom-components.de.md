@@ -1,10 +1,10 @@
 +++
-title = "Listing Components"
+title = "Komponentenliste"
 slug = "bom-components"
 weight = 20
 +++
 
-The purpose of a Bill of Materials is to catalogue components of a product. BOMnipotent Client can be used to list all packages etc. contained in any product that is accessible to your user account. Simply call the client with the arguments "component", "list", and then name and version of the product:
+Der Zweck eines Stücklistenverzeichnisses (Bill of Materials, BOM) besteht darin, die Komponenten eines Produkts zu katalogisieren. BOMnipotent Client kann verwendet werden, um alle Pakete usw. aufzulisten, die in einem Produkt enthalten sind, welches über Ihr Benutzerkonto zugänglich ist. Rufen Sie einfach den Client mit den Argumenten "component", "list" und anschließend dem Namen und der Version des Produkts auf:
 
 ```bash
 bomnipotent_client component list vulny 0.1.0
@@ -27,6 +27,6 @@ bomnipotent_client component list vulny 0.1.0
 ...
 ```
 
-This output is primarily meant to be human-readable. Using the `--output=raw` option makes it machine-readable in principle, but [downloading the complete BOM](/client/consumer/boms/) is most likely preferable to parsing this table output.
+Diese Ausgabe ist in erster Linie für den Menschen lesbar. Die Verwendung der Option `--output=raw` macht sie prinzipiell maschinenlesbar, aber [das vollständige Herunterladen der BOM ](/de/client/consumer/boms/) ist höchstwahrscheinlich vorzuziehen, anstatt diese Tabellenausgabe zu parsen.
 
-A vendor of a product should periodically scan the BOM of a product for vulnerabilities, for example by using tools like [grype](/integration/grype/). The [next section](/client/consumer/vulnerabilities/) explains how you as the user of a product can access these list.
+Ein Anbieter eines Produkts sollte die BOM eines Produkts regelmäßig auf Schwachstellen überprüfen, beispielsweise mit Tools wie [grype](/de/integration/grype/). Der [nächste Abschnitt](/de/client/consumer/vulnerabilities/) erklärt, wie Sie als Nutzer eines Produkts auf diese Listen zugreifen können.

@@ -1,6 +1,5 @@
 +++
 title = "Client"
-type = "chapter"
 weight = 20
 +++
 

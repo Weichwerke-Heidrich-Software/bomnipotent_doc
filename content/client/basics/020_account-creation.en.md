@@ -24,7 +24,7 @@ bomnipotent_client -d <server> user request <your-email>
 {{% /tab %}}
 {{< /tabs >}}
 
-If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your userfolder.
+If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your local userfolder.
 
 > The secret key is more commonly called "private key", but the author believes that "secret" is a more apt description and reduces the chance to confuse it with the public key.
 
@@ -36,9 +36,9 @@ Now that your request is made, you need to wait for a user manager of the server
 
 > If you are said user manager and are looking for how approve users, consult the section about [User Approval](/client/manager/user-management/user-approval/).
 
-## Reading stored Keys
+## Using stored Keys
 
-If you have a key pair stored in the defaul user location (which depends on your platform), BOMnipotent Client will automatically read and use it.
+If you have a key pair stored in the default user location (which depends on your platform), BOMnipotent Client will automatically read and use it.
 
 If you would instead like to reuse an existing stored at a different location, you can add the path as a positional argument:
 {{< tabs >}}

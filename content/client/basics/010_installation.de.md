@@ -1,12 +1,12 @@
 +++
-title = "Installing the Client"
+title = "Client Installation"
 slug = "installation"
 weight = 10
 +++
 
-To manually download BOMnipotent Client, go to [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/downloads/), select your platform and version, and click on the download button.
+Um BOMnipotent Client manuell herunterzuladen, gehen Sie zu [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/de/downloads/), wählen Sie Ihre Platform und Version, und klicken Sie auf den Download Button.
 
-To automate this process further, you can access the download link directly:
+Um den Prozess weiter zu automatisieren, können Sie den Download Link direkt nutzen:
 {{< tabs >}}
 {{% tab title="Windows" %}}
 ```powershell
@@ -25,7 +25,7 @@ wget https://www.bomnipotent.de/downloads/raw/latest/debian-glibc/bomnipotent_cl
 chmod +x bomnipotent_client
 ```
 {{% /tab %}}
-{{% tab title="Linux (statically linked)" %}}
+{{% tab title="Linux (statisch gelinkt)" %}}
 ```bash
 wget https://www.bomnipotent.de/downloads/raw/latest/linux-musl/bomnipotent_client;
 chmod +x bomnipotent_client
@@ -33,6 +33,6 @@ chmod +x bomnipotent_client
 {{% /tab %}}
 {{< /tabs >}}
 
-Replace "latest" with a specific version tag, e.g. "v1.0.0", to download that version instead of the latest.
+Ersetzen sie "latest" mit einem Spezifischen Versionstag, zum Beispiel "v1.0.0", um diese statt der neuesten herunterzuladen.
 
-To access BOMnipotent Client from anywhere in your system, move it into a folder that is included in your PATH environment variable. This step is optional, though.
+Um von überall im System auf BOMnipotent Client zugreifen zu können, verschieben Sie es in einen Ordner der in ihrer PATH Umgebungsvariable enthalten ist. Dieser Schritt ist jedoch optional.

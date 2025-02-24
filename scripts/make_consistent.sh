@@ -2,7 +2,7 @@
 
 set -e
 
-toplevel=$(git rev-parse --show-toplevel)
+toplevel="$(git rev-parse --show-toplevel)"
 
 fileendings=(".en.md" ".de.md")
 

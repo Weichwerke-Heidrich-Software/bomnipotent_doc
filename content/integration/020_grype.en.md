@@ -10,7 +10,7 @@ There are several tools for scanning a product for supply chain vulnerabilities.
 
 ## Setup
 
-The official [Grype GitHub repo](https://github.com/anchore/grype#installation) contains installation instructions. Like for Syft, you may want to change the install path (the very last argument to the shell command) to `~/.local/bin`, because `/usr/local/bin` requires root permissions to modify.
+The official [Grype GitHub repo](https://github.com/anchore/grype#installation) contains installation instructions. Like for Syft, you may want to change the install path (the very last argument to the shell command) to '~/.local/bin', because '/usr/local/bin' requires root permissions to modify.
 
 ## Usage
 
@@ -30,7 +30,7 @@ grype sbom:./sbom.cdx.json -f low
 {{< /tabs >}}
 
 
-When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The fail-on option specifies that it exits with a non-zero error code if any with severity low or higher is discovered.
+When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The 'fail-on' option specifies that it exits with a non-zero error code if any with severity 'low' or higher is discovered.
 
 The syntax to export a vulnerability report consumable by BOMnipotent is similar to Syft:
 

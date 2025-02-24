@@ -1,6 +1,6 @@
 +++
 title = "Legal Stuff"
-type = "chapter"
 weight = 40
 +++
 
+This section contains several texts necessary to be compliant with various laws and regulations.
