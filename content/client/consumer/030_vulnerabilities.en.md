@@ -2,6 +2,7 @@
 title = "Listing Vulnerabilities"
 slug = "vulnerabilities"
 weight = 30
+description = "Learn how to list known vulnerabilities affecting a product using the bomnipotent_client command and understand the output details, including CVSS, TLP, and CSAF."
 +++
 
 To dispaly a list of known vulnerabilities affecting a product, call "vulnerability", "list" and then name and version of the product:

@@ -2,6 +2,7 @@
 title = "Terms and Conditions"
 slug = "terms"
 weight = 30
+robots = "noindex"
 +++
 
 *Powered by [Termly](https://termly.io)*

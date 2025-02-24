@@ -2,6 +2,7 @@
 title = "CSAF Documents"
 slug = "csaf-docs"
 weight = 40
+description = "Learn how to list and download CSAF documents using BOMnipotent Client, including commands and output examples, and understand the file naming scheme."
 +++
 
 When a vulnerability becomes known in one of the components of a product that you use, one of the most natural questions to ask is "What do I have to do now?". The [Common Security Advisory Format (CSAF)](https://www.csaf.io/) aims to provide an answer to that question in an automated fashion. It is a mainly machine-readable format for exchanging advisories about security vulnerabilities.

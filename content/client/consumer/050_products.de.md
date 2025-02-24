@@ -2,6 +2,7 @@
 title = "Produktlisten"
 slug = "products"
 weight = 50
+description = "Produktliste eines CSAF Dokuments mit Befehlsanleitung und tabellarischer Ausgabe der Produkte, deren Schwachstellen, Status, CSAF ID und TLP."
 +++
 
 Um genau zu sehen, welche Produkte von einem CSAF Dokument behandelt werden, führen Sie den folgenden Befehl aus:

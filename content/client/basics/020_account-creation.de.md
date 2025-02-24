@@ -2,6 +2,7 @@
 title = "Account Erstellung"
 slug = "account-creation"
 weight = 20
+description = "Anleitung zur Erstellung eines neuen Accounts bei BOMnipotent, einschließlich der Nutzung von Schlüsselpaaren und der Verwaltung gespeicherter Schlüssel."
 +++
 
 Die meisten Interaktion mit BOMnipotent benötigen eine Berechtigung. Die einzige Ausnahme ist der Zugriff auf Daten, welche als {{< tlp-white >}} / {{< tlp-clear >}} klassifiziert wurden.

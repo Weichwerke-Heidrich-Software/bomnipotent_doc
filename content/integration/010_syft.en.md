@@ -2,6 +2,7 @@
 title = "SBOM Generation with Syft"
 slug = "syft"
 weight = 10
+description = "SBOM Generation with Syft: Learn to generate a Software Bill of Materials using Anchore's Syft, covering setup, usage, and examples for lockfiles, directories, and containers."
 +++
 
 A Software Bill of Material (SBOM) is a list of all software components used in your product. In the contex of supply chain security, it serves as a machine-readable list of items to compare to whenever a new vulnerability surfaces.

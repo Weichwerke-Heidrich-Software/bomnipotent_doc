@@ -2,6 +2,7 @@
 title = "BOMs"
 slug = "boms"
 weight = 10
+description = "Learn about Bills of Materials (BOMs) in cybersecurity, how to list and download them using the BOMnipotent Client, and file storage details."
 +++
 
 ## List

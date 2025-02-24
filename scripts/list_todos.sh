@@ -14,6 +14,10 @@ echo
 ./scripts/missing_translations.sh
 echo
 
+echo
+./scripts/missing_description.sh
+echo
+
 SCRIPT=$(readlink -f "$0")
 
 output=$(grep -rinI todo * \

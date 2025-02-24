@@ -2,6 +2,7 @@
 title = "Output Mode"
 slug = "output-mode"
 weight = 50
+description = "The BOMnipotent client offers various output modes (code, raw, error, warn, info, debug, trace) for logging and data output, with examples and usage instructions."
 +++
 
 The BOMnipotent client offers several output modes which can be chosen by a global optional argument:

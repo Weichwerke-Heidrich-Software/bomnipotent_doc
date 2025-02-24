@@ -2,6 +2,7 @@
 title = "Stücklisten / BOMs"
 slug = "boms"
 weight = 10
+description = "Learn about BOMs (Bills of Materials), how to list accessible BOMs using bomnipotent_client, and download them locally, including file naming conventions."
 +++
 
 ## Auflistung

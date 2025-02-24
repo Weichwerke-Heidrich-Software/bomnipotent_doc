@@ -2,6 +2,7 @@
 title = "Benutzersitzung"
 slug = "user-session"
 weight = 40
+description = "Anleitung zur Verwaltung von Benutzersitzungen im BOMnipotent Client, einschließlich Anmeldung, Parameterüberschreibung und Abmeldung."
 +++
 
 ## Anmeldung

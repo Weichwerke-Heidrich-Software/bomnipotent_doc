@@ -2,6 +2,7 @@
 title = "Installing the Client"
 slug = "installation"
 weight = 10
+description = "Learn how to manually or automatically download and install the BOMnipotent Client on Windows, MacOS, and Linux."
 +++
 
 To manually download BOMnipotent Client, go to [https://www.bomnipotent.de/downloads/](https://www.bomnipotent.de/downloads/), select your platform and version, and click on the download button.

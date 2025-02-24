@@ -2,6 +2,7 @@
 title = "User Session"
 slug = "user-session"
 weight = 40
+description = "Guide on managing user sessions in the BOMnipotent Client, including login, overwriting parameters, and logout."
 +++
 
 ## Login

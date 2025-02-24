@@ -2,6 +2,7 @@
 title = "Listing Products"
 slug = "products"
 weight = 50
+description = "Listing of products covered by a CSAF advisory, including product names, vulnerabilities, statuses, CSAF IDs, and TLP levels, with command to generate the list."
 +++
 
 To see exactly which products are covered by a CSAF advisory, run:

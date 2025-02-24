@@ -1,6 +1,7 @@
 +++
 title = "Workflow Integration"
 weight = 30
+description = "Guide for integrating BOMnipotent into workflows, including SBOM creation, vulnerability scanning, and CSAF document generation with tools like Syft, Grype, and Secvisogram."
 +++
 
 Sobald der BOMnipotent-Server läuft, können Sie mit dem Hochladen von Dokumenten beginnen. Ein typischer Workflow beginnt mit der Erstellung eines SBOM, einer Inventarliste der Komponenten, die Ihr Produkt enthält. Dieser Schritt sollte automatisch ausgelöst werden, sobald eine neue Version erstellt wird. Anschließend wird dieses Inventar auf bekannte Sicherheitslücken überprüft. Auch dieser Schritt sollte automatisch erfolgen, jedoch in regelmäßigen Abständen.

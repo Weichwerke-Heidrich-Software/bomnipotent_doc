@@ -1,6 +1,7 @@
 +++
 title = "Workflow Integration"
 weight = 30
+description = "Workflow Integration: Generate SBOMs, scan for vulnerabilities, and create CSAF documents using Syft, Grype, and secvisogram for BOMnipotent Server."
 +++
 
 Once the BOMnipotent Server is up and running, you can begin uploading documents. A typical workflow begins with generating an SBOM, an inventory of what components your product contains. This step should be automatically triggered upon creating a new release. Then this inventory is scanned for known vulnerabilities. This should also be an automatic step, but it should be triggered periodically. If a vulnerability is discovered, it is time to analyse it. This task needs expertise, and thus cannot be done automatically. The result of this analysis is a CSAF document, which tells your users if and how they have to react to this new development.

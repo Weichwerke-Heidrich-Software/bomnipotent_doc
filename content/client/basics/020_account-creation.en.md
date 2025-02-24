@@ -2,6 +2,7 @@
 title = "Account Creation"
 slug = "account-creation"
 weight = 20
+description = "Learn how to create a new user account in BOMnipotent, manage key pairs, and use stored keys for authentication with detailed command examples."
 +++
 
 Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as {{< tlp-white >}} / {{< tlp-clear >}}.

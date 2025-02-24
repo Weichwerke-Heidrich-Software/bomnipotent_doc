@@ -2,6 +2,7 @@
 title = "Authentifizierung"
 slug = "authenticating"
 weight = 30
+description = "Authentifizierung mit BOMnipotent Client: Nutzeraccount-Antrag, Bestätigung, Email und Schlüssel für Serveranfragen, Schlüsselpfad-Option, Nutzersitzung."
 +++
 
 > Authentifizierung setzt voraus, dass Sie [einen Nutzeraccount beantragt haben](/de/client/basics/account-creation/), und dass dieser von einem Nutzermanager [bestätigt wurde](/de/client/manager/user-management/user-approval/).

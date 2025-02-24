@@ -2,6 +2,7 @@
 title = "Imprint"
 slug = "imprint"
 weight = 40
+robots = "noindex"
 +++
 
 Weichwerke Heidrich Software

@@ -2,6 +2,7 @@
 title = "Ausgabemodus"
 slug = "output-mode"
 weight = 50
+description = "Der BOMnipotent-Client bietet verschiedene Ausgabemodi (code, raw, error, warn, info, debug, trace) zur Auswahl, die detailliert beschrieben werden."
 +++
 
 Der BOMnipotent-Client bietet mehrere Ausgabemodi, die über ein globales optionales Argument ausgewählt werden können:

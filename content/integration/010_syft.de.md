@@ -2,6 +2,7 @@
 title = "SBOM-Generierung mit Syft"
 slug = "syft"
 weight = 10
+description = "SBOM-Generierung mit Syft: Einrichtung, Verwendung für Lockfiles, Verzeichnisse und Container, sowie abschließende Bemerkungen zur Zielauswahl und Sicherheitslücken-Scans."
 +++
 
 Eine Software Bill of Materials (SBOM) ist eine Liste aller Softwarekomponenten, die in deinem Produkt verwendet werden. Im Kontext der Lieferkettensicherheit dient sie als maschinenlesbare Liste von Elementen, mit der neue Schwachstellen abgeglichen werden können, sobald sie bekannt werden.

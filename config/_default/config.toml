@@ -2,18 +2,14 @@ baseURL = 'https://doc.bomnipotent.wwh-soft.com/'
 languageCode = 'en-us'
 title = 'BOMnipotent'
 theme = 'relearn'
+copyright = "© {currentYear} Weichwerke Heidrich Software"
+enableRobotsTXT = true
 
 [frontmatter]
 lastmod = ["lastmod", ":fileModTime"]
 
 [taxonomies]
   tag = "tags"
-
-[outputs]
-  # activate the feature to print whole chapters
-  home = ['html', 'rss', 'print']
-  section = ['html', 'rss', 'print']
-  page = ['html', 'rss', 'print']
 
 [params]
 themeVariantAuto = ['wwh-light', 'wwh-dark']
@@ -41,6 +37,17 @@ defaultContentLanguage = 'en'
   [languages.de]
     languageCode = 'de'
     languageName = 'Deutsch'
+
+[outputs]
+  # activate the feature to print whole chapters
+  home = ['html', 'rss', 'print']
+  section = ['html', 'rss', 'print']
+  page = ['html', 'rss', 'print']
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 # Render HTML code in Markdown.
 [markup]

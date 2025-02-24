@@ -2,6 +2,7 @@
 title = "Privacy Policy"
 slug = "privacy-policy"
 weight = 20
+robots = "noindex"
 +++
 
 *Powered by [Termly](https://termly.io)*

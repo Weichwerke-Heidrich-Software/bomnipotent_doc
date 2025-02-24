@@ -2,6 +2,7 @@
 title = "Vulnerability Detection with Grype"
 slug = "grype"
 weight = 20
+description = "Learn how to use Anchore's Grype to scan SBOMs for vulnerabilities, including setup, usage, and exporting vulnerability reports in CycloneDX format."
 +++
 
 Once your SBOM is generated, it is time to continuously scan it for vulnerabilities. Note that some laws, for example the EU's Cyber Resiliance Act, require that products are released without any known vulnerability. The first scan should therefore happen before a release.

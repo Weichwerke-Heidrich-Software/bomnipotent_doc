@@ -2,6 +2,7 @@
 title = "CSAF Dokumente"
 slug = "csaf-docs"
 weight = 40
+description = "Information on how to list and download CSAF documents using BOMnipotent, including command examples and output formats."
 +++
 
 Wenn eine Sicherheitslücke in einer der Komponenten eines von Ihnen genutzten Produkts bekannt wird, stellt sich eine der naheliegendsten Fragen: "Was muss ich jetzt tun?". Das [Common Security Advisory Format (CSAF)](https://www.csaf.io/) soll diese Frage auf automatisierte Weise beantworten. Es handelt sich um ein hauptsächlich maschinenlesbares Format zum Austausch von Sicherheitswarnungen zu Schwachstellen.

@@ -2,6 +2,7 @@
 title = "Sicherheitslücken"
 slug = "vulnerabilities"
 weight = 30
+description = "Anleitung zur Anzeige bekannter Sicherheitslücken eines Produkts mit Beispielausgabe und Erklärung der enthaltenen Informationen wie CVSS-Wert und TLP-Klassifizierung."
 +++
 
 Um eine Liste bekannter Sicherheitslücken anzuzeigen, die ein Produkt betreffen, rufen Sie "vulnerability", "list" sowie den Namen und die Version des Produkts auf:

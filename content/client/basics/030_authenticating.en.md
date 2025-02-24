@@ -2,6 +2,7 @@
 title = "Authenticating"
 slug = "authenticating"
 weight = 30
+description = "Learn how to authenticate with BOMnipotent Client using your email and secret key, including command examples and handling non-default key storage locations."
 +++
 
 > Authentication requires that you have [requested a user account](/client/basics/account-creation/), and that it has [been approved](/client/manager/user-management/user-approval/) by a user manager.
