@@ -14,9 +14,9 @@ Das offizielle [Syft GitHub Repository](https://github.com/anchore/syft?tab=read
 
 Auf manchen Linux-Systemen sollten Sie den Installationspfad (das letzte Argument des Shell-Befehls) auf "~/.local/bin" ändern, da für Änderungen an "/usr/local/bin" Root-Rechte erforderlich sind.
 
-## Nutzung
+## Verwendung
 
-Die grundlegende Nutzung von Syft lautet:
+Die grundlegende Verwendung von Syft lautet:
 ```bash
 syft <Ziel> [Optionen]
 ```
