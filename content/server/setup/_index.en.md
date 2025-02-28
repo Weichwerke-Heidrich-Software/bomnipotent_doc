@@ -1,7 +1,7 @@
 +++
 title = "Setup"
 weight = 10
-draft = true
+description = "Learn how to set up your BOMnipotent Server with various methods, including Docker Compose, to make your server accessible and ready for configuration."
 +++
 
 This section aims to make setting up your server to host an instance of BOMnipotent Server as easy as possible.

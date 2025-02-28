@@ -1,5 +1,5 @@
 +++
-title = "Via Docker Compose"
+title = "Docker Compose"
 slug = "docker-compose"
 weight = 10
 +++
@@ -114,10 +114,10 @@ services:
     container_name: bomnipotent_db
     deploy:
       resources:
-        # Limit the CPU usage to 0.5 cores
         limits:
+          # Limit the CPU usage to 0.5 cores
           cpus: "0.5"
-        # Limit the memory usage to 512MB
+          # Limit the memory usage to 512MB
           memory: "512M"
     environment:
       # Set the database name
@@ -166,10 +166,10 @@ services:
         condition: service_healthy
     deploy:
       resources:
-        # Limit the CPU usage to 0.5 cores
         limits:
+          # Limit the CPU usage to 0.5 cores
           cpus: "0.5"
-        # Limit the memory usage to 512MB
+          # Limit the memory usage to 512MB
           memory: "512M"
     environment:
       # Pass the database password on to the server.
@@ -208,7 +208,7 @@ services:
     # Restart the container if it has stopped for some reason other than a user command
     restart: always
     volumes:
-      # Mount the host
+      # Bind mount the config folder on the host
       - type: bind
         source: ./bomnipotent_config
         target: /etc/bomnipotent_server/configs/
@@ -324,4 +324,4 @@ Your server is now up and running!
 
 > It is not? Please [contact me](https://www.bomnipotent.de/contact)!
 
-Run `docker ps` to check if it is healthy.
+Run "docker ps" to check if it is healthy.
