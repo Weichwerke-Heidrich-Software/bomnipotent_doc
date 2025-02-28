@@ -2,6 +2,7 @@
 title = "Docker Compose"
 slug = "docker-compose"
 weight = 10
+description = "Learn how to set up BOMnipotent Server using Docker Compose, making it directly available from the internet."
 +++
 
 The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/).
