@@ -1,11 +1,14 @@
 +++
-title = "Setup"
+title = "Initiales Aufsetzen"
 weight = 10
-description = "Erfahren Sie, wie Sie Ihren BOMnipotent-Server mit verschiedenen Methoden, einschließlich Docker Compose, einrichten, um Ihren Server zugänglich und für die Konfiguration bereit zu machen."
+
 +++
 
 Dieser Abschnitt soll Ihnen die Einrichtung Ihres Servers zum Hosten einer Instanz von BOMnipotent Server so einfach wie möglich machen.
 
-Hier werden mehrere Einrichtungsvarianten vorgestellt. Sie können diejenige auswählen, die Ihren Anforderungen am besten entspricht, oder sie nach Belieben ändern. Wenn Sie nicht wissen, wo Sie anfangen sollen, ist die [Einrichtung über Docker Compose](/de/server/setup/docker-compose/) eine ausgezeichnete Wahl.
+Die Einrichtung besteht aus den folgenden, notwendigen Schritten:
+1. [Starten Sie den Server.](/de/server/setup/starting)
+1. [Fügen Sie einen Admin hinzu.](/de/server/setup/admin)
+1. [Aktivieren Sie ihre Subscription](/de/server/setup/subscription)
 
-Nachdem Sie die Schritte einer der Varianten befolgt haben, hat Ihr Server eine Standardkonfiguration und sollte über das Internet erreichbar sein. Danach können Sie den [nächsten Abschnitt](/de/server/configuration/) konsultieren, um ihn Ihren Anforderungen entsprechend zu konfigurieren.
+Anschließend können Sie den Server nach Belieben [konfigurieren](/de/server/configuration).
