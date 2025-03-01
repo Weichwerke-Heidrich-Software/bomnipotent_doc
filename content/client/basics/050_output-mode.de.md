@@ -140,6 +140,8 @@ Beachten Sie, dass am Ende der Ausgabe kein Zeilenumbruch oder Wagenrücklaufzei
 
 > "Wagenrücklaufzeichen" ist tatsächlich die deutsche Übersetzung von "carriage return". Abgefahren.
 
+**Achtung:** Im Code Modus hat BOMnipotent Client immer einen Terminal Rückgabewert von 0 (was Erfolg anzeigt), egal welchen HTTP Code es zurück gibt. Das macht es leichter, das Programm in Skripten zu verwenden, welche bei einem Fehler abbrechen.
+
 ## Raw
 
 Für Aufrufe, die auf strukturierte Daten zugreifen, gibt der raw-Modus die Daten im JSON-Format aus, **anstatt** sie zu analysieren und zu verarbeiten.
