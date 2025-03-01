@@ -89,7 +89,7 @@ In der Compose-Datei geben Sie das Container-Setup an. Sobald es reibungslos lä
 
 Eine vollständig einsatzbereite Compose-Datei sieht so aus:
 {{< tabs >}}
-{{% tab title="annotated" %}}
+{{% tab title="kommentiert" %}}
 ```yaml
 # Es ist optional, dem Setup einen Namen zu geben, andernfalls wird er von Docker abgeleitet.
 name: bomnipotent_server_containers
@@ -220,7 +220,7 @@ services:
         read_only: true
 ```
 {{% /tab %}}
-{{% tab title="not annotated" %}}
+{{% tab title="unkommentiert" %}}
 ```yaml
 name: bomnipotent_server_containers
 
@@ -308,12 +308,12 @@ services:
 
 Speichern Sie diese Datei als "compose.yaml". Dann rufen Sie:
 {{< tabs >}}
-{{% tab title="long" %}}
+{{% tab title="lang" %}}
 ```bash
 docker compose --detach
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
 docker compose -d
 ```
