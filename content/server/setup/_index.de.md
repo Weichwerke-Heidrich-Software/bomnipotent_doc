@@ -1,7 +1,7 @@
 +++
 title = "Initiales Aufsetzen"
 weight = 10
-
+description = "Dieser Abschnitt soll Ihnen die Einrichtung Ihres Servers zum Hosten einer Instanz von BOMnipotent Server so einfach wie möglich machen."
 +++
 
 Dieser Abschnitt soll Ihnen die Einrichtung Ihres Servers zum Hosten einer Instanz von BOMnipotent Server so einfach wie möglich machen.

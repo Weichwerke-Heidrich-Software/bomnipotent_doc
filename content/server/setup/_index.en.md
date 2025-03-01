@@ -1,7 +1,7 @@
 +++
 title = "Initial Setup"
 weight = 10
-
+description = "This section aims to make setting up your server to host an instance of BOMnipotent Server as easy as possible."
 +++
 
 This section aims to make setting up your server to host an instance of BOMnipotent Server as easy as possible.
