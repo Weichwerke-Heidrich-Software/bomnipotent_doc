@@ -7,6 +7,7 @@ draft = true
 
 Several interactions with BOMnipotent require a user with admin rights. One of these is granting a new user admin rights. This means that some kind of bootstrapping mechanism is required.
 
+## Step 1: Create User
 First, you will need to [create a user account](/client/basics/account-creation):
 {{< tabs >}}
 {{% tab title="long" %}}
@@ -27,6 +28,64 @@ bomnipotent_client -d <server> user request <your-email>
 [INFO] User request submitted. It now needs to be confirmed by a user manager.
 ```
 
-Next, you will become said user manager: Log into your server.
+To make things a litle less verbose, let's store the domain of your server and your email address in a [user session](/client/basics/user-session/):
+{{< tabs >}}
+{{% tab title="long" %}}
+```bash
+bomnipotent_client --domain=<server> --email=<your-email> session login
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```bash
+bomnipotent_client -d <server> -e <your-email> session login
+```
+{{% /tab %}}
+{{< /tabs >}}
 
-TODO Needs tmp admin overhaul.
+``` {wrap="false" title="output"}
+[INFO] Storing session data in /home/simon/.config/bomnipotent/session.toml
+```
+
+## Step 2: Mark User as TMP Admin
+
+> Due to security reasons, the user needs to already exist in the database at this point. Otherwise, a malicious actor could anticipate the email address you use for your admin, and make their own request at an opportune time. To prevent this, the tmp admin mechanism blocks all requests to newly add this particular user to the database.
+
+Next, you will become the user manager mentioned in the server reply: Log into your server, and in your server configuration file prepend
+```toml
+tmp_admin = "<your-email>"
+```
+
+> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this filed as part of the "[publisher_metadata]" object.
+
+Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
+
+```bash
+docker logs bomnipotent_server
+```
+``` {wrap="false" title="output"}
+...
+2025-03-02 11:30:15 +00:00 [INFO] Received POST request from 101.102.103.104 to https://bomnipotent.wwh-soft.com/user/info@wwh-soft.com
+2025-03-02 11:32:56 +00:00 [INFO] Configuration successfully reloaded from "/etc/bomnipotent_server/configs/config.toml"
+...
+```
+
+## Step 3: Make User a full Admin
+
+The server now treats authenticated requests from that user as if that user was an admin. To become a permanent admin, you first need to approve your user request. Back on the client, call
+
+```bash
+bomnipotent_client user approve <your-email>
+```
+``` {wrap="false" title="output"}
+[INFO] Changed status of info@wwh-soft.com to APPROVED
+```
+
+Now you can make yourself a full server admin:
+```bash
+bomnipotent_client user-role add <your-email> admin
+```
+
+## Step 4: Remove TMP Admin Mark
+
+
+TODO This page needs a further tmp admin overhaul.
