@@ -1,8 +1,8 @@
 +++
 title = "TLP Config"
 slug = "tlp-config"
-weight = 90
+weight = 30
 draft = true
 +++
 
-TODO
+TODO: Needs Config restructuring

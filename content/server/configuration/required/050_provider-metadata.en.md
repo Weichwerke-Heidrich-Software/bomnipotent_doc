@@ -1,8 +1,8 @@
 +++
 title = "CSAF Provider Metadata"
 slug = "provider-metadata"
-weight = 70
+weight = 50
 draft = true
 +++
 
-TODO
+TODO: Needs Config restructuring

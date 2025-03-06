@@ -1,8 +1,8 @@
 +++
 title = "DOS Prevention"
 slug = "dos-prevention"
-weight = 110
+weight = 50
 draft = true
 +++
 
-TODO
+TODO: Needs Config restructuring

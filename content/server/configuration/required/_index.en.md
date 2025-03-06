@@ -1,8 +1,8 @@
 +++
-title = "Log Level"
-slug = "log-level"
+title = "Required Configs"
 weight = 20
 draft = true
 +++
 
 TODO
+

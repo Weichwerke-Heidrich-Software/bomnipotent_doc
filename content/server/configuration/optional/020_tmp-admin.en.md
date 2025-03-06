@@ -1,7 +1,7 @@
 +++
 title = "Temporary Admin"
 slug = "tmp-admin"
-weight = 80
+weight = 20
 draft = true
 +++
 

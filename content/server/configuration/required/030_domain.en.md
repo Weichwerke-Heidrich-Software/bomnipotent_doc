@@ -1,7 +1,7 @@
 +++
 title = "Server Domain"
 slug = "domain"
-weight = 40
+weight = 30
 draft = true
 +++
 

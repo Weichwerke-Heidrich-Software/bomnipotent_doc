@@ -1,8 +1,8 @@
 +++
 title = "TLS Config"
 slug = "tls-config"
-weight = 50
+weight = 40
 draft = true
 +++
 
-TODO
+TODO: Needs Config restructuring
