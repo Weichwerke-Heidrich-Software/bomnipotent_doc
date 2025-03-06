@@ -2,7 +2,6 @@
 title = "The Config File"
 slug = "config-file"
 weight = 10
-draft = true
 +++
 
 Your instance of BOMnipotent Server is configured using a config file. It contains several values, provided in [TOML Format](https://toml.io/en/). The [setup instructions](/server/setup/starting/) each contain a config file that you can fill with your specific data. All configurations accepted by BOMnipotent Server are described in the [rest of this section](/server/configuration/).
@@ -36,8 +35,43 @@ The official [BOMnipotent Server docker image](https://hub.docker.com/r/wwhsoft/
 
 ## Environment Variables
 
-TODO: Reference env var
+Inside your config files, you can reference environment variables. To do so, simply use `${<some-env-var>}` anywhere within the file, where "<some-env-var>" is replaced with the name of the variable.
 
-TODO: .env
+For example, if you provide
+{{< tabs >}}
+{{% tab title=".env" %}}
+```bash
+BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
+```
+{{% /tab %}}
+{{% tab title="bash" %}}
+```bash
+export BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
+```
+{{% /tab %}}
+{{% tab title="cmd" %}}
+```bash
+set BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
+```
+{{% /tab %}}
+{{% tab title="ps1" %}}
+```bash
+$env:BOMNIPOTENT_DB_PW = "eHD5B6S8Kze3"
+```
+{{% /tab %}}
+{{% tab title="docker" %}}
+```bash
+docker run -e BOMNIPOTENT_DB_PW=eHD5B6S8Kze3 wwhsoft/bomnipotent_server --detach
+```
+{{% /tab %}}
+{{< /tabs >}}
+you can use it inside your config.toml like this:
+```toml
+db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
+```
 
-TODO: .env triggers hot reloading
+> You wouldn't actually use this publicly available example passwort, would you?
+
+BOMnipotent Server supports reading variables from a .env file. If a file with that exact name is located next to your config file, the server will try to evaluate it before loading the config.
+
+Changing the .env file while BOMnipotent Server is running will trigger a hot reloading and a re-evaluation of both the .env and the config file.
