@@ -22,7 +22,7 @@ Dieses Tutorial führt Sie durch die Dateien und erklärt sie einzeln.
 
 ## .env
 
-Der BOMnipotent-Server kommuniziert mit einer Datenbank. Derzeit wird nur [PostgreSQL](https://www.postgresql.org/) unterstützt. Die Datenbank ist passwortgeschützt. Es empfiehlt sich, das Passwort in einer separaten .env-Datei zu speichern, anstatt direkt im compose.yaml.
+Der BOMnipotent-Server kommuniziert mit einer Datenbank. Derzeit wird nur [PostgreSQL](https://www.postgresql.org/) als Backend unterstützt. Die Datenbank ist durch ein Passwort geschützt. Es empfiehlt sich, das Passwort in einer separaten .env-Datei zu speichern, anstatt direkt im compose.yaml.
 
 > Der Name der Datei muss ".env" lauten, ansonsten erkennt Docker sie nicht.
 

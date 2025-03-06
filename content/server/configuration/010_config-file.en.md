@@ -7,6 +7,8 @@ draft = true
 
 Your instance of BOMnipotent Server is configured using a config file. It contains several values, provided in [TOML Format](https://toml.io/en/). The [setup instructions](/server/setup/starting/) each contain a config file that you can fill with your specific data. All configurations accepted by BOMnipotent Server are described in the [rest of this section](/server/configuration/).
 
+## (Re)Loading Configurations
+
 Many configurations support hot reloading. This means that you can change them inside the file, and they take effect without requiring a restart of the server. BOMnipotent Server achieves this by watching for changes of files in the directory that the config file resides in. You can verify a successful reload of the configurations by looking at the logs:
 ```bash
 docker logs bomnipotent_server -n 1
@@ -32,6 +34,10 @@ The official [BOMnipotent Server docker image](https://hub.docker.com/r/wwhsoft/
 
 > **Important:** For the hot reloading to work, your docker volume must bind to the **directory** in which the config file is located, **not to the file itself**. With a direct file binding BOMnipotent will not receive file events and thus cannot reload the config on change.
 
+## Environment Variables
 
+TODO: Reference env var
 
-TODO .env
+TODO: .env
+
+TODO: .env triggers hot reloading
