@@ -1,5 +1,5 @@
 +++
-title = "Starting Server"
+title = "Starting the Server"
 weight = 10
 description = "Learn how to set up your BOMnipotent Server with various methods, including Docker Compose, to make your server accessible and ready for configuration."
 +++

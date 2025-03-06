@@ -1,8 +1,7 @@
 +++
-title = "Creating Admin"
+title = "Creating an Admin"
 slug = "admin"
 weight = 20
-draft = true
 +++
 
 Several interactions with BOMnipotent require a user with admin rights. One of these is granting a new user admin rights. This means that some kind of bootstrapping mechanism is required.
@@ -50,12 +49,12 @@ bomnipotent_client -d <server> -e <your-email> session login
 
 > Due to security reasons, the user needs to already exist in the database at this point. Otherwise, a malicious actor could anticipate the email address you use for your admin, and make their own request at an opportune time. To prevent this, the tmp admin mechanism blocks all requests to newly add this particular user to the database.
 
-Next, you will become the user manager mentioned in the server reply: Log into your server, and in your server configuration file prepend
+Next, you will become the user manager mentioned in the server reply: Log onto your server machine, and in your server configuration file prepend
 ```toml
 tmp_admin = "<your-email>"
 ```
 
-> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this filed as part of the "[publisher_metadata]" object.
+> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this field as part of the "[publisher_metadata]" object.
 
 Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
 
@@ -84,8 +83,23 @@ Now you can make yourself a full server admin:
 ```bash
 bomnipotent_client user-role add <your-email> admin
 ```
+``` {wrap="false" title="output"}
+[INFO] Added role to user
+```
 
 ## Step 4: Remove TMP Admin Mark
 
+The stat of being a temporary admin is intended to be, well, temporary. The server logs a warning whenever you use temporary access rights:
+```bash
+docker logs bomnipotent_server -n 4
+```
+``` {wrap="false" title="output"}
+2025-03-06 14:51:35 +00:00 [INFO] Received POST request from info@wwh-soft.com to https://bomnipotent.wwh-soft.com/user/info@wwh-soft.com/roles
+2025-03-06 14:51:35 +00:00 [WARN] Temporary admin functionality is enabled for info@wwh-soft.com
+2025-03-06 14:51:35 +00:00 [INFO] User info@wwh-soft.com was authenticated as a temporary admin
+2025-03-06 14:51:35 +00:00 [INFO] Temporary admin info@wwh-soft.com has permission USER_MANAGEMENT to perform this action
+```
 
-TODO This page needs a further tmp admin overhaul.
+But now that you have successfully made yourself a permanent admin, you can and should remove the "tmp_admin" field from the configuration file again.
+
+You are now read to [activate your subscription](/server/setup/subscription/).
