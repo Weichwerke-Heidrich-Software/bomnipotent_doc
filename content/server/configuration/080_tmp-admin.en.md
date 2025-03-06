@@ -1,7 +1,7 @@
 +++
-title = "Temporary Admin Rights"
+title = "Temporary Admin"
 slug = "tmp-admin"
-weight = 20
+weight = 80
 draft = true
 +++
 

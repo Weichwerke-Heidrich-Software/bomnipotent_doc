@@ -1,6 +1,6 @@
 +++
-title = "Log Level"
-slug = "log-level"
+title = "Database URL"
+slug = "db-url"
 weight = 30
 draft = true
 +++
