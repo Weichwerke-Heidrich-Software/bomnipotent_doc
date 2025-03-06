@@ -5,4 +5,8 @@ weight = 10
 draft = true
 +++
 
-TODO
+
+
+BOMnipotent Server supports five log levels:
+
+TODO: Needs Config restructuring

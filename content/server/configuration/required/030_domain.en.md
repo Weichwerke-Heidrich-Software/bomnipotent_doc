@@ -2,7 +2,6 @@
 title = "Server Domain"
 slug = "domain"
 weight = 30
-draft = true
 +++
 
 BOMnipotent Server is not only reachable per API, but also displays some static XML and HTML pages. One important example is that it may generate [CSAF Provider Metadata](/server/configuration/required/provider-metadata/) for you. As some of these pages reference one another, the server needs to know the full domain behind which it is reachable from the internet.
