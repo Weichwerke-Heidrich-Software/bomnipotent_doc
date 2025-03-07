@@ -4,6 +4,8 @@ slug = "db-url"
 weight = 20
 +++
 
+> The "db_url" configuration does not support hot reloading. You will need to restart the server after modifying it.
+
 BOMnipotent Server is your gateway for providing supply chain security data and managing access to it. The data itself is stored in a SQL database.
 
 > At the moment, only [PostgreSQL](https://www.postgresql.org/) is supported as a driver.
