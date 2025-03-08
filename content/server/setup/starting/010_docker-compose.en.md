@@ -42,17 +42,13 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 
 > The name of the file is arbitrary in principle, but the ready-to-deploy BOMnipotent Server docker container is set up to look for "config.toml".
 
-An almost minimal configuration looks like this:
+A minimal configuration looks like this:
 ```toml {wrap="false" title="config.toml"}
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 # Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
 domain = "https://<your-domain>.<top-level>"
-
-[log]
-# Possible values: error, warn, info, debug, trace
-level = "info"
 
 [tls]
 # The path to your full TLS certificate chain
@@ -82,7 +78,7 @@ It is recommended to store your config.toml file inside a dedicated directory, "
 * In the unlikely case of a security breach of the BOMnipotent Server container, an attacker would only have access to you config directory, and nothing else on your server.
 * BOMnipotent Server will watch the directory for changes and will try to reload the configuration file if it has changed. This does **not** work when exposing only a single file to the docker container.
 
-> Many configuration values support hot reloading, meaning they can be modified without restarting the server. In the above minimal config, the log_level is the most meaningful example that comes to mind.
+> Many configuration values support hot reloading, meaning they can be modified without restarting the server.
 
 After having set up your config.toml, you may want to copy it as for example config.toml.default, to be able to quickly restore your initial configuration. This is entirely optional, though.
 

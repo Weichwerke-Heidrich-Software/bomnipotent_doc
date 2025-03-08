@@ -41,17 +41,13 @@ BOMnipotent Server benötigt eine Konfigurationsdatei, die in [einem anderen Abs
 
 > Der Name der Datei ist grundsätzlich beliebig, aber der einsatzbereite Docker-Container von BOMnipotent Server ist so eingerichtet, dass er nach "config.toml" sucht.
 
-Eine fast minimale Konfiguration sieht so aus:
+Eine minimale Konfiguration sieht so aus:
 ```toml {wrap="false" title="config.toml"}
 # Die db_url hat die Struktur [db_client]://[Benutzer]:[Passwort]@[Container]:[Port]/[db]
 # Beachten Sie, dass ${BOMNIPOTENT_DB_PW} auf eine Umgebungsvariable verweist.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain, hinter der der Bomnipotent-Server gehostet wird
 domain = "https://<Ihre-Domain>.<Top-Level>"
-
-[log]
-# Mögliche Werte: error, warn, info, debug, trace
-level = "info"
 
 [tls]
 # Der Pfad zu Ihrer vollständigen TLS-Zertifikatskette
@@ -81,7 +77,7 @@ Es wird empfohlen, Ihre config.toml-Datei in einem dedizierten Verzeichnis zu sp
 * Im unwahrscheinlichen Fall einer Sicherheitsverletzung des BOMnipotent Server-Containers hätte ein Angreifer nur Zugriff auf Ihr Konfigurationsverzeichnis und sonst nichts auf Ihrem Server.
 * BOMnipotent Server überwacht das Verzeichnis auf Änderungen und versucht, die Konfigurationsdatei neu zu laden, wenn sie geändert wurde. Dies funktioniert **nicht**, wenn nur eine einzige Datei dem Docker-Container zugänglich gemacht wird.
 
-> Viele Konfigurationseinstellungen unterstützen Hot Reloading, d. h. sie können geändert werden, ohne den Server neu zu starten. In der obigen Minimalkonfiguration ist der log_level das sinnvollste Beispiel, welches mir einfällt.
+> Viele Konfigurationseinstellungen unterstützen Hot Reloading, d. h. sie können geändert werden, ohne den Server neu zu starten.
 
 Nachdem Sie Ihre config.toml eingerichtet haben, möchten Sie sie möglicherweise beispielsweise als config.toml.default kopieren, um Ihre ursprüngliche Konfiguration schnell wiederherstellen zu können. Dies ist jedoch völlig optional.
 
