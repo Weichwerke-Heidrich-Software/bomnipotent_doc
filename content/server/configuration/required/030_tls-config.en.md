@@ -14,7 +14,7 @@ Transport Layer Security (TLS), sometimes also called by its legacy name Secure 
 
 In very broad terms, TLS works as outlined in the following paragraphs:
 
-Your server generates a pair of secret and public key. Anyone can use the public key to either encrypt a message that only the secret key can decrypt, or to decrypt a message that was encrypted with the secret key.
+Your server generates a pair of secret and public key. Anyone can use the public key to either *en*crypt a message that only the secret key can *de*crypt, or to *de*crypt a message that was *en*crypted with the secret key.
 
 When a client reaches out to your sever asking for encryption, the latter responds by sending a TLS certificate. It contains several important field:
 - Your severs public key, which the client can now use to send messages only the server can read.
@@ -26,7 +26,7 @@ The digital signature is *not* created with the server's secret key, because the
 
 For practical reasons the root CAs usually do not directly sign a server certificate, but rather an intermediate certificate, which is then used to sign the final certificate.
 
-All in all, the chain of trust looks like this:
+All in all, the chain of trust thus looks like this:
 1. The Client trusts the root CA.
 1. The root CA trusts the intermediate CA.
 1. The intermediate CA trusts the server.
@@ -35,7 +35,7 @@ Thus, the client decides to trust the server and establich an encrypted connecti
 
 ## TLS Configuration
 
-Because BOMnipotent is secure-by-default, it requires you to make some statement about TLS encryption. The "tls" section of your [configuration file](/server/configuration/config-file/) accepts the following fields:
+Because BOMnipotent is secure-by-default, it requires you to make at least one statement about TLS encryption. The "tls" section of your [configuration file](/server/configuration/config-file/) accepts the following fields:
 
 ```toml
 [tls]
@@ -64,13 +64,13 @@ secret_key_path = "/etc/ssl/private/<yourdomain>_private_key.key"
 The file needs to be an [ASCII-armoured](https://openpgp.dev/book/armor.html) secret key in [PEM-Format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail). Luckily, this is the format you typically receive when obtaining a TLS certificate.
 
 The contents of the file could for example look like this:
-``` {wrap="false" title="private key"}
+``` {wrap="false" title="secret key"}
 -----BEGIN PRIVATE KEY-----
 MC4CAQAwBQYDK2VwBCIEIHru40FLuqgasPSWDuZhc5b2EhCGGcVC+j3DuAqiw0/m
 -----END PRIVATE KEY-----
 ```
 
-> This is the private key from a certificate generated for the BOMnipotent integration tests.
+> This is the secret key from a certificate generated for the BOMnipotent integration tests.
 
 ### certificate_chain_path
 
@@ -111,4 +111,3 @@ SgRVZT4wBQYDK2VwA0EARYL+v9oDGjaSW5MhjjpQUFXnAVMFayaKFfsfbbkmTkv4
 The first certificate ("MIIB8j...") authenticates the server, the second one ("MIIBaz...") is that of the root CA.
 
 > There is no intermediate certificate authority here because it is not required for the tests. In your productive environemnt with real certificates you will most likely need to add an intermediate certificate in the middle.
-

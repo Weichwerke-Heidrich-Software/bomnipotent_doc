@@ -36,11 +36,11 @@ While the "name" field is primarily aimed at humans, the "namespace" is used by 
 
 #### Category
 
-The publisher category is a machine readable classification of who you are. According to the [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#32181-document-property---publisher---category), the publisher categories allows the values "coordinator", "discoverer", "other", "translator", "user" or "vendor". As a user of BOMnipotent Server, you are most likely a "vendor", meaning a developer or maintainer of products or a service.
+The publisher category is a machine readable classification of who you are. According to the [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#32181-document-property---publisher---category), the publisher categories allows the values "coordinator", "discoverer", "other", "translator", "user" or "vendor". As a user of BOMnipotent Server, you are most likely a "vendor", meaning a developer or retailer of products or a service.
 
 #### Issuing Authority
 
-This optional field can be used to clarify your connection to the hosted documents. Are you the developer and maintainer? Are you the retailer? The input is in free form.
+This optional field can be used to clarify your connection to the hosted documents. Are you the developer and maintainer? Are you a retailer? The input is in free form.
 
 #### Contact Details
 
@@ -48,7 +48,7 @@ This optional field allows you to offer contact details for general or security 
 
 ### Generated Document
 
-Once you have provided the data and started the server, it will host it under "your-domain/.well-known/csaf/provider-metadata.json". You can see a live example [here](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) and a static example here:
+Once you have provided the data and started the server, the generated document will host it under "your-domain/.well-known/csaf/provider-metadata.json". You can see a live example [here](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) and a static example here:
 
 ```json {wrap="false" title="provider-metadata.json"}
 {
@@ -102,7 +102,7 @@ Once you have provided the data and started the server, it will host it under "y
 
 This file contains a [ROLIE feed](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#7115-requirement-15-rolie-feed) for all your CSAF documents, which is probably the main reason why you do not want to create this document by hand.
 
-The "last_updated" field is generated from the last modified timestamp of your config file.
+The "last_updated" field is generated from the last modification timestamp of your config file.
 
 BOMnipotent assumes that you want your CSAF documents listed and mirrored on publicly available repositories. This only concerns the documents labeled {{<tlp-white>}} / {{<tlp-clear>}}! The aggregators do not have access to any documents classified otherwisely.
 

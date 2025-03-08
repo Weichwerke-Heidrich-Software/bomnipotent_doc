@@ -24,7 +24,7 @@ Let's break this down:
 - The driver is "postgres", which is the only driver currently supported.
 - The username is "bomnipotent_user", because this is the value that was provided to PostgreSQL during the setup.
 - The password is read from the external variable "BOMNIPOTENT_DB_PW", which may be provided via environment or .env file. You could also store it in the config file directly, but this is considered bad practice.
-- The domain is "bomnipotent_db", which is the name of the docker container running the database. For a database in the same environment this would be "localhost", and for an external database it would be some other domain or IP address.
+- The domain is "bomnipotent_db", which is the name of the docker container running the database. For a database in the same environment this would instead be "localhost", and for an external database it would be some other domain or IP address.
 - The port is 5432, which is the default port that the PostgreSQL listens to. In this case the docker container is in the same docker network as the BOMnipotent Server container. Without this direct connection, you would need to map this internal port to an arbitrary external port in the docker setup, and provide this external port in the config.
 - The database itself is also called "bomnipotent_db", because this is the value that was provided to PostgreSQL during the setup.
 
