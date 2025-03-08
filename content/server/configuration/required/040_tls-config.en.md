@@ -2,7 +2,6 @@
 title = "TLS Config"
 slug = "tls-config"
 weight = 40
-draft = true
 +++
 
 > The TLS configuration **does not** support hot reloading. You will need to restart the server after modifying it.
