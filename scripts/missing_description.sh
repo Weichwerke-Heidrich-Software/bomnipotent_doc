@@ -20,5 +20,5 @@ for file in $(find . -name "*.md"); do
 done
 
 if [ $count -gt 0 ]; then
-    echo "Found $count missing translations for published pages!"
+    echo "Found $count missing descriptions for published pages!"
 fi
