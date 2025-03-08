@@ -61,13 +61,13 @@ secret_key_path = "/etc/ssl/private/<Ihr-geheimer-TLS-Schlüssel>"
 
 # Herausgeberdaten gemäß dem unten verlinkten CSAF-Standard
 [provider_metadata.publisher]
+name = "<Geben Sie den Namen Ihrer Organisation an>"
+# Namespace Ihrer Organisation in Form einer vollständigen URL
+namespace = "https://<Ihre Domain>.<Top-Level>"
 # Dies ist höchstwahrscheinlich die gewünschte Kategorie
 category = "vendor"
 # Kontaktdaten sind optional und in freier Form
 contact_details = "<Bei Sicherheitsfragen kontaktieren Sie uns bitte unter...>"
-name = "<Geben Sie den Namen Ihrer Organisation an>"
-# Namespace Ihrer Organisation in Form einer vollständigen URL
-namespace = "https://<Ihre Domain>.<Top-Level>"
 ```
 Füllen Sie die Klammern mit Ihren Daten aus.
 
@@ -75,9 +75,7 @@ Füllen Sie die Klammern mit Ihren Daten aus.
 
 Die Herausgeberdaten werden verwendet, um dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher) zu entsprechen.
 
-Der Namespace der Herausgeberdaten kann und wird sich normalerweise von der Domäne unterscheiden:
-* Die Domäne wird verwendet, um auf Ihre BOMnipotent-Serverinstanz zu verweisen, z. B. "https://bomnipotent.wwh-soft.com"
-* Der Namespace ist ebenfalls eine URL, wird jedoch verwendet, um Ihre Organisation in verschiedenen Sicherheitsdokumenten zu identifizieren. Im Fall von Weichwerke Heidrich Software ist es "https://wwh-soft.com".
+> Der [Abschnitt über Provider-Metadata](/de/server/configuration/required/provider-metadata/) enthält mehr Details dazu was die verschiedenen Felder bedeuten.
 
 Es wird empfohlen, Ihre config.toml-Datei in einem dedizierten Verzeichnis zu speichern, in diesem Beispiel "bomnipotent_config". Die Docker-Compose-Datei gewährt Lesezugriff auf diesen Ordner. Dieses Setup hat zwei Vorteile:
 * Im unwahrscheinlichen Fall einer Sicherheitsverletzung des BOMnipotent Server-Containers hätte ein Angreifer nur Zugriff auf Ihr Konfigurationsverzeichnis und sonst nichts auf Ihrem Server.

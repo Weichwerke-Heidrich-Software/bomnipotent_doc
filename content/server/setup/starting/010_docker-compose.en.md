@@ -62,13 +62,13 @@ secret_key_path = "/etc/ssl/private/<your-secret-TLS-key>"
 
 # Publisher data according to the CSAF Standard linked below
 [provider_metadata.publisher]
+name = "<Provide the name of your organsiation>"
+# Namespace of your organisation, in form of a complete URL
+namespace = "https://<your-domain>.<top-level>"
 # This is most likely the enum variant you want
 category = "vendor"
 # Contact details are optional and in free form
 contact_details = "<For security inquiries, please contact us at...>"
-name = "<Provide the name of your organsiation>"
-# Namespace of your organisation, in form of a complete URL
-namespace = "https://<your-domain>.<top-level>"
 ```
 Fill in the braces with your data.
 
@@ -76,9 +76,7 @@ Fill in the braces with your data.
 
 The publisher data is used to comply with the [OASIS CSAF standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher).
 
-The publisher data namespace can and usually will be different from the domain:
-* The domain is used to point to your BOMnipotent server instance, for example "https://bomnipotent.wwh-soft.com"
-* The namespace is a URL as well, but is used to identify your organsiation accross various security documents. In case of Weichwerke Heidrich Software, it is "https://wwh-soft.com".
+> The [section about provider-metadata](/server/configuration/required/provider-metadata/) goes into more details what the fields actually mean.
 
 It is recommended to store your config.toml file inside a dedicated directory, "bomnipotent_config" in this example. The docker compose file will grant read access to this folder. This setup has two advantages:
 * In the unlikely case of a security breach of the BOMnipotent Server container, an attacker would only have access to you config directory, and nothing else on your server.
