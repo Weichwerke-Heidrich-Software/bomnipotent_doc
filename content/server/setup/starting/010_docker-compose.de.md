@@ -48,15 +48,19 @@ Eine fast minimale Konfiguration sieht so aus:
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain, hinter der der Bomnipotent-Server gehostet wird
 domain = "https://<Ihre-Domain>.<Top-Level>"
-# Mögliche Werte: error, warning, info, debug, trace
-log_level = "info"
+
+[log]
+# Mögliche Werte: error, warn, info, debug, trace
+level = "info"
+
+[tls]
 # Der Pfad zu Ihrer vollständigen TLS-Zertifikatskette
 certificate_chain_path = "/etc/ssl/certs/<Ihre-TLS-Zertifikatskette.crt>"
 # Der Pfad zu Ihrem geheimen TLS-Schlüssel
 secret_key_path = "/etc/ssl/private/<Ihr-geheimer-TLS-Schlüssel>"
 
 # Herausgeberdaten gemäß dem unten verlinkten CSAF-Standard
-[publisher_data]
+[provider_metadata.publisher]
 # Dies ist höchstwahrscheinlich die gewünschte Kategorie
 category = "vendor"
 # Kontaktdaten sind optional und in freier Form

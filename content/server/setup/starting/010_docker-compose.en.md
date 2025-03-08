@@ -49,15 +49,19 @@ An almost minimal configuration looks like this:
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
 domain = "https://<your-domain>.<top-level>"
-# Possible values: error, warning, info, debug, trace
-log_level = "info"
+
+[log]
+# Possible values: error, warn, info, debug, trace
+level = "info"
+
+[tls]
 # The path to your full TLS certificate chain
 certificate_chain_path = "/etc/ssl/certs/<your-TLS-certificate-chain.crt>"
 # The path to your secret TLS key
 secret_key_path = "/etc/ssl/private/<your-secret-TLS-key>"
 
 # Publisher data according to the CSAF Standard linked below
-[publisher_data]
+[provider_metadata.publisher]
 # This is most likely the enum variant you want
 category = "vendor"
 # Contact details are optional and in free form
