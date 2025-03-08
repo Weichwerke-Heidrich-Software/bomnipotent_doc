@@ -10,11 +10,11 @@ Only an admin can give admin permissions to a user. In order to create the first
 tmp_admin = "<email>"
 ```
 
-The whole procedure is described in the [setup instructions](/server/setup/admin/#step-2-mark-user-as-tmp-admin).
+The whole procedure is described in the [setup instructions](/server/setup/admin).
 
 For security reasons, the rules surrounding temporary adminship are rather strict, and allow only one specific order of operations:
 1. Request a new user. The "tmp_admin" parameter may not be set at this point, or the request is denied by the server. A request for a new user with the same email is also denied.
-1. Mark that user as a temporary admin. If the user does not exists, the configuration will fail to load.
+1. Mark that user as a temporary admin in the configuration. If the user does not exists, the configuration will fail to load.
 1. Make the user a proper admin by approving them and adding the admin role.
 1. Remove the "tmp_admin" parameter from the server configuration. The server logs will print warning messages while it is still active.
 

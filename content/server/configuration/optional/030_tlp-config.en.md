@@ -49,4 +49,4 @@ default_tlp = "amber"
 
 If you do not provide a default TLP label, and BOMnipotent encounters an unlabelled document, it will default to {{<tlp-red>}} and log a warning.
 
-The default TLP label is evaluated **at the time of access**, not at the time of writing. Unlabelled documents remain unlabelled in the database. If at any point you change the default TLP label, you change it for all unlabelled documents of past and future .
+The default TLP label is evaluated **at the time of access**, not at the time of writing. Unlabelled documents remain unlabelled in the database. If at any point you change the default TLP label, you thus change it for all unlabelled documents of past and future .
