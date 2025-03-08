@@ -71,6 +71,8 @@ namespace = "https://<Ihre Domain>.<Top-Level>"
 ```
 Füllen Sie die Klammern mit Ihren Daten aus.
 
+> Der [Abschnitt über TLS Konfiguration](/de/server/configuration/required/tls-config/) enthält detailiertere Information wie Sie übliche Fallstricke verhindern können.
+
 Die Herausgeberdaten werden verwendet, um dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher) zu entsprechen.
 
 Der Namespace der Herausgeberdaten kann und wird sich normalerweise von der Domäne unterscheiden:

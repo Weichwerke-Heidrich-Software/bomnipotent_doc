@@ -72,6 +72,8 @@ namespace = "https://<your-domain>.<top-level>"
 ```
 Fill in the braces with your data.
 
+> The [section about TLS configuration](/server/configuration/required/tls-config/) contains more detailed information to avoid common pitfalls.
+
 The publisher data is used to comply with the [OASIS CSAF standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher).
 
 The publisher data namespace can and usually will be different from the domain:
