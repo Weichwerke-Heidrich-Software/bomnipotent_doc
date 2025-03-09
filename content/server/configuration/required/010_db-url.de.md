@@ -1,7 +1,8 @@
 +++
 title = "Datenbank-URL"
 slug = "db-url"
-weight = 20
+weight = 10
+description = "Konfigurationsanleitung für die Datenbank-URL des BOMnipotent Servers, einschließlich Syntax und Beispiel."
 +++
 
 > Die "db_url"-Konfiguration **unterstützt kein** Hot Reloading. Sie müssen den Server nach einer Änderung neu starten.

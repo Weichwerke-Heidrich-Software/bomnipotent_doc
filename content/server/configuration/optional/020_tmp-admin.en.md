@@ -2,6 +2,7 @@
 title = "Temporary Admin"
 slug = "tmp-admin"
 weight = 20
+description = "Learn how to enable temporary admin permissions in your server configuration using the tmp_admin parameter for secure initial admin setup."
 +++
 
 Only an admin can give admin permissions to a user. In order to create the first admin, you therefore need to enable these permissions via another, temporary path. This is done with the config parameter "tmp_admin", which takes the email of a user as an input:

@@ -2,6 +2,7 @@
 title = "DOS Prevention"
 slug = "dos-prevention"
 weight = 50
+description = "Learn how to fine-tune your DOS prevention in BOMnipotent Server."
 +++
 
 Denial of Service (DOS) attacks target programs or servers with the goal of making them unresponsive. They are notoriously hard to mitigate, because they are often based on flooding the service with otherwise legitimate requests.

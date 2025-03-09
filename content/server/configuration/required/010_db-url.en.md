@@ -1,7 +1,8 @@
 +++
 title = "Database URL"
 slug = "db-url"
-weight = 20
+weight = 10
+description = "Learn how to configure the db_url parameter for BOMnipotent Server to connect to a PostgreSQL database, including syntax and example setup."
 +++
 
 > The "db_url" configuration **does not** support hot reloading. You will need to restart the server after modifying it.

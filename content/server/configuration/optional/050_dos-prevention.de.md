@@ -2,6 +2,7 @@
 title = "DOS-Prävention"
 slug = "dos-prevention"
 weight = 50
+description = "Erfahren Sie, wie Sie Ihren BOMnipotent Server Schutz vor DOS-Angriffen feinjustieren können."
 +++
 
 Denial of Service (DOS)-Angriffe haben das Ziel, ein Programm oder einen Server unresponsiv zu machen. Sie sind bekanntermaßen schwer abzuwenden, da sie häufig darauf basieren, den Dienst mit ansonsten legitimen Anfragen zu überfluten.

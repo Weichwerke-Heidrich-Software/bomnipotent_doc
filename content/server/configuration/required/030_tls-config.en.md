@@ -1,7 +1,8 @@
 +++
 title = "TLS Config"
 slug = "tls-config"
-weight = 40
+weight = 30
+description = "Learn how to configure TLS for BOMnipotent Server, including setting up certificates and keys, to ensure secure HTTPS communication."
 +++
 
 > The TLS configuration **does not** support hot reloading. You will need to restart the server after modifying it.

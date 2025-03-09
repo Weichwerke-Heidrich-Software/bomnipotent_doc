@@ -2,6 +2,7 @@
 title = "Temporäre Adminrechte"
 slug = "tmp-admin"
 weight = 20
+description = "Erfahren Sie, wie Sie temporäre Adminrechte mit dem Konfigurationsparameter tmp_admin sicher einrichten und verwalten können."
 +++
 
 Nur ein Administrator kann einem Benutzer Administratorrechte erteilen. Um den ersten Administrator zu erstellen, müssen Sie diese Rechte daher über einen anderen, temporären Pfad aktivieren. Dies geschieht mit dem Konfigurationsparameter "tmp_admin", der die E-Mail-Adresse eines Benutzers als Eingabe verwendet:

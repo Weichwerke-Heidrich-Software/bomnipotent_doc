@@ -2,6 +2,7 @@
 title = "Admin erstellen"
 slug = "admin"
 weight = 20
+description = "Erfahren Sie, wie Sie einen Admin-Benutzer in BOMnipotent erstellen und verwalten, einschließlich der Schritte zu temporären und dauerhaften Admin-Rechten."
 +++
 
 Für einige Interaktionen mit BOMnipotent ist ein Benutzer mit Administratorrechten erforderlich. Eine davon ist die Gewährung von Administratorrechten an einen neuen Benutzer. Dies bedeutet, dass eine Art Bootstrapping-Mechanismus erforderlich ist.

@@ -2,6 +2,7 @@
 title = "Activating your Subscription"
 slug = "subscription"
 weight = 30
+description = "Learn how to activate and manage your BOMnipotent subscription, including acquiring a subscription key and checking subscription status."
 +++
 
 Most actions that add data to your BOMnipotent database require an active subscription, while reading and removing data do not. This policy ensures that your users do not loose access to the existing data should you one day choose to stop paying for the product.

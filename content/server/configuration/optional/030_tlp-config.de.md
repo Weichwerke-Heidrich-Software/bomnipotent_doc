@@ -2,6 +2,7 @@
 title = "TLP Konfiguration"
 slug = "tlp-config"
 weight = 30
+description = "Konfigurieren Sie TLP v1.0 und v2.0 für CSAF-Dokumente im BOMnipotent Server. Erfahren Sie, wie Sie TLP-Labels korrekt anwenden und verwalten."
 +++
 
 CSAF-Dokumente können und sollten mit dem [Traffic Light Protocol (TLP)](https://www.first.org/tlp/) klassifiziert werden. Es klärt, ob und mit wem Sie Dokumente teilen können, auf die Sie Zugriff haben. Der etwas ältere TLP v1.0-Standard kennt vier verschiedene Klassifizierungen:

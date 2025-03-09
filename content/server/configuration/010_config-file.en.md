@@ -2,6 +2,7 @@
 title = "The Config File"
 slug = "config-file"
 weight = 10
+description = "Configure BOMnipotent Server using a TOML config file. Learn about hot reloading, environment variables, and troubleshooting configuration issues."
 +++
 
 Your instance of BOMnipotent Server is configured using a config file. It contains several values, provided in [TOML Format](https://toml.io/en/). The [setup instructions](/server/setup/starting/) each contain a config file that you can fill with your specific data. All configurations accepted by BOMnipotent Server are described in the [rest of this section](/server/configuration/).

@@ -1,7 +1,8 @@
 +++
 title = "CSAF Provider Metadata"
 slug = "provider-metadata"
-weight = 50
+weight = 40
+description = "Learn how to configure CSAF Provider Metadata in BOMnipotent, generate provider-metadata.json, and ensure compliance with OASIS standards."
 +++
 
 The [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#717-requirement-7-provider-metadatajson) requires that providers of CSAF documents offer a "provider-metadata.json", which needs to follow a [specific schema](https://docs.oasis-open.org/csaf/csaf/v2.0/provider_json_schema.json).

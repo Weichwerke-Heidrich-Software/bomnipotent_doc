@@ -2,6 +2,7 @@
 title = "Die Konfigurationsdatei"
 slug = "config-file"
 weight = 10
+description = "Konfigurieren Sie BOMnipotent Server mit einer TOML-Datei. Erfahren Sie, wie Hot Reloading und Umgebungsvariablen die Konfiguration erleichtern."
 +++
 
 Ihre Instanz von BOMnipotent Server wird mithilfe einer Konfigurationsdatei konfiguriert. Sie enthält mehrere Werte, die im [TOML-Format](https://toml.io/en/) übergeben werden. Die [Anleitungen zum Starten des Servers](/de/server/setup/starting/) enthalten jeweils eine Konfigurationsdatei, die Sie mit Ihren spezifischen Daten füllen können. Alle von BOMnipotent Server akzeptierten Konfigurationen werden im [Rest dieses Abschnitts](/de/server/configuration/) beschrieben.
