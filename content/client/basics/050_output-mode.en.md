@@ -138,6 +138,8 @@ fi
 
 Note that there is no newline or carriage return character at the end of the output.
 
+**Attention:** In code mode, BOMnipotent Client always exits with a terminal exit code of 0 (signaling success) if it can obtain any HTTP code. This way, the program is easier to use inside scripts that return on errors.
+
 ## Raw
 
 For calls to BOMnipotent Client that access some structured data, the raw output prints that data in json format **instead** of parsing and processing it.

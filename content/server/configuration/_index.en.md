@@ -1,9 +1,8 @@
 +++
 title = "Configuration"
 weight = 20
-draft = true
+description = "Learn how to configure BOMnipotent server with detailed instructions on required and optional parameters, including the config file setup."
 +++
 
-TODO
+This section describes how you can make an instance of BOMnipotent server your own. It introduces the [config file](/server/configuration/config-file/), and explains all [required](/server/configuration/required/) and [optional](/server/configuration/optional/) parameters it understands.
 
-> Important: For the hot reloading to work, your docker volume must bind to the **directory** in which the config file is located, **not to the file itself**. With a direct file binding BOMnipotent will not receive file events and thus cannot reload the config on change.

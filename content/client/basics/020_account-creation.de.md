@@ -1,17 +1,17 @@
 +++
-title = "Account Erstellung"
+title = "Benutzerkonto Erstellen"
 slug = "account-creation"
 weight = 20
-description = "Anleitung zur Erstellung eines neuen Accounts bei BOMnipotent, einschließlich der Nutzung von Schlüsselpaaren und der Verwaltung gespeicherter Schlüssel."
+description = "Anleitung zur Erstellung eines neuen Benutzerkontos bei BOMnipotent, einschließlich der Nutzung von Schlüsselpaaren und der Verwaltung gespeicherter Schlüssel."
 +++
 
 Die meisten Interaktion mit BOMnipotent benötigen eine Berechtigung. Die einzige Ausnahme ist der Zugriff auf Daten, welche als {{< tlp-white >}} / {{< tlp-clear >}} klassifiziert wurden.
 
-Berechtigungen sind an Nutzeraccounts gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
+Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
 
-## Erstellung eine neuen Accounts
+## Erstellung eine neuen Benutzerkontos
 
-Einen neuen Account erstellen Sie per
+Ein neues Benutzerkonto erstellen Sie per
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```bash
@@ -26,6 +26,12 @@ bomnipotent_client -d <Server> user request <Ihre-Email>
 {{< /tabs >}}
 
 Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://en.wikipedia.org/wiki/Public-key_cryptography) mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generieren. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
+
+``` {wrap="false" title="output"}
+[INFO] Generating new key pair
+[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
+[INFO] User request submitted. It now needs to be confirmed by a user manager.
+```
 
 > Der geheime Schlüssel wird auch häufig "privater Schlüssel" genannt. Der Autor glaubt aber, dass "geheimer Schlüssel" eine treffendere Beschreibung ist, und außerdem, vor allem im Englischen, die Chance auf Verwechslung mit dem öffentlichen Schlüssel verringert.
 

@@ -1,7 +1,8 @@
 +++
-title = "Via Docker Compose"
+title = "Docker Compose"
 slug = "docker-compose"
 weight = 10
+description = "Learn how to set up BOMnipotent Server using Docker Compose, making it directly available from the internet."
 +++
 
 The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/).
@@ -21,7 +22,7 @@ This tutorial will walk through the files and explain them one by one.
 
 ## .env
 
-BOMnipotent server communicates with a database. Currently, only [PostgreSQL](https://www.postgresql.org/) is supported. The database is password protected. It is best practice to store the password inside a separate .env file instead of directly in the compose.yaml.
+BOMnipotent server communicates with a database. Currently, only [PostgreSQL](https://www.postgresql.org/) is supported as a backend. The database is protected by a password. It is best practice to store the password inside a separate .env file instead of directly in the compose.yaml.
 
 > The name of the file must be ".env", otherwise docker will not recognise it.
 
@@ -41,43 +42,43 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 
 > The name of the file is arbitrary in principle, but the ready-to-deploy BOMnipotent Server docker container is set up to look for "config.toml".
 
-An almost minimal configuration looks like this:
+A minimal configuration looks like this:
 ```toml {wrap="false" title="config.toml"}
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 # Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
 domain = "https://<your-domain>.<top-level>"
-# Possible values: error, warning, info, debug, trace
-log_level = "info"
+
+[tls]
 # The path to your full TLS certificate chain
 certificate_chain_path = "/etc/ssl/certs/<your-TLS-certificate-chain.crt>"
 # The path to your secret TLS key
 secret_key_path = "/etc/ssl/private/<your-secret-TLS-key>"
 
 # Publisher data according to the CSAF Standard linked below
-[publisher_data]
+[provider_metadata.publisher]
+name = "<Provide the name of your organsiation>"
+# Namespace of your organisation, in form of a complete URL
+namespace = "https://<your-domain>.<top-level>"
 # This is most likely the enum variant you want
 category = "vendor"
 # Contact details are optional and in free form
 contact_details = "<For security inquiries, please contact us at...>"
-name = "<Provide the name of your organsiation>"
-# Namespace of your organisation, in form of a complete URL
-namespace = "https://<your-domain>.<top-level>"
 ```
 Fill in the braces with your data.
 
+> The [section about TLS configuration](/server/configuration/required/tls-config/) contains more detailed information to avoid common pitfalls.
+
 The publisher data is used to comply with the [OASIS CSAF standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher).
 
-The publisher data namespace can and usually will be different from the domain:
-* The domain is used to point to your BOMnipotent server instance, for example "https://bomnipotent.wwh-soft.com"
-* The namespace is a URL as well, but is used to identify your organsiation accross various security documents. In case of Weichwerke Heidrich Software, it is "https://wwh-soft.com".
+> The [section about provider-metadata](/server/configuration/required/provider-metadata/) goes into more details what the fields actually mean.
 
 It is recommended to store your config.toml file inside a dedicated directory, "bomnipotent_config" in this example. The docker compose file will grant read access to this folder. This setup has two advantages:
 * In the unlikely case of a security breach of the BOMnipotent Server container, an attacker would only have access to you config directory, and nothing else on your server.
 * BOMnipotent Server will watch the directory for changes and will try to reload the configuration file if it has changed. This does **not** work when exposing only a single file to the docker container.
 
-> Many configuration values support hot reloading, meaning they can be modified without restarting the server. In the above minimal config, the log_level is the most meaningful example that comes to mind.
+> Many configuration values support hot reloading, meaning they can be modified without restarting the server.
 
 After having set up your config.toml, you may want to copy it as for example config.toml.default, to be able to quickly restore your initial configuration. This is entirely optional, though.
 
@@ -114,10 +115,10 @@ services:
     container_name: bomnipotent_db
     deploy:
       resources:
-        # Limit the CPU usage to 0.5 cores
         limits:
+          # Limit the CPU usage to 0.5 cores
           cpus: "0.5"
-        # Limit the memory usage to 512MB
+          # Limit the memory usage to 512MB
           memory: "512M"
     environment:
       # Set the database name
@@ -166,10 +167,10 @@ services:
         condition: service_healthy
     deploy:
       resources:
-        # Limit the CPU usage to 0.5 cores
         limits:
+          # Limit the CPU usage to 0.5 cores
           cpus: "0.5"
-        # Limit the memory usage to 512MB
+          # Limit the memory usage to 512MB
           memory: "512M"
     environment:
       # Pass the database password on to the server.
@@ -208,7 +209,7 @@ services:
     # Restart the container if it has stopped for some reason other than a user command
     restart: always
     volumes:
-      # Mount the host
+      # Bind mount the config folder on the host
       - type: bind
         source: ./bomnipotent_config
         target: /etc/bomnipotent_server/configs/
@@ -324,4 +325,4 @@ Your server is now up and running!
 
 > It is not? Please [contact me](https://www.bomnipotent.de/contact)!
 
-Run `docker ps` to check if it is healthy.
+Run "docker ps" to check if it is healthy.
