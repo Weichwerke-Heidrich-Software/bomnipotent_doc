@@ -29,13 +29,13 @@ unknown field `starlight_throughput`, expected one of `allow_http`, `allow_tlp2`
 
 > If the configuration loading produces an error during server startup, the process is aborted. If the configuration cannot be reloaded for an already running server, then the last valid configuration is left untouched.
 
-The official [BOMnipotent Server docker image](https://hub.docker.com/r/wwhsoft/bomnipotent_server) looks for the config file at the path "/etc/bomnipotent_server/configs/config.toml" inside the container. It is recommended to bind the container path "/etc/bomnipotent_server/configs/" to a directory of your choice on the host machine.
+The official [BOMnipotent Server docker image](https://hub.docker.com/r/wwhsoft/bomnipotent_server) looks for the config file at the path "/etc/bomnipotent_server/configs/config.toml" inside the container. It is recommended to read-only bind the container path "/etc/bomnipotent_server/configs/" to a directory of your choice on the host machine.
 
 > **Important:** For the hot reloading to work, your docker volume must bind to the **directory** in which the config file is located, **not to the file itself**. With a direct file binding BOMnipotent will not receive file events and thus cannot reload the config on change.
 
 ## Environment Variables
 
-Inside your config files, you can reference environment variables. To do so, simply use `${<some-env-var>}` anywhere within the file, where "<some-env-var>" is replaced with the name of the variable.
+Inside your config files, you can reference environment variables. To do so, simply use `${<some-env-var>}` anywhere within the file, where "\<some-env-var\>" is replaced with the name of the variable.
 
 For example, if you provide
 {{< tabs >}}
@@ -72,6 +72,6 @@ db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/b
 
 > You wouldn't actually use this publicly available example passwort, would you?
 
-BOMnipotent Server supports reading variables from a .env file. If a file with that exact name is located next to your config file, the server will try to evaluate it before loading the config.
+BOMnipotent Server supports reading variables from a .env file. If a file with that exact name, ".env", is located next to your config file, the server will try to evaluate it before loading the config.
 
 Changing the .env file while BOMnipotent Server is running will trigger a hot reloading and a re-evaluation of both the .env and the config file.

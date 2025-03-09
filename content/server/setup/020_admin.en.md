@@ -49,12 +49,12 @@ bomnipotent_client -d <server> -e <your-email> session login
 
 > Due to security reasons, the user needs to already exist in the database at this point. Otherwise, a malicious actor could anticipate the email address you use for your admin, and make their own request at an opportune time. To prevent this, the tmp admin mechanism blocks all requests to newly add this particular user to the database.
 
-Next, you will become the user manager mentioned in the server reply: Log onto your server machine, and in your server configuration file prepend
+Next, you will become the user manager that was mentioned in the server reply: Log onto your server machine, and in your server configuration file prepend
 ```toml
 tmp_admin = "<your-email>"
 ```
 
-> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this field as part of the "[publisher_metadata]" object.
+> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this field as part of another section.
 
 Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
 
@@ -102,4 +102,4 @@ docker logs bomnipotent_server -n 4
 
 But now that you have successfully made yourself a permanent admin, you can and should remove the "tmp_admin" field from the configuration file again.
 
-You are now read to [activate your subscription](/server/setup/subscription/).
+You are now ready to [activate your subscription](/server/setup/subscription/).

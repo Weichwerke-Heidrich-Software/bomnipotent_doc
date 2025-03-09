@@ -1,17 +1,17 @@
 +++
-title = "Account Erstellung"
+title = "Benutzerkonto Erstellen"
 slug = "account-creation"
 weight = 20
-description = "Anleitung zur Erstellung eines neuen Accounts bei BOMnipotent, einschließlich der Nutzung von Schlüsselpaaren und der Verwaltung gespeicherter Schlüssel."
+description = "Anleitung zur Erstellung eines neuen Benutzerkontos bei BOMnipotent, einschließlich der Nutzung von Schlüsselpaaren und der Verwaltung gespeicherter Schlüssel."
 +++
 
 Die meisten Interaktion mit BOMnipotent benötigen eine Berechtigung. Die einzige Ausnahme ist der Zugriff auf Daten, welche als {{< tlp-white >}} / {{< tlp-clear >}} klassifiziert wurden.
 
-Berechtigungen sind an Nutzeraccounts gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
+Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
 
-## Erstellung eine neuen Accounts
+## Erstellung eine neuen Benutzerkontos
 
-Einen neuen Account erstellen Sie per
+Ein neues Benutzerkonto erstellen Sie per
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```bash
