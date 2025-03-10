@@ -1,6 +1,6 @@
 +++
 title = "Workflow Integration"
-weight = 30
+weight = 40
 description = "Workflow Integration: Generate SBOMs, scan for vulnerabilities, and create CSAF documents using Syft, Grype, and secvisogram for BOMnipotent Server."
 +++
 
