@@ -5,8 +5,7 @@ weight = 10
 robots = "noindex"
 +++
 
-BOMnipotent is based on numerous open source software projects. Several of these are licensesd under terms requiring that the full license text be listed in the documentation. This page serves to fulfil that promise.
-
+BOMnipotent is based on numerous open source software projects. Several (though not all) of these are licensesd under terms requiring that the full license text be listed in the documentation. This page serves to fulfil that promise.
 
 {{< expand title="Apache License 2.0" expanded="false" expanded="false" >}}
 <iframe src="https://spdx.org/licenses/Apache-2.0.html" style="width: 100%; height: 80vh; border: none;"></iframe>
@@ -48,3 +47,6 @@ BOMnipotent is based on numerous open source software projects. Several of these
 <iframe src="https://spdx.org/licenses/Unicode-DFS-2016.html" style="width: 100%; height: 80vh; border: none;"></iframe>
 {{< /expand >}}
 
+{{< expand title="zlib License" expanded="false" expanded="false" >}}
+<iframe src="https://spdx.org/licenses/Zlib.html" style="width: 100%; height: 80vh; border: none;"></iframe>
+{{< /expand >}}
