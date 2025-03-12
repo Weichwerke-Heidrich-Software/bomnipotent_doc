@@ -104,8 +104,11 @@ networks:
     name: bomnipotent_network
 
 volumes:
-  # Definieren Sie das Volume für die dauerhafte Datenspeicherung
+  # Definieren Sie das Volume für die dauerhafte Speicherung der Datenbank
   bomnipotent_data:
+    driver: local
+  # Der Server selbst benötigt auch noch ein Volumen falls Sie nicht das Abonnement nach jedem Neustart aktivieren wollen
+  bomnipotent_subscription:
     driver: local
 
 services:
@@ -218,6 +221,8 @@ services:
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
+      # Die Subscription darf gern in dem Container persisitert werden
+      - bomnipotent_subscription:/root/.config/bomnipotent
 ```
 {{% /tab %}}
 {{% tab title="unkommentiert" %}}
@@ -231,6 +236,8 @@ networks:
 
 volumes:
   bomnipotent_data:
+    driver: local
+  bomnipotent_subscription:
     driver: local
 
 services:
@@ -302,6 +309,7 @@ services:
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
+      - bomnipotent_subscription:/root/.config/bomnipotent
 ```
 {{% /tab %}}
 {{< /tabs >}}
