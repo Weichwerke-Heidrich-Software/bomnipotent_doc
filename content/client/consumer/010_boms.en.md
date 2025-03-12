@@ -32,7 +32,7 @@ To create a local copy of all boms the server exposes to you, run:
 ```bash
 bomnipotent_client bom download ./boms
 ```
-```
+``` {wrap="false" title="output"}
 [INFO] Storing BOMs under ./boms
 ```
 
@@ -54,3 +54,32 @@ tree ./boms/
 ```
 
 Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.
+
+## Get
+
+You can directly display the contents of a single BOM to the consolte output by calling
+```bash
+bomnipotent_client bom get <NAME> <VERSION>
+```
+``` {wrap="false" title="output (cropped)"}
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:60d5a033-6d54-4ac4-a5fa-824d0b04c718",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-23T07:23:33+01:00",
+    "tools": {
+      "components": [
+...
+```
+
+This is especially useful if you want to use the contents of this BOM in a script. For example, to [check for vulnerabilities](/integration/grype/) in the supply chain, you could call:
+```bash
+bomnipotent_client bom get <NAME> <VERSION> | grype
+```
+``` {wrap="false" title="output"}
+NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
+ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
+```

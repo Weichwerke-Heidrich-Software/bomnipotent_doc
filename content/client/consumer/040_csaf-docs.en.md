@@ -64,3 +64,25 @@ It is possible to only download a single file by providing the path as an additi
 ```bash
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
+
+## Get
+
+You can directly display the contents of a single CSAF doc to the consolte output by calling
+```bash
+bomnipotent_client csaf get <ID>
+```
+``` {wrap="false" title="output (cropped)"}
+{
+  "document" : {
+    "aggregate_severity" : {
+      "text" : "mittel"
+    },
+    "category" : "csaf_base",
+    "csaf_version" : "2.0",
+    "distribution" : {
+      "tlp" : {
+        "label" : "WHITE",
+...
+```
+
+This is especially useful if you want to use the contents of this CSAF doc in a script.
