@@ -45,7 +45,7 @@ Erklärung:
 - 'SYFT_FORMAT_PRETTY=1' setzt eine Umgebungsvariable, die Syft anweist, durch Menschen besser lesbare Ausgabe zu produzieren. Eine vollständige Liste der Konfigurationen befindet sich [hier](https://github.com/anchore/syft/wiki/configuration).
 - 'syft' ruft das Syft-Programm auf.
 - 'Cargo.lock' gibt an, dass Syft die Lockfile-Datei des Rust-Ökosystems analysieren soll.
-- '--output cyclonedx-json=./sbom.cdx.json' legt fest, dass die Ausgabe im [CycloneDx](https://cyclonedx.org/) JJSON-Format in der Datei './sbom.cdx.json' gespeichert wird.
+- '--output cyclonedx-json=./sbom.cdx.json' legt fest, dass die Ausgabe im [CycloneDx](https://cyclonedx.org/) JSON-Format in der Datei './sbom.cdx.json' gespeichert wird.
   - Beachten Sie, dass '.cdx.json' die [empfohlene Dateiendung](https://cyclonedx.org/specification/overview/#recognized-file-patterns) ist.
 - '--source-name="BOMnipotent"' gibt an, dass diese Quellen zu der Komponente BOMnipotent gehören, was Syft nicht in allen Fällen automatisch erkennen kann.
   - Das CycloneDX-Schema erfordert möglicherweise keinen Komponentennamen, aber BOMnipotent benötigt ihn.
