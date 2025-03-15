@@ -74,7 +74,7 @@ BOM Schlagsahne_1.0.1 not found in database
 
 The section about [listing vulnerabilities](/client/consumer/vulnerabilities/) in the documentation for consumers covers most aspects of listing vulnerabilities.
 
-One aspect not mentioned there is the "--unassessed" option. Providing it lists only those vulnerabilities that have no CSAF document associated with it. The output can be interpreted as a TODO list.
+One aspect not mentioned there is the "--unassessed" option. With it, BOMnipotent Client lists only those vulnerabilities that have no CSAF document associated with it.
 
 {{< tabs >}}
 {{% tab title="long" %}}
