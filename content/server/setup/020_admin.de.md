@@ -11,12 +11,12 @@ Für einige Interaktionen mit BOMnipotent ist ein Benutzer mit Administratorrech
 Zuerst müssen Sie [ein Benutzerkonto erstellen](/de/client/basics/account-creation):
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --domain=<Server> user request <Ihre-E-Mail>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -d <Server> user request <Ihre-E-Mail>
 ```
 {{% /tab %}}
@@ -31,12 +31,12 @@ bomnipotent_client -d <Server> user request <Ihre-E-Mail>
 Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers und Ihre E-Mail-Adresse in einer [Benutzersitzung](/client/basics/user-session/):
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --domain=<Server> --email=<Ihre-Email> session login
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -d <Server> -e <Ihre-Email> session login
 ```
 {{% /tab %}}
@@ -59,7 +59,7 @@ tmp_admin = "<Ihre-E-Mail>"
 
 Ihre Serverprotokolle sollten jetzt zeigen, dass die Konfiguration zusätzlich zu der Benutzeranfrage, die Sie zuvor gestellt haben, neu geladen wurde.
 
-```bash
+```
 docker logs bomnipotent_server
 ```
 ``` {wrap="false" title="output"}
@@ -73,7 +73,7 @@ docker logs bomnipotent_server
 
 Der Server behandelt authentifizierte Anfragen dieses Benutzers jetzt so, als wäre die Person ein Administrator. Um dauerhafter Administrator zu werden, müssen Sie zuerst Ihre Benutzeranfrage genehmigen. Zurück auf dem Client rufen Sie:
 
-```bash
+```
 bomnipotent_client user approve <Ihre-Email>
 ```
 ``` {wrap="false" title="output"}
@@ -81,7 +81,7 @@ bomnipotent_client user approve <Ihre-Email>
 ```
 
 Jetzt können Sie sich selbst zum vollwertigen Serveradministrator machen:
-```bash
+```
 bomnipotent_client user-role add <Ihre-Email> admin
 ```
 ``` {wrap="false" title="output"}
@@ -91,7 +91,7 @@ bomnipotent_client user-role add <Ihre-Email> admin
 ## Schritt 4: TMP-Administratormarkierung entfernen
 
 Der Status eines temporären Administrators soll, nun ja, temporär sein. Der Server protokolliert eine Warnung, wenn Sie temporäre Zugriffsrechte verwenden:
-```bash
+```
 docker logs bomnipotent_server -n 4
 ```
 ``` {wrap="false" title="output"}

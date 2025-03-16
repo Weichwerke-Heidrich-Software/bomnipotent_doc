@@ -19,12 +19,12 @@ Sobald eine SBOM vorliegt, ist das Scannen auf Schwachstellen sehr einfach:
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --fail-on low
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -f low
 ```
 {{% /tab %}}
@@ -46,12 +46,12 @@ Die Syntax zum Exportieren eines Schwachstellenberichts, der von BOMnipotent ver
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
@@ -60,12 +60,12 @@ grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
 Grype lässt sich leicht mit BOMnipotent kombinieren. Sie können das "bom get" Kommando von BOMnipotent Client verwenden, um den Inhalt einer BOM direkt in die Konsole ausgeben zu lassen, und diesen dann an Grype weitergeben:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}

@@ -12,7 +12,7 @@ Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt der Funktionalitä
 ## Hochladen
 
 Um eine BOM hochzuladen, rufen Sie Folgendes auf:
-```bash
+```
 bomnipotent_client bom upload <PFAD/ZUR/BOM>
 ```
 
@@ -43,12 +43,12 @@ Um Komplikationen zu vermeiden, wird empfohlen, beim Generieren der Stückliste 
 Falls Ihrer BOM aus irgendeinem Grund ein Name oder eine Version fehlt oder diese fehlerhaft ist, bietet der BOMnipotent Client die Möglichkeit, dies über Befehlszeilenargumente zu beheben:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom upload <PFAD/ZUR/BOM> --name-overwrite=<NEUER-NAME> --version-overwrite=<NEUE-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom upload <PFAD/ZUR/BOM> -n <NEUER-NAME> -v <NEUE-VERSION>
 ```
 {{% /tab %}}
@@ -71,12 +71,12 @@ Um BOMnipotent mitzuteilen, wie ein Dokument klassifiziert werden soll, haben Si
 2. Geben Sie eine TLP-Klassifizierung per Kommandozeilenargument an:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom upload <PFAD/ZUR/BOM> --tlp=<label>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom upload <PFAD/ZUR/BOM> -t <LABEL>
 ```
 {{% /tab %}}
@@ -87,7 +87,7 @@ Falls Sie keines von beiden tun, behandelt BOMnipotent alle nicht klassifizierte
 ## Ändern
 
 Im einfachsten Fall funktioniert das Ändern einer vorhandenen Stückliste ähnlich wie das Hochladen einer neuen.
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM>
 ```
 
@@ -101,12 +101,12 @@ Wenn Sie ein neues TLP-Label angeben möchten, können Sie dies über das folgen
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -t <LABEL>
 ```
 {{% /tab %}}
@@ -115,12 +115,12 @@ bomnipotent_client bom modify <PFAD/ZUR/BOM> -t <LABEL>
 Wenn sich der Inhalt der Stückliste nicht geändert hat und Sie nur das TLP-Label ändern möchten, müssen Sie das Dokument nicht erneut hochladen. Anstatt einen Dateipfad anzugeben, können Sie Name und Version der neu zu klassifizierenden BOM angeben:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom modify --name=<NAME> --version=<VERSION> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify -n <NAME> -v <VERSION> -t <LABEL>
 ```
 {{% /tab %}}
@@ -130,14 +130,14 @@ Wenn Sie als TLP-Label "none", "default" oder "unlabelled" angeben, wird jede vo
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --tlp=none
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --tlp=default # Führt dasselbe aus
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --tlp=unlabelled # Führt dasselbe aus
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -t none
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -t default # Führt dasselbe aus
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -t unlabelled # Führt dasselbe aus
@@ -150,12 +150,12 @@ bomnipotent_client bom modify <PFAD/ZUR/BOM> -t unlabelled # Führt dasselbe aus
 Wenn das hochgeladene Dokument einen anderen Namen oder eine andere Version hat als die zu ändernden Daten, müssen Sie diese Informationen dem BOMnipotent-Client mithilfe der folgenden Befehlszeilenargumente mitteilen:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --name=<ALTER-NAME> --version=<ALTE-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -n <ALTER-NAME> -v <ALTE-VERSION>
 ```
 {{% /tab %}}
@@ -167,7 +167,7 @@ BOMnipotent leitet die neuen Daten aus dem von Ihnen bereitgestellten Dokument a
 
 Wie beim Hochladen können Sie den im lokalen Dokument gespeicherten Namen und/oder die Version überschreiben:
 
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --name-overwrite=<NEUER-NAME> --version-overwrite=<NEUE_VERSION>
 ```
 
@@ -177,12 +177,12 @@ Wenn die Daten auf dem Server einen anderen Namen und/oder eine andere Version h
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> --name=<ALTER-NAME> --version=<ALTE-VERSION> --name-overwrite=<NEUER-NAME> --version-overwrite=<NEUE-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PFAD/ZUR/BOM> -n <ALTER-NAME> -v <ALTE-VERSION> --name-overwrite=<NEUER-NAME> --version-overwrite=<NEUE-VERSION>
 ```
 {{% /tab %}}
@@ -193,7 +193,7 @@ Das Ändern von Name und/oder Version ohne Angabe des vollständigen Dokuments i
 ## Löschen
 
 Das Löschen einer BOM ist sehr einfach:
-```bash
+```
 bomnipotent_client bom delete <NAME> <VERSION>
 ```
 

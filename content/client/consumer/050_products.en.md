@@ -7,7 +7,7 @@ description = "Listing of products covered by a CSAF advisory, including product
 
 To see exactly which products are covered by a CSAF advisory, run:
 
-```bash
+```
 ./bomnipotent_client product list
 ```
 

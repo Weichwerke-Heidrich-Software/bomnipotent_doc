@@ -10,14 +10,14 @@ Ihre Instanz von BOMnipotent Server wird mithilfe einer Konfigurationsdatei konf
 ## (Neu-)Laden von Konfigurationen
 
 Viele Konfigurationen unterstützen Hot Reloading. Dies bedeutet, dass Sie sie innerhalb der Datei ändern können und sie wirksam werden, ohne dass ein Neustart des Servers erforderlich ist. BOMnipotent Server erreicht dies, indem es auf Dateiänderungen in dem Verzeichnis lauscht, in dem sich die Konfigurationsdatei befindet. Sie können ein erfolgreiches Neuladen der Konfigurationen überprüfen, indem Sie sich die Protokolle ansehen:
-```bash
+```
 docker logs bomnipotent_server -n 1
 ```
 ``` {wrap="false" title="output"}
 2025-03-06 15:34:45 +00:00 [INFO] Configuration successfully reloaded from "/etc/bomnipotent_server/configs/config.toml"
 ```
 Wenn etwas nicht wie vorgesehen funktioniert, informiert BOMnipotent Sie ebenfalls in den Protokollen darüber:
-```bash
+```
 docker logs bomnipotent_server -n 6
 ```
 ``` {wrap="false" title="output"}
@@ -41,27 +41,27 @@ In Ihren Konfigurationsdateien können Sie auf Umgebungsvariablen verweisen. Ver
 Wenn Sie beispielsweise Folgendes angeben:
 {{< tabs >}}
 {{% tab title=".env" %}}
-```bash
+```
 BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
 ```
 {{% /tab %}}
 {{% tab title="bash" %}}
-```bash
+```
 export BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
 ```
 {{% /tab %}}
 {{% tab title="cmd" %}}
-```bash
+```
 set BOMNIPOTENT_DB_PW=eHD5B6S8Kze3
 ```
 {{% /tab %}}
 {{% tab title="ps1" %}}
-```bash
+```
 $env:BOMNIPOTENT_DB_PW = "eHD5B6S8Kze3"
 ```
 {{% /tab %}}
 {{% tab title="docker" %}}
-```bash
+```
 docker run -e BOMNIPOTENT_DB_PW=eHD5B6S8Kze3 wwhsoft/bomnipotent_server --detach
 ```
 {{% /tab %}}

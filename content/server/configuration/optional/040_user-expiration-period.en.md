@@ -8,7 +8,7 @@ description = "Learn how to configure the user expiration period in BOMnipotent.
 When a request for a new [user account](/client/basics/account-creation/) is made, it deposits a public key in the database.
 
 This key has an expiration data, after which it is not accepted anymore. This can be seen by calling:
-```bash
+```
 ./bomnipotent_client user list
 ```
 ``` {wrap="false" title="output"}

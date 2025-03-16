@@ -10,24 +10,24 @@ To manually download BOMnipotent Client, go to [https://www.bomnipotent.de/downl
 To automate this process further, you can access the download link directly:
 {{< tabs >}}
 {{% tab title="Windows" %}}
-```powershell
+```
 Invoke-WebRequest -Uri https://www.bomnipotent.de/downloads/raw/latest/windows/bomnipotent_client.exe -OutFile bomnipotent_client.exe
 ```
 {{% /tab %}}
 {{% tab title="MacOS" %}}
-```bash
+```
 curl -O https://www.bomnipotent.de/downloads/raw/latest/macos/bomnipotent_client
 chmod +x bomnipotent_client
 ```
 {{% /tab %}}
 {{% tab title="Linux (glibc)" %}}
-```bash
+```
 wget https://www.bomnipotent.de/downloads/raw/latest/debian-glibc/bomnipotent_client;
 chmod +x bomnipotent_client
 ```
 {{% /tab %}}
 {{% tab title="Linux (statically linked)" %}}
-```bash
+```
 wget https://www.bomnipotent.de/downloads/raw/latest/linux-musl/bomnipotent_client;
 chmod +x bomnipotent_client
 ```

@@ -19,12 +19,12 @@ With an SBOM at hand, scanning for vulnerabilities is very easy:
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --fail-on low
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -f low
 ```
 {{% /tab %}}
@@ -47,12 +47,12 @@ The syntax to export a vulnerability report consumable by BOMnipotent is similar
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
@@ -61,12 +61,12 @@ grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
 Grype integrates well with BOMnipotent. You can use the "bom get" command of BOMnipotent Client to directly print the contents of a BOM to the console output, and then pipe it to grype:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}

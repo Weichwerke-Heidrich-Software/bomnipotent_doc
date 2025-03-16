@@ -7,7 +7,7 @@ description = "Produktliste eines CSAF Dokuments mit Befehlsanleitung und tabell
 
 Um genau zu sehen, welche Produkte von einem CSAF Dokument behandelt werden, führen Sie den folgenden Befehl aus:
 
-```bash
+```
 ./bomnipotent_client product list
 ```
 

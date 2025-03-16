@@ -14,7 +14,7 @@ Shortly after you have acquired a subscription, you will receive an email contai
 Subscriptions can only be managed by a user with the "admin" role. [Create one](/server/setup/admin/) if you haven't already.
 
 Logged in as that user, call
-```bash
+```
 bomnipotent_client subscription activate <your-subscription-key>
 ```
 ``` {wrap="false" title="output"}
@@ -22,7 +22,7 @@ bomnipotent_client subscription activate <your-subscription-key>
 ```
 
 To check the current status of your subscription, run
-```bash
+```
 bomnipotent_client subscription status
 ```
 ``` {wrap="false" title="output"}

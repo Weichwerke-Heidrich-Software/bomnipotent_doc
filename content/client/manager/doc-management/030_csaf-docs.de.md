@@ -12,7 +12,7 @@ Ein Common Security Advisory Format (CSAF)-Dokument ist die Antwort eines Herste
 ## Hochladen
 
 Um ein CSAF-Dokument hochzuladen, rufen Sie
-```bash
+```
 bomnipotent_client csaf upload <PFAD/ZUM/CSAF> auf.
 ```
 
@@ -23,7 +23,7 @@ bomnipotent_client csaf upload <PFAD/ZUM/CSAF> auf.
 Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
 Sie können das Ergebnis des Vorgangs mit
-```bash
+```
 bomnipotent_client csaf list
 ```
 ``` {wrap="false" title="Ausgabe"}
@@ -53,7 +53,7 @@ Falls das Dokument nicht den optionalen TLP-Labeleintrag enthält, wird es mit d
 
 Wenn sich der Status Ihres Dokuments ändert, Sie es neu klassifizieren möchten oder neue Informationen vorliegen, können Sie es ändern. Um die neue Version hochzuladen, rufen Sie Folgendes auf:
 
-```bash
+```
 bomnipotent_client csaf delete <CSAF-ID> <PFAD/ZUM/CSAF>
 ```
 ``` {wrap="false" title="Ausgabe"}
@@ -65,7 +65,7 @@ Der Befehl benötigt die ID des gehosteten CSAF-Dokuments, da er diese im Prinzi
 ## Löschen
 
 Um ein CSAF-Dokument von Ihrem Server zu löschen (was Sie wirklich nur tun sollten, falls etwas komplett schiefgelaufen ist), rufen Sie einfach Folgendes auf:
-```bash
+```
 bomnipotent_client csaf delete <CSAF-ID>
 ```
 ``` {wrap="false" title="Ausgabe"}

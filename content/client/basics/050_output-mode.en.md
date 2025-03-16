@@ -20,14 +20,14 @@ Output modes [code](#code) and [raw](#raw) have special behaviour treated below.
 
 The default output mode is info. It prints some information, but does not overwhelm the user.
 
-``` bash
+```
 bomnipotent_client health
 ```
 ``` {wrap="false" title="output"}
 Service is healthy
 ```
 
-``` bash
+```
 bomnipotent_client bom list
 ```
 ``` {wrap="false" title="output"}
@@ -49,12 +49,12 @@ Error: "No approved and currently valid public keys were found for user admin@ww
 The debug output mode prints some additional information which may be of interest when looking for the cause of an error in the input or setup:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --output=debug health
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -o debug health
 ```
 {{% /tab %}}
@@ -75,12 +75,12 @@ Service is healthy
 In output mode trace, BOMnipotent additionally prints the module where the log message originated. This is mainly interesting for finding the cause of an error in the program itself.
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --output=trace health
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -o trace health
 ```
 {{% /tab %}}
@@ -112,12 +112,12 @@ Service is healthy
 The code output prints only the [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) of the response.
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --output=code health
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -o code health
 ```
 {{% /tab %}}
@@ -128,7 +128,7 @@ bomnipotent_client -o code health
 ```
 
 This can come in handy if you want to use BOMnipotent Client in scripts:
-```bash
+```
 code=$(./bomnipotent_client --domain=$domain --output=code health)
 if (( code != 200 )); then
     echo "Server at $domain is not healthy!"
@@ -146,12 +146,12 @@ For calls to BOMnipotent Client that access some structured data, the raw output
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --output=raw bom list
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -o raw bom list
 ```
 {{% /tab %}}

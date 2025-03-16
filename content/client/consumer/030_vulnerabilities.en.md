@@ -7,7 +7,7 @@ description = "Learn how to list known vulnerabilities affecting a product using
 
 To dispaly a list of known vulnerabilities affecting a product, call "vulnerability", "list" and then name and version of the product:
 
-```bash
+```
 bomnipotent_client vulnerability list vulny 0.1.0
 ```
 
@@ -24,7 +24,7 @@ bomnipotent_client vulnerability list vulny 0.1.0
 Product name and version are optional positional arguments. If you do not provide a version, you will get the output for all versions of the product, and if you do not provide either, the output of all products accessible to you.
 
 
-```bash
+```
 bomnipotent_client vulnerability list
 ```
 

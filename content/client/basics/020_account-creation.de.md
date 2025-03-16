@@ -14,12 +14,12 @@ Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berec
 Ein neues Benutzerkonto erstellen Sie per
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --domain=<Server> user request <Ihre-Email>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -d <Server> user request <Ihre-Email>
 ```
 {{% /tab %}}
@@ -50,12 +50,12 @@ Falls Sie ein Schlüsselpaar im üblichen Nutzerordner (welcher auf Ihre Platfor
 Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wollen, der an einem anderen Ord gespeichert ist, dann können Sie den Pfad als positionales Argument angeben:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --domain=<Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -d <Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
 ```
 {{% /tab %}}

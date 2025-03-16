@@ -318,12 +318,12 @@ services:
 Store this as "compose.yaml". Then, call:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 docker compose --detach
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 docker compose -d
 ```
 {{% /tab %}}

@@ -14,7 +14,7 @@ Kurz nachdem Sie ein Abonnement erworben haben, erhalten Sie eine E-Mail mit Ihr
 Abonnements können nur von einem Benutzer mit der Rolle "Administrator" verwaltet werden. [Erstellen Sie eines](/de/server/setup/admin/), falls Sie dies noch nicht getan haben.
 
 Als dieser Benutzer angemeldet, rufen Sie:
-```bash
+```
 bomnipotent_client subscription activate <Ihr Abonnementschlüssel>
 ```
 ``` {wrap="false" title="output"}
@@ -22,7 +22,7 @@ bomnipotent_client subscription activate <Ihr Abonnementschlüssel>
 ```
 
 Um den aktuellen Status Ihres Abonnements zu überprüfen, führen Sie Folgendes aus:
-```bash
+```
 bomnipotent_client subscription status
 ```
 ``` {wrap="false" title="output"}

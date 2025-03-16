@@ -12,7 +12,7 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 ## Uploading
 
 To upload a BOM, call:
-```bash
+```
 bomnipotent_client bom upload <PATH/TO/BOM>
 ```
 
@@ -43,12 +43,12 @@ To avoid any complications, it is recommended that you specify a name and versio
 If for some reason your BOM lacks a name or version, or if it is incorrect, the BOMnipotent Client offers to remedy that via command line arguments:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom upload <PATH/TO/BOM> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom upload <PATH/TO/BOM> -n <NEW-NAME> -v <NEW-VERSION>
 ```
 {{% /tab %}}
@@ -71,12 +71,12 @@ To tell BOMnipotent how to classify a document, you have two options:
 2. Provide a tlp classification via command line argument:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom upload <PATH/TO/BOM> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom upload <PATH/TO/BOM> -t <LABEL>
 ```
 {{% /tab %}}
@@ -88,7 +88,7 @@ If you do neither, BOMnipotent will treat any unclassified documents as if they 
 ## Modifying
 
 In the simplest case, modifying an existing BOM works very much like uploading a new one.
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM>
 ```
 
@@ -102,12 +102,12 @@ If you want to specify a new TLP label, you can do so via argument:
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> -t <LABEL>
 ```
 {{% /tab %}}
@@ -116,12 +116,12 @@ bomnipotent_client bom modify <PATH/TO/BOM> -t <LABEL>
 If the contents of the BOM have not changed and you just want to modify the TLP label, you do not need to upload the document again. Instead of providing a path to a file, you can specify name and version of the BOM you want to reclassify:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify --name=<NAME> --version=<VERSION> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify -n <name> -v <version> -t <label>
 ```
 {{% /tab %}}
@@ -131,14 +131,14 @@ If you specify "none", "default" or "unlabelled" as the TLP label, any existing 
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> --tlp=none
 bomnipotent_client bom modify <PATH/TO/BOM> --tlp=default # Does the same
 bomnipotent_client bom modify <PATH/TO/BOM> --tlp=unlabelled # Does the same
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> -t none
 bomnipotent_client bom modify <PATH/TO/BOM> -t default # Does the same
 bomnipotent_client bom modify <PATH/TO/BOM> -t unlabelled # Does the same
@@ -151,12 +151,12 @@ bomnipotent_client bom modify <PATH/TO/BOM> -t unlabelled # Does the same
 If the document you are uploading has a different name or version than the data it shall modify, you need to provide that information to the BOMnipotent Client using command line arguments:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> --name=<OLD-NAME> --version=<OLD-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> -n <OLD-NAME> -v <OLD-VERSION>
 ```
 {{% /tab %}}
@@ -168,7 +168,7 @@ BOMnipotent will infer the new data from the document you provide and change the
 
 As with uploading, it is possible to overwrite the name and/or version stored in the local document:
 
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 
@@ -178,12 +178,12 @@ If the data on the server has a different name and/or version than specified in 
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> --name=<OLD-NAME> --version=<OLD-VERSION> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom modify <PATH/TO/BOM> -n <OLD-NAME> -v <OLD-VERSION> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
@@ -195,7 +195,7 @@ Changing name and/or version without providing the complete document is not supp
 ## Deleting
 
 Deleting a BOM is very straightforward:
-```bash
+```
 bomnipotent_client bom delete <NAME> <VERSION>
 ```
 

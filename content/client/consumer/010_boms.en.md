@@ -10,7 +10,7 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 ## List
 
 Running
-```bash
+```
 bomnipotent_client bom list
 ```
 will list all BOMs accessible to you:
@@ -29,7 +29,7 @@ BOMs with label {{<tlp-white>}} / {{<tlp-clear>}} are visible to everyone. In th
 ## Download
 
 To create a local copy of all boms the server exposes to you, run:
-```bash
+```
 bomnipotent_client bom download ./boms
 ```
 ```
@@ -41,7 +41,7 @@ This will store the BOMs in the provided folder ("./boms", in this example). It 
 > To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display an error instead of silently overwriting a file.
 
 
-```bash
+```
 tree ./boms/
 ```
 ``` {wrap="false" title="output"}

@@ -17,12 +17,12 @@ Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und 
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
@@ -35,7 +35,7 @@ Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und 
 ## Aktualisierung
 
 Der Befehl zum Aktualisieren der mit einer BOM verknüpften Schwachstellen lautet:
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES>
 ```
 ``` {wrap="false" title="Ausgabe"}
@@ -47,12 +47,12 @@ Das Argument "\<VULNERABILITIES\>" muss ein Pfad zu einer Datei im [CycloneDX JS
 Idealerweise enthält diese Datei den Namen und die Version der zugehörigen BOM. In diesem Fall werden diese automatisch gelesen. Falls einer der Werte fehlt (z. B. aufgrund eines [bekannten Fehlers](https://github.com/anchore/grype/issues/2418) in grype), können Sie ihn mit einem optionalen Argument angeben:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES> --name=<NAME> --version=<VERSION>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES> -n <NAME> -v <VERSION>
 ```
 {{% /tab %}}
@@ -79,12 +79,12 @@ Ein Aspekt, der dort nicht erwähnt wird, ist die Option "--unassessed". Damit l
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client vulnerability list --unassessed
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client vulnerability list -u
 ```
 {{% /tab %}}
@@ -111,12 +111,12 @@ Sie können diese Option frei mit der Angabe eines Produktnamens oder einer Vers
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client vulnerability list <NAME> <VERSION> --unassessed
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client vulnerability list <NAME> <VERSION>  -u
 ```
 {{% /tab %}}

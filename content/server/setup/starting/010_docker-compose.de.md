@@ -317,12 +317,12 @@ services:
 Speichern Sie diese Datei als "compose.yaml". Dann rufen Sie:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 docker compose --detach
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 docker compose -d
 ```
 {{% /tab %}}
