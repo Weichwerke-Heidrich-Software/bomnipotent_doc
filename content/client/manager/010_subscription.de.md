@@ -39,12 +39,12 @@ Um Informationen über den aktuellen Status Ihres Abonnements zu erhalten, rufen
 bomnipotent_client subscription status
 ```
 ``` {wrap="false" title="Ausgabe"}
-╭──────────┬───────────────────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product                   │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼───────────────────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***qcgy2 │ pro_01jg3k3ndmpmyx9z7he86 │ active              │ 2026-03-01 04:19:13 UTC │ 2025-03-01 04:19:13 UTC │ The Subscription is valid │
-│          │ z5430                     │                     │                         │                         │                           │
-╰──────────┴───────────────────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
+╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
+│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
+├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
+│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
+│          │             │                     │                         │                         │ .                         │
+╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
 ```
 
 Diese Ausgabe enthält eine verschleierte Variante Ihres Schlüssels, einen Status und einige zusätzliche Informationen.
