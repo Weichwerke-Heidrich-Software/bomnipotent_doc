@@ -17,7 +17,7 @@ Als dieser Benutzer angemeldet, rufen Sie:
 ```
 bomnipotent_client subscription activate <Ihr Abonnementschlüssel>
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 [INFO] Successfully stored subscription key.
 ```
 
@@ -25,11 +25,11 @@ Um den aktuellen Status Ihres Abonnements zu überprüfen, führen Sie Folgendes
 ```
 bomnipotent_client subscription status
 ```
-``` {wrap="false" title="output"}
-╭──────────┬───────────────────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product                   │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼───────────────────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***qcgy2 │ pro_01jg3k3ndmpmyx9z7he86 │ active              │ 2026-03-01 04:19:13 UTC │ 2025-03-01 04:19:13 UTC │ The Subscription is valid │
-│          │ z5430                     │                     │                         │                         │                           │
-╰──────────┴───────────────────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
+``` {wrap="false" title="Ausgabe"}
+╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
+│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
+├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
+│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
+│          │             │                     │                         │                         │ .                         │
+╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
 ```

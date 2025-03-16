@@ -64,3 +64,25 @@ Es ist auch möglich, eine einzelne Datei herunterzuladen, indem der Pfad als zu
 ```
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
+
+## Anzeigen
+
+Sie können den Inhalt eines einzelnen CSAF Dokuments direkt in die Konsole ausgeben lassen, indem Sie folgendes rufen:
+```bash
+bomnipotent_client csaf get <ID>
+```
+``` {wrap="false" title="output (cropped)"}
+{
+  "document" : {
+    "aggregate_severity" : {
+      "text" : "mittel"
+    },
+    "category" : "csaf_base",
+    "csaf_version" : "2.0",
+    "distribution" : {
+      "tlp" : {
+        "label" : "WHITE",
+...
+```
+
+Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skript weiterverwenden wollen.

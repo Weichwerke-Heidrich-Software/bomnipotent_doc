@@ -1,6 +1,6 @@
 +++
 title = "Legal Stuff"
-weight = 40
+weight = 50
 robots = "noindex"
 +++
 

@@ -33,7 +33,7 @@ Um eine lokale Kopie aller BOMs zu erstellen, die der Server für Sie bereitstel
 ```
 bomnipotent_client bom download ./boms
 ```
-```
+``` {wrap="false" title="output"}
 [INFO] Storing BOMs under ./boms
 ```
 
@@ -55,3 +55,32 @@ tree ./boms/
 ```
 
 Bevor BOMnipotent Client Dateien zum Download anfordert, erstellt er eine Inventarliste der bereits im Ordner vorhandenen BOMs und lädt nur die fehlenden Dateien herunter.
+
+## Anzeigen
+
+Sie können den Inhalt einer einzelnen BOM direkt in die Konsole ausgeben lassen, indem Sie folgendes rufen:
+```bash
+bomnipotent_client bom get <NAME> <VERSION>
+```
+``` {wrap="false" title="output (abgeschnitten)"}
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:60d5a033-6d54-4ac4-a5fa-824d0b04c718",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-02-23T07:23:33+01:00",
+    "tools": {
+      "components": [
+...
+```
+
+Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterverwenden wollen. Falls sie zum Beispiel nach [Schwachstellen in der Lieferkette](/de/integration/grype/) schauen wollen, können sie folgendes rufen:
+```bash
+bomnipotent_client bom get <NAME> <VERSION> | grype
+```
+``` {wrap="false" title="output"}
+NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
+ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
+```

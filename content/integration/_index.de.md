@@ -1,6 +1,6 @@
 +++
 title = "Workflow Integration"
-weight = 30
+weight = 40
 description = "Guide for integrating BOMnipotent into workflows, including SBOM creation, vulnerability scanning, and CSAF document generation with tools like Syft, Grype, and Secvisogram."
 +++
 
