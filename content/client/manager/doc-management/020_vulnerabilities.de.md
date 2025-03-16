@@ -2,6 +2,7 @@
 title = "Sicherheitslücken"
 slug = "vulnerabilities"
 weight = 20
+description = "Erfahren Sie, wie Sie Sicherheitslücken in Ihrer Lieferkette mit BOMnipotent und Tools wie grype erkennen, aktualisieren und auflisten können."
 +++
 
 Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalts einer Stückliste (BOM), also aller Komponenten eines Produkts, mit Datenbanken bekannter Schwachstellen.

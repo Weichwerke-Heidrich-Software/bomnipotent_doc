@@ -1,6 +1,7 @@
 +++
 title = "Document Management"
 weight = 20
+description = "Document Management in BOMnipotent: Manage BOMs and CSAF documents, check for vulnerabilities, and update security advisories efficiently."
 +++
 
 BOMnipotent knows two types of supply chain security documents: Bills of Materials (BOMs) and Common Security Advisory Format (CSAF) documents. In addition, it can host information on vulnerabilities associated with a BOM.

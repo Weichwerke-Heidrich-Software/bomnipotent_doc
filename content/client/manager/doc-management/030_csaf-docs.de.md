@@ -2,6 +2,7 @@
 title = "CSAF Dokumente"
 slug = "csaf-docs"
 weight = 30
+description = "Anleitung zur Verwaltung von CSAF-Dokumenten: Hochladen, Ändern und Löschen von Sicherheitsberichten gemäß OASIS CSAF-Standard."
 +++
 
 Ein Common Security Advisory Format (CSAF)-Dokument ist die Antwort eines Herstellers auf eine neu entdeckte Sicherheitslücke. Es ist ein maschinenlesbares Format, welches Informationen darüber verbreitet, wie Nutzer Ihres Produkts reagieren sollten: Muss auf eine neuere Version aktualisiert werden? Muss eine Konfiguration geändert werden? Ist Ihr Produkt überhaupt betroffen oder ruft es den betroffenen Teil der anfälligen Bibliothek möglicherweise nie auf?

@@ -2,6 +2,7 @@
 title = "Vulnerabilities"
 slug = "vulnerabilities"
 weight = 20
+description = "Learn how to manage and update vulnerabilities in your BOM using BOMnipotent. Includes commands and troubleshooting tips."
 +++
 
 An activity at the core of supply chain security is to compare the contents of a BOM, meaning all components of a product, to databases of known vulnerabilities.

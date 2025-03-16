@@ -2,6 +2,7 @@
 title = "BOMs"
 slug = "boms"
 weight = 10
+description = "Erfahren Sie, wie Sie Stücklisten (BOMs) in BOMnipotent hochladen, ändern und löschen."
 +++
 
 Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt der Funktionalität und des Namens von BOMnipotents. Eine BOM ist eine Liste aller Komponenten, aus denen ein Produkt besteht. Im Kontext der Cybersicherheit ist die Software-BOM (SBOM) die bekannteste Variante, BOMs ermöglichen aber auch allgemeinere Überlegungen.

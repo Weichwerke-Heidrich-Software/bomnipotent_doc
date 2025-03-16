@@ -2,6 +2,7 @@
 title = "CSAF Documents"
 slug = "csaf-docs"
 weight = 30
+description = "Learn how to manage CSAF documents with BOMnipotent Client, including uploading, modifying, and deleting security advisories."
 +++
 
 A Common Security Advisory Format (CSAF) document is a vendor's response to a newly discovered vulnerability. It is a machine-readable format to spread information on how a user of your product should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?

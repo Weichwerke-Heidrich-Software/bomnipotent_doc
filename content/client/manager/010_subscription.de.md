@@ -2,6 +2,7 @@
 title = "Abonnementverwaltung"
 slug = "subscription"
 weight = 10
+description = "Aktivieren, prüfen und entfernen Sie Ihren BOMnipotent Abonnementenschlüssel."
 +++
 
 Die meisten Aktionen, die Daten zu Ihrer BOMnipotent-Datenbank hinzufügen, erfordern ein aktives Abonnement. Das Lesen und Entfernen von Daten hingegen nicht. Diese Richtlinie stellt sicher, dass Ihre Nutzer den Zugriff auf die vorhandenen Daten nicht verlieren, falls Sie das Produkt nicht mehr bezahlen möchten.
