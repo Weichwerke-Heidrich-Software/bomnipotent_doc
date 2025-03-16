@@ -43,9 +43,9 @@
 
   --MENU-VISITED-color: var(--WWH-PURPLE); /* icon color of visited menu topics if configured */
 
-  --BOX-CAPTION-color: rgba(240, 240, 240, 1); /* text color of colored box titles */
-  --BOX-BG-color: rgba(20, 20, 20, 1); /* background color of colored boxes */
-  --BOX-TEXT-color: rgba(224, 224, 224, 1); /* text color of colored box content */
+  --BOX-CAPTION-color: var(--WWH-LIGHT); /* text color of colored box titles */
+  --BOX-BG-color: var(--WWH-DARK); /* background color of colored boxes */
+  --BOX-TEXT-color: var(--WWH-LIGHT); /* text color of colored box content */
 }
 
 body a#R-logo,
