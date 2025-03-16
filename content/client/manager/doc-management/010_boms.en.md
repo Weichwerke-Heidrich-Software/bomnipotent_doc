@@ -10,16 +10,14 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 
 ## Uploading
 
-
-
 To upload a BOM, call:
 ```bash
-bomnipotent_client bom upload <path/to/bom>
+bomnipotent_client bom upload <PATH/TO/BOM>
 ```
 
 BOMnipotent expects its BOMs in the structured [CycloneDX](https://cyclonedx.org/) JSON format.
 
-> Consult the [Syft tutorial](/environment/syft) to learn how to generate a Bill of Materials (BOM) for your product.
+> Consult the [Syft tutorial](/integration/syft) to learn how to generate a BOM for your product.
 
 The BOMnipotent Client will read the file at the provided path and upload its content. It can then be viewed by the consumers with appropriate permissions.
 
@@ -32,12 +30,11 @@ To add a BOM to the database, the BOMnipotent Client has to have some additional
 {{< tabs >}}
 {{% tab title="Inference (recommended)" %}}
 
-BOMnipotent uses name and version to identify a BOM. It tries to infer these from the provided CycloneDX JSON fields metadata.component.name and metadata.component.version. However, according to the [CycloneDX specification](https://cyclonedx.org/docs/1.6/json/#metadata_component), the metadata.component field is optional.
+BOMnipotent uses name and version to identify a BOM. It tries to infer these from the provided CycloneDX JSON fields "metadata.component.name" and "metadata.component.version". However, according to the [CycloneDX specification](https://cyclonedx.org/docs/1.6/json/#metadata_component), the metadata.component field is optional.
 
-If no version is specified, BOMnipotent instead uses the date of metadata.timestamp, if available.
+If no version is specified, BOMnipotent instead uses the date of "metadata.timestamp", if available.
 
-To avoid any complications, it is recommended that you specify a name and version when generating the BOM, as is shown in the [Syft tutorial](/environment/syft).
-
+To avoid any complications, it is recommended that you specify a name and version when generating the BOM, as is shown in the [Syft tutorial](/integration/syft).
 
 {{% /tab %}}
 {{% tab title="Overwriting (not particularly recommended)" %}}
@@ -46,12 +43,12 @@ If for some reason your BOM lacks a name or version, or if it is incorrect, the 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom upload <path/to/bom> --name-overwrite=<new-name> --version-overwrite=<new-version>
+bomnipotent_client bom upload <PATH/TO/BOM> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client bom upload <path/to/bom> -n <new-name> -v <new-version>
+bomnipotent_client bom upload <PATH/TO/BOM> -n <NEW-NAME> -v <NEW-VERSION>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -59,7 +56,6 @@ bomnipotent_client bom upload <path/to/bom> -n <new-name> -v <new-version>
 **Important:** The BOMnipotent Client will in this case **modify the data** before sending it to the server. It does not modify the local file, as that would be overstepping. This means that your local file and the data on the server are now out-of-sync. What's maybe worse, if you signed your BOM, your signature is now invalid.
 
 If you do use this option, it is thus recommended that you immediately download the BOM from the server (as described in [BOMs for Consumers](/client/consumer/boms/)) and replace your local file with the result.
-
 
 {{% /tab %}}
 {{< /tabs >}}
@@ -75,12 +71,12 @@ To tell BOMnipotent how to classify a document, you have two options:
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom upload <path/to/bom> --tlp=<label>
+bomnipotent_client bom upload <PATH/TO/BOM> --tlp=<LABEL>
 ```
 {{% /tab %}}
-{{% tab title="short" %}}
+{{% tab title="kurz" %}}
 ```bash
-bomnipotent_client bom upload <path/to/bom> -t <label>
+bomnipotent_client bom upload <PATH/TO/BOM> -t <LABEL>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -92,7 +88,7 @@ If you do neither, BOMnipotent will treat any unclassified documents as if they 
 
 In the simplest case, modifying an existing BOM works very much like uploading a new one.
 ```bash
-bomnipotent_client bom modify <path/to/bom>
+bomnipotent_client bom modify <PATH/TO/BOM>
 ```
 
 This will infer the name and version from the document, and overwrite the existing content on the server. If the data does not exist on the server, it will return a 404 Not Found error.
@@ -106,12 +102,12 @@ If you want to specify a new TLP label, you can do so via argument:
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> --tlp=<label>
+bomnipotent_client bom modify <PATH/TO/BOM> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> -t <label>
+bomnipotent_client bom modify <PATH/TO/BOM> -t <LABEL>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -120,7 +116,7 @@ If the contents of the BOM have not changed and you just want to modify the TLP 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom modify --name=<name> --version=<version> --tlp=<label>
+bomnipotent_client bom modify --name=<NAME> --version=<VERSION> --tlp=<LABEL>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
@@ -135,16 +131,16 @@ If you specify "none", "default" or "unlabelled" as the TLP label, any existing 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> --tlp=none
-bomnipotent_client bom modify <path/to/bom> --tlp=default # Does the same
-bomnipotent_client bom modify <path/to/bom> --tlp=unlabelled # Does the same
+bomnipotent_client bom modify <PATH/TO/BOM> --tlp=none
+bomnipotent_client bom modify <PATH/TO/BOM> --tlp=default # Does the same
+bomnipotent_client bom modify <PATH/TO/BOM> --tlp=unlabelled # Does the same
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> -t none
-bomnipotent_client bom modify <path/to/bom> -t default # Does the same
-bomnipotent_client bom modify <path/to/bom> -t unlabelled # Does the same
+bomnipotent_client bom modify <PATH/TO/BOM> -t none
+bomnipotent_client bom modify <PATH/TO/BOM> -t default # Does the same
+bomnipotent_client bom modify <PATH/TO/BOM> -t unlabelled # Does the same
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -155,12 +151,12 @@ If the document you are uploading has a different name or version than the data 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version>
+bomnipotent_client bom modify <PATH/TO/BOM> --name=<OLD-NAME> --version=<OLD-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> -n <old-name> -v <old-version>
+bomnipotent_client bom modify <PATH/TO/BOM> -n <OLD-NAME> -v <OLD-VERSION>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -172,7 +168,7 @@ BOMnipotent will infer the new data from the document you provide and change the
 As with uploading, it is possible to overwrite the name and/or version stored in the local document:
 
 ```bash
-bomnipotent_client bom modify <path/to/bom> --name-overwrite=<new-name> --version-overwrite=<new-version>
+bomnipotent_client bom modify <PATH/TO/BOM> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 
 **Important:** As with uploading, this modifies the JSON data before uploading to the server! The same caveats apply.
@@ -182,12 +178,12 @@ If the data on the server has a different name and/or version than specified in 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> --name=<old-name> --version=<old-version> --name-overwrite=<new-name> --version-overwrite=<new-version>
+bomnipotent_client bom modify <PATH/TO/BOM> --name=<OLD-NAME> --version=<OLD-VERSION> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```bash
-bomnipotent_client bom modify <path/to/bom> -n <old-name> -v <old-version> --name-overwrite=<new-name> --version-overwrite=<new-version>
+bomnipotent_client bom modify <PATH/TO/BOM> -n <OLD-NAME> -v <OLD-VERSION> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -199,7 +195,7 @@ Changing name and/or version without providing the complete document is not supp
 
 Deleting a BOM is very straightforward:
 ```bash
-bomnipotent_client bom delete <name> <version>
+bomnipotent_client bom delete <NAME> <VERSION>
 ```
 
 If the BOM does not exist, the server will return 404 Not Found. If it does exists, it is removed from the database.
