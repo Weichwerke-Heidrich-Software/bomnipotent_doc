@@ -18,7 +18,7 @@ On some linux systems you may want to change the install path (the very last arg
 ## Usage
 
 The basic usage of Syft is:
-```bash
+```
 syft <target> [options]
 ```
 Additionally, some configuration can be made using environment variables.
@@ -30,12 +30,12 @@ Syft supports lockfiles, directories, container images and more as targets.
 An example call looks like this:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 SYFT_FORMAT_PRETTY=1 syft Cargo.lock --output cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 SYFT_FORMAT_PRETTY=1 syft Cargo.lock -o cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
 ```
 {{% /tab %}}
@@ -59,12 +59,12 @@ Letting Syft loose on a whole directory is possible, but overdoes it in most sit
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 syft . --output cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 syft . -o cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
 ```
 {{% /tab %}}
@@ -76,12 +76,12 @@ If you have a docker container exported as a '.tar' file you can also specify th
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 syft container.tar --output cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 syft container.tar -o cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
 ```
 {{% /tab %}}

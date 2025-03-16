@@ -7,7 +7,7 @@ description = "Katalogisiert die Komponenten eines Produkts mit BOMnipotent Clie
 
 Der Zweck eines Stücklistenverzeichnisses (Bill of Materials, BOM) besteht darin, die Komponenten eines Produkts zu katalogisieren. BOMnipotent Client kann verwendet werden, um alle Pakete usw. aufzulisten, die in einem Produkt enthalten sind, welches über Ihr Benutzerkonto zugänglich ist. Rufen Sie einfach den Client mit den Argumenten "component", "list" und anschließend dem Namen und der Version des Produkts auf:
 
-```bash
+```
 bomnipotent_client component list vulny 0.1.0
 ```
 ``` {wrap="false" title="output"}

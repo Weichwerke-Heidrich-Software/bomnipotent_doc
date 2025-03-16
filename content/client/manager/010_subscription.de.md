@@ -18,7 +18,7 @@ Kurz nach Abschluss Ihres Abonnements erhalten Sie eine E-Mail mit Ihrem Abonnem
 ## Aktivieren
 
 Um Ihr neues Abonnement zu aktivieren, rufen Sie einfach Folgendes auf:
-```bash
+```
 bomnipotent_client subscription activate <IHR-ABONNEMENTSCHLÜSSEL>
 ```
 ``` {wrap="false" title="Ausgabe"}
@@ -35,7 +35,7 @@ Failed to activate subscription key: The subscription is missing in the sever da
 ## Status
 
 Um Informationen über den aktuellen Status Ihres Abonnements zu erhalten, rufen Sie:
-```bash
+```
 bomnipotent_client subscription status
 ```
 ``` {wrap="false" title="Ausgabe"}
@@ -52,7 +52,7 @@ Diese Ausgabe enthält eine verschleierte Variante Ihres Schlüssels, einen Stat
 ## Entfernen
 
 Wenn Sie Ihr Abonnement von einer Instanz des BOMnipotent-Servers entfernen möchten (z. B. weil Sie es für eine andere Instanz verwenden möchten), rufen Sie Folgendes auf:
-```bash
+```
 bomnipotent_client subscription remove <IHR-ABONNEMENTSCHLÜSSEL>
 ```
 ``` {wrap="false" title="Ausgabe"}

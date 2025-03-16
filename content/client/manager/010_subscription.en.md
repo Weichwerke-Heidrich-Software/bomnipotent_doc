@@ -18,7 +18,7 @@ Shortly after you have acquired a subscription, you will receive an email contai
 ## Activating
 
 To activate your new subscription, simply call:
-```bash
+```
 bomnipotent_client subscription activate <YOUR-SUBSCRIPTION-KEY>
 ```
 ``` {wrap="false" title="output"}
@@ -36,7 +36,7 @@ Failed to activate subscription key: The subscription is missing in the sever da
 
 To get more information about your current subscription, call:
 
-```bash
+```
 bomnipotent_client subscription status
 ```
 ``` {wrap="false" title="output"}
@@ -53,7 +53,7 @@ This output contains an obfuscated print of your key, a status, and some additio
 ## Removing
 
 If you want to remove your subscription from an instance of BOMnipotent Server (because you for example want to use it for another instance), call
-```bash
+```
 bomnipotent_client subscription remove <YOUR-SUBSCRIPTION-KEY>
 ```
 ``` {wrap="false" title="output"}

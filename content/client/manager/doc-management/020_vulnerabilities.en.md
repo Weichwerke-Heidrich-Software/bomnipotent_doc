@@ -17,12 +17,12 @@ Using the BOMnipotent Client, you can directly print the contents of a BOM and p
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
@@ -35,7 +35,7 @@ This will check the software components agains several databases and add the res
 ## Updating
 
 The command to update the vulnerabilities associated with a BOM is
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES>
 ```
 ``` {wrap="false" title="output"}
@@ -47,12 +47,12 @@ The "\<VULNERABILITIES\>" argument needs to be a path to a file in [CycloneDX JS
 Ideally, this file contains the name and version of the associated BOM, in which case they will automatically be read. If one of the values is missing (due to a [known bug](https://github.com/anchore/grype/issues/2418) in grype, for example), you can provide it with an optional argument:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES> --name=<NAME> --version=<VERSION>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client vulnerability update <VULNERABILITIES> -n <NAME> -v <VERSION>
 ```
 {{% /tab %}}
@@ -79,12 +79,12 @@ One aspect not mentioned there is the "--unassessed" option. With it, BOMnipoten
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client vulnerability list --unassessed
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client vulnerability list -u
 ```
 {{% /tab %}}
@@ -110,12 +110,12 @@ You can freely combine this option with specifying a product name or version:
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client vulnerability list <NAME> <VERSION> --unassessed
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client vulnerability list <NAME> <VERSION>  -u
 ```
 {{% /tab %}}

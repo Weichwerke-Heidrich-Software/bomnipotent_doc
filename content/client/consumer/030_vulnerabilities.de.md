@@ -7,7 +7,7 @@ description = "Anleitung zur Anzeige bekannter Sicherheitslücken eines Produkts
 
 Um eine Liste bekannter Sicherheitslücken anzuzeigen, die ein Produkt betreffen, rufen Sie "vulnerability", "list" sowie den Namen und die Version des Produkts auf:
 
-```bash
+```
 bomnipotent_client vulnerability list vulny 0.1.0
 ```
 
@@ -24,7 +24,7 @@ bomnipotent_client vulnerability list vulny 0.1.0
 Produktname und -version sind optionale positionale Argumente. Falls Sie keine Version angeben erhalten sie die Ausgabe für alle Versionen des Produktes, und falls Sie auch dieses nicht angeben, die für alle Ihnen zur Verfügung stehenden Produkte.
 
 
-```bash
+```
 bomnipotent_client vulnerability list
 ```
 
