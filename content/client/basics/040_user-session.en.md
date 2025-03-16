@@ -2,7 +2,7 @@
 title = "User Session"
 slug = "user-session"
 weight = 40
-description = "Guide on managing user sessions in the BOMnipotent Client, including login, overwriting parameters, and logout."
+description = "Guide on managing user sessions in the BOMnipotent Client, including login, overwriting parameters, checking status, and logout."
 +++
 
 ## Login
@@ -63,6 +63,91 @@ bomnipotent_client -d <other-server> -e <your-email> -o <mode> login # Will set 
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
+## Status
+
+To print the current parameters of your session, call:
+```
+bomnipotent_client session status
+```
+
+The output is in [TOML format](https://toml.io/en/) (which is also how it is stored on your filesystem):
+``` toml {wrap="false" title="output"}
+domain = "https://localhost:62443"
+email = "admin@wwh-soft.com"
+secret_key_path = "/home/simon/git/bomnipotent/test_cryptofiles/admin"
+trusted_root_path = "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
+```
+
+If you want to use this command in scripting and prefer JSON, merely append the "--json" option:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+./bomnipotent_client session status --json
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+./bomnipotent_client session status -j
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` json {wrap="false" title="output"}
+{
+  "domain": "https://localhost:62443",
+  "email": "admin@wwh-soft.com",
+  "secret_key_path": "/home/simon/git/bomnipotent/test_cryptofiles/admin",
+  "trusted_root_path": "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
+}
+```
+
+If you are not logged in, you get an informational trace and an empty TOML/JSON output:
+{{< tabs >}}
+{{% tab title="output (toml)" %}}
+```
+[INFO] No session data is currently stored
+
+```
+{{% /tab %}}
+{{% tab title="output (json)" %}}
+```
+[INFO] No session data is currently stored
+{}
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+If you would like to use this command to programatically check if session data exists, you can for example use the "raw" output mode to supress the info trace, and check if the return value is empty:
+
+{{< tabs >}}
+{{% tab title="bash" %}}
+``` bash
+#!/bin/bash
+
+output=$(./bomnipotent_client --output raw session status)
+if [ -n "$output" ]; then
+    echo "Found session data:"
+    echo "$output"
+else
+    echo "Session not logged in."
+fi
+```
+{{% /tab %}}
+{{% tab title="powershell" %}}
+``` ps1
+$output = ./bomnipotent_client --output raw session status
+if ($output) {
+    Write-Output "Found session data:"
+    Write-Output $output
+} else {
+    Write-Output "Session not logged in."
+}
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
 
 ## Logout
 
