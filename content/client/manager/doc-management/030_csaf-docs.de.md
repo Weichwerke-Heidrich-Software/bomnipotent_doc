@@ -1,31 +1,31 @@
 +++
-title = "CSAF Documents"
+title = "CSAF Dokumente"
 slug = "csaf-docs"
 weight = 30
 +++
 
-A Common Security Advisory Format (CSAF) document is a vendor's response to a newly discovered vulnerability. It is a machine-readable format to spread information on how a user of your product should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?
+Ein Common Security Advisory Format (CSAF)-Dokument ist die Antwort eines Herstellers auf eine neu entdeckte Sicherheitslücke. Es ist ein maschinenlesbares Format, welches Informationen darüber verbreitet, wie Nutzer Ihres Produkts reagieren sollten: Muss auf eine neuere Version aktualisiert werden? Muss eine Konfiguration geändert werden? Ist Ihr Produkt überhaupt betroffen oder ruft es den betroffenen Teil der anfälligen Bibliothek möglicherweise nie auf?
 
-> For CSAF interactions beyond reading, you need the CSAF_MANAGEMENT permission. The [User Management Section](/client/manager/user-management/) describes how it is granted.
+> Für CSAF-Interaktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung CSAF_MANAGEMENT. Im Abschnitt [Benutzerverwaltung](/de/client/manager/user-management/) wird beschrieben, wie diese erteilt wird.
 
-## Uploading
+## Hochladen
 
-To upload a CSAF document, call
+Um ein CSAF-Dokument hochzuladen, rufen Sie
 ```bash
-bomnipotent_client csaf upload <PATH/TO/CSAF>
+bomnipotent_client csaf upload <PFAD/ZUM/CSAF> auf.
 ```
 
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 [INFO] Uploaded CSAF with id WID-SEC-W-2024-3470
 ```
 
-Before your CSAF document is uploaded, BOMnipotent Client checks that it is valid according to the [OASIS CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests).
+Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
-You can view the result of the operation with
+Sie können das Ergebnis des Vorgangs mit
 ```bash
 bomnipotent_client csaf list
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 ╭─────────────────────┬───────────────────────────┬─────────────────────────┬─────────────────────────┬────────┬───────────╮
 │ ID                  │ Title                     │ Initial Release         │ Current Release         │ Status │ TLP       │
 ├─────────────────────┼───────────────────────────┼─────────────────────────┼─────────────────────────┼────────┼───────────┤
@@ -35,12 +35,12 @@ bomnipotent_client csaf list
 ╰─────────────────────┴───────────────────────────┴─────────────────────────┴─────────────────────────┴────────┴───────────╯
 ```
 
-All data is taken from the CSAF document.
+Alle Daten stammen aus dem CSAF-Dokument.
 
-If the document does not have the optional TLP label entry, it is treated with the [default tlp](/server/configuration/optional/tlp-config/) configured for the server.
+Falls das Dokument nicht den optionalen TLP-Labeleintrag enthält, wird es mit dem für den Server konfigurierten [Default-TLP](/de/server/configuration/optional/tlp-config/) behandelt.
 
 
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 ...┬────────┬─────────╮
 ...│ Status │ TLP     │
 ...┼────────┼─────────┤
@@ -48,26 +48,25 @@ If the document does not have the optional TLP label entry, it is treated with t
 ...┴────────┴─────────╯
 ```
 
+## Ändern
 
-## Modifying
-
-When the status of your document changes, if you want to reclassify it, or if new information has come to light, you may want to modify your document. To upload the new version, call:
+Wenn sich der Status Ihres Dokuments ändert, Sie es neu klassifizieren möchten oder neue Informationen vorliegen, können Sie es ändern. Um die neue Version hochzuladen, rufen Sie Folgendes auf:
 
 ```bash
-bomnipotent_client csaf delete <CSAF-ID> <PATH/TO/CSAF>
+bomnipotent_client csaf delete <CSAF-ID> <PFAD/ZUM/CSAF>
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 [INFO] Modified CSAF with id BSI-2024-0001-unlabeled
 ```
 
-The command requires the ID of the hosted CSAF document, because it can in principle modify that as well. The new CSAF document is considered authorative.
+Der Befehl benötigt die ID des gehosteten CSAF-Dokuments, da er diese im Prinzip ebenfalls ändern kann. Das neue CSAF-Dokument gilt als autorativ.
 
-## Deleting
+## Löschen
 
-To delete a CSAF document from your server (which you should really only do if something went completely wrong), simply call:
+Um ein CSAF-Dokument von Ihrem Server zu löschen (was Sie wirklich nur tun sollten, falls etwas komplett schiefgelaufen ist), rufen Sie einfach Folgendes auf:
 ```bash
 bomnipotent_client csaf delete <CSAF-ID>
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 [INFO] Deleted CSAF with id WID-SEC-W-2024-3470
 ```
