@@ -2,7 +2,7 @@
 title = "Aktivieren Ihres Abonnements"
 slug = "subscription"
 weight = 30
-description = "rfahren Sie, wie Sie Ihren Abonnementschlüssel erhalten, aktivieren und den Status überprüfen."
+description = "Erfahren Sie, wie Sie Ihren Abonnementschlüssel erhalten, aktivieren und den Status überprüfen."
 +++
 
 Die meisten Aktionen, die Daten zu Ihrer BOMnipotent-Datenbank hinzufügen, erfordern ein aktives Abonnement, während das Lesen und Entfernen von Daten dies nicht erfordert. Diese Richtlinie stellt sicher, dass Ihre Benutzer den Zugriff auf die vorhandenen Daten nicht verlieren, falls Sie eines Tages die Zahlung für das Produkt einstellen sollten.
