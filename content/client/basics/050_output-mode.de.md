@@ -20,14 +20,14 @@ Die Ausgabemodi [code](#code) und [raw](#raw) haben ein besonderes Verhalten, we
 
 Der Standard-Ausgabemodus ist info. Er gibt einige Informationen aus, überflutet den Benutzer jedoch nicht mit Nachrichten.
 
-``` bash
+```
 bomnipotent_client health
 ```
 ``` {wrap="false" title="output"}
 Service is healthy
 ```
 
-``` bash
+```
 bomnipotent_client bom list
 ```
 ``` {wrap="false" title="output"}
@@ -49,12 +49,12 @@ Error: "No approved and currently valid public keys were found for user admin@ww
 Der Debug-Ausgabemodus gibt zusätzliche Informationen aus, die bei der Fehlersuche in der Eingabe oder Konfiguration nützlich sein können:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --output=debug health
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -o debug health
 ```
 {{% /tab %}}
@@ -75,12 +75,12 @@ Service is healthy
 Im trace-Modus gibt BOMnipotent zusätzlich das Modul aus, aus dem die Protokollnachricht stammt. Dies ist besonders nützlich, um Fehler im Programm selbst zu identifizieren.
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --output=trace health
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -o trace health
 ```
 {{% /tab %}}
@@ -112,12 +112,12 @@ Service is healthy
 Der code-Modus gibt nur den [HTTP Statuscode](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) der Antwort aus.
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --output=code health
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -o code health
 ```
 {{% /tab %}}
@@ -128,7 +128,7 @@ bomnipotent_client -o code health
 ```
 
 Das ist besonders nützlich, wenn BOMnipotent-Client in Skripten verwendet wird:
-```bash
+```
 code=$(./bomnipotent_client --domain=$domain --output=code health)
 if (( code != 200 )); then
     echo "Server at $domain is not healthy!"
@@ -148,12 +148,12 @@ Für Aufrufe, die auf strukturierte Daten zugreifen, gibt der raw-Modus die Date
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 bomnipotent_client --output=raw bom list
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 bomnipotent_client -o raw bom list
 ```
 {{% /tab %}}

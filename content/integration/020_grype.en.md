@@ -19,17 +19,26 @@ With an SBOM at hand, scanning for vulnerabilities is very easy:
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --fail-on low
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -f low
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
+``` {wrap="false" title="output"}
+ ✔ Scanned for vulnerabilities     [2 vulnerability matches]  
+   ├── by severity: 0 critical, 0 high, 2 medium, 0 low, 0 negligible
+   └── by status:   2 fixed, 0 not-fixed, 0 ignored 
+NAME    INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
+ring    0.17.8     0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium    
+rustls  0.23.15    0.23.18   rust-crate  GHSA-qg5g-gv98-5ffh  Medium
+[0000] ERROR discovered vulnerabilities at or above the severity threshold
+```
 
 When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The 'fail-on' option specifies that it exits with a non-zero error code if any with severity 'low' or higher is discovered.
 
@@ -38,13 +47,27 @@ The syntax to export a vulnerability report consumable by BOMnipotent is similar
 
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json --output cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+Grype integrates well with BOMnipotent. You can use the "bom get" command of BOMnipotent Client to directly print the contents of a BOM to the console output, and then pipe it to grype:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype -o cyclonedx-json=./vuln.cdx.json
 ```
 {{% /tab %}}
 {{< /tabs >}}

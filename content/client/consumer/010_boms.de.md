@@ -5,12 +5,13 @@ weight = 10
 description = "Learn about BOMs (Bills of Materials), how to list accessible BOMs using bomnipotent_client, and download them locally, including file naming conventions."
 +++
 
-## Auflistung
 
 Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt sowohl der Funktionalität als auch des Namens von BOMnipotent. Eine BOM ist eine Liste aller Komponenten, die ein Produkt ausmachen. Im Bereich der Cybersicherheit ist die bekannteste Variante die Software-Stückliste (Software Bill of Materials, SBOM), aber BOMs ermöglichen auch allgemeinere Überlegungen.
 
+## Auflistung
+
 Das Ausführen des Befehls
-```bash
+```
 bomnipotent_client bom list
 ```
 listet alle für Sie zugänglichen BOMs auf:
@@ -29,7 +30,7 @@ BOMs mit der Klassifizierung {{<tlp-white>}} / {{<tlp-clear>}} sind für alle si
 ## Herunterladen
 
 Um eine lokale Kopie aller BOMs zu erstellen, die der Server für Sie bereitstellt, führen Sie folgenden Befehl aus:
-```bash
+```
 bomnipotent_client bom download ./boms
 ```
 ``` {wrap="false" title="output"}
@@ -41,7 +42,7 @@ Dies speichert die BOMs im angegebenen Ordner ("./boms" in diesem Beispiel). Fal
 > Um inkonsistentes Verhalten zwischen verschiedenen Betriebssystemen zu vermeiden, werden der Name und die Version des Produkts in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen durch einen Unterstrich '_' ersetzt. Dadurch könnte es theoretisch vorkommen, dass verschiedene Produkte zum selben Dateinamen führen. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt die Datei stillschweigend zu überschreiben.
 
 
-```bash
+```
 tree ./boms/
 ```
 ``` {wrap="false" title="output"}

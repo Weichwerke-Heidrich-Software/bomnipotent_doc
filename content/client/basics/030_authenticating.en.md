@@ -10,12 +10,12 @@ description = "Learn how to authenticate with BOMnipotent Client using your emai
 Once your account (meaning your email and public key) is approved, you can provide your email to Bomnipotent Client to make a request that can be authenticated by the server:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> --email=<your-email> <command>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> -e <your-email> <command>
 ```
 {{% /tab %}}
@@ -28,12 +28,12 @@ BOMnipotent Client then automatically reads your secret key and uses it for auth
 If you are not storing your keys in the default user location, you have to tell BOMnipotent Client the path to it via a command line option:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> --email=<your-email> --secret-key=<path/to/key> <command>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> -e <your-email> -s <path/to/key> <command>
 ```
 {{% /tab %}}

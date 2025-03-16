@@ -13,7 +13,7 @@ Eine der Hauptfunktionen von BOMnipotent besteht darin, die Verteilung von CSAF-
 
 Das Ausführen des Befehls
 
-```bash
+```
 ./bomnipotent_client csaf list
 ```
 
@@ -34,7 +34,7 @@ Zugängliche CSAF-Dokumente sind diejenigen, die entweder mit {{<tlp-white>}}/{{
 ## Herunterladen
 
 Um alle für Sie zugänglichen CSAF-Dokumente lokal zu spiegeln, führen Sie den folgenden Befehl aus:
-```bash
+```
 bomnipotent_client csaf download ./csaf
 ```
 ``` {wrap="false" title="output"}
@@ -46,7 +46,7 @@ Dies speichert die CSAF-Dokumente im angegebenen Ordner ("./csaf"in diesem Beisp
 > Die Dateinamen der CSAF-Dokumente folgen einem vom [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) vorgegebenen Namensschema: Die IDs werden in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen werden durch einen Unterstrich '_' ersetzt. Das bedeutet, dass theoretisch verschiedene CSAF-Dokumente zum selben Dateipfad führen könnten. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt eine Datei stillschweigend zu überschreiben.
 
 
-```bash
+```
 tree ./csaf/
 ```
 
@@ -61,7 +61,7 @@ Bevor Dateien zum Download angefordert werden, erstellt der BOMnipotent-Client e
 
 Es ist auch möglich, eine einzelne Datei herunterzuladen, indem der Pfad als zusätzliches Argument angegeben wird:
 
-```bash
+```
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
 

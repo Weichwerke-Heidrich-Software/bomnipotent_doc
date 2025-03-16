@@ -18,7 +18,7 @@ Auf manchen Linux-Systemen sollten Sie den Installationspfad (das letzte Argumen
 ## Verwendung
 
 Die grundlegende Verwendung von Syft lautet:
-```bash
+```
 syft <Ziel> [Optionen]
 ```
 Zusätzlich lassen sich einige Konfigurationen über Umgebungsvariablen vornehmen.
@@ -30,12 +30,12 @@ Syft unterstützt Lockfiles, Verzeichnisse, Container-Images und weitere Zieltyp
 Ein Beispielaufruf sieht folgendermaßen aus:
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 SYFT_FORMAT_PRETTY=1 syft Cargo.lock --output cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 SYFT_FORMAT_PRETTY=1 syft Cargo.lock -o cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
 ```
 {{% /tab %}}
@@ -45,7 +45,7 @@ Erklärung:
 - 'SYFT_FORMAT_PRETTY=1' setzt eine Umgebungsvariable, die Syft anweist, durch Menschen besser lesbare Ausgabe zu produzieren. Eine vollständige Liste der Konfigurationen befindet sich [hier](https://github.com/anchore/syft/wiki/configuration).
 - 'syft' ruft das Syft-Programm auf.
 - 'Cargo.lock' gibt an, dass Syft die Lockfile-Datei des Rust-Ökosystems analysieren soll.
-- '--output cyclonedx-json=./sbom.cdx.json' legt fest, dass die Ausgabe im [CycloneDx](https://cyclonedx.org/) JJSON-Format in der Datei './sbom.cdx.json' gespeichert wird.
+- '--output cyclonedx-json=./sbom.cdx.json' legt fest, dass die Ausgabe im [CycloneDx](https://cyclonedx.org/) JSON-Format in der Datei './sbom.cdx.json' gespeichert wird.
   - Beachten Sie, dass '.cdx.json' die [empfohlene Dateiendung](https://cyclonedx.org/specification/overview/#recognized-file-patterns) ist.
 - '--source-name="BOMnipotent"' gibt an, dass diese Quellen zu der Komponente BOMnipotent gehören, was Syft nicht in allen Fällen automatisch erkennen kann.
   - Das CycloneDX-Schema erfordert möglicherweise keinen Komponentennamen, aber BOMnipotent benötigt ihn.
@@ -60,12 +60,12 @@ Syft kann auf ein ganzes Verzeichnis angewendet werden, allerdings ist das oft �
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 syft . --output cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Entwicklungsumgebung" --source-version=1.2.3
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 syft . -o cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Entwicklungsumgebung" --source-version=1.2.3
 ```
 {{% /tab %}}
@@ -77,12 +77,12 @@ Falls Sie einen Docker-Container als '.tar'-Datei exportiert haben, können Sie 
 
 {{< tabs >}}
 {{% tab title="lang" %}}
-```bash
+```
 syft container.tar --output cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
-```bash
+```
 syft container.tar -o cyclonedx-json=./container_sbom.cdx.json --source-name="BOMnipotent Container" --source-version=1.2.3
 ```
 {{% /tab %}}

@@ -8,7 +8,7 @@ description = "Konfigurieren Sie den Ablaufzeitraum von Benutzerschlüsseln in B
 Wenn eine Anfrage für ein neues [Benutzerkonto](/de/client/basics/account-creation/) gestellt wird, wird ein öffentlicher Schlüssel in der Datenbank hinterlegt.
 
 Dieser Schlüssel hat ein Ablaufdatum, nach dem er nicht mehr akzeptiert wird. Dieses können Sie sich anzeigen lassen:
-```bash
+```
 ./bomnipotent_client user list
 ```
 ``` {wrap="false" title="output"}

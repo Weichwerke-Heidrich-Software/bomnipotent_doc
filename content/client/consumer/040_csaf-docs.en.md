@@ -13,7 +13,7 @@ One of the main functionalities of BOMnipotent is to make distribution of CSAF d
 
 Running
 
-```bash
+```
 ./bomnipotent_client csaf list
 ```
 
@@ -34,7 +34,7 @@ Accesible CSAF documents are those that are either labeled {{<tlp-white>}}/{{<tl
 ## Download
 
 To locally mirror all CSAF documents accessible to you, run
-```bash
+```
 bomnipotent_client csaf download ./csaf
 ```
 ``` {wrap="false" title="output"}
@@ -46,7 +46,7 @@ This will store th CSAF documents in the provided folder ("./csaf", in this exam
 > The filenames of CSAF documents follow a naming scheme defined by the [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename): The ids are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different CSAF documents could lead to the same filepath. In that case, BOMnipotent will display an error instead of silently overwriting a file.
 
 
-```bash
+```
 tree ./csaf/
 ```
 
@@ -61,7 +61,7 @@ Before requesting files for download, BOMnipotent Client makes an inventory of t
 
 It is possible to only download a single file by providing the path as an additional argument:
 
-```bash
+```
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
 

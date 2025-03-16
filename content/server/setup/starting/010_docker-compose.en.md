@@ -105,8 +105,11 @@ networks:
     name: bomnipotent_network
 
 volumes:
-  # Define the volume for persistent data storage
+  # Define the volume for persistent storage of the database
   bomnipotent_data:
+    driver: local
+  # The server itself also needs persistence if you do not want to activate the subscription after every reboot
+  bomnipotent_subscription:
     driver: local
 
 services:
@@ -219,6 +222,8 @@ services:
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
+      # The subscription can be stored inside the container
+      - bomnipotent_subscription:/root/.config/bomnipotent
 ```
 {{% /tab %}}
 {{% tab title="not annotated" %}}
@@ -232,6 +237,8 @@ networks:
 
 volumes:
   bomnipotent_data:
+    driver: local
+  bomnipotent_subscription:
     driver: local
 
 services:
@@ -303,6 +310,7 @@ services:
         source: /etc/ssl
         target: /etc/ssl
         read_only: true
+      - bomnipotent_subscription:/root/.config/bomnipotent
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -310,12 +318,12 @@ services:
 Store this as "compose.yaml". Then, call:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 docker compose --detach
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 docker compose -d
 ```
 {{% /tab %}}

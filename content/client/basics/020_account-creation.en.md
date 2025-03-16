@@ -14,12 +14,12 @@ Permissions are linked to user accounts. For more information on how permissions
 To create a new user account, run
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> user request <your-email>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> user request <your-email>
 ```
 {{% /tab %}}
@@ -50,12 +50,12 @@ If you have a key pair stored in the default user location (which depends on you
 If you would instead like to reuse an existing stored at a different location, you can add the path as a positional argument:
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> user request <your-email> <path/to/key>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> user request <your-email> <path/to/key>
 ```
 {{% /tab %}}

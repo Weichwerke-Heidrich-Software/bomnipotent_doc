@@ -11,12 +11,12 @@ Several interactions with BOMnipotent require a user with admin rights. One of t
 First, you will need to [create a user account](/client/basics/account-creation):
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> user request <your-email>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> user request <your-email>
 ```
 {{% /tab %}}
@@ -31,12 +31,12 @@ bomnipotent_client -d <server> user request <your-email>
 To make things a litle less verbose, let's store the domain of your server and your email address in a [user session](/client/basics/user-session/):
 {{< tabs >}}
 {{% tab title="long" %}}
-```bash
+```
 bomnipotent_client --domain=<server> --email=<your-email> session login
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
-```bash
+```
 bomnipotent_client -d <server> -e <your-email> session login
 ```
 {{% /tab %}}
@@ -59,7 +59,7 @@ tmp_admin = "<your-email>"
 
 Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
 
-```bash
+```
 docker logs bomnipotent_server
 ```
 ``` {wrap="false" title="output"}
@@ -73,7 +73,7 @@ docker logs bomnipotent_server
 
 The server now treats authenticated requests from that user as if that user was an admin. To become a permanent admin, you first need to approve your user request. Back on the client, call
 
-```bash
+```
 bomnipotent_client user approve <your-email>
 ```
 ``` {wrap="false" title="output"}
@@ -81,7 +81,7 @@ bomnipotent_client user approve <your-email>
 ```
 
 Now you can make yourself a full server admin:
-```bash
+```
 bomnipotent_client user-role add <your-email> admin
 ```
 ``` {wrap="false" title="output"}
@@ -91,7 +91,7 @@ bomnipotent_client user-role add <your-email> admin
 ## Step 4: Remove TMP Admin Mark
 
 The stat of being a temporary admin is intended to be, well, temporary. The server logs a warning whenever you use temporary access rights:
-```bash
+```
 docker logs bomnipotent_server -n 4
 ```
 ``` {wrap="false" title="output"}
