@@ -15,12 +15,12 @@
   --MAIN-TITLES-TEXT-color: var(--WWH-DARK); /* text color of h2-h6 titles and transparent box titles */
 
   --CODE-theme: relearn-light; /* name of the chroma stylesheet file */
-  --CODE-BLOCK-color: rgba(248, 248, 242, 1); /* fallback text color of block code; should be adjusted to your selected chroma style */
-  --CODE-BLOCK-BG-color: rgba(43, 43, 43, 1); /* fallback background color of block code; should be adjusted to your selected chroma style */
-  --CODE-BLOCK-BORDER-color: rgba(71, 71, 71, 1); /* border color of block code */
-  --CODE-INLINE-color: rgb(179, 0, 204); /* text color of inline code */
-  --CODE-INLINE-BG-color: rgba(45, 45, 45, 1); /* background color of inline code */
-  --CODE-INLINE-BORDER-color: rgba(70, 70, 70, 1); /* border color of inline code */
+  --CODE-BLOCK-color: var(--WWH-DARK); /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BG-color: var(--WWH-LIGHT); /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: var(--WWH-ORANGE); /* border color of block code */
+  --CODE-INLINE-color: var(--WWH-DARK); /* text color of inline code */
+  --CODE-INLINE-BG-color: var(--WWH-LIGHT); /* background color of inline code */
+  --CODE-INLINE-BORDER-color: var(--WWH-ORANGE); /* border color of inline code */
 
   --BROWSER-theme: light; /* name of the theme for browser scrollbars of the main section */
   --MERMAID-theme: default; /* name of the default Mermaid theme for this variant, can be overridden in hugo.toml */
