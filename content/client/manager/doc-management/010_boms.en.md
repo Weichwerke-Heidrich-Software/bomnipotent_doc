@@ -7,7 +7,7 @@ description = "Learn how to manage Bills of Materials (BOMs) with BOMnipotent, i
 
 Bills of Materials stand at the forefront of both BOMnipotents functionality and name. A BOM is a list of all components that make up a product. In the context of cybersecurity, the most prominent variant is the Software Bill of Materials (SBOM), but BOMs allow for more general considerations as well.
 
-> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The [User Management Section](/client/manager/user-management/) describes how it is granted.
+> For BOM interactions beyond reading, you need the BOM_MANAGEMENT permission. The section about [Access Management](/client/manager/access-management/) describes how it is granted.
 
 ## Uploading
 

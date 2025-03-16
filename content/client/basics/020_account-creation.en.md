@@ -7,7 +7,7 @@ description = "Learn how to create a new user account in BOMnipotent, manage key
 
 Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as {{< tlp-white >}} / {{< tlp-clear >}}.
 
-Permissions are linked to user accounts. For more information on how permissions are granted, see [User Management](/client/manager/user-management).
+Permissions are linked to user accounts. For more information on how permissions are granted, see the section about [Access Management](/client/manager/access-management).
 
 ## Creating a new Account
 
@@ -41,7 +41,7 @@ Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
 Now that your request is made, you need to wait for a user manager of the server to approve it. After that you can start making [authenticated requests](/client/basics/authenticating/).
 
-> If you are said user manager and are looking for how approve users, consult the section about [User Approval](/client/manager/user-management/user-approval/).
+> If you are said user manager and are looking for how approve users, consult the section about [User Approval](/client/manager/access-management/user-approval/).
 
 ## Using stored Keys
 

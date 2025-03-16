@@ -7,7 +7,7 @@ description = "Erfahren Sie, wie Sie Stücklisten (BOMs) in BOMnipotent hochlade
 
 Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt der Funktionalität und des Namens von BOMnipotents. Eine BOM ist eine Liste aller Komponenten, aus denen ein Produkt besteht. Im Kontext der Cybersicherheit ist die Software-BOM (SBOM) die bekannteste Variante, BOMs ermöglichen aber auch allgemeinere Überlegungen.
 
-> Für BOM-Interaktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung BOM_MANAGEMENT. Im Abschnitt [Benutzerverwaltung](/de/client/manager/user-management/) wird beschrieben, wie diese erteilt wird.
+> Für BOM-Interaktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung BOM_MANAGEMENT. Im Abschnitt zur [Verwaltung von Zugriffsrechten](/de/client/manager/access-management/) wird beschrieben, wie diese erteilt wird.
 
 ## Hochladen
 
