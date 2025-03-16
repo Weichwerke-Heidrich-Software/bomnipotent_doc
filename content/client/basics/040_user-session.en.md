@@ -79,7 +79,7 @@ secret_key_path = "/home/simon/git/bomnipotent/test_cryptofiles/admin"
 trusted_root_path = "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
 ```
 
-If you want to use this command in scripting and prefer JSON, merely append the "--json" option:
+If you prefer JSON, merely append the "--json" option:
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
@@ -118,7 +118,7 @@ If you are not logged in, you get an informational trace and an empty TOML/JSON 
 {{% /tab %}}
 {{< /tabs >}}
 
-If you would like to use this command to programatically check if session data exists, you can for example use the "raw" output mode to supress the info trace, and check if the return value is empty:
+If you would like to use this command to programatically check if session data exists, you can for example use the "raw" output mode to avoid the info trace, and check if the return value is empty:
 
 {{< tabs >}}
 {{% tab title="bash" %}}
