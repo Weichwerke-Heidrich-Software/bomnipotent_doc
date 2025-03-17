@@ -242,4 +242,4 @@ These Legal Terms and any policies or operating rules posted by us on the Servic
 
 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us by email at [info@wwh-soft.com](mailto:info@wwh-soft.com) or by mail to Weichwerke Heidrich Software, Im Hirschmorgen 32, 69181 Leimen, Germany.
 
-TODO: Add VAT number
+VAT ID no: DE450755905
