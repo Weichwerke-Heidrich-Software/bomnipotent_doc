@@ -7,7 +7,7 @@ description = "Erfahren Sie, wie Sie Sicherheitslücken in Ihrer Lieferkette mit
 
 Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalts einer Stückliste (BOM), also aller Komponenten eines Produkts, mit Datenbanken bekannter Schwachstellen.
 
-> Für Schwachstelleninteraktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung VULN_MANAGEMENT. Im Abschnitt zur [Verwaltung von Zugriffsrechten](/de/client/manager/access-management/) wird beschrieben, wie diese erteilt wird.
+> Für Schwachstelleninteraktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung {{<vuln-management-de>}}. Im Abschnitt zur [Verwaltung von Zugriffsrechten](/de/client/manager/access-management/) wird beschrieben, wie diese erteilt wird.
 
 ## Erkennen
 

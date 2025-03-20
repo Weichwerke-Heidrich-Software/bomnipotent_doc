@@ -6,6 +6,6 @@ draft = true
 +++
 
 
-> For user interaction, including reading, you need the USER_MANAGEMENT permission.
+> For user interaction, including reading, you need the {{<user-management-en>}} permission.
 
 TODO

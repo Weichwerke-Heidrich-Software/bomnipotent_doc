@@ -6,16 +6,16 @@ weight = 20
 
 BOMnipotent uses a role-based access model (RBAC), in which users are associated with roles, and roles with permissions. While [permissions](/client/manager/access-management/permissions/) are largely hardcoded into BOMnipotent, roles can be managed (almost) freely. This section explains how to do that.
 
-> To modify or even view roles and their permissions, your user account needs the [ROLE_MANAGEMENT](/client/manager/access-management/permissions/#role_management) permission.
+> To modify or even view roles and their permissions, your user account needs the {{<role-management-en>}} permission.
 
 ## Default Roles
 
 When you spin up your BOMnipotent Server for the first time, it creates several colourfully named default roles in the database:
-- "bom_manager", with the BOM_MANAGEMENT permission.
-- "csaf_manager", with the CSAF_MANAGEMENT permission.
-- "role_manager", with the ROLE_MANAGEMENT permission.
-- "user_manager", with the USER_MANAGEMENT permission.
-- "vuln_manager", with the VULN_MANAGEMENT permission.
+- "bom_manager", with the {{<bom-management-en>}} permission.
+- "csaf_manager", with the {{<csaf-management-en>}} permission.
+- "role_manager", with the {{<role-management-en>}} permission.
+- "user_manager", with the {{<user-management-en>}} permission.
+- "vuln_manager", with the {{<vuln-management-en>}} permission.
 
 You can modify or delete these roles at will, they are merely suggestions.
 

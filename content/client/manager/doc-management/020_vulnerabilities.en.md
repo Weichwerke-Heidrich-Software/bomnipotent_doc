@@ -7,7 +7,7 @@ description = "Learn how to manage and update vulnerabilities in your BOM using 
 
 An activity at the core of supply chain security is to compare the contents of a BOM, meaning all components of a product, to databases of known vulnerabilities.
 
-> For vulnerability interactions beyond reading, you need the VULN_MANAGEMENT permission. The section about [Access Management](/client/manager/access-management/) describes how it is granted.
+> For vulnerability interactions beyond reading, you need the {{<vuln-management-en>}} permission. The section about [Access Management](/client/manager/access-management/) describes how it is granted.
 
 ## Detecting
 
