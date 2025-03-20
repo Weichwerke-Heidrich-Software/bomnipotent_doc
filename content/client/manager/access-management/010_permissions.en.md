@@ -2,7 +2,6 @@
 title = "Permissions"
 slug = "permissions"
 weight = 10
-draft = true
 +++
 
 In BOMnipotent, permissions are not directly associated with user accounts, but rather with roles. The section about [role management](/client/manager/access-management/role-management/) covers how this association is managed, and the section about [role assignment](/client/manager/access-management/role-assignment/) explains how roles (and thus ultimately permissions) are assigned to users.
@@ -27,7 +26,7 @@ Consequently, "PRODUCT_ACCESS(\*)" allows the viewing of all documents.
 
 ## Manager Permissions
 
-For managers of documents, the situation is usually reversed: They need the permission to not only view but also modify the contents in the database. Their scope is typically not restricted to a specific product, but instead to a specific type of document. This is why the sorting of manager permissions takes another perspective.
+For managers of documents, the situation is usually reversed: They need the permission to not only view but also modify the contents in the database. Their scope is typically not restricted to a specific product, but instead to a specific type of document. This is why the segregation of manager permissions takes another perspective.
 
 ### BOM_MANAGEMENT
 
