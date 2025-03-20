@@ -17,6 +17,6 @@ Webseite: [https://www.wwh-soft.com](https://www.wwh-soft.com/de)
 
 Vertreten durch: Simon Heidrich
 
-USt–IdNr. gemäß §27a Umsatzsteuergesetz: Steht noch aus
+USt–IdNr. gemäß §27a Umsatzsteuergesetz: DE450755905
 
 Gründungsdatum: 02.12.2024

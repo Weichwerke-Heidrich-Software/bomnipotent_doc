@@ -17,6 +17,6 @@ Website: [https://www.wwh-soft.com](https://www.wwh-soft.com)
 
 Authorised representative: Simon Heidrich
 
-VAT ID no: Pending
+VAT ID no: DE450755905
 
 Founding Date: 02.12.2024
