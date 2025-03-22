@@ -47,7 +47,7 @@ Neither user nor role need to exist at this point.
 
 To remove a role from a user, call
 ```
-bomnipotent_client user-role remove info@wildeheide bom_manager
+bomnipotent_client user-role remove <EMAIL> <ROLE>
 ```
 
 ``` {wrap="false" title="output"}
