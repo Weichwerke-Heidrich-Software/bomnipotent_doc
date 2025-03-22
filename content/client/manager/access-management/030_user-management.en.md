@@ -32,7 +32,7 @@ You can see the email addresses of the users and their stati.
 
 > A user that does not have the status APPROVED has no special permissions, no matter which roles they have.
 
-An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid, and the request has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
+An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid and has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
 
 ## Approval or Denial
 
@@ -53,6 +53,8 @@ bomnipotent_client user deny <EMAIL>
 ``` {wrap="false" title="output"}
 [INFO] Changed status of info@wildeheide.de to DENIED
 ```
+
+> It is possible to deny a user that has already been approved, effectively revoking the account.
 
 ## Deleting
 
