@@ -41,7 +41,7 @@ Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
 Now that your request is made, you need to wait for a user manager of the server to approve it. After that you can start making [authenticated requests](/client/basics/authenticating/).
 
-> If you are said user manager and are looking for how approve users, consult the section about [User Approval](/client/manager/access-management/user-approval/).
+> If you are said user manager and are looking for how approve users, consult the section about [User Management](/client/manager/access-management/user-management/).
 
 ## Using stored Keys
 

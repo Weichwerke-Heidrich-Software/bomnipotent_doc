@@ -46,7 +46,7 @@ With this permission, a user can [modify the permissions](/client/manager/access
 
 ### USER_MANAGEMENT
 
-This permission is required to [approve, deny or view](/client/manager/access-management/user-approval/) users, or to individually [assign roles](/client/manager/access-management/role-assignment/) to them.
+This permission is required to [approve, deny or view](/client/manager/access-management/user-management/) users, or to individually [assign roles](/client/manager/access-management/role-assignment/) to them.
 
 ## Special Admin permissions
 

@@ -1,6 +1,6 @@
 +++
-title = "User Approval"
-slug = "user-approval"
+title = "User Management"
+slug = "user-management"
 weight = 30
 +++
 

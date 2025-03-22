@@ -41,7 +41,7 @@ Alle nun folgenden Aufrufe vom BOMnipotent Client werden das existierende Schlü
 
 Jetzt, da Ihre Anfrage gestellt ist, müssen Sie darauf warten, dass ein Nutzermanager sie bestätigt. Danach können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
 
-> Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Zugriffsverwaltung](/de/client/manager/access-management/user-approval/).
+> Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerverwaltung](/de/client/manager/access-management/user-management/).
 
 ## Gespeicherte Schlüssel nutzen
 
