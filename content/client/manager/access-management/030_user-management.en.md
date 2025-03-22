@@ -28,7 +28,11 @@ bomnipotent_client user list
 ╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
 ```
 
-You can see the email addresses of the users and their stati. There is also an expiration date associated with each user, which is the point in time at which the public key is considered invalid, and the request has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
+You can see the email addresses of the users and their stati. 
+
+> A user that does not have the status APPROVED has no special permissions, no matter which roles they have.
+
+An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid, and the request has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
 
 ## Approval or Denial
 
