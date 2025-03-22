@@ -2,6 +2,7 @@
 title = "User Management"
 slug = "user-management"
 weight = 30
+description = "Learn how to manage users in BOMnipotent, including creating, listing, approving, denying, and deleting user accounts."
 +++
 
 The first step when creating a new user is to request a new account. This step is described [elsewhere](/client/basics/account-creation/), because it is relevant for managers and consumers alike.

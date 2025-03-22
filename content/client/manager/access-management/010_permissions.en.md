@@ -2,6 +2,7 @@
 title = "Permissions"
 slug = "permissions"
 weight = 10
+description = "Learn what permissions exist in BOMnipotent, including consumer, manager, and special admin permissions."
 +++
 
 In BOMnipotent, permissions are not directly associated with user accounts, but rather with roles. The section about [role management](/client/manager/access-management/role-management/) covers how this association is managed, and the section about [role assignment](/client/manager/access-management/role-assignment/) explains how roles (and thus ultimately permissions) are assigned to users.

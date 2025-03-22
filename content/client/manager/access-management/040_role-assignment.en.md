@@ -2,6 +2,7 @@
 title = "Role Assignment"
 slug = "role-assignment"
 weight = 40
+description = "Learn how to manage user roles in BOMnipotent Server, including listing, adding, and removing roles, with detailed command examples and permissions."
 +++
 
 Roles are what connects users to permissions. Adding or removing roles to and from users indirectly controls to what extend users can interact with your BOMnipotent Server instance.

@@ -1,6 +1,7 @@
 +++
 title = "Access Management"
 weight = 30
+description = "Learn about BOMnipotent's Access Management, including role-based access control (RBAC), user roles, permissions, and the workflow for new user access."
 +++
 
 Supply chain security documents are the what of BOMnipotent, users are the who. Unless you explicitly state otherwise, the hosted documents are only visible to those user accounts you grant access to.

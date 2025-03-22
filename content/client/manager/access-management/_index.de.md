@@ -1,6 +1,7 @@
 +++
 title = "Zugriffsverwaltung"
 weight = 30
+description = "Erfahren Sie, wie Sie in BOMnipotent die Zugriffsverwaltung mit rollenbasierter Zugriffskontrolle (RBAC) einrichten und Nutzerrollen zuweisen."
 +++
 
 Dokumente zur Lieferkettensicherheit sind das Was von BOMnipotent, Nutzer das Wer. Sofern Sie nicht ausdrücklich etwas anderes angeben, sind die gehosteten Dokumente nur für die Nutzerkonten sichtbar, welch von Ihnen Zugriff erahalten haben.

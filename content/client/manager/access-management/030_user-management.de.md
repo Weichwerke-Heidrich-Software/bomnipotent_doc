@@ -2,6 +2,7 @@
 title = "Nutzerverwaltung"
 slug = "user-management"
 weight = 30
+description = "Erfahren Sie, wie Sie Benutzerkonten in BOMnipotent verwalten: Benutzer auflisten, genehmigen, ablehnen und löschen. Schritt-für-Schritt-Anleitungen inklusive."
 +++
 
 Der erste Schritt beim Anlegen eines neuen Benutzers ist die Beantragung eines neuen Kontos. Dieser Schritt wird [an anderer Stelle](/de/client/basics/account-creation/) beschrieben, da er sowohl für Manager als auch für Konsumenten relevant ist.

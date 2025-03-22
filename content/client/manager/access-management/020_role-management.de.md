@@ -2,6 +2,7 @@
 title = "Rollenverwaltung"
 slug = "role-management"
 weight = 20
+description = "Verwalten Sie Rollen und Berechtigungen in BOMnipotent mit einem rollenbasierten Zugriffsmodell (RBAC). Erfahren Sie, wie Sie Standardrollen anpassen."
 +++
 
 BOMnipotent verwendet ein rollenbasiertes Zugriffsmodell (RBAC), bei dem Benutzer Rollen und Rollen Berechtigungen zugeordnet werden. Während [Berechtigungen](/de/client/manager/access-management/permissions/) in BOMnipotent größtenteils fest kodiert sind, können Rollen (fast) frei verwaltet werden. Dieser Abschnitt erklärt, wie das geht.

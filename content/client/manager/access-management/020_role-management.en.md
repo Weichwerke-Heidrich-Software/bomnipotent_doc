@@ -2,6 +2,7 @@
 title = "Role Management"
 slug = "role-management"
 weight = 20
+description = "Learn how to manage roles and permissions in BOMnipotent using role-based access control (RBAC). Modify, add, or remove roles and permissions easily."
 +++
 
 BOMnipotent uses a role-based access model (RBAC), in which users are associated with roles, and roles with permissions. While [permissions](/client/manager/access-management/permissions/) are largely hardcoded into BOMnipotent, roles can be managed (almost) freely. This section explains how to do that.

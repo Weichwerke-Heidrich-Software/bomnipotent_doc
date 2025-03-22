@@ -2,6 +2,7 @@
 title = "Rollenzuweisung"
 slug = "role-assignment"
 weight = 40
+description = "Verwalten Sie Benutzerrollen im BOMnipotent-Server: Rollen auflisten, hinzufügen und entfernen. Nur Admins können Admin-Rollen zuweisen oder entfernen."
 +++
 
 Rollen verbinden Benutzer mit Berechtigungen. Das Hinzufügen oder Entfernen von Rollen steuert indirekt, in welchem ​​Umfang Benutzer mit Ihrer BOMnipotent Server Instanz interagieren können.

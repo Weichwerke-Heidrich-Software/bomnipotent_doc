@@ -2,6 +2,7 @@
 title = "Berechtigungen"
 slug = "permissions"
 weight = 10
+description = "Erfahren Sie, wie Berechtigungen in BOMnipotent verwaltet werden, einschließlich Rollenverknüpfungen und spezifischer Zugriffsrechte für Konsumenten und Manager."
 +++
 
 In BOMnipotent sind Berechtigungen nicht direkt mit Benutzerkonten, sondern mit Rollen verknüpft. Der Abschnitt zur [Rollenverwaltung](/de/client/manager/access-management/role-management/) beschreibt, wie diese Verknüpfung verwaltet wird, und der Abschnitt zur [Rollenzuweisung](/de/client/manager/access-management/role-assignment/) erläutert, wie Rollen (und damit letztlich Berechtigungen) Benutzern zugewiesen werden.
