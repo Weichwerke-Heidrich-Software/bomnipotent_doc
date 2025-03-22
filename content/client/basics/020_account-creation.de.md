@@ -7,7 +7,7 @@ description = "Anleitung zur Erstellung eines neuen Benutzerkontos bei BOMnipote
 
 Die meisten Interaktion mit BOMnipotent benötigen eine Berechtigung. Die einzige Ausnahme ist der Zugriff auf Daten, welche als {{< tlp-white >}} / {{< tlp-clear >}} klassifiziert wurden.
 
-Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich unter [Nutzerverwaltung](/de/client/manager/user-management).
+Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berechtigungen vergeben werden, befinden sich im Abschnitt über [Zugriffsverwaltung](/de/client/manager/access-management).
 
 ## Erstellung eine neuen Benutzerkontos
 
@@ -41,7 +41,7 @@ Alle nun folgenden Aufrufe vom BOMnipotent Client werden das existierende Schlü
 
 Jetzt, da Ihre Anfrage gestellt ist, müssen Sie darauf warten, dass ein Nutzermanager sie bestätigt. Danach können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
 
-> Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerbestätigung](/de/client/manager/user-management/user-approval/).
+> Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerverwaltung](/de/client/manager/access-management/user-management/).
 
 ## Gespeicherte Schlüssel nutzen
 

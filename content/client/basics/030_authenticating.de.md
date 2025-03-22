@@ -5,7 +5,7 @@ weight = 30
 description = "Authentifizierung mit BOMnipotent Client: Nutzeraccount-Antrag, Bestätigung, Email und Schlüssel für Serveranfragen, Schlüsselpfad-Option, Nutzersitzung."
 +++
 
-> Authentifizierung setzt voraus, dass Sie [einen Nutzeraccount beantragt haben](/de/client/basics/account-creation/), und dass dieser von einem Nutzermanager [bestätigt wurde](/de/client/manager/user-management/user-approval/).
+> Authentifizierung setzt voraus, dass Sie [einen Nutzeraccount beantragt haben](/de/client/basics/account-creation/), und dass dieser von einem Nutzermanager [bestätigt wurde](/de/client/manager/access-management/user-management/).
 
 Sobald Ihr Account (also ihre Email und ihr öffentlicher Schlüssel) bestätigt ist, können Sie BOMnipotent Client Ihre Email mitgeben um eine authentifizierte Anfrage an den Server zu stellen:
 {{< tabs >}}

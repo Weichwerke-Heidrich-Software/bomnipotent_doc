@@ -15,7 +15,7 @@ Das Ausführen des Befehls
 bomnipotent_client bom list
 ```
 listet alle für Sie zugänglichen BOMs auf:
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 ╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
 │ Product     │ Version │ Timestamp               │ TLP       │ Components │
 ├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
@@ -33,7 +33,7 @@ Um eine lokale Kopie aller BOMs zu erstellen, die der Server für Sie bereitstel
 ```
 bomnipotent_client bom download ./boms
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 [INFO] Storing BOMs under ./boms
 ```
 
