@@ -5,7 +5,7 @@ weight = 20
 description = "Learn how to create a new user account in BOMnipotent, manage key pairs, and use stored keys for authentication with detailed command examples."
 +++
 
-Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as {{< tlp-white >}} / {{< tlp-clear >}}.
+Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as {{<tlp-white>}} / {{<tlp-clear>}}.
 
 Permissions are linked to user accounts. For more information on how permissions are granted, see the section about [Access Management](/client/manager/access-management).
 
