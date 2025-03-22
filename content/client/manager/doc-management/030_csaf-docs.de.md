@@ -54,13 +54,25 @@ Falls das Dokument nicht den optionalen TLP-Labeleintrag enthält, wird es mit d
 Wenn sich der Status Ihres Dokuments ändert, Sie es neu klassifizieren möchten oder neue Informationen vorliegen, können Sie es ändern. Um die neue Version hochzuladen, rufen Sie Folgendes auf:
 
 ```
-bomnipotent_client csaf delete <CSAF-ID> <PFAD/ZUM/CSAF>
+bomnipotent_client csaf delete <PFAD/ZUM/CSAF>
 ```
 ``` {wrap="false" title="Ausgabe"}
 [INFO] Modified CSAF with id BSI-2024-0001-unlabeled
 ```
 
-Der Befehl benötigt die ID des gehosteten CSAF-Dokuments, da er diese im Prinzip ebenfalls ändern kann. Das neue CSAF-Dokument gilt als autorativ.
+Der Befehl kann sogar die ID vom CSAF Dokument modifizieren. Da die bisheriger ID in diesem Fall nicht aus dem neuen Dokument abgeleitet werden kann, muss sie als optionales Argument angegeben werden:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf delete <PFAD/ZUM/CSAF> --id=<ALTE-ID>
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf delete <PFAD/ZUM/CSAF> -i <ALTE-ID>
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Löschen
 
