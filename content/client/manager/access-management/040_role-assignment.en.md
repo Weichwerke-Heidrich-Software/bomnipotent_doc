@@ -40,7 +40,7 @@ bomnipotent_client user-role add <EMAIL> <ROLE>
 [INFO] Added role to user
 ```
 
-Neither user nor role need to exist at this point.
+The user account needs to exist on the server at this point, the role does not.
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can add the admin role to other users.
 
