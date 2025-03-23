@@ -2,6 +2,7 @@
 title = "Log Level"
 slug = "log-level"
 weight = 50
+description = "Erfahren Sie, wie Sie die verschiedenen Log-Level des BOMnipotent Clients nutzen, um Fehler zu identifizieren und die Ausgabe anzupassen."
 +++
 
 BOMnipotent Client bietet verschiedene Schweregrade an Logs:

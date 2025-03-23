@@ -2,6 +2,7 @@
 title = "Output Mode"
 slug = "output-mode"
 weight = 70
+description = "Learn about BOMnipotent Client's output modess \"code\" and \"raw\", to optimize log message handling for automation and script integration."
 +++
 
 Withouth any specifications of the output-mode, BOMnipotent Client prints its log messages either to stdout, or to a configured [log-file](/client/basics/log-file/). This is great if it used by humans, but not so useful for automation. This is why BOMnipotent Client offers the two additional output-modes ["code"](#code) and ["raw"](#raw). They modify which output is printed where.

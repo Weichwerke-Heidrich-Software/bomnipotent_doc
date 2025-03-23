@@ -2,6 +2,7 @@
 title = "Log Level"
 slug = "log-level"
 weight = 50
+description = "Learn how to configure log levels in BOMnipotent Client, including error, warn, info, debug, and trace, with examples and output details."
 +++
 
 BOMnipotent Client offers several severity levels of logs:

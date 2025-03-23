@@ -2,6 +2,7 @@
 title = "Log Datei"
 slug = "log-file"
 weight = 60
+description = "Speichern Sie die Log-Ausgabe des BOMnipotent Clients in einer Datei, um Fehlermeldungen zu analysieren und die Datenverarbeitung zu optimieren."
 +++
 
 Um die Log Ausgabe eines BOMnipotent Client Aufrufs in einer Datei zu speichern anstatt sie auf stdout zu schreiben, rufen Sie:

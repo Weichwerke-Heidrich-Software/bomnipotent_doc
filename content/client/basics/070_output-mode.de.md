@@ -2,6 +2,7 @@
 title = "Ausgabemodus"
 slug = "output-mode"
 weight = 70
+description = "Erfahren Sie, wie der BOMnipotent Client Lognachrichten ausgibt und die Ausgabemodi \"code\" und \"raw\" für Automatisierung und Skripte nutzt."
 +++
 
 Ohne das irgendein Ausgabemodus angegeben ist, schreibt BOMnipotent Client seine Lognachrichten entweder auf stdout, oder in eine konfigurierte [Logdatei](/de/client/basics/log-file/). Das ist großartig falls es von Menschen genutzt wird, aber nicht so praktisch für Automation. Deswegen bietet BOMnipotent Client zusätzlich die beiden Ausgabemodi ["code"](#code) und ["raw"](#raw) an. Diese modifizieren welche Ausgabe wohin geschrieben wird.

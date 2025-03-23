@@ -2,6 +2,7 @@
 title = "Log File"
 slug = "log-file"
 weight = 60
+description = "Learn how to store BOMnipotent Client log output in a file, manage log file overwriting, and handle log file configurations effectively."
 +++
 
 To store the log output of a call to BOMnipotent Client in a file instead of printing it to stdout, call
