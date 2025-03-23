@@ -65,6 +65,27 @@ Es ist auch möglich, eine einzelne Datei herunterzuladen, indem der Pfad als zu
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
 
+BOMnipotent überschreibt existierende Dateien **nicht**, selbst falls sie sich auf dem Server geändert haben. Stattdessen gibt es eine Warnung aus:
+``` {wrap="false" title="Ausgabe"}
+[WARN] File ./csaf/white/2023/wid-sec-w-2023-0001.json already exists.
+Use the "--overwrite" flag to replace it.
+Skipping download to prevent data loss.
+```
+
+Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrieben hätten, indem Sie die "--overwrite" flag nutzen:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf download ./csaf --overwrite
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf download ./csaf -o
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Anzeigen
 
 Sie können den Inhalt eines einzelnen CSAF Dokuments direkt in die Konsole ausgeben lassen, indem Sie folgendes rufen:

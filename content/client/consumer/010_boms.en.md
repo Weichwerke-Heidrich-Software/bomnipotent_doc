@@ -38,8 +38,7 @@ bomnipotent_client bom download ./boms
 
 This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder structure if it does not already exist. The BOMs are stored in files following the naming scheme `{product name}_{product version}.cdx.json`.
 
-> To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display an error instead of silently overwriting a file.
-
+> To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display a warning instead of silently overwriting a file.
 
 ```
 tree ./boms/
@@ -54,6 +53,27 @@ tree ./boms/
 ```
 
 Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.
+
+BOMnipotent **does not** automatically replace existing files, even if they have changed on the server. It instead prints a warning message:
+``` {wrap="false" title="output"}
+[WARN] File ./boms/white/2023/wid-sec-w-2023-0001.json already exists.
+Use the "--overwrite" flag to replace it.
+Skipping download to prevent data loss.
+```
+
+You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom download ./boms --overwrite
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom download ./boms -o
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Get
 

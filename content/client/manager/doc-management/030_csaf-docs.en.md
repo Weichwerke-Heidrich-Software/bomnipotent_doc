@@ -55,13 +55,26 @@ If the document does not have the optional TLP label entry, it is treated with t
 When the status of your document changes, if you want to reclassify it, or if new information has come to light, you may want to modify your document. To upload the new version, call:
 
 ```
-bomnipotent_client csaf delete <CSAF-ID> <PATH/TO/CSAF>
+bomnipotent_client csaf delete <PATH/TO/CSAF>
 ```
 ``` {wrap="false" title="output"}
 [INFO] Modified CSAF with id BSI-2024-0001-unlabeled
 ```
 
-The command requires the ID of the hosted CSAF document, because it can in principle modify that as well. The new CSAF document is considered authorative.
+The command can even modify the ID of the CSAF document. Because the old ID cannot be inferred from the new document in that case, it has to be provided as an optional argument:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client csaf delete <PATH/TO/CSAF> --id=<OLD-ID>
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client csaf delete <PATH/TO/CSAF> -i <OLD-ID>
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 
 ## Deleting
 
