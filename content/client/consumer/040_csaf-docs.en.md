@@ -65,6 +65,27 @@ It is possible to only download a single file by providing the path as an additi
 bomnipotent_client csaf download ./csaf white/2022/bsi-2022-0001.json
 ```
 
+BOMnipotent **does not** automatically replace existing files, even if they have changed on the server. It instead prints a warning message:
+``` {wrap="false" title="output"}
+[WARN] File ./csaf/white/2023/wid-sec-w-2023-0001.json already exists.
+Use the "--overwrite" flag to replace it.
+Skipping download to prevent data loss.
+```
+
+You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client csaf download ./csaf --overwrite
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client csaf download ./csaf -o
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Get
 
 You can directly display the contents of a single CSAF doc to the consolte output by calling

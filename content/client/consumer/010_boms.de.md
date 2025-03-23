@@ -39,8 +39,7 @@ bomnipotent_client bom download ./boms
 
 Dies speichert die BOMs im angegebenen Ordner ("./boms" in diesem Beispiel). Falls der Ordner noch nicht existiert, wird er automatisch erstellt. Die BOMs werden in Dateien gespeichert, die folgendem Namensschema folgen: `{Produktname}_{Produktversion}.cdx.json`.
 
-> Um inkonsistentes Verhalten zwischen verschiedenen Betriebssystemen zu vermeiden, werden der Name und die Version des Produkts in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen durch einen Unterstrich '_' ersetzt. Dadurch könnte es theoretisch vorkommen, dass verschiedene Produkte zum selben Dateinamen führen. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt die Datei stillschweigend zu überschreiben.
-
+> Um inkonsistentes Verhalten zwischen verschiedenen Betriebssystemen zu vermeiden, werden der Name und die Version des Produkts in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen durch einen Unterstrich '_' ersetzt. Dadurch könnte es theoretisch vorkommen, dass verschiedene Produkte zum selben Dateinamen führen. In einem solchen Fall zeigt BOMnipotent eine Warnung an, anstatt die Datei stillschweigend zu überschreiben.
 
 ```
 tree ./boms/
@@ -55,6 +54,27 @@ tree ./boms/
 ```
 
 Bevor BOMnipotent Client Dateien zum Download anfordert, erstellt er eine Inventarliste der bereits im Ordner vorhandenen BOMs und lädt nur die fehlenden Dateien herunter.
+
+BOMnipotent überschreibt existierende Dateien **nicht**, selbst falls sie sich auf dem Server geändert haben. Stattdessen gibt es eine Warnung aus:
+``` {wrap="false" title="Ausgabe"}
+[WARN] File ./boms/white/2023/wid-sec-w-2023-0001.json already exists.
+Use the "--overwrite" flag to replace it.
+Skipping download to prevent data loss.
+```
+
+Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrieben hätten, indem Sie die "--overwrite" flag nutzen:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client bom download ./boms --overwrite
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client bom download ./boms -o
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Anzeigen
 
