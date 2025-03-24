@@ -14,6 +14,10 @@ lastmod = ["lastmod", ":fileModTime"]
 [params]
 themeVariantAuto = ['wwh-light', 'wwh-dark']
 collapsibleMenu = true # Display icon next to expandable menu items
+alwaysopen = false
+author.name = 'Weichwerke Heidrich Software'
+author.emailname = 'info@wwh-soft.com'
+titleSeparator = '|'
 
 [[params.themeVariant]]
 identifier = 'auto'
