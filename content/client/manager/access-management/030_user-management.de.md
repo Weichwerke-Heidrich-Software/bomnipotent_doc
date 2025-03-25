@@ -57,7 +57,7 @@ bomnipotent_client user deny <EMAIL>
 
 > Es ist möglich, einem bereits genehmigten Benutzer den Zugriff wieder zu verweigern, wodurch das Konto effektiv widerrufen wird.
 
-## Löschen
+## Entfernen
 
 Wenn Sie ein Benutzerkonto vollständig löschen möchten, rufen Sie
 ```
@@ -67,3 +67,5 @@ bomnipotent_client user remove <EMAIL>
 ``` {wrap="false" title="output"}
 [INFO] Deleted user info@wildeheide.de
 ```
+
+Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
