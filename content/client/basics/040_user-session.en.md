@@ -32,6 +32,8 @@ Whenever you call the BOMnipotent Client from now on, it will use these paramete
 bomnipotent_client bom list # Will automatically reach out to the provided domain and use your authentication data.
 ```
 
+Any relative filepaths you provide will be resolved to absolute paths before storing them. This way, the session data can be used from anywhere on your computer.
+
 ## Overwriting Parameters
 
 If you are logged in and provide any of the global optional parameters to a BOMnipotent Client call, it will use these instead:
