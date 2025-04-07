@@ -330,6 +330,4 @@ docker compose -d
 
 Ihr Server ist jetzt einsatzbereit!
 
-> Ist er nicht? Bitte [kontaktieren Sie mich](https://www.bomnipotent.de/contact)!
-
 Rufen Sie "docker ps" um den Zustand des Servers zu überprüfen.

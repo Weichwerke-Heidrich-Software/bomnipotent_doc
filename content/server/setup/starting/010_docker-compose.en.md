@@ -331,6 +331,4 @@ docker compose -d
 
 Your server is now up and running!
 
-> It is not? Please [contact me](https://www.bomnipotent.de/contact)!
-
 Run "docker ps" to check if it is healthy.
