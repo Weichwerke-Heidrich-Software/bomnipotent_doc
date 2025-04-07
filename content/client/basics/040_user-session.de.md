@@ -32,6 +32,8 @@ Wann immer Sie den BOMnipotent Client von nun an aufrufen, werden diese Paramete
 bomnipotent_client bom list # Wird automatisch die angegebene Domain kontaktieren und Ihre Authentifizierungsdaten verwenden.
 ```
 
+Jegliche relativen Dateipfade, die Sie hierbei angeben, werden vor dem Speichern in absolute Pfade umgewandelt. Somit können Sie die Sitzungsdaten von überall auf Ihrem Computer nutzen.
+
 ## Parameter überschreiben
 
 Wenn Sie angemeldet sind und bei einem Aufruf des BOMnipotent Clients globale optionale Parameter angeben, werden diese stattdessen verwendet:

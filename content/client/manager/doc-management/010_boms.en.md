@@ -200,3 +200,5 @@ bomnipotent_client bom delete <NAME> <VERSION>
 ```
 
 If the BOM does not exist, the server will return 404 Not Found. If it does exists, it is removed from the database.
+
+All components and vulnerabilities associated with the BOM are also deleted.

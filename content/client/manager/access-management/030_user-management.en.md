@@ -57,7 +57,7 @@ bomnipotent_client user deny <EMAIL>
 
 > It is possible to deny a user that has already been approved, effectively revoking the account.
 
-## Deleting
+## Removing
 
 If you want to get rid of a user account alltogether, call
 ```
@@ -67,3 +67,5 @@ bomnipotent_client user remove <EMAIL>
 ``` {wrap="false" title="output"}
 [INFO] Deleted user info@wildeheide.de
 ```
+
+This also removes all roles associated with the user.

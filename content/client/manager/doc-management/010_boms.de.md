@@ -198,3 +198,5 @@ bomnipotent_client bom delete <NAME> <VERSION>
 ```
 
 Falls die BOM nicht existiert, gibt der Server den Fehler 404 "Nicht gefunden" zurück. Ist sie vorhanden, wird sie aus der Datenbank entfernt.
+
+Alle Komponenten und Sicherheitslücken, die mit der BOM assoziiert sind, werden ebenfalls gelöscht.
