@@ -49,7 +49,9 @@ Providing the TLS certificate paths is *required* if HTTP is not allowed (becaus
 
 ### allow_http
 
-If you set this optional field to true, your BOMnipotent Server will allow unencrypted connections vie port 8080. This makes sense if your server is running behind a reverse proxy, and is communicating to it only over the local network. In this setup, the server is not directly reachable from the internet, so the reverse proxy can handle encryption for it.
+If you set this optional field to true, your BOMnipotent Server will allow unencrypted connections. This makes sense if your server is running behind a reverse proxy, and is communicating to it only over the local network. In this setup, the server is not directly reachable from the internet, so the reverse proxy can handle encryption for it.
+
+> The default port for HTTPS is 8080, but it can be [freely configured](/server/configuration/optional/port-binding/).
 
 Please note that the [OASIS CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#713-requirement-3-tls) requires that the access to your CSAF documents is encrypted!
 
