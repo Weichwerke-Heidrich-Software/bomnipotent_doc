@@ -5,7 +5,7 @@ weight = 10
 description = "Learn how to set up BOMnipotent Server using Docker Compose, making it directly available from the internet."
 +++
 
-The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/). This variant of the setup will make BOMnipotent Server directly reachable from the internet. If you want to handle traffic through a reverse proxy, see [another setup](/server/setup/starting/docker-compose-with-proxy/) instead.
+The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/). This variant of the setup will make BOMnipotent Server directly reachable from the internet. If you want to handle traffic through a reverse proxy, check out [another setup](/server/setup/starting/docker-compose-with-proxy/) instead.
 
 ## Suggested File Structure
 
@@ -38,7 +38,7 @@ If you are using a versioning system to store your setup, do not forget to add "
 
 ## config.toml
 
-BOMnipotent Server needs a configuration file, which is explained in more detail in [another section](server/configuration/config-file/).
+BOMnipotent Server needs a configuration file, which is explained in more detail in [another section](/server/configuration/config-file/).
 
 > The name of the file is arbitrary in principle, but the ready-to-deploy BOMnipotent Server docker container is set up to look for "config.toml".
 
@@ -48,7 +48,7 @@ A minimal configuration looks like this:
 # Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
-domain = "https://<your-domain>.<top-level>"
+domain = "https://bomnipotent.<your-domain>.<top-level>"
 
 [tls]
 # The path to your full TLS certificate chain
@@ -217,7 +217,7 @@ services:
         source: ./bomnipotent_config
         target: /etc/bomnipotent_server/configs/
         read_only: true
-      # Bind mount the SSL directory
+      # Bind mount the SSL directory, so that BOMnipotent can find the TLS certificate and key
       - type: bind
         source: /etc/ssl
         target: /etc/ssl
