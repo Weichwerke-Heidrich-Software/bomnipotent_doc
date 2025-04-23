@@ -5,7 +5,7 @@ weight = 10
 description = "Learn how to set up BOMnipotent Server using Docker Compose, making it directly available from the internet."
 +++
 
-The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/).
+The recommended and easiest setup for BOMnipotent Server uses [docker compose](https://docs.docker.com/compose/). This variant of the setup will make BOMnipotent Server directly reachable from the internet. If you want to handle traffic through a reverse proxy, see [another setup](/server/setup/starting/docker-compose-with-proxy/) instead.
 
 ## Suggested File Structure
 
