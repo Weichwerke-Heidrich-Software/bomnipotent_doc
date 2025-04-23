@@ -2,6 +2,7 @@
 title = "Docker Compose inkl. Reverse Proxy"
 slug = "docker-compose-with-proxy"
 weight = 20
+description = "Ein Leitfaden zur Einrichtung eines BOMnipotent-Servers mit Docker Compose und nginx Reverse-Proxy, inklusive Dateistruktur und Konfigurationsbeispielen."
 +++
 
 Diese Variante des sehr [ähnlichen Setups](/de/server/setup/starting/docker-compose/) mit [Docker Compose](https://docs.docker.com/compose/) richtet nicht nur einen laufenden BOMnipotent-Server ein, sondern auch einen [nginx](https://nginx.org/en/) Reverse-Proxy.
