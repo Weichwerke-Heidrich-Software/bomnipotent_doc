@@ -2,6 +2,7 @@
 title = "Standalone"
 slug = "standalone"
 weight = 30
+description = "Learn how to set up and run the BOMnipotent Server as a standalone application on Linux or Windows, with PostgreSQL and configuration details."
 +++
 
 You are not required to run the official BOMnipotent Server [docker container](https://hub.docker.com/r/wwhsoft/bomnipotent_server). Instead, you can download and directly run the BOMnipotent Server binary as a standalone application.
@@ -69,7 +70,7 @@ docker run --name bomnipotent_db \
   -v pgdata:/var/lib/postgresql/data \
   -d postgres:latest
 ```
-This creates a container named "bomnipotent_db", with a database also called "bomnipotent_db", a user called "bomnipotent_user", and a password that you need to set. It exposes port 5432 of the container, persists the data in a docker volume, and spins up the "postgres_latest" image in detached mode.
+This creates a container named "bomnipotent_db", with a database also called "bomnipotent_db", a user called "bomnipotent_user", and a password that you need to set. It exposes port 5432 of the container, persists the data in a docker volume, and spins up the "postgres:latest" image in detached mode.
 
 > You could use different names for the user and database, but would need to adjust the "db_url" entry of your [config file](#configtoml) accordingly.
 {{% /tab %}}
@@ -196,14 +197,14 @@ Open the Task Scheduler (taskschd.msc).
 
 In the right panel, click Create Task.
 
-In the General tab:
+In the "General" tab:
 - Name the task as "BOMnipotent Server".
 - Choose "Run whether user is logged on or not".
 
-In the Triggers tab:
+In the "Triggers" tab:
 - Click "New" and select "At startup".
 
-In the Actions tab:
+In the "Actions" tab:
 - Click "New" and set the action to "Start a program".
 - For "Program/script", select "C:\path\to\bomnipotent_server.exe" (adjust accordingly).
 - In "Add arguments (optional)", provide "C:\path\to\bomnipotent_config\config.toml" (adjust accordingly).
