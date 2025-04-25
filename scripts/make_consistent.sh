@@ -53,12 +53,14 @@ make_file_consistent() {
     check_slug_consistency $slug
     if ! grep "^weight =" $file > /dev/null; then
         echo "Warning: No line starting with 'weight =' found in $file"
-    else
+    elif ! grep "^weight = $weight$" $file > /dev/null; then
+        echo "Replacing weight in $file with $weight"
         sed -i "s/^weight =.*/weight = $weight/" $file
     fi
     if ! grep "^slug =" $file > /dev/null; then
         echo "Warning: No line starting with 'slug =' found in $file"
-    else
+    elif ! grep "^slug = \"$slug\"$" $file > /dev/null; then
+        echo "Replacing slug in $file with $slug"
         sed -i "s/^slug =.*/slug = \"$slug\"/" $file
     fi
 }
