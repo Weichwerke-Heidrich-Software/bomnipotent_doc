@@ -14,7 +14,7 @@ for path in $paths; do
             echo "$path:"
             echo "  Git last modified: $git_last_modified"
             echo "  System last modified: $system_last_modified"
-            echo "  Updating system modification date to match Git modification date..."
+            echo "  Updating system modification date to match Git modification date."
             touch -d "$git_last_modified" "$path"
         fi
     fi
