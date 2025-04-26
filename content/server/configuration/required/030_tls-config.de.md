@@ -49,7 +49,9 @@ Die Angabe der TLS-Zertifikatpfade ist *erforderlich*, falls HTTP nicht erlaubt 
 
 ### allow_http
 
-Wenn Sie dieses optionale Feld auf true setzen, lässt Ihr BOMnipotent-Server unverschlüsselte Verbindungen über Port 8080 zu. Dies ist sinnvoll, falls Ihr Server hinter einem Reverse-Proxy läuft und nur über das lokale Netzwerk mit ihm kommuniziert. In diesem Setup ist der Server nicht direkt vom Internet aus erreichbar, sodass der Reverse-Proxy die Verschlüsselung für ihn übernehmen kann.
+Wenn Sie dieses optionale Feld auf true setzen, lässt Ihr BOMnipotent-Server eine unverschlüsselte Verbindungen zu. Dies ist sinnvoll, falls Ihr Server hinter einem Reverse-Proxy läuft und nur über das lokale Netzwerk mit ihm kommuniziert. In diesem Setup ist der Server nicht direkt vom Internet aus erreichbar, sodass der Reverse-Proxy die Verschlüsselung für ihn übernehmen kann.
+
+> Der Default Port für HTTP ist 8080, er kann aber [frei konfiguriert](/de/server/configuration/optional/port-binding/) werden.
 
 Bitte beachten Sie, dass der [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#713-requirement-3-tls) erfordert, dass der Zugriff auf Ihre CSAF-Dokumente verschlüsselt ist!
 
