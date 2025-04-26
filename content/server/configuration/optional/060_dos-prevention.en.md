@@ -1,7 +1,7 @@
 +++
 title = "DOS Prevention"
 slug = "dos-prevention"
-weight = 50
+weight = 60
 description = "Learn how to fine-tune your DOS prevention in BOMnipotent Server."
 +++
 

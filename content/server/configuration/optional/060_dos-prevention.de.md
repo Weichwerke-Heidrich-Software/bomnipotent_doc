@@ -1,7 +1,7 @@
 +++
 title = "DOS-Prävention"
 slug = "dos-prevention"
-weight = 50
+weight = 60
 description = "Erfahren Sie, wie Sie Ihren BOMnipotent Server Schutz vor DOS-Angriffen feinjustieren können."
 +++
 

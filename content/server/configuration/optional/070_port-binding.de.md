@@ -1,7 +1,7 @@
 +++
 title = "Port Bindung"
 slug = "port-binding"
-weight = 60
+weight = 70
 description = "Lernen Sie, wie Sie BOMnipotents HTTP und HTTPS Port-Bindung konfigurieren können."
 +++
 
