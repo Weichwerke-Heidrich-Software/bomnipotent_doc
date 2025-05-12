@@ -1,9 +1,9 @@
 :root {
   --WWH-PURPLE: rgb(179, 0, 204);
   --WWH-ORANGE: rgb(255, 77, 0);
-  --WWH-LIGHT: rgb(224, 224, 224);
-  --WWH-DARK: rgb(64, 64, 64);
-  --WWH-DARK-OPAQUE: rgba(64, 64, 64, 0.5);
+  --WWH-LIGHT: rgb(240, 240, 240);
+  --WWH-DARK: rgb(32, 32, 32);
+  --WWH-DARK-OPAQUE: rgba(32, 32, 32, 0.5);
 
   --PRIMARY-color: var(--WWH-PURPLE); /* brand primary color */
   --SECONDARY-color: var(--WWH-ORANGE); /* brand secondary color */
