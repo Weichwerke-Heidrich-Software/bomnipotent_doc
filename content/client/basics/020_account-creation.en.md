@@ -39,7 +39,9 @@ The public key can, in principle, be shared with anyone. The "user request" call
 
 Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
-Now that your request is made, you need to wait for a user manager of the server to approve it. After that you can start making [authenticated requests](/client/basics/authenticating/).
+Most BOMnipotent Server instances will require you to confirm that you have access to the provided email address. They will send you a verification link, which expires after some time.
+
+After your request is made and your email verified, you need to wait for a user manager of the server to approve your account. Once that happened you can start making [authenticated requests](/client/basics/authenticating/).
 
 > If you are said user manager and are looking for how approve users, consult the section about [User Management](/client/manager/access-management/user-management/).
 
