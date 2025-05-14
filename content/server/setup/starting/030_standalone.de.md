@@ -140,6 +140,9 @@ namespace = "https://<Ihre Domain>.<Top-Level>"
 category = "Anbieter"
 # Kontaktdaten sind optional und frei wählbar.
 contact_details = "<Bei Sicherheitsanfragen kontaktieren Sie uns bitte unter...>"
+
+[smtp]
+TODO
 ```
 Fügen Sie Ihre Daten in die Klammern ein.
 

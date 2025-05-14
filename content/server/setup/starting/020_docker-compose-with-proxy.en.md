@@ -112,6 +112,9 @@ namespace = "https://<your-domain>.<top-level>"
 category = "vendor"
 # Contact details are optional and in free form
 contact_details = "<For security inquiries, please contact us at...>"
+
+[smtp]
+TODO
 ```
 Fill in the braces with your data.
 
