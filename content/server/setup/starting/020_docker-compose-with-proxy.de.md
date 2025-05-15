@@ -79,11 +79,10 @@ Der BOMnipotent-Server kommuniziert mit einer Datenbank. Derzeit wird nur [Postg
 Ihre .env-Datei sollte so aussehen:
 ```
 BOMNIPOTENT_DB_PW=<Ihr-Datenbank-Passwort>
+SMTP_SECRET=<Ihr-smtp-Authentifizierungs-Geheimnis>
 ```
 
 Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
-
-> Um die Sicherheit ins rechte Licht zu rücken: Die Compose-Datei macht den PostgreSQL-Container **nicht** direkt vom Internet aus erreichbar. Das Passwort wird daher nur für Aufrufe innerhalb des Containernetzwerks verwendet.
 
 ## config.toml
 
@@ -104,6 +103,14 @@ domain = "https://bomnipotent.<Ihre-Domain>.<Top-Level>"
 # der BOMnipotent-Server ist nicht direkt über das Internet erreichbar.
 allow_http = true
 
+[smtp]
+# Der Nutzername für den Mail-Anbieter, üblicherweise Ihre Mail Adresse
+user = "<you@yourdomain.com>"
+# Der SMTP Endpunkt Ihres Mail-Anbieters
+endpoint = "<your.smtp.host>"
+# Das Geheimnis um sich gegenüber dem Mail-Anbieter zu authentifizierenn, üblicherweise Ihr Passwort
+secret = "${SMTP_SECRET}"
+
 # Herausgeberdaten gemäß dem unten verlinkten CSAF-Standard
 [provider_metadata.publisher]
 name = "<Geben Sie den Namen Ihrer Organisation an>"
@@ -113,11 +120,10 @@ namespace = "https://<Ihre Domain>.<Top-Level>"
 category = "vendor"
 # Kontaktdaten sind optional und in freier Form
 contact_details = "<Bei Sicherheitsfragen kontaktieren Sie uns bitte unter...>"
-
-[smtp]
-TODO
 ```
 Füllen Sie die Klammern mit Ihren Daten aus.
+
+Falls Sie es bevorzugen, eine lokal laufende SMTP Relay Station zu nutzen, schauen Sie sich die [notwendigen Anpassungen](/de/integration/smtp-server/#communication-via-smtp-relay) der compose Datei an.
 
 Die Herausgeberdaten werden verwendet, um dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher) zu entsprechen.
 
@@ -282,6 +288,8 @@ services:
     environment:
       # Datenbankpasswort an den Server weitergeben.
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      # Geben Sie das SMTP Geheimnis an den Server weiter.
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       # Servergesundheit überprüfen
       test: ["CMD-SHELL", "curl --fail http://localhost:8080/health || exit 1"]
@@ -414,6 +422,7 @@ services:
           memory: "512M"
     environment:
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       test: ["CMD-SHELL", "curl --fail http://localhost:8080/health || exit 1"]
       interval: 60s

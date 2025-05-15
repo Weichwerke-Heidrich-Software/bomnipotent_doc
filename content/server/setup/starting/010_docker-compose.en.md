@@ -29,12 +29,10 @@ BOMnipotent server communicates with a database. Currently, only [PostgreSQL](ht
 Your .env file should look like this:
 ```
 BOMNIPOTENT_DB_PW=<your-database-password>
+SMTP_SECRET=<your-smtp-authentication-secret>
 ```
 
 If you are using a versioning system to store your setup, do not forget to add ".env" to your .gitignore or analogous ignore file!
-
-> To put the security into perspective: The compose file will **not** directly expose the PostgreSQL container to the internet. The password is therefore only used for calls within the container network.
-
 
 ## config.toml
 
@@ -56,6 +54,14 @@ certificate_chain_path = "/etc/ssl/certs/<your-TLS-certificate-chain.crt>"
 # The path to your secret TLS key
 secret_key_path = "/etc/ssl/private/<your-secret-TLS-key>"
 
+[smtp]
+# The username for your mail provider, typically your mail address
+user = "<you@yourdomain.com>"
+# The smtp endpoint of your mail provider
+endpoint = "<your.smtp.host>"
+# The secret to authenticate against the mail provider, typically your password
+secret = "${SMTP_SECRET}"
+
 # Publisher data according to the CSAF Standard linked below
 [provider_metadata.publisher]
 name = "<Provide the name of your organsiation>"
@@ -65,13 +71,12 @@ namespace = "https://<your-domain>.<top-level>"
 category = "vendor"
 # Contact details are optional and in free form
 contact_details = "<For security inquiries, please contact us at...>"
-
-[smtp]
-TODO
 ```
 Fill in the braces with your data.
 
 > The [section about TLS configuration](/server/configuration/required/tls-config/) contains more detailed information to avoid common pitfalls.
+
+If you prefer using a local smtp releay station, have a look at the [necessary adjustments](/integration/smtp-server/#communication-via-smtp-relay) to the compose file.
 
 The publisher data is used to comply with the [OASIS CSAF standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher).
 
@@ -181,6 +186,8 @@ services:
     environment:
       # Pass the database password on to the server.
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      # Pass the SMTP secret on to the server.
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       # Check if the server is healthy
       # Your TLS certificate is most likely not valid for "localhost"
@@ -286,6 +293,7 @@ services:
           memory: "512M"
     environment:
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       test: ["CMD-SHELL", "curl --fail --insecure https://localhost:8443/health || exit 1"]
       interval: 60s
