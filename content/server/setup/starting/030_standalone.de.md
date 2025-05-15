@@ -152,7 +152,7 @@ Fügen Sie Ihre Daten in die Klammern ein.
 
 > Der [Abschnitt zur TLS-Konfiguration](/de/server/configuration/required/tls-config/) enthält ausführlichere Informationen, um häufige Fehler zu vermeiden.
 
-Falls Sie es bevorzugen, eine lokal laufende SMTP Relay Station zu nutzen, schauen Sie sich die [notwendigen Anpassungen](/de/integration/smtp-server/#communication-via-smtp-relay) der compose Datei an.
+Falls Sie es bevorzugen, eine lokal laufende SMTP Relay Station zu nutzen, schauen Sie sich die [notwendigen Anpassungen](/de/integration/smtp-server/#kommunikation-über-smtp-relay) der compose Datei an.
 
 Die Publisher-Daten werden verwendet, um den [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher) einzuhalten.
 
