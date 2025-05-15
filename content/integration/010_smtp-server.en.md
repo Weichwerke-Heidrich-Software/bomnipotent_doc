@@ -15,7 +15,7 @@ secret = "${SMTP_SECRET}"
 ```
 The exact form will strongly depend on your email provider. Some may require the full email address as the user, others may not.
 
-Clients like Mozilla Thunderbird are usually very good at deducing the required parameters. If you're at a loss, look for the parameters there.
+Clients like Mozilla Thunderbird are usually very good at deducing the required parameters. If you're at a loss, look for them there.
 
 ## Communication via SMTP Relay
 
@@ -74,7 +74,7 @@ networks:
     name: smtp_network
 ```
 
-You also need to add the network to any container that is supposed to contact it. You may also want for these containers to depend on the smtp_relay, so that they don't start before the email server is ready:
+You also need to add the network to any container that is supposed to contact it. You may also want for these containers to depend on the smtp_relay, so that they don't start before the relay station is ready:
 ``` yaml
   bomnipotent_server:
     container_name: bomnipotent_server
@@ -110,7 +110,7 @@ $env:SMTP_PASSWORD = "eHD5B6S8Kze3"
 {{% /tab %}}
 {{< /tabs >}}
 
-In your BOMnipotent Server config file, you can modify your smtp section to connect to the relay via the docker network:
+In your BOMnipotent Server config file, you can now modify your smtp section to connect to the relay via the docker network:
 ``` toml
 [smtp_config]
 user = "you@yourdomain.com"
@@ -119,7 +119,7 @@ endpoint = "smtp://smtp_relay:2500"
 
 ### Running Relay in standalone Docker Container
 
-If your setup does not have a compose file, you can instead run the container using "just" Docker. Make sure that your environment provides a value for SMTP_PASSWORD, and then run
+If your setup does not have a compose file, you can instead run the container using Docker directly. Make sure that your environment provides a value for SMTP_PASSWORD, and then run
 ```
 docker run --detach -p 2500:2500 --name smtp_relay \
     -e TZ=Europe/Berlin \
