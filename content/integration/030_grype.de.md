@@ -1,7 +1,7 @@
 +++
 title = "Sicherheitslücken entdecken mit Grype"
 slug = "grype"
-weight = 20
+weight = 30
 description = "Guide on using Grype to scan SBOMs for vulnerabilities, including setup, usage, and exporting reports compatible with BOMnipotent."
 +++
 

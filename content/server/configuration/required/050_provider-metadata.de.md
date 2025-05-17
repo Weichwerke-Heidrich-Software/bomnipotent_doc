@@ -1,7 +1,7 @@
 +++
 title = "CSAF-Provider Metadaten"
 slug = "provider-metadata"
-weight = 40
+weight = 50
 description = "Erfahren Sie, wie Sie CSAF-Provider-Metadaten gemäß OASIS-Standard mit BOMnipotent einfach generieren oder bereitstellen können."
 +++
 
@@ -39,7 +39,7 @@ Während das Feld "name" in erster Linie für Menschen gedacht ist, wird der "na
 
 Die Herausgeberkategorie ist eine maschinenlesbare Klassifizierung Ihrer Organsiation. Gemäß dem [CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#32181-document-property---publisher---category) sind in den Herausgeberkategorien die Werte "coordinator", "discoverer", "other", "translator", "user" oder "vendor" zulässig. Als Benutzer von BOMnipotent Server sind Sie höchstwahrscheinlich ein "vendor", also ein Entwickler oder Weiterverkäufer von Produkten oder Dienstleistungen.
 
-#### Ausstellenrinformation
+#### Issuing Authority / Ausstellerinformation
 
 Das optionale Feld "issuing_authority" kann verwendet werden, um Ihre Verbindung zu den gehosteten Dokumenten zu verdeutlichen. Sind Sie der Entwickler? Sind Sie ein Händler? Die Eingabe ist in freier Form.
 

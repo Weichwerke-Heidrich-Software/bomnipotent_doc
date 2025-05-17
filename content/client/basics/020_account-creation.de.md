@@ -39,9 +39,28 @@ Der öffentliche Schlüssel kann, im Prinzip, mit jeder beliebigen Person geteil
 
 Alle nun folgenden Aufrufe vom BOMnipotent Client werden das existierende Schlüsselpaar wiederverwenden.
 
-Jetzt, da Ihre Anfrage gestellt ist, müssen Sie darauf warten, dass ein Nutzermanager sie bestätigt. Danach können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
+Die meisten Instanzen von BOMnipotent Server werden fordern, dass Sie bestätigen, dass Sie Zugriff auf die angegebene Email Adresse haben. Dafür senden diese Ihnen einen Verifizierungslink, welcher nach einer Weile abläuft.
+
+Nachdem Ihre Anfrage gestellt und Ihre Email verifiziert ist, müssen Sie darauf warten, dass ein Nutzermanager Sie bestätigt. Sobald das geschehen ist können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
 
 > Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerverwaltung](/de/client/manager/access-management/user-management/).
+
+## Erstellung eines Roboteraccount
+
+Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert. BOMnipotent ist gebaut, um in Pipelines integriert zu werden. Um ein Konto zu erstellen, welches in Automatisierung genutzt werden soll, fügen Sie der Anfrage die '--robot' Option hinzu:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client --domain=<server> user request <Name-des-Roboters> --robot
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client -d <server> user request <Name-des-Roboters> -r
+```
+{{% /tab %}}
+{{< /tabs >}}
+Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
 
 ## Gespeicherte Schlüssel nutzen
 

@@ -23,6 +23,10 @@ BOMnipotent basiert auf vielerlei Open Source Software Projekten. Mehrere (obgle
 <iframe src="https://spdx.org/licenses/CC0-1.0.html" style="width: 100%; height: 80vh; border: none;"></iframe>
 {{< /expand >}}
 
+{{< expand title="Community Data License Agreement Permissive 2.0" expanded="false" expanded="false" >}}
+<iframe src="https://spdx.org/licenses/CDLA-Permissive-2.0.html" style="width: 100%; height: 80vh; border: none;"></iframe>
+{{< /expand >}}
+
 {{< expand title="ISC License" expanded="false" expanded="false" >}}
 <iframe src="https://spdx.org/licenses/ISC.html" style="width: 100%; height: 80vh; border: none;"></iframe>
 {{< /expand >}}

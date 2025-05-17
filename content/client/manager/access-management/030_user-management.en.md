@@ -25,7 +25,7 @@ bomnipotent_client user list
 │ User Email         │ Status    │ Expires                 │ Last Updated            │
 ├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
 │ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
-│ info@wildeheide.de │ REQUESTED │ 2026-03-23 03:52:21 UTC │ 2025-03-22 03:52:21 UTC │
+│ info@wildeheide.de │ VERIFIED  │ 2026-03-23 03:52:21 UTC │ 2025-03-22 03:52:21 UTC │
 ╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
 ```
 
@@ -46,6 +46,27 @@ bomnipotent_client user approve <EMAIL>
 [INFO] Changed status of info@wildeheide.de to APPROVED
 ```
 
+If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the '--allow-unverified' option (there's no short version for options that bypass security measures):
+```
+bomnipotent_client user approve <EMAIL> --allow-unverified
+```
+
+If the account belongs to a robot, it can not be verified. In that case you can approve it with the '--robot' option.
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user approve <Username> --robot
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user approve <Username> -r
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+> **Important:** You should be absolutely certain that this is the account you want to approve.
+
 Analogously, you can decide agains allowing this user any special access:
 ```
 bomnipotent_client user deny <EMAIL>
@@ -54,6 +75,8 @@ bomnipotent_client user deny <EMAIL>
 ``` {wrap="false" title="output"}
 [INFO] Changed status of info@wildeheide.de to DENIED
 ```
+
+Contrary to approval, this action does not care which status the user had before the denial.
 
 > It is possible to deny a user that has already been approved, effectively revoking the account.
 

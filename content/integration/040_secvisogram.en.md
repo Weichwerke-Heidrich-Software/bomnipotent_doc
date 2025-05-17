@@ -1,7 +1,7 @@
 +++
 title = "CSAF Creation with Secvisogram"
 slug = "secvisogram"
-weight = 30
+weight = 40
 draft = true
 +++
 

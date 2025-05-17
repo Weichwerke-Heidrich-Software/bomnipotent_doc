@@ -78,11 +78,10 @@ BOMnipotent server communicates with a database. Currently, only [PostgreSQL](ht
 Your .env file should look like this:
 ```
 BOMNIPOTENT_DB_PW=<your-database-password>
+SMTP_SECRET=<your-smtp-authentication-secret>
 ```
 
 If you are using a versioning system to store your setup, do not forget to add ".env" to your .gitignore or analogous ignore file!
-
-> To put the security into perspective: The compose file will **not** directly expose the PostgreSQL container to the internet. The password is therefore only used for calls within the container network.
 
 ## config.toml
 
@@ -103,6 +102,14 @@ domain = "https://bomnipotent.<your-domain>.<top-level>"
 # BOMnipotent Server is not directly reachable from the internet.
 allow_http = true
 
+[smtp]
+# The username for your mail provider, typically your mail address
+user = "<you@yourdomain.com>"
+# The smtp endpoint of your mail provider
+endpoint = "<your.smtp.host>"
+# The secret to authenticate against the mail provider, typically your password
+secret = "${SMTP_SECRET}"
+
 # Publisher data according to the CSAF Standard linked below
 [provider_metadata.publisher]
 name = "<Provide the name of your organsiation>"
@@ -114,6 +121,8 @@ category = "vendor"
 contact_details = "<For security inquiries, please contact us at...>"
 ```
 Fill in the braces with your data.
+
+If you prefer using a local smtp releay station, have a look at the [necessary adjustments](/integration/smtp-server/#communication-via-smtp-relay) to the compose file.
 
 The publisher data is used to comply with the [OASIS CSAF standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher).
 
@@ -278,6 +287,8 @@ services:
     environment:
       # Pass the database password on to the server.
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      # Pass the SMTP secret on to the server.
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       # Check if the server is healthy
       test: ["CMD-SHELL", "curl --fail http://localhost:8080/health || exit 1"]
@@ -410,6 +421,7 @@ services:
           memory: "512M"
     environment:
       BOMNIPOTENT_DB_PW: ${BOMNIPOTENT_DB_PW}
+      SMTP_SECRET: ${SMTP_SECRET}
     healthcheck:
       test: ["CMD-SHELL", "curl --fail http://localhost:8080/health || exit 1"]
       interval: 60s

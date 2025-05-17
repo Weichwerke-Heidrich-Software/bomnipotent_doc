@@ -1,7 +1,7 @@
 +++
 title = "CSAF Provider Metadata"
 slug = "provider-metadata"
-weight = 40
+weight = 50
 description = "Learn how to configure CSAF Provider Metadata in BOMnipotent, generate provider-metadata.json, and ensure compliance with OASIS standards."
 +++
 

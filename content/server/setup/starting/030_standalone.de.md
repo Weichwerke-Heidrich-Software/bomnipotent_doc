@@ -99,11 +99,10 @@ Der BOMnipotent-Server kommuniziert mit einer Datenbank. Derzeit wird nur [Postg
 Ihre .env-Datei sollte so aussehen:
 ```
 BOMNIPOTENT_DB_PW=<Ihr-Datenbank-Passwort>
+SMTP_SECRET=<Ihr-smtp-Authentifizierungs-Geheimnis>
 ```
 
 Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
-
-> Um die Sicherheit ins rechte Licht zu rücken: Die Compose-Datei macht den PostgreSQL-Container **nicht** direkt vom Internet aus erreichbar. Das Passwort wird daher nur für Aufrufe innerhalb des Containernetzwerks verwendet.
 
 ## config.toml
 
@@ -131,6 +130,14 @@ certificate_chain_path = "/etc/ssl/certs/<Ihre-TLS-Zertifikatskette.crt>"
 # Pfad zu Ihrem geheimen TLS-Schlüssel
 secret_key_path = "/etc/ssl/private/<Ihr-geheimer-TLS-Schlüssel>"
 
+[smtp]
+# Der Nutzername für den Mail-Anbieter, üblicherweise Ihre Mail Adresse
+user = "<you@yourdomain.com>"
+# Der SMTP Endpunkt Ihres Mail-Anbieters
+endpoint = "<your.smtp.host>"
+# Das Geheimnis um sich gegenüber dem Mail-Anbieter zu authentifizierenn, üblicherweise Ihr Passwort
+secret = "${SMTP_SECRET}"
+
 # Herausgeberdaten gemäß CSAF-Standard (Link unten)
 [provider_metadata.publisher]
 name = "<Name Ihrer Organisation>"
@@ -144,6 +151,8 @@ contact_details = "<Bei Sicherheitsanfragen kontaktieren Sie uns bitte unter...>
 Fügen Sie Ihre Daten in die Klammern ein.
 
 > Der [Abschnitt zur TLS-Konfiguration](/de/server/configuration/required/tls-config/) enthält ausführlichere Informationen, um häufige Fehler zu vermeiden.
+
+Falls Sie es bevorzugen, eine lokal laufende SMTP Relay Station zu nutzen, schauen Sie sich die [notwendigen Anpassungen](/de/integration/smtp-server/#kommunikation-über-smtp-relay) der compose Datei an.
 
 Die Publisher-Daten werden verwendet, um den [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#3218-document-property---publisher) einzuhalten.
 

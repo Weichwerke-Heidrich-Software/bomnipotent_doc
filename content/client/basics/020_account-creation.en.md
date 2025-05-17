@@ -39,9 +39,28 @@ The public key can, in principle, be shared with anyone. The "user request" call
 
 Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
-Now that your request is made, you need to wait for a user manager of the server to approve it. After that you can start making [authenticated requests](/client/basics/authenticating/).
+Most BOMnipotent Server instances will require you to confirm that you have access to the provided email address. They will send you a verification link, which expires after some time.
+
+After your request is made and your email verified, you need to wait for a user manager of the server to approve your account. Once that happened you can start making [authenticated requests](/client/basics/authenticating/).
 
 > If you are said user manager and are looking for how approve users, consult the section about [User Management](/client/manager/access-management/user-management/).
+
+## Requesting a Robot Account
+
+Not all accounts are necessarily associated with human users. BOMnipotent is built with pipeline integration in mind. To create an account to be used in a automation, add the '--robot' option to the request:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client --domain=<server> user request <name-for-robot> --robot
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client -d <server> user request <name-for-robot> -r
+```
+{{% /tab %}}
+{{< /tabs >}}
+This request will mark the account as a robot, and not send a verification mail.
 
 ## Using stored Keys
 
