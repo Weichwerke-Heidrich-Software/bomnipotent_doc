@@ -75,3 +75,8 @@ a::after {
 a:hover::after {
   transform: scaleX(1);
 }
+
+/* Disable the underline of the R sidebar links */
+#R-sidebar a::after {
+  display: none !important;
+}
