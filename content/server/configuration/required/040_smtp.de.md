@@ -2,6 +2,7 @@
 title = "SMTP-Einstellungen"
 slug = "smtp"
 weight = 40
+description = "Erfahren Sie, wie Sie SMTP für BOMnipotent konfigurieren, um E-Mails sicher zu versenden und Benutzerverifizierung optimal einzurichten."
 +++
 
 Simple Mail Transfer Protocol (SMTP) ist das Protokoll zum Versenden von E-Mails. Im Kontext von BOMnipotent verwendet der Server es, um zu überprüfen, ob neu angefragte Benutzer Zugriff auf die von ihnen angegebene E-Mail-Adresse haben. Dazu muss der Server einen SMTP-Endpunkt erreichen.

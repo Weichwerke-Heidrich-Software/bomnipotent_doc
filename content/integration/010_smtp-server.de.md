@@ -2,6 +2,7 @@
 title = "SMTP Server"
 slug = "smtp-server"
 weight = 10
+description = "Lernen Sie, wie sie BOMnipotent Server für das Versenden von Emails konfigurieren können, per direkter SMTP Verbindung, oder per Relay Station in Docker oder Docker Compose."
 +++
 
 ## Direkte SMTP-Server-Kommunikation

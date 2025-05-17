@@ -2,6 +2,7 @@
 title = "SMTP Server"
 slug = "smtp-server"
 weight = 10
+description = "Learn how to configure BOMnipotent Server for direct SMTP email delivery or SMTP relay delivery using Docker or Docker Compose."
 +++
 
 ## Direct SMTP Server Communication

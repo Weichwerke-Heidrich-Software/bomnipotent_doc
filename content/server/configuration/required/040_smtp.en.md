@@ -2,6 +2,7 @@
 title = "SMTP Settings"
 slug = "smtp"
 weight = 40
+description = "Learn how to configure SMTP settings in BOMnipotent Server for secure email verification, including user, endpoint, secret, and encryption options."
 +++
 
 Simple Mail Transfer Protocol (SMTP) is the protocol used for sending emails. In the context of BOMnipotent, the server uses it to verify that newly requested users have access to the email address they provided. To enable the server to do that, it needs to be taught to reach an SMTP endpoint.
