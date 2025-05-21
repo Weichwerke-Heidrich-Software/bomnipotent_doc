@@ -5,7 +5,7 @@ weight = 40
 description = "Information on how to list and download CSAF documents using BOMnipotent, including command examples and output formats."
 +++
 
-Wenn eine Sicherheitslücke in einer der Komponenten eines von Ihnen genutzten Produkts bekannt wird, stellt sich eine der naheliegendsten Fragen: "Was muss ich jetzt tun?". Das [Common Security Advisory Format (CSAF)](https://www.csaf.io/) soll diese Frage auf automatisierte Weise beantworten. Es handelt sich um ein hauptsächlich maschinenlesbares Format zum Austausch von Sicherheitswarnungen zu Schwachstellen.
+Wenn eine Sicherheitslücke in einer der Komponenten eines von Ihnen genutzten Produkts bekannt wird, stellt sich eine der naheliegendsten Fragen: "Was muss ich jetzt tun?". Das [Common Security Advisory Framework (CSAF)](https://www.csaf.io/) soll diese Frage auf automatisierte Weise beantworten. Es handelt sich um ein hauptsächlich maschinenlesbares Format zum Austausch von Sicherheitswarnungen zu Schwachstellen.
 
 Eine der Hauptfunktionen von BOMnipotent besteht darin, die Verteilung von CSAF-Dokumenten so einfach wie möglich zu gestalten. Jede laufende Instanz des BOMnipotent-Servers fungiert als "CSAF Provider" gemäß dem [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider).
 
