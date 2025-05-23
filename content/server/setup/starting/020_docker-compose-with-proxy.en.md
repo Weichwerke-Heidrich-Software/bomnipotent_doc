@@ -252,7 +252,7 @@ services:
       start_period: 10s
     # Use the specified PostgreSQL image
     # You may ddjust the container tag at will
-    image: postgres:17-alpine3.21
+    image: postgres:17
     logging:
       # Use the local logging driver
       driver: local
@@ -397,7 +397,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 10s
-    image: postgres:17-alpine3.21
+    image: postgres:17
     logging:
       driver: local
       options:
