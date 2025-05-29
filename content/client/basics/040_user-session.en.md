@@ -11,12 +11,12 @@ The BOMnipotent Client offers several global optional arguments. To avoid having
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
-bomnipotent_client --domain=<server> --email=<your-email> --output=<mode> --secret-key=<path/to/key> --trusted-root=<path/to/cert> login
+bomnipotent_client --domain=<server> --user=<your-email> --output=<mode> --secret-key=<path/to/key> --trusted-root=<path/to/cert> login
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```
-bomnipotent_client -d <server> -e <your-email> -o <mode> -s <path/to/key> -t <path/to/cert> login
+bomnipotent_client -d <server> -u <your-email> -o <mode> -s <path/to/key> -t <path/to/cert> login
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -56,12 +56,12 @@ This can also be used to remove parameters, simply by not providing them:
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
-bomnipotent_client --domain=<other-server> --email=<your-email> --output=<mode> login # Will set secret-key and trusted-root to none.
+bomnipotent_client --domain=<other-server> --user=<your-email> --output=<mode> login # Will set secret-key and trusted-root to none.
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```
-bomnipotent_client -d <other-server> -e <your-email> -o <mode> login # Will set secret-key and trusted-root to none.
+bomnipotent_client -d <other-server> -u <your-email> -o <mode> login # Will set secret-key and trusted-root to none.
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -76,7 +76,7 @@ bomnipotent_client session status
 The output is in [TOML format](https://toml.io/en/) (which is also how it is stored on your filesystem):
 ``` toml {wrap="false" title="output"}
 domain = "https://localhost:62443"
-email = "admin@wwh-soft.com"
+user = "admin@wwh-soft.com"
 secret_key_path = "/home/simon/git/bomnipotent/test_cryptofiles/admin"
 trusted_root_path = "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
 ```
@@ -98,7 +98,7 @@ If you prefer JSON, merely append the "--json" option:
 ``` json {wrap="false" title="output"}
 {
   "domain": "https://localhost:62443",
-  "email": "admin@wwh-soft.com",
+  "user": "admin@wwh-soft.com",
   "secret_key_path": "/home/simon/git/bomnipotent/test_cryptofiles/admin",
   "trusted_root_path": "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
 }

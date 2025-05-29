@@ -7,7 +7,7 @@ description = "Learn how to manage users in BOMnipotent, including creating, lis
 
 The first step when creating a new user is to request a new account. This step is described [elsewhere](/client/basics/account-creation/), because it is relevant for managers and consumers alike.
 
-From BOMnipotent's point of view, a user is associated with a unique email address, which is used as an identifier, and a public key, which is used for authentication. This is all the data sent during the creation of a new user account.
+From BOMnipotent's point of view, a user is associated with a unique email address or username, which is used as an identifier, and a public key, which is used for authentication. This is all the data sent during the creation of a new user account.
 
 After a new account has been requested, it is up to a user manager to approve or deny the request.
 
@@ -29,7 +29,7 @@ bomnipotent_client user list
 ╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
 ```
 
-You can see the email addresses of the users and their stati. 
+You can see the email addresses or usernames of the users and their stati. 
 
 > A user that does not have the status APPROVED has no special permissions, no matter which roles they have.
 

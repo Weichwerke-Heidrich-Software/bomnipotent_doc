@@ -60,7 +60,7 @@ Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
 ``` {wrap="false" title="Ausgabe"}
 [ERROR] Received response:
 404 Not Found
-User with email info@wildeheide does not have role bom_manager
+User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können die Admin-Rolle von anderen Benutzern entfernen.

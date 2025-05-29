@@ -11,12 +11,12 @@ Sobald Ihr Account (also ihre Email und ihr öffentlicher Schlüssel) bestätigt
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```
-bomnipotent_client --domain=<Server> --email=<Ihre-Email> <Kommando>
+bomnipotent_client --domain=<Server> --user=<Ihre-Email> <Kommando>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
 ```
-bomnipotent_client -d <Server> -e <Ihre-Email> <Kommando>
+bomnipotent_client -d <Server> -u <Ihre-Email> <Kommando>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -29,12 +29,12 @@ Falls Sie Ihren Schlüssel nicht im üblichen Nutzerordner speichern, müssen Si
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```
-bomnipotent_client --domain=<Server> --email=<Ihre-Email> --secret-key=<Pfad/zum/Schlüssel> <Kommando>
+bomnipotent_client --domain=<Server> --user=<Ihre-Email> --secret-key=<Pfad/zum/Schlüssel> <Kommando>
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
 ```
-bomnipotent_client -d <Server> -e <Ihre-Email> -s <Pfad/zum/Schlüssel> <Kommando>
+bomnipotent_client -d <Server> -u <Ihre-Email> -s <Pfad/zum/Schlüssel> <Kommando>
 ```
 {{% /tab %}}
 {{< /tabs >}}

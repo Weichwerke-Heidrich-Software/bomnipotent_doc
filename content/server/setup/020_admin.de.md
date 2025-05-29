@@ -32,12 +32,12 @@ Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers u
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```
-bomnipotent_client --domain=<Server> --email=<Ihre-Email> session login
+bomnipotent_client --domain=<Server> --user=<Ihre-Email> session login
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
 ```
-bomnipotent_client -d <Server> -e <Ihre-Email> session login
+bomnipotent_client -d <Server> -u <Ihre-Email> session login
 ```
 {{% /tab %}}
 {{< /tabs >}}

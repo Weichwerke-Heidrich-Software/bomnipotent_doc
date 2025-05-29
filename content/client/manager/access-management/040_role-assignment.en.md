@@ -60,7 +60,7 @@ This will show an error if either does not exist:
 ``` {wrap="false" title="output"}
 [ERROR] Received response:
 404 Not Found
-User with email info@wildeheide does not have role bom_manager
+User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can remove the admin role from other users.
