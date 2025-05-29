@@ -39,7 +39,7 @@ This permission allows to [update and view](/client/manager/doc-management/vulne
 
 ### CSAF_MANAGEMENT
 
-Unsurprisingly, this permission allows the [uploading, modifying and deleting](/client/manager/doc-management/csaf-docs/) of Common Security Advisory Format (CSAF) documents. It also automatically grants view permissions to all hosted CSAF documents.
+Unsurprisingly, this permission allows the [uploading, modifying and deleting](/client/manager/doc-management/csaf-docs/) of Common Security Advisory Framework (CSAF) documents. It also automatically grants view permissions to all hosted CSAF documents.
 
 ### ROLE_MANAGEMENT
 

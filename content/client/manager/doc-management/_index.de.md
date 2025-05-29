@@ -4,7 +4,7 @@ weight = 20
 description = "Verwalten Sie Lieferkettensicherheitsdokumente wie BOMs und CSAF-Dokumente effizient mit BOMnipotent. Automatisierte Schwachstellenprüfung inklusive."
 +++
 
-BOMnipotent unterstützt zwei Arten von Lieferkettensicherheitsdokumenten: Stücklisten (BOMs) und Common Security Advisory Format (CSAF)-Dokumente. Darüber hinaus kann es Informationen zu Schwachstellen in Zusammenhang mit einer BOM bereitstellen.
+BOMnipotent unterstützt zwei Arten von Lieferkettensicherheitsdokumenten: Stücklisten (BOMs) und Common Security Advisory Framework (CSAF)-Dokumente. Darüber hinaus kann es Informationen zu Schwachstellen in Zusammenhang mit einer BOM bereitstellen.
 
 Eine typische Herangehensweise an das Dokumentenmanagement sieht folgendermaßen aus:
 1. Eine neue Produktversion wird zusammen mit der zugehörigen BOM veröffentlicht. Die BOM kann beispielsweise mit [syft](/de/integration/syft/) erstellt werden. Dieses Dokument wird auf den Server [hochgeladen](/de/client/manager/doc-management/boms/) hochgeladen. Im Gegensatz zu anderen Dokumenten sollten BOMs als statische Daten behandelt werden. Das Ändern oder Löschen von Stücklisten ist möglich, aber selten.

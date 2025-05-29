@@ -39,7 +39,7 @@ Diese Berechtigung ermöglicht das [Aktualisieren und Anzeigen](/de/client/manag
 
 ### CSAF_MANAGEMENT
 
-Diese Berechtigung ermöglicht das [Hochladen, Ändern und Löschen](/de/client/manager/doc-management/csaf-docs/) von CSAF-Dokumenten (Common Security Advisory Format). Sie gewährt außerdem automatisch Anzeigeberechtigungen für alle gehosteten CSAF-Dokumente.
+Diese Berechtigung ermöglicht das [Hochladen, Ändern und Löschen](/de/client/manager/doc-management/csaf-docs/) von CSAF-Dokumenten (Common Security Advisory Framework). Sie gewährt außerdem automatisch Anzeigeberechtigungen für alle gehosteten CSAF-Dokumente.
 
 ### ROLE_MANAGEMENT
 

@@ -151,7 +151,7 @@ services:
       start_period: 10s
     # Verwenden Sie das angegebene PostgreSQL-Image
     # Sie können das Container-Tag nach Belieben anpassen
-    image: postgres:17-alpine3.21
+    image: postgres:17
     logging:
       # Verwenden Sie den lokalen Protokollierungstreiber
       driver: local
@@ -269,7 +269,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 10s
-    image: postgres:17-alpine3.21
+    image: postgres:17
     logging:
       driver: local
       options:
