@@ -83,13 +83,27 @@ After setting up BOMnipotent Client and generating the BOM, it can be uploaded w
 
 The action accepts several arguments:
 - bom: This is the only mandatory argument, it needs to point to an existing file containing a BOM in CycloneDX format. In this example, the bom was stored under "./bom.cdx.json".
-- name: 
+- name / version: The CycloneDX standard does not require a BOM to have a name or version, but BOMnipotent does. If the tool used to create the BOM does not offer to set the name and/or version, you can overwrite them via arguments. In the example above, the repository name is used as the product name, and the triggering tag as the version. You may instead also specify a path to a file: The line `version: './version.txt'` for example would tell the action to read the file "./version.txt" and use the contents as the version string.
+- tlp: You can specify a TLP label to classify the uploaded BOM. If not provided, the server's [default TLP](/server/configuration/optional/tlp-config/#default-tlp) applies.
 
-TODO
+A full list of arguments can be found on the [GitHub marketplace](https://github.com/marketplace/actions/upload-bom-to-bomnipotent-server).
 
 ### Other Pipeline
 
-TODO
+The GitHub action is merely a wrapper for a bash script. To upload a BOM using your pipeline infrastructure you can download and use the [script](https://github.com/Weichwerke-Heidrich-Software/upload-bom-action/blob/main/upload_bom.sh) from the repo.
+
+```
+if [ ! -f ./upload_bom.sh ]; then
+    curl https://raw.githubusercontent.com/Weichwerke-Heidrich-Software/upload-bom-action/refs/heads/main/upload_bom.sh > ./upload_bom.sh
+    chmod +x ./upload_bom.sh
+fi
+./upload_bom.sh <bom.cdx.json> <optional args...>
+```
+
+The script takes the same arguments as the action does, except that the bom argument is positional, and that optional arguments need to be prefixed with a double hyphen:
+```
+./upload_bom.sh ./bom.cdx.json --name <product-name> --version <product-version> --tlp amber
+```
 
 ## Check for Vulnerabilities
 
