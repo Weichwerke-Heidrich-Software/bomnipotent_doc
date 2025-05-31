@@ -22,7 +22,29 @@ The task of making executables available is where various pipeline environments 
 
 ### GitHub Action
 
-TODO
+The action to setup BOMnipotent Client can be found on the [GitHub Marketplace](https://github.com/marketplace/actions/setup-bomnipotent-client).
+
+A typical snippet from you workflow yaml file looks like this (except for the indentation, because yaml...):
+
+```yaml {{ title="Typical setup snippet" }}
+- name: Install BOMnipotent Client
+  uses: Weichwerke-Heidrich-Software/setup-bomnipotent-action@v1
+  with:
+    domain: '<your-server-domain>'
+    user: '<your-robot-user>'
+    secret-key: ${{ secrets.CLIENT_SECRET_KEY }} 
+```
+
+> A more complete example can be found on [GitHub](https://github.com/marketplace/actions/setup-bomnipotent-client).
+
+The three parameters are optional, but recommended:
+- domain: Provide the full domain (including subdomain) to your BOMnipotent Server instance. It will be stored in a session, so that you do not have to provide in subsequent calls.
+- user: Store the username of your robot user, which you have set up during the [prerequisites](#prerequisites) section.
+- secret-key: Provide a reference to the secret key used to authenticate the robot user. You can make it available to your pipeline via \<your repo\> → Settings → Secrets and variables → Actions → New repository secret. In the example above, it is named "CLIENT_SECRET_KEY".
+
+> **Caution:** Do not directly store your secret key inside the pipeline, or any other versioned file. This is what the GitHub secret mechanism is designed to handle.
+
+After running this action, the command "bomnipotent_client.exe" (Windows) or "bomnipotent_client" (UNIX) is available for the rest of the job. Because different jobs run inside different containers, it may be necessary to call the setup action several times throughout the workflow.
 
 ## Upload BOMs
 
