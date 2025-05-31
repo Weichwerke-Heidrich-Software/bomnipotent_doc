@@ -1,5 +1,5 @@
 +++
-title = "SBOM-Generierung mit Syft"
+title = "SBOMs mit Syft"
 slug = "syft"
 weight = 20
 description = "SBOM-Generierung mit Syft: Einrichtung, Verwendung für Lockfiles, Verzeichnisse und Container, sowie abschließende Bemerkungen zur Zielauswahl und Sicherheitslücken-Scans."
