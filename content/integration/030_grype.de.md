@@ -1,8 +1,8 @@
 +++
-title = "Sicherheitslücken entdecken mit Grype"
+title = "Sicherheitslücken mit Grype"
 slug = "grype"
 weight = 30
-description = "Guide on using Grype to scan SBOMs for vulnerabilities, including setup, usage, and exporting reports compatible with BOMnipotent."
+description = "Erfahren Sie, wie Sie mit Grype SBOMs auf Sicherheitslücken scannen und Berichte für die Software-Lieferkettensicherheit erstellen."
 +++
 
 Sobald Ihre SBOM (Software Bill of Materials) erstellt wurde, ist es an der Zeit, sie kontinuierlich auf Schwachstellen zu scannen. Beachten Sie, dass einige Gesetze, wie beispielsweise der Cyber Resilience Act der EU, vorschreiben, dass Produkte ohne bekannte Schwachstellen veröffentlicht werden. Der erste Scan sollte daher vor einer Veröffentlichung erfolgen.
