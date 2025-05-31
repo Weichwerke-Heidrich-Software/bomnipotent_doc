@@ -62,7 +62,7 @@ The task of generating a BOM is highly specific to the product. The ideal tool d
 
 An often used pattern is to trigger the release pipeline upon pushing a tag that corresponds to a semantic version:
 
-```yaml {{ title="Possible trigger" }}
+```yaml {{ title="Tag trigger" }}
 on:
   push:
     tags:
@@ -107,10 +107,47 @@ The script takes the same arguments as the action does, except that the bom argu
 
 ## Check for Vulnerabilities
 
+While BOMs are static objects documenting the composition of a product, vulnerabilities associated with a BOM need to be checked regularly. Most vulnerability databases are updated on a daily basis, and vulnerability checks should match that frequency.
+
+The BOMnipotent vulnerability action has two substeps:
+- Update the known vulnerabilities associated with all BOMs on the server.
+- Check the server for new, unassesed vulnerabilities.
+
+Both steps can be skipped individually, in case they do not fit your use-case.
+
 ### GitHub Action
 
-TODO
+To run the vulnerability check every day at 3:00 am (for example), add the following trigger to your workflow yaml:
+
+```yaml {{ title="Schedule trigger" }}
+on:
+  schedule:
+    - cron: '0 3 * * *' # Runs the workflow every day at 03:00 UTC
+```
+
+Once you have [set up BOMnipotent Client](#setup-bomnipotent-client) on the agent, the snippet for handling the vulnerability checks is very simple:
+
+```yaml {{ title="Typical vulnerability snippet" }}
+- name: Update Vulnerabilities
+  uses: Weichwerke-Heidrich-Software/vulnerability-action@v0
+```
+
+A complete example can be found in the [GitHub marketplace](https://github.com/marketplace/actions/bomnipotent-server-vulnerability-check).
+
+The script downloads all BOMs accessible to it, checks it against several databases of known vulnerabilities, and updates them on the server.
+
+It then lists checks if there are any unassesed vulnerabilities. A vulnerability is unassessed if BOMnipotent Server does not contain a [CSAF document](https://www.csaf.io/) associated with it.
 
 ### Other Pipeline
 
-TODO
+Analogously to the [upload step](#upload-boms), the action is mostly a wrapper for a bash script. You can reference the [script](https://github.com/Weichwerke-Heidrich-Software/vulnerability-action/blob/main/update_vulns.sh) in the repo, or download and use it directly:
+
+```
+if [ ! -f ./upload_bom.sh ]; then
+    curl https://raw.githubusercontent.com/Weichwerke-Heidrich-Software/vulnerability-action/refs/heads/main/update_vulns.sh > ./update_vulns.sh
+    chmod +x ./update_vulns.sh
+fi
+./update_vulns.sh
+```
+
+The script internally uses [grype](/integration/grype/) to check for vulnerabilities. If you use the script directly, you will need to ensure that the program is installed.
