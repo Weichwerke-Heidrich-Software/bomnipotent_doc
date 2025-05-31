@@ -52,7 +52,38 @@ A Bill of Materials (BOM) is a list of the components of a product. It is a *sta
 
 This is why the step of uploading a BOM to the server should be run as part of the release pipeline.
 
+Following the separation-of-concerns principle, the action to upload BOMs has some prerequisites:
+- The BOMnipotent Client command has to be available. There is a [separate action](#setup-bomnipotent-client) that does just that.
+- The action requires a BOM in CycloneDX format as input, which has to be generated in an earlier step.
+
+The task of generating a BOM is highly specific to the product. The ideal tool depends on the ecosystem and how it is used. [Syft](/integration/syft/) is one tool that can assist, and that offers a ready-to-use [GitHub action](https://github.com/anchore/sbom-action). It is by far not the only option: The [CycloneDX Tool Center](https://cyclonedx.org/tool-center/) offers many alternatives.
+
 ### GitHub Action
+
+An often used pattern is to trigger the release pipeline upon pushing a tag that corresponds to a semantic version:
+
+```yaml {{ title="Possible trigger" }}
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+```
+
+After setting up BOMnipotent Client and generating the BOM, it can be uploaded with the following snippet:
+
+```yaml {{ title="Typical upload snippet" }}
+- name: Upload SBOM
+  uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
+  with:
+    bom: './bom.cdx.json'
+    name: '${{ github.event.repository.name }}'
+    version: '${{ github.ref_name }}'
+    tlp: 'amber'
+```
+
+The action accepts several arguments:
+- bom: This is the only mandatory argument, it needs to point to an existing file containing a BOM in CycloneDX format. In this example, the bom was stored under "./bom.cdx.json".
+- name: 
 
 TODO
 
