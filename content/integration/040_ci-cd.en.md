@@ -4,7 +4,7 @@ slug = "ci-cd"
 weight = 40
 +++
 
-BOMnipotent is built with automation in mind. By design, it never prompts for a user input and is fully scriptable.
+BOMnipotent is built with automation in mind. By design, it never prompts for an interactive user input and is thus fully scriptable.
 
 This page describes how to use BOMnipotent Client inside your CI/CD pipeline to [upload BOMs](#upload-boms) with every release, and to [check for vulnerabilities](#check-for-vulnerabilities) on a daily basis.
 
@@ -52,8 +52,8 @@ A Bill of Materials (BOM) is a list of the components of a product. It is a *sta
 
 This is why the step of uploading a BOM to the server should be run as part of the release pipeline.
 
-Following the separation-of-concerns principle, the action to upload BOMs has some prerequisites:
-- The BOMnipotent Client command has to be available. There is a [separate action](#setup-bomnipotent-client) that does just that.
+Following the single responsibility principle, the action to upload BOMs has some prerequisites:
+- The BOMnipotent Client command has to be available. There is a [separate action](#setup-bomnipotent-client) that ensures just that.
 - The action requires a BOM in CycloneDX format as input, which has to be generated in an earlier step.
 
 The task of generating a BOM is highly specific to the product. The ideal tool depends on the ecosystem and how it is used. [Syft](/integration/syft/) is one tool that can assist, and that offers a ready-to-use [GitHub action](https://github.com/anchore/sbom-action). It is by far not the only option: The [CycloneDX Tool Center](https://cyclonedx.org/tool-center/) offers many alternatives.
@@ -72,7 +72,7 @@ on:
 After setting up BOMnipotent Client and generating the BOM, it can be uploaded with the following snippet:
 
 ```yaml {{ title="Typical upload snippet" }}
-- name: Upload SBOM
+- name: Upload BOM
   uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
   with:
     bom: './bom.cdx.json'
@@ -101,6 +101,7 @@ fi
 ```
 
 The script takes the same arguments as the action does, except that the bom argument is positional, and that optional arguments need to be prefixed with a double hyphen:
+
 ```
 ./upload_bom.sh ./bom.cdx.json --name <product-name> --version <product-version> --tlp amber
 ```
@@ -134,9 +135,9 @@ Once you have [set up BOMnipotent Client](#setup-bomnipotent-client) on the agen
 
 A complete example can be found in the [GitHub marketplace](https://github.com/marketplace/actions/bomnipotent-server-vulnerability-check).
 
-The script downloads all BOMs accessible to it, checks it against several databases of known vulnerabilities, and updates them on the server.
+The script downloads all BOMs accessible to the robot user, checks it against several databases of known vulnerabilities, and updates them on the server.
 
-It then lists checks if there are any unassesed vulnerabilities. A vulnerability is unassessed if BOMnipotent Server does not contain a [CSAF document](https://www.csaf.io/) associated with it.
+It then checks if there are any unassesed vulnerabilities. A vulnerability is unassessed if BOMnipotent Server does not contain a [CSAF document](https://www.csaf.io/) associated with it.
 
 ### Other Pipeline
 
