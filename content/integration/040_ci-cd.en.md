@@ -2,6 +2,7 @@
 title = "CI/CD"
 slug = "ci-cd"
 weight = 40
+description = "Learn how to integrate BOMnipotent into your CI/CD pipeline for automated BOM uploads and vulnerability checks using GitHub Actions or scripts."
 +++
 
 BOMnipotent is built with automation in mind. By design, it never prompts for an interactive user input and is thus fully scriptable.

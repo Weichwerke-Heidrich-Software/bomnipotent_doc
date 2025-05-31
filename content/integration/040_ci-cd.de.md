@@ -2,6 +2,7 @@
 title = "CI/CD"
 slug = "ci-cd"
 weight = 40
+description = "Anleitung zur Integration von BOMnipotent in CI/CD-Pipelines: BOM-Upload, Sicherheitslückenprüfung und Automatisierung mit GitHub Actions."
 +++
 
 BOMnipotent wurde für die Automatisierung entwickelt. Es fordert den Nutzer nie zur interaktiven Eingabe auf und ist damit vollständig skriptbar.
