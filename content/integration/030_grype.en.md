@@ -1,5 +1,5 @@
 +++
-title = "Vulnerability Detection with Grype"
+title = "Vulnerabilities with Grype"
 slug = "grype"
 weight = 30
 description = "Learn how to use Anchore's Grype to scan SBOMs for vulnerabilities, including setup, usage, and exporting vulnerability reports in CycloneDX format."

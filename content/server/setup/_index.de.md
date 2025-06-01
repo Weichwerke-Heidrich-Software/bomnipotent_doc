@@ -9,6 +9,6 @@ Dieser Abschnitt soll Ihnen die Einrichtung Ihres Servers zum Hosten einer Insta
 Die Einrichtung besteht aus den folgenden, notwendigen Schritten:
 1. [Starten Sie den Server.](/de/server/setup/starting)
 1. [Fügen Sie einen Admin hinzu.](/de/server/setup/admin)
-1. [Aktivieren Sie ihre Subscription](/de/server/setup/subscription)
+1. [Aktivieren Sie Ihre Subscription.](/de/server/setup/subscription)
 
 Anschließend können Sie den Server nach Belieben [konfigurieren](/de/server/configuration).

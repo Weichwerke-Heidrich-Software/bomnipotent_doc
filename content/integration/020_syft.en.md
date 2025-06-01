@@ -1,5 +1,5 @@
 +++
-title = "SBOM Generation with Syft"
+title = "SBOMs with Syft"
 slug = "syft"
 weight = 20
 description = "SBOM Generation with Syft: Learn to generate a Software Bill of Materials using Anchore's Syft, covering setup, usage, and examples for lockfiles, directories, and containers."
