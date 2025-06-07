@@ -10,7 +10,7 @@ Der Zweck eines Stücklistenverzeichnisses (Bill of Materials, BOM) besteht dari
 ```
 bomnipotent_client component list vulny 0.1.0
 ```
-``` {wrap="false" title="output"}
+``` {wrap="false" title="Ausgabe"}
 ╭──────────────┬─────────┬─────────┬───────────────────────────┬───────────────────────────╮
 │ Name         │ Version │ Type    │ CPE                       │ PURL                      │
 ├──────────────┼─────────┼─────────┼───────────────────────────┼───────────────────────────┤
@@ -26,6 +26,29 @@ bomnipotent_client component list vulny 0.1.0
 │              │         │         │ :0.69.5:*:*:*:*:*:*:*     │                           │
 
 ...
+```
+
+Der Befehl akzeptiert die optionalen Filter "name", "version", "type", "cpe" und "purl" (der Kürze zuliebe hier nicht alle genutzt):
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client component list vulny 0.1.0 --name=aho-corasick --version=1.1.3 --type=library
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client component list vulny 0.1.0 -n aho-corasick -v 1.1.3 -t library
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="Ausgabe"}
+╭──────────────┬─────────┬─────────┬───────────────────────────┬───────────────────────────╮
+│ Name         │ Version │ Type    │ CPE                       │ PURL                      │
+├──────────────┼─────────┼─────────┼───────────────────────────┼───────────────────────────┤
+│ aho-corasick │ 1.1.3   │ library │ cpe:2.3:a:aho-corasick:ah │ pkg:cargo/aho-corasick@1. │
+│              │         │         │ o-corasick:1.1.3:*:*:*:*: │ 1.3                       │
+│              │         │         │ *:*:*                     │                           │
+╰──────────────┴─────────┴─────────┴───────────────────────────┴───────────────────────────╯
 ```
 
 Diese Ausgabe ist in erster Linie für den Menschen lesbar. Die Verwendung der Option `--output=raw` macht sie prinzipiell maschinenlesbar, aber [das vollständige Herunterladen der BOM ](/de/client/consumer/boms/) ist höchstwahrscheinlich vorzuziehen, anstatt diese Tabellenausgabe zu parsen.
