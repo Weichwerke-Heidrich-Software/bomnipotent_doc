@@ -31,6 +31,30 @@ gibt eine Liste aller für Sie zugänglichen CSAF-Dokumente aus.
 
 Zugängliche CSAF-Dokumente sind diejenigen, die entweder mit {{<tlp-white>}}/{{<tlp-clear>}}, gekennzeichnet sind oder sich auf ein Produkt beziehen, für das Sie Zugriff erhalten haben.
 
+### Filtern
+
+Der "csaf list" Befehl erlaubt eine große Anzahl an Filtern, um nur manche der CSAF Dokuemente anzuzeigen:
+- *id*: Die ID eines CSAF Dokuments ist eindeutig, sodass dieser Filter höchstens ein Ergebnis liefern kann.
+- *filename*: Laut dem [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) erlauben CSAF IDs mehr Zeichen als deren Dateinamen. Aus diesem Grund ist der Dateiname eines CSAF Dokuments nicht zwingend eindeutig.
+- *after*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum hinter einem bestimmten Zeitpunkt liegen. Die Eingabe sollte im [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) Format erfolgen, mit Datum, Uhrzeit und Zeitzone.
+- *before*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum vor einem bestimmten Zeitpunkt liegen.
+- *year*: Zeigt nur CSAF Dokuemente, dere initiales Veröffentlichungsdatum in einem gegebenen Jahr liegen.
+- *status*: Filtert nach Dokumentenstatus. Der [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321127-document-property---tracking---status) listet alle erlaubten Werte.
+- *tlp*: Zeigt nur CSAF Dokumente mit einer gewissen [TLP](https://www.first.org/tlp/) Klassifizierung. Zusätzlich zu den TLP1 und TLP2 Labeln sind auch "default", "none", "unclassified" und "unlabeled" hier valide Eingaben (welche alle dasselbe meinen).
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf list --after=2023-07-01T00:00Z --year=2023 --status=final --tlp=amber
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf list -a 2023-07-01T00:00Z -y 2023 -s final -t amber
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Herunterladen
 
 Um alle für Sie zugänglichen CSAF-Dokumente lokal zu spiegeln, führen Sie den folgenden Befehl aus:
@@ -41,7 +65,7 @@ bomnipotent_client csaf download ./csaf
 [INFO] Storing CSAF documents under ./csaf
 ```
 
-Dies speichert die CSAF-Dokumente im angegebenen Ordner ("./csaf"in diesem Beispiel). Falls der Ordner noch nicht existiert, wird die Verzeichnisstruktur automatisch erstellt. Die CSAF-Dokumente werden in Dateipfaden abgelegt, die dem Namensschema `{tlp}/{initial_release_year}/{csaf_id}.json`. 
+Dies speichert die CSAF-Dokumente im angegebenen Ordner ("./csaf"in diesem Beispiel). Falls der Ordner noch nicht existiert, wird die Verzeichnisstruktur automatisch erstellt. Die CSAF-Dokumente werden in Dateipfaden abgelegt, die dem Namensschema "{tlp}/{initial_release_year}/{csaf_id}.json".
 
 > Die Dateinamen der CSAF-Dokumente folgen einem vom [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) vorgegebenen Namensschema: Die IDs werden in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen werden durch einen Unterstrich '_' ersetzt. Das bedeutet, dass theoretisch verschiedene CSAF-Dokumente zum selben Dateipfad führen könnten. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt eine Datei stillschweigend zu überschreiben.
 
@@ -85,6 +109,8 @@ bomnipotent_client csaf download ./csaf -o
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
+Der Download Befehl akzeptiert exakt die [gleichen Filter](#filtern) wie der Befehl zum Auflisten, sodass Sie nur die Dokumente herunterladen können, welche relevant für Sie sind.
 
 ## Anzeigen
 
