@@ -89,7 +89,7 @@ bomnipotent_client csaf download ./csaf -o
 ## Anzeigen
 
 Sie können den Inhalt eines einzelnen CSAF Dokuments direkt in die Konsole ausgeben lassen, indem Sie folgendes rufen:
-```bash
+```
 bomnipotent_client csaf get <ID>
 ```
 ``` {wrap="false" title="output (cropped)"}

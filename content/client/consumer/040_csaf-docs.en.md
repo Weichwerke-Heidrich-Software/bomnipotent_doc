@@ -89,7 +89,7 @@ bomnipotent_client csaf download ./csaf -o
 ## Get
 
 You can directly display the contents of a single CSAF doc to the consolte output by calling
-```bash
+```
 bomnipotent_client csaf get <ID>
 ```
 ``` {wrap="false" title="output (cropped)"}

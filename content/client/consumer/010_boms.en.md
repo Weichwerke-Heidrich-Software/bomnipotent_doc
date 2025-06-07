@@ -26,6 +26,48 @@ will list all BOMs accessible to you:
 
 BOMs with label {{<tlp-white>}} / {{<tlp-clear>}} are visible to everyone. In this example, your account has access to one BOM with label {{<tlp-amber>}}.
 
+The command accepts the optional filters "name" and "version":
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom list --name=BOMnipotent
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom list -n BOMnipotent
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="output"}
+╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
+│ Product     │ Version │ Timestamp               │ TLP       │ Components │
+├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
+│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
+│ BOMnipotent │ 1.0.1   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
+╰─────────────┴─────────┴─────────────────────────┴───────────┴────────────╯
+```
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom list --name=BOMnipotent --version=1.0.0
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom list -n BOMnipotent -v 1.0.0
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="output"}
+╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
+│ Product     │ Version │ Timestamp               │ TLP       │ Components │
+├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
+│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
+╰─────────────┴─────────┴─────────────────────────┴───────────┴────────────╯
+```
+
 ## Download
 
 To create a local copy of all boms the server exposes to you, run:
@@ -75,10 +117,24 @@ bomnipotent_client bom download ./boms -o
 {{% /tab %}}
 {{< /tabs >}}
 
+Analogously to the [list](#list) command, the download command accepts the filters "name" and "version", to only download a subset of BOMs:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom download ./boms --name=BOMnipotent --version=1.0.0
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom download ./boms -n BOMnipotent -v 1.0.0
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Get
 
 You can directly display the contents of a single BOM to the consolte output by calling
-```bash
+```
 bomnipotent_client bom get <NAME> <VERSION>
 ```
 ``` {wrap="false" title="output (cropped)"}
@@ -96,7 +152,7 @@ bomnipotent_client bom get <NAME> <VERSION>
 ```
 
 This is especially useful if you want to use the contents of this BOM in a script. For example, to [check for vulnerabilities](/integration/grype/) in the supply chain, you could call:
-```bash
+```
 bomnipotent_client bom get <NAME> <VERSION> | grype
 ```
 ``` {wrap="false" title="output"}
