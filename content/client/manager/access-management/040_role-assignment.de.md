@@ -29,6 +29,29 @@ bomnipotent_client user-role list
 ╰──────────────────┴─────────────┴───────────────────────────╯
 ```
 
+Die Ausgabe kann nach Nutzer oder Rolle gefiltert werden:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user-role list --user=info@quantumwire --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user-role list -u info@quantumwire -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="Ausgabe"}
+╭──────────────────┬─────────────┬───────────────────────────╮
+│ User Email       │ User Role   │ Last Updated              │
+├──────────────────┼─────────────┼───────────────────────────┤
+│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
+│                  │             │ 7 UTC                     │
+╰──────────────────┴─────────────┴───────────────────────────╯
+```
+
 ## Hinzufügen
 
 Um einem Benutzer eine neue Rolle hinzuzufügen, rufen Sie

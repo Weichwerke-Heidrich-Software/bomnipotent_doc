@@ -29,6 +29,29 @@ bomnipotent_client user-role list
 ╰──────────────────┴─────────────┴───────────────────────────╯
 ```
 
+The output can be filtered by user or role:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user-role list --user=info@quantumwire --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user-role list -u info@quantumwire -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="output"}
+╭──────────────────┬─────────────┬───────────────────────────╮
+│ User Email       │ User Role   │ Last Updated              │
+├──────────────────┼─────────────┼───────────────────────────┤
+│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
+│                  │             │ 7 UTC                     │
+╰──────────────────┴─────────────┴───────────────────────────╯
+```
+
 ## Adding
 
 To add a new role to a user, call
