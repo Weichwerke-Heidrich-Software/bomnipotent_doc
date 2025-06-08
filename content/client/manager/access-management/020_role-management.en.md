@@ -77,6 +77,28 @@ bomnipotent_client role-permission list
 ╰──────────────┴─────────────────┴───────────────────────────╯
 ```
 
+The output can be filtered by role or permission:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client role-permission list --role=bom_manager --permission=BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client role-permission list -r bom_manager -p BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="output"}
+╭──────────────┬─────────────────┬───────────────────────────╮
+│ Role         │ Permission      │ Last Updated              │
+├──────────────┼─────────────────┼───────────────────────────┤
+│ bom_manager  │ BOM_MANAGEMENT  │ 2025-03-20 10:38:27.29648 │
+│              │                 │ 0 UTC                     │
+╰──────────────┴─────────────────┴───────────────────────────╯
+```
+
 ## Adding
 
 Because roles without permissions are meaningless, the two always come in pairs. There is no dedicated mechanism to create a new role: rather, you add a permission to a role, and henceforth it exists.

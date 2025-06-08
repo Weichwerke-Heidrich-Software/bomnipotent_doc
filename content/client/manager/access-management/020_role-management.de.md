@@ -78,6 +78,28 @@ bomnipotent_client role-permission list
 ╰──────────────┴─────────────────┴───────────────────────────╯
 ```
 
+Die Ausgabe kann nach Rolle oder Berechtigung gefiltert werden:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client role-permission list --role=bom_manager --permission=BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client role-permission list -r bom_manager -p BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="Ausgabe"}
+╭──────────────┬─────────────────┬───────────────────────────╮
+│ Role         │ Permission      │ Last Updated              │
+├──────────────┼─────────────────┼───────────────────────────┤
+│ bom_manager  │ BOM_MANAGEMENT  │ 2025-03-20 10:38:27.29648 │
+│              │                 │ 0 UTC                     │
+╰──────────────┴─────────────────┴───────────────────────────╯
+```
+
 ## Hinzufügen
 
 Da Rollen ohne Berechtigungen bedeutungslos sind, werden sie immer paarweise verwendet. Es gibt keinen speziellen Mechanismus zum Erstellen einer neuen Rolle. Stattdessen existiert eine Rolle dadurch, dass ihr eine Berechtigung hinzugefügt wird.
