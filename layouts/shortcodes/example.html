@@ -1,0 +1,52 @@
+{{ $name := .Get 0 }}
+{{ $base := printf "snippets/%s" $name }}
+
+{{ $inVal    := readFile (printf "layouts/partials/%s.in"    $base) }}
+{{ $shortVal := readFile (printf "layouts/partials/%s.short" $base) }}
+{{ $outVal   := readFile (printf "layouts/partials/%s.out"   $base) }}
+
+<div class="tab-nav">
+    <button data-tab-item="output" class="tab-nav-button tab-panel-style cstyle active code">
+        <span class="tab-nav-text">long</span>
+    </button>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight wrap-code" dir="auto">
+                <pre tabindex="0" class="pre-code"><code>{{ $inVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="tab-nav">
+    <button data-tab-item="output" class="tab-nav-button tab-panel-style cstyle active code">
+        <span class="tab-nav-text">short</span>
+    </button>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight wrap-code" dir="auto">
+                <pre tabindex="0" class="pre-code"><code>{{ $shortVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-nav">
+    <button data-tab-item="output" class="tab-nav-button tab-panel-style cstyle active code">
+        <span class="tab-nav-text">output</span>
+    </button>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight" dir="auto">
+                <pre tabindex="0" class="pre-code"><code>{{ $outVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
