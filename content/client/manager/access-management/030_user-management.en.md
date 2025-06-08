@@ -35,6 +35,45 @@ You can see the email addresses or usernames of the users and their stati.
 
 An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid and has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
 
+The list of users can be filtered by username, approval status, and whether or not they are expired:
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="output"}
+╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
+│ User Email         │ Status    │ Expires                 │ Last Updated            │
+├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
+│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
+╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
+```
+
+The "true" argument for the expired filter is optional:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user list --expired=true
+bomnipotent_client user list --expired # does the same
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user list -e true
+bomnipotent_client user list -e # does the same
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Approval or Denial
 
 If you were expecting the user request, you can approve it via
