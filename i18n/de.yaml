@@ -1,0 +1,8 @@
+- id: input
+  translation: "Eingabe"
+- id: input_long
+  translation: "Eingabe (lange Variante)"
+- id: input_short
+  translation: "Eingabe (kurze Variante)"
+- id: output
+  translation: "Ausgabe"

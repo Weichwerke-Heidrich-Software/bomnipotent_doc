@@ -7,9 +7,9 @@
 
 <div class="tab-nav">
     {{ if fileExists $shortPath }}
-    <span class="tab-nav-text" style="font-size: 90%;">Input (long variant)</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_long" }}</span>
     {{ else }}
-    <span class="tab-nav-text" style="font-size: 90%;">Input</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input" }}</span>
     {{ end }}
 </div>
 <div class="tab-content-container">
@@ -25,7 +25,7 @@
 {{ if fileExists $shortPath }}
     {{ $shortVal := readFile $shortPath }}
 <div class="tab-nav">
-    <span class="tab-nav-text" style="font-size: 90%;">Input (short variant)</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_short" }}</span>
 </div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
@@ -39,7 +39,7 @@
 {{ end }}
 
 <div class="tab-nav">
-    <span class="tab-nav-text" style="font-size: 90%;">Output</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "output" }}</span>
 </div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
