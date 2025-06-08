@@ -12,26 +12,10 @@ Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berec
 ## Erstellung eine neuen Benutzerkontos
 
 Ein neues Benutzerkonto erstellen Sie per
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> user request <Ihre-Email>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> user request <Ihre-Email>
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request" >}}
 
 Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://en.wikipedia.org/wiki/Public-key_cryptography) mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generieren. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
-
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
 
 > Der geheime Schlüssel wird auch häufig "privater Schlüssel" genannt. Der Autor glaubt aber, dass "geheimer Schlüssel" eine treffendere Beschreibung ist, und außerdem, vor allem im Englischen, die Chance auf Verwechslung mit dem öffentlichen Schlüssel verringert.
 

@@ -34,31 +34,9 @@ By default, BOMnipotent Client logs messages to stdout, regardless of severity l
 
 The default log-level is info. It prints some information, but does not overwhelm the user.
 
-```
-bomnipotent_client health
-```
-``` {wrap="false" title="output"}
-[INFO] Service is healthy
-```
+{{< example "health" >}}
 
-```
-bomnipotent_client bom list
-```
-``` {wrap="false" title="output"}
-[INFO]
-╭─────────────┬─────────┬─────────────────────────┬─────────┬────────────╮
-│ Product     │ Version │ Timestamp               │ TLP     │ Components │
-├─────────────┼─────────┼─────────────────────────┼─────────┼────────────┤
-│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ Default │ 363        │
-╰─────────────┴─────────┴─────────────────────────┴─────────┴────────────╯
-```
-
-Or, in case of an error:
-``` {wrap="false" title="output"}
-[ERROR] Received response:
-404 Not Found
-BOM Volcano_1.0.0 not found in database
-```
+{{< example "bom_list" >}}
 
 ## Debug
 

@@ -2,11 +2,15 @@
 {{ $base := printf "snippets/%s" $name }}
 
 {{ $inVal    := readFile (printf "layouts/partials/%s.in"    $base) }}
-{{ $shortVal := readFile (printf "layouts/partials/%s.short" $base) }}
+{{ $shortPath := printf "layouts/partials/%s.short" $base }}
 {{ $outVal   := readFile (printf "layouts/partials/%s.out"   $base) }}
 
 <div class="tab-nav">
-    <span class="tab-nav-text" style="font-size: 90%;">long</span>
+    {{ if fileExists $shortPath }}
+    <span class="tab-nav-text" style="font-size: 90%;">Input (long variant)</span>
+    {{ else }}
+    <span class="tab-nav-text" style="font-size: 90%;">Input</span>
+    {{ end }}
 </div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
@@ -18,8 +22,10 @@
     </div>
 </div>
 
+{{ if fileExists $shortPath }}
+    {{ $shortVal := readFile $shortPath }}
 <div class="tab-nav">
-    <span class="tab-nav-text" style="font-size: 90%;">short</span>
+    <span class="tab-nav-text" style="font-size: 90%;">Input (short variant)</span>
 </div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
@@ -30,9 +36,10 @@
         </div>
     </div>
 </div>
+{{ end }}
 
 <div class="tab-nav">
-    <span class="tab-nav-text" style="font-size: 90%;">output</span>
+    <span class="tab-nav-text" style="font-size: 90%;">Output</span>
 </div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">

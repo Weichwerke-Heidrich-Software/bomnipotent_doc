@@ -34,31 +34,9 @@ Standardmäßig schreibt BOMnipotent Client die Nachrichten zu stdout, unabhäng
 
 Der Standard-Ausgabemodus ist info. Er gibt einige Informationen aus, überflutet den Benutzer jedoch nicht mit Nachrichten.
 
-```
-bomnipotent_client health
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Service is healthy
-```
+{{< example "health" >}}
 
-```
-bomnipotent_client bom list
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO]
-╭─────────────┬─────────┬─────────────────────────┬─────────┬────────────╮
-│ Product     │ Version │ Timestamp               │ TLP     │ Components │
-├─────────────┼─────────┼─────────────────────────┼─────────┼────────────┤
-│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ Default │ 363        │
-╰─────────────┴─────────┴─────────────────────────┴─────────┴────────────╯
-```
-
-Oder, falls ein Fehler auftritt:
-``` {wrap="false" title="Ausgabe"}
-[ERROR] Received response:
-404 Not Found
-BOM Volcano_1.0.0 not found in database
-```
+{{< example "bom_list" >}}
 
 ## Debug
 

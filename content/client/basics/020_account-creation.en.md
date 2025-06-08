@@ -15,26 +15,6 @@ To create a new user account, run
 
 {{< example "user_request" >}}
 
-
-
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <your-email>
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <your-email>
-```
-{{% /tab %}}
-{{< /tabs >}}
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
-
 If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your local userfolder.
 
 > The secret key is more commonly called "private key", but the author believes that "secret" is a more apt description and reduces the chance to confuse it with the public key.
