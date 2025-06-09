@@ -13,7 +13,7 @@ After a new account has been requested, it is up to a user manager to approve or
 
 > For most user interactions, including listing, you need the {{<user-management-en>}} permission.
 
-## Listing
+## List
 
 To list all users in your database, call
 ```
@@ -74,7 +74,7 @@ bomnipotent_client user list -e # does the same
 {{% /tab %}}
 {{< /tabs >}}
 
-## Approval or Denial
+## Approve or Deny
 
 If you were expecting the user request, you can approve it via
 ```
@@ -119,7 +119,7 @@ Contrary to approval, this action does not care which status the user had before
 
 > It is possible to deny a user that has already been approved, effectively revoking the account.
 
-## Removing
+## Remove
 
 If you want to get rid of a user account alltogether, call
 ```
@@ -131,3 +131,20 @@ bomnipotent_client user remove <EMAIL>
 ```
 
 This also removes all roles associated with the user.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user exists --status=APPROVED
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user exists -s APPROVED
+```
+{{% /tab %}}
+{{< /tabs >}}

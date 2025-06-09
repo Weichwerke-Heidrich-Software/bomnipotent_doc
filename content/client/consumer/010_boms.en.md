@@ -159,3 +159,20 @@ bomnipotent_client bom get <NAME> <VERSION> | grype
 NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
 ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
 ```
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom exists --name=BOMnipotent --version=1.0.0
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom exists -n BOMnipotent -v 1.0.0
+```
+{{% /tab %}}
+{{< /tabs >}}

@@ -11,7 +11,7 @@ For your convenience, several [default roles](/client/manager/access-management/
 
 > To modify or even view user roles, your user account needs the {{<user-management-en>}} permission.
 
-## Listing
+## List
 
 To list all roles of all users, call
 ```
@@ -52,7 +52,7 @@ bomnipotent_client user-role list -u info@quantumwire -r bom_manager
 ╰──────────────────┴─────────────┴───────────────────────────╯
 ```
 
-## Adding
+## Add
 
 To add a new role to a user, call
 ```
@@ -67,7 +67,7 @@ The user account needs to exist on the server at this point, the role does not.
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can add the admin role to other users.
 
-## Removing
+## Remove
 
 To remove a role from a user, call
 ```
@@ -87,3 +87,20 @@ User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can remove the admin role from other users.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user-role exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user-role liexistst -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}

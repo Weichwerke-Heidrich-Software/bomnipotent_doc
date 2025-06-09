@@ -1,0 +1,13 @@
+<p>
+    The "exists" subcommand checks whether or not at least one object on the server matches some filters. It is available for all commands that accept the <a href="#list" class="highlight"><span>"list"</span></a> subcommand, and accepts the same filters.
+</p>
+
+<p>
+    Depending on the output mode, the client prints:
+</p>
+
+<ul>
+    <li>normal mode: a sentence including the number of found objects.</li>
+    <li>code: The string "200" if at least one item was found, or "404" if none were found.</li>
+    <li>raw: The string "true" if at least one item was found, or "false" if none were found.</li>
+</ul>

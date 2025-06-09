@@ -13,7 +13,7 @@ Nach der Beantragung eines neuen Kontos obliegt es einem Benutzermanager, die An
 
 > Für die meisten Benutzerinteraktionen, einschließlich der Auflistung, benötigen Sie die Berechtigung {{<user-management-de>}}.
 
-## Auflistung
+## Auflisten
 
 Um alle Benutzer in Ihrer Datenbank aufzulisten, rufen Sie
 ```
@@ -74,7 +74,7 @@ bomnipotent_client user list -e # tut dasselbe
 {{% /tab %}}
 {{< /tabs >}}
 
-## Genehmigung oder Ablehnung
+## Genehmigen oder Ablehnen
 
 Wenn Sie die Benutzeranfrage erwartet haben, können Sie sie genehmigen:
 ```
@@ -131,3 +131,20 @@ bomnipotent_client user remove <EMAIL>
 ```
 
 Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user exists --status=APPROVED
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user exists -s APPROVED
+```
+{{% /tab %}}
+{{< /tabs >}}

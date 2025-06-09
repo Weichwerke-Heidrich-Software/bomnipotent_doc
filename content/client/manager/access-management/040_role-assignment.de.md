@@ -11,7 +11,7 @@ Zu Ihrer Bequemlichkeit werden beim ersten Start des BOMnipotent-Servers mehrere
 
 > Um Benutzerrollen zu ändern oder anzuzeigen, benötigt Ihr Benutzerkonto die Berechtigung {{<user-management-de>}}.
 
-## Auflistung
+## Auflisten
 
 Um alle Rollen aller Benutzer aufzulisten, rufen Sie
 ```
@@ -87,3 +87,20 @@ User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können die Admin-Rolle von anderen Benutzern entfernen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user-role exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user-role liexistst -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}

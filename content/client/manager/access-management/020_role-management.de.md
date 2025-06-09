@@ -54,7 +54,7 @@ Cannot modify admin role permissions
 
 Die Administratorrolle verfügt über alle Berechtigungen, die erteilt werden können, und dann noch [einige weitere](/de/client/manager/access-management/permissions/#sonderberechtigungen-für-administratoren).
 
-## Auflistung
+## Auflisten
 
 Um alle Rollen und die zugehörigen Berechtigungen aufzulisten, rufen Sie Folgendes auf:
 ```
@@ -165,3 +165,20 @@ bomnipotent_client role-permission remove <ROLE> <PERMISSION>
 Sobald Sie die letzte Rolle aus einer Berechtigung entfernt haben, existiert diese nicht mehr.
 
 > Um Hoppla-Momente zu vermeiden, unterstützt BOMnipotent nicht das Löschen ganzer Stapel von Rollenberechtigungen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client role-permission exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client role-permission exists -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}

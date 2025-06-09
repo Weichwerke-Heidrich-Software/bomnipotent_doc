@@ -9,7 +9,7 @@ Wenn eine Sicherheitslücke in einer der Komponenten eines von Ihnen genutzten P
 
 Eine der Hauptfunktionen von BOMnipotent besteht darin, die Verteilung von CSAF-Dokumenten so einfach wie möglich zu gestalten. Jede laufende Instanz des BOMnipotent-Servers fungiert als "CSAF Provider" gemäß dem [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider).
 
-## Auflistung
+## Auflisten
 
 Das Ausführen des Befehls
 
@@ -133,3 +133,20 @@ bomnipotent_client csaf get <ID>
 ```
 
 Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skript weiterverwenden wollen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf exists --year=2023
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf exists -y 2023
+```
+{{% /tab %}}
+{{< /tabs >}}

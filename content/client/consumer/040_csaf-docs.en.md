@@ -31,7 +31,7 @@ will give you a list of all CSAF documents accessible to you.
 
 Accesible CSAF documents are those that are either labeled {{<tlp-white>}}/{{<tlp-clear>}}, or that concern a product that you have been granted access to.
 
-### Filtering
+### Filter
 
 The "csaf list" command allows quite a large number of filters, to display only some of all CSAF documents:
 - *id*: The ID of a CSAF document is unique, so this filter will display at most one result.
@@ -133,3 +133,20 @@ bomnipotent_client csaf get <ID>
 ```
 
 This is especially useful if you want to use the contents of this CSAF doc in a script.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client csaf exists --year=2023
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client csaf exists -y 2023
+```
+{{% /tab %}}
+{{< /tabs >}}

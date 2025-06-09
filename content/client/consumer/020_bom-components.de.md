@@ -1,5 +1,5 @@
 +++
-title = "Komponentenliste"
+title = "Komponenten"
 slug = "bom-components"
 weight = 20
 description = "Katalogisiert die Komponenten eines Produkts mit BOMnipotent Client, zeigt die Nutzung und Ausgabe des Befehls bomnipotent_client component list und erklärt maschinenlesbare Optionen."

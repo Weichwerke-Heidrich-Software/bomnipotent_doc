@@ -1,9 +1,11 @@
 +++
-title = "Produktlisten"
+title = "Produkte"
 slug = "products"
 weight = 50
 description = "Produktliste eines CSAF Dokuments mit Befehlsanleitung und tabellarischer Ausgabe der Produkte, deren Schwachstellen, Status, CSAF ID und TLP."
 +++
+
+## Auflisten
 
 Um genau zu sehen, welche Produkte von welchem CSAF Dokument behandelt werden, führen Sie den folgenden Befehl aus:
 
@@ -55,3 +57,20 @@ bomnipotent_client product list -n "CSAF Tools CVRF-CSAF-Converter 1.0.0-alpha" 
 │ erter 1.0.0-alpha         │                │                │               │           │
 ╰───────────────────────────┴────────────────┴────────────────┴───────────────┴───────────╯
 ```
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client product exists --status=known_affected
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client product exists -s known_affected
+```
+{{% /tab %}}
+{{< /tabs >}}

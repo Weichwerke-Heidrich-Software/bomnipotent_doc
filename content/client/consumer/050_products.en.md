@@ -1,9 +1,11 @@
 +++
-title = "Listing Products"
+title = "Products"
 slug = "products"
 weight = 50
 description = "Listing of products covered by a CSAF advisory, including product names, vulnerabilities, statuses, CSAF IDs, and TLP levels, with command to generate the list."
 +++
+
+## List
 
 To see exactly which products are covered by which CSAF advisory, run:
 
@@ -55,3 +57,20 @@ bomnipotent_client product list -n "CSAF Tools CVRF-CSAF-Converter 1.0.0-alpha" 
 │ erter 1.0.0-alpha         │                │                │               │           │
 ╰───────────────────────────┴────────────────┴────────────────┴───────────────┴───────────╯
 ```
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client product exists --status=known_affected
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client product exists -s known_affected
+```
+{{% /tab %}}
+{{< /tabs >}}

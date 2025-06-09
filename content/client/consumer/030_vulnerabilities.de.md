@@ -5,6 +5,8 @@ weight = 30
 description = "Anleitung zur Anzeige bekannter Sicherheitslücken eines Produkts mit Beispielausgabe und Erklärung der enthaltenen Informationen wie CVSS-Wert und TLP-Klassifizierung."
 +++
 
+## Auflisten
+
 Um eine Liste bekannter, Ihnen zugänglicher Sicherheitslücken anzuzeigen, rufen Sie:
 
 ```
@@ -85,3 +87,20 @@ bomnipotent_client vulnerability list -u false
 {{< /tabs >}}
 
 Das CSAF-Dokument ist ein entscheidender Bestandteil, da es Ihnen als Nutzer des Produkts mitteilt, wie Sie auf diese Sicherheitslücke in der Lieferkette reagieren sollten. Lesen Sie den [nächsten Abschnitt](/de/client/consumer/csaf-docs/), um herauszufinden, wie Sie darauf zugreifen können.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client vulnerability exists --version=0.1.0
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client vulnerability exists -v 0.1.0
+```
+{{% /tab %}}
+{{< /tabs >}}

@@ -8,7 +8,7 @@ description = "Learn about BOMs (Bills of Materials), how to list accessible BOM
 
 Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt sowohl der Funktionalität als auch des Namens von BOMnipotent. Eine BOM ist eine Liste aller Komponenten, die ein Produkt ausmachen. Im Bereich der Cybersicherheit ist die bekannteste Variante die Software-Stückliste (Software Bill of Materials, SBOM), aber BOMs ermöglichen auch allgemeinere Überlegungen.
 
-## Auflistung
+## Auflisten
 
 Das Ausführen des Befehls
 ```
@@ -160,3 +160,20 @@ bomnipotent_client bom get <NAME> <VERSION> | grype
 NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
 ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
 ```
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client bom exists --name=BOMnipotent --version=1.0.0
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client bom exists -n BOMnipotent -v 1.0.0
+```
+{{% /tab %}}
+{{< /tabs >}}

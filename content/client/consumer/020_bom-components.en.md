@@ -1,5 +1,5 @@
 +++
-title = "Listing Components"
+title = "Components"
 slug = "bom-components"
 weight = 20
 description = "Learn how to use BOMnipotent Client to list all components of a product, including their names, versions, types, CPEs, and PURLs, with example commands."
