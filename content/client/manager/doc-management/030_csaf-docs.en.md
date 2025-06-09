@@ -22,6 +22,36 @@ bomnipotent_client csaf upload <PATH/TO/CSAF>
 
 Before your CSAF document is uploaded, BOMnipotent Client checks that it is valid according to the [OASIS CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests).
 
+CSAF documents are identified by their, well, identifier, which needs to be unique. Trying to upload another document with the same id results in an error. You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client csaf upload <PATH/TO/CSAF> --on-existing=skip
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client csaf upload <PATH/TO/CSAF> -o skip
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client csaf upload <PATH/TO/CSAF> --on-existing=replace
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client csaf upload <PATH/TO/CSAF> -o replace
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+## Listing
+
 You can view the result of the operation with
 ```
 bomnipotent_client csaf list
