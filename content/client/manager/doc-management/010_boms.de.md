@@ -84,6 +84,36 @@ bomnipotent_client bom upload <PFAD/ZUR/BOM> -t <LABEL>
 
 Falls Sie keines von beiden tun, behandelt BOMnipotent alle nicht klassifizierten Dokumente so, als wären sie mit dem Label {{< tlp-red >}} gekennzeichnet, und gibt jedes Mal eine Warnung aus, wenn dies erforderlich ist.
 
+### Konfliktbehandlung
+
+Die Kombination aus Name und Version der Hauptkomponente einer BOM muss eindeutig sein. Der Versuch, ein weiteres Dokuement mit derselben Kombination hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client bom upload <PFAD/ZUR/BOM> --on-existing=skip
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client bom upload <PFAD/ZUR/BOM> -o skip
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client bom upload <PFAD/ZUR/BOM> --on-existing=replace
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client bom upload <PFAD/ZUR/BOM> -o replace
+```
+{{% /tab %}}
+{{< /tabs >}}
+
 ## Ändern
 
 Im einfachsten Fall funktioniert das Ändern einer vorhandenen Stückliste ähnlich wie das Hochladen einer neuen.

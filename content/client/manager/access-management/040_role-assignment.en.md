@@ -11,7 +11,7 @@ For your convenience, several [default roles](/client/manager/access-management/
 
 > To modify or even view user roles, your user account needs the {{<user-management-en>}} permission.
 
-## Listing
+## List
 
 To list all roles of all users, call
 ```
@@ -29,7 +29,30 @@ bomnipotent_client user-role list
 ╰──────────────────┴─────────────┴───────────────────────────╯
 ```
 
-## Adding
+The output can be filtered by user or role:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user-role list --user=info@quantumwire --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user-role list -u info@quantumwire -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="output"}
+╭──────────────────┬─────────────┬───────────────────────────╮
+│ User Email       │ User Role   │ Last Updated              │
+├──────────────────┼─────────────┼───────────────────────────┤
+│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
+│                  │             │ 7 UTC                     │
+╰──────────────────┴─────────────┴───────────────────────────╯
+```
+
+## Add
 
 To add a new role to a user, call
 ```
@@ -44,7 +67,7 @@ The user account needs to exist on the server at this point, the role does not.
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can add the admin role to other users.
 
-## Removing
+## Remove
 
 To remove a role from a user, call
 ```
@@ -60,7 +83,24 @@ This will show an error if either does not exist:
 ``` {wrap="false" title="output"}
 [ERROR] Received response:
 404 Not Found
-User with email info@wildeheide does not have role bom_manager
+User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can remove the admin role from other users.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user-role exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user-role liexistst -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}

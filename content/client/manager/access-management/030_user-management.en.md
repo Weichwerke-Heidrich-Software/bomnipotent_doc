@@ -7,13 +7,13 @@ description = "Learn how to manage users in BOMnipotent, including creating, lis
 
 The first step when creating a new user is to request a new account. This step is described [elsewhere](/client/basics/account-creation/), because it is relevant for managers and consumers alike.
 
-From BOMnipotent's point of view, a user is associated with a unique email address, which is used as an identifier, and a public key, which is used for authentication. This is all the data sent during the creation of a new user account.
+From BOMnipotent's point of view, a user is associated with a unique email address or username, which is used as an identifier, and a public key, which is used for authentication. This is all the data sent during the creation of a new user account.
 
 After a new account has been requested, it is up to a user manager to approve or deny the request.
 
 > For most user interactions, including listing, you need the {{<user-management-en>}} permission.
 
-## Listing
+## List
 
 To list all users in your database, call
 ```
@@ -29,13 +29,52 @@ bomnipotent_client user list
 ╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
 ```
 
-You can see the email addresses of the users and their stati. 
+You can see the email addresses or usernames of the users and their stati. 
 
 > A user that does not have the status APPROVED has no special permissions, no matter which roles they have.
 
 An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid and has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
 
-## Approval or Denial
+The list of users can be filtered by username, approval status, and whether or not they are expired:
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="output"}
+╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
+│ User Email         │ Status    │ Expires                 │ Last Updated            │
+├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
+│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
+╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
+```
+
+The "true" argument for the expired filter is optional:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user list --expired=true
+bomnipotent_client user list --expired # does the same
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user list -e true
+bomnipotent_client user list -e # does the same
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+## Approve or Deny
 
 If you were expecting the user request, you can approve it via
 ```
@@ -80,7 +119,7 @@ Contrary to approval, this action does not care which status the user had before
 
 > It is possible to deny a user that has already been approved, effectively revoking the account.
 
-## Removing
+## Remove
 
 If you want to get rid of a user account alltogether, call
 ```
@@ -92,3 +131,20 @@ bomnipotent_client user remove <EMAIL>
 ```
 
 This also removes all roles associated with the user.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user exists --status=APPROVED
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user exists -s APPROVED
+```
+{{% /tab %}}
+{{< /tabs >}}

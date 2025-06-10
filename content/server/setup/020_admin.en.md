@@ -32,12 +32,12 @@ To make things a litle less verbose, let's store the domain of your server and y
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
-bomnipotent_client --domain=<server> --email=<your-email> session login
+bomnipotent_client --domain=<server> --user=<your-email> session login
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```
-bomnipotent_client -d <server> -e <your-email> session login
+bomnipotent_client -d <server> -u <your-email> session login
 ```
 {{% /tab %}}
 {{< /tabs >}}

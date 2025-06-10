@@ -11,12 +11,12 @@ Once your account (meaning your email and public key) is approved, you can provi
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
-bomnipotent_client --domain=<server> --email=<your-email> <command>
+bomnipotent_client --domain=<server> --user=<your-email> <command>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```
-bomnipotent_client -d <server> -e <your-email> <command>
+bomnipotent_client -d <server> -u <your-email> <command>
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -29,12 +29,12 @@ If you are not storing your keys in the default user location, you have to tell 
 {{< tabs >}}
 {{% tab title="long" %}}
 ```
-bomnipotent_client --domain=<server> --email=<your-email> --secret-key=<path/to/key> <command>
+bomnipotent_client --domain=<server> --user=<your-email> --secret-key=<path/to/key> <command>
 ```
 {{% /tab %}}
 {{% tab title="short" %}}
 ```
-bomnipotent_client -d <server> -e <your-email> -s <path/to/key> <command>
+bomnipotent_client -d <server> -u <your-email> -s <path/to/key> <command>
 ```
 {{% /tab %}}
 {{< /tabs >}}

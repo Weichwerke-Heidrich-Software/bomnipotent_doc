@@ -11,7 +11,7 @@ Zu Ihrer Bequemlichkeit werden beim ersten Start des BOMnipotent-Servers mehrere
 
 > Um Benutzerrollen zu ändern oder anzuzeigen, benötigt Ihr Benutzerkonto die Berechtigung {{<user-management-de>}}.
 
-## Auflistung
+## Auflisten
 
 Um alle Rollen aller Benutzer aufzulisten, rufen Sie
 ```
@@ -26,6 +26,29 @@ bomnipotent_client user-role list
 │                  │             │ 7 UTC                     │
 │ info@wildeheide  │ bom_manager │ 2025-03-22 04:26:08.83708 │
 │                  │             │ 3 UTC                     │
+╰──────────────────┴─────────────┴───────────────────────────╯
+```
+
+Die Ausgabe kann nach Nutzer oder Rolle gefiltert werden:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user-role list --user=info@quantumwire --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user-role list -u info@quantumwire -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="Ausgabe"}
+╭──────────────────┬─────────────┬───────────────────────────╮
+│ User Email       │ User Role   │ Last Updated              │
+├──────────────────┼─────────────┼───────────────────────────┤
+│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
+│                  │             │ 7 UTC                     │
 ╰──────────────────┴─────────────┴───────────────────────────╯
 ```
 
@@ -60,7 +83,24 @@ Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
 ``` {wrap="false" title="Ausgabe"}
 [ERROR] Received response:
 404 Not Found
-User with email info@wildeheide does not have role bom_manager
+User with username "info@wildeheide" does not have role bom_manager.
 ```
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können die Admin-Rolle von anderen Benutzern entfernen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user-role exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user-role liexistst -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}
