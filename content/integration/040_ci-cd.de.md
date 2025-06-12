@@ -131,7 +131,7 @@ Sobald sie auf dem Agent [BOMnipotent Client aufgesetzt haben](#bomnipotent-clie
 
 ```yaml {{ title="Typical vulnerability snippet" }}
 - name: Update Vulnerabilities
-  uses: Weichwerke-Heidrich-Software/vulnerability-action@v0
+  uses: Weichwerke-Heidrich-Software/vulnerability-action@v1
 ```
 
 Ein vollständiges Beispiel finden Sie im [GitHub Marketplace](https://github.com/marketplace/actions/bomnipotent-server-vulnerability-check).
