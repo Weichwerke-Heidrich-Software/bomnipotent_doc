@@ -74,7 +74,7 @@ Nachdem der BOMnipotent-Client eingerichtet und die BOM generiert wurde, kann es
 
 ```yaml {{ title="Typischer Hochladen Ausschnitt" }}
 - name: BOM Hochladen
-  uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
+  uses: Weichwerke-Heidrich-Software/upload-bom-action@v1
   with:
     bom: './bom.cdx.json'
     name: '${{ github.event.repository.name }}'

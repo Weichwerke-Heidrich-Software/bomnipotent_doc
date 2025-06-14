@@ -74,7 +74,7 @@ After setting up BOMnipotent Client and generating the BOM, it can be uploaded w
 
 ```yaml {{ title="Typical upload snippet" }}
 - name: Upload BOM
-  uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
+  uses: Weichwerke-Heidrich-Software/upload-bom-action@v1
   with:
     bom: './bom.cdx.json'
     name: '${{ github.event.repository.name }}'
