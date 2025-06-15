@@ -32,18 +32,7 @@ Nachdem Ihre Anfrage gestellt und Ihre Email verifiziert ist, müssen Sie darauf
 ## Erstellung eines Roboteraccount
 
 Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert. BOMnipotent ist gebaut, um in Pipelines integriert zu werden. Um ein Konto zu erstellen, welches in Automatisierung genutzt werden soll, fügen Sie der Anfrage die '--robot' Option hinzu:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <Name-des-Roboters> --robot
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <Name-des-Roboters> -r
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example "user_request_robot" >}}
 Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
 
 ## Gespeicherte Schlüssel nutzen

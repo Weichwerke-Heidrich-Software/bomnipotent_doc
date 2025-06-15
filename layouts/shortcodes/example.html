@@ -3,7 +3,7 @@
 
 {{ $inVal    := readFile (printf "%s.in"    $base) }}
 {{ $shortPath := printf "%s.short" $base }}
-{{ $outVal   := readFile (printf "%s.out"   $base) }}
+{{ $outPath := printf "%s.out"  $base }}
 
 <div class="tab-nav">
     {{ if fileExists $shortPath }}
@@ -38,6 +38,8 @@
 </div>
 {{ end }}
 
+{{ if fileExists $outPath }}
+    {{ $outVal := readFile $outPath }}
 <div class="tab-nav">
     <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "output" }}</span>
 </div>
@@ -50,3 +52,4 @@
         </div>
     </div>
 </div>
+{{ end }}
