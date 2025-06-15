@@ -1,9 +1,9 @@
 {{ $name := .Get 0 }}
-{{ $base := printf "snippets/%s" $name }}
+{{ $base := printf "data/snippets/%s" $name }}
 
-{{ $inVal    := readFile (printf "layouts/partials/%s.in"    $base) }}
-{{ $shortPath := printf "layouts/partials/%s.short" $base }}
-{{ $outVal   := readFile (printf "layouts/partials/%s.out"   $base) }}
+{{ $inVal    := readFile (printf "%s.in"    $base) }}
+{{ $shortPath := printf "%s.short" $base }}
+{{ $outVal   := readFile (printf "%s.out"   $base) }}
 
 <div class="tab-nav">
     {{ if fileExists $shortPath }}
