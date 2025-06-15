@@ -22,6 +22,7 @@ declare -A OPTION_MAP=(
   [--name]=-n
   [--name-overwrite]=-n
   [--on-existing]=-o
+  [--output]=-o
   [--output-mode]=-o
   [--overwrite]=-o
   [--permission]=-p
@@ -59,7 +60,6 @@ for file in $input_files; do
 
         if grep -q -e "$long " -e "$long=" -e "$long\$" "$file"; then
             if [ ! -f "$tmp_file" ]; then
-                echo "creating temporary file $tmp_file because $long is used in $file"
                 cp "$file" "$tmp_file"
             fi
             sed -i "s/$long /$short /g" "$tmp_file"
