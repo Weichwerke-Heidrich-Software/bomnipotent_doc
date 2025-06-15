@@ -1,0 +1,5 @@
+bomnipotent_client role-permission remove bom_manager BOM_MANAGEMENT;
+bomnipotent_client role-permission remove csaf_manager CSAF_MANAGEMENT;
+bomnipotent_client role-permission remove role_manager ROLE_MANAGEMENT;
+bomnipotent_client role-permission remove user_manager USER_MANAGEMENT;
+bomnipotent_client role-permission remove vuln_manager VULN_MANAGEMENT;

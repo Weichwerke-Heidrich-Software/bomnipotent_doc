@@ -1,0 +1,5 @@
+bomnipotent_client role-permission add doc_manager BOM_MANAGEMENT;
+bomnipotent_client role-permission add doc_manager CSAF_MANAGEMENT;
+bomnipotent_client role-permission add doc_manager VULN_MANAGEMENT;
+bomnipotent_client role-permission add access_manager ROLE_MANAGEMENT;
+bomnipotent_client role-permission add access_manager USER_MANAGEMENT;
