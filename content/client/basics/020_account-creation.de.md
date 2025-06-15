@@ -40,18 +40,7 @@ Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
 Falls Sie ein Schlüsselpaar im üblichen Nutzerordner (welcher auf Ihre Platform ankommt) gespeichert haben, wird BOMnipotent Client ihn automatisch lesen und nutzen.
 
 Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wollen, der an einem anderen Ord gespeichert ist, dann können Sie den Pfad als positionales Argument angeben:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example "user_request_stored_key" >}}
 
 
 > Damit dies funktioniert muss der Schlüssel mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generiert worden und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein. Falls Sie darauf bestehen, Ihre Schlüssel selber zu verwalten, oder falls Sie ein Beispiel sehen möchten, dann können Sie ein solches Paar am einfachsten wie folgt generieren: Rufen Sie `openssl genpkey -algorithm ED25519 -out secret_key.pem` um einen geheimen Schlüssel zu generieren, und dann `openssl pkey -in secret_key.pem -pubout -out public_key.pem` um den zugehörigen öffentlichen Schlüssel zu erstellen.

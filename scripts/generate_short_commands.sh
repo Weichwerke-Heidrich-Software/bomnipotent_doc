@@ -49,8 +49,6 @@ for file in $input_files; do
     
     for long in "${!OPTION_MAP[@]}"; do
         short="${OPTION_MAP[$long]}"
-        long_with_arg="${long}="
-        short_with_arg="${short} "
 
         # Some special cases handling
         if [[ "$long" == "--name-overwrite" || "$long" == "--version-overwrite" ]]; then
@@ -59,12 +57,14 @@ for file in $input_files; do
             fi
         fi
 
-        if grep -q -- "$long" "$file"; then
+        if grep -q -e "$long " -e "$long=" -e "$long\$" "$file"; then
             if [ ! -f "$tmp_file" ]; then
+                echo "creating temporary file $tmp_file because $long is used in $file"
                 cp "$file" "$tmp_file"
             fi
-            sed -i "s/$long_with_arg/$short_with_arg/g" "$tmp_file"
-            sed -i "s/$long/$short/g" "$tmp_file"
+            sed -i "s/$long /$short /g" "$tmp_file"
+            sed -i "s/$long=/$short /g" "$tmp_file"
+            sed -i "s/$long\n/$short\n/g" "$tmp_file"
         fi
     done
 
@@ -77,6 +77,11 @@ for file in $input_files; do
         else
             echo "Updating $short_file"
             mv "$tmp_file" "$short_file"
+        fi
+    else
+        if [ -f "$short_file" ]; then
+            echo "Removing $short_file that should not exist."
+            rm "$short_file"
         fi
     fi
 done
