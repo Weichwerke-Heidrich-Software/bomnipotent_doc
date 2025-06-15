@@ -14,14 +14,17 @@ For your convenience, several [default roles](/client/manager/access-management/
 ## List
 
 To list all roles of all users, call
+
 {{< example user_role_list >}}
 
 The output can be filtered by user or role:
+
 {{< example user_role_filtered_list >}}
 
 ## Add
 
 To add a new role to a user, call
+
 {{< example user_role_add >}}
 
 The user account needs to exist on the server at this point, the role does not.
@@ -31,9 +34,11 @@ The user account needs to exist on the server at this point, the role does not.
 ## Remove
 
 To remove a role from a user, call:
+
 {{< example user_role_remove >}}
 
 This will show an error if either does not exist:
+
 {{< example user_role_remove_wrong >}}
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can remove the admin role from other users.
@@ -41,4 +46,5 @@ This will show an error if either does not exist:
 ## Existence
 
 {{< exists-subcommand-en >}}
+
 {{< example user_role_exists >}}

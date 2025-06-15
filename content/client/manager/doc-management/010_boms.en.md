@@ -12,6 +12,7 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 ## Uploading
 
 To upload a BOM, call:
+
 {{< example bom_upload >}}
 
 BOMnipotent expects its BOMs in the structured [CycloneDX](https://cyclonedx.org/) JSON format.
@@ -37,6 +38,7 @@ To avoid any complications, it is recommended that you specify a name and versio
 #### Overwriting (not particularly recommended)
 
 If for some reason your BOM lacks a name or version, or if it is incorrect, the BOMnipotent Client offers to remedy that via command line arguments:
+
 {{< example bom_upload_overwrite >}}
 
 **Important:** The BOMnipotent Client will in this case **modify the data** before sending it to the server. It does not modify the local file, as that would be overstepping. This means that your local file and the data on the server are now out-of-sync. What's maybe worse, if you signed your BOM, your signature is now invalid.
@@ -51,6 +53,7 @@ For consumers, BOMnipotent manages access to data using the [Traffic Light Proto
 To tell BOMnipotent how to classify a document, you have two options:
 1. Set a [default TLP Label](/server/configuration/optional/tlp-config/) in the server config. This will then be used for all BOMs without further specifications.
 2. Provide a tlp classification via command line argument:
+
 {{< example bom_upload_tlp >}}
 
 If you do neither, BOMnipotent will treat any unclassified documents as if they were labelled {{< tlp-red >}}, and will log a warning every time it has to do that.
@@ -58,12 +61,15 @@ If you do neither, BOMnipotent will treat any unclassified documents as if they 
 ### Conflict Handling
 
 The combination of name and version of the main component of a BOM need to be unique. Trying to upload another document with the same combination results in an error. You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
+
 {{< example bom_upload_skip_existing >}}
+
 {{< example bom_upload_replace_existing >}}
 
 ## Modifying
 
 In the simplest case, modifying an existing BOM works very much like uploading a new one.
+
 {{< example bom_modify >}}
 
 This will infer the name and version from the document, and overwrite the existing content on the server. If the data does not exist on the server, it will return a 404 Not Found error.
@@ -73,17 +79,21 @@ This will infer the name and version from the document, and overwrite the existi
 If a TLP label had previously been assigned to the BOM, a modification of the contents will **not** automatically alter it.
 
 If you want to specify a new TLP label, you can do so via argument:
+
 {{< example bom_modify_tlp>}}
 
 If the contents of the BOM have not changed and you just want to modify the TLP label, you do not need to upload the document again. Instead of providing a path to a file, you can specify name and version of the BOM you want to reclassify:
+
 {{< example bom_modify_only_tlp >}}
 
 If you specify "none", "default" or "unlabelled" as the TLP label, any existing classification will be removed, and the server falls back to the [default TLP Label](/server/configuration/optional/tlp-config/) of the server config:
+
 {{< example bom_modify_remove_tlp >}}
 
 ### Modifying Name or Version
 
 If the document you are uploading has a different name or version than the data it shall modify, you need to provide that information to the BOMnipotent Client using command line arguments:
+
 {{< example bom_modify_name >}}
 
 BOMnipotent will infer the new data from the document you provide and change the database entries accordingly.
@@ -91,11 +101,13 @@ BOMnipotent will infer the new data from the document you provide and change the
 ### Overwriting Name or Version (not recommended)
 
 As with uploading, it is possible to overwrite the name and/or version stored in the local document:
+
 {{< example bom_modify_overwrite_name >}}
 
 **Important:** As with uploading, this modifies the JSON data before uploading to the server! The same caveats apply.
 
 If the data on the server has a different name and/or version than specified in the document, you can combine the specification with an overwrite of the data:
+
 {{< example bom_modify_overwrite_name_extreme >}}
 
 Changing name and/or version without providing the complete document is not supported.
@@ -104,6 +116,7 @@ Changing name and/or version without providing the complete document is not supp
 ## Deleting
 
 Deleting a BOM is very straightforward:
+
 {{< example bom_delete >}}
 
 If the BOM does not exist, the server will return 404 Not Found. If it does exists, it is removed from the database.

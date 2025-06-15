@@ -18,14 +18,17 @@ Kurz nach Abschluss Ihres Abonnements erhalten Sie eine E-Mail mit Ihrem Abonnem
 ## Aktivieren
 
 Um Ihr neues Abonnement zu aktivieren, rufen Sie einfach Folgendes auf:
+
 {{< example subscription_activate >}}
 
 Der Server benachrichtigt Sie, falls bei der Aktivierung ein Fehler auftritt:
+
 {{< example subscription_activate_wrong >}}
 
 ## Status
 
 Um Informationen über den aktuellen Status Ihres Abonnements zu erhalten, rufen Sie:
+
 {{< example subscription_status >}}
 
 Diese Ausgabe enthält eine verschleierte Variante Ihres Schlüssels, einen Status und einige zusätzliche Informationen.
@@ -33,7 +36,9 @@ Diese Ausgabe enthält eine verschleierte Variante Ihres Schlüssels, einen Stat
 ## Entfernen
 
 Wenn Sie Ihr Abonnement von einer Instanz des BOMnipotent-Servers entfernen möchten (z. B. weil Sie es für eine andere Instanz verwenden möchten), rufen Sie Folgendes auf:
+
 {{< example subscription_remove >}}
 
 Um zu vermeiden, dass eine BOMnipotent-Serverinstanz, auf die Sie Administratorzugriff haben, versehentlich deaktiviert wird, ist der korrekte Schlüssel als Argument erforderlich.
+
 {{< example subscription_remove_wrong >}}

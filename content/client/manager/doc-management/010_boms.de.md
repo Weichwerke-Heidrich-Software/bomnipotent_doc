@@ -12,6 +12,7 @@ Stücklisten (Bills of Materials, BOMs) stehen im Mittelpunkt der Funktionalitä
 ## Hochladen
 
 Um eine BOM hochzuladen, rufen Sie Folgendes auf:
+
 {{< example bom_upload >}}
 
 BOMnipotent erwartet seine BOM im strukturierten [CycloneDX](https://cyclonedx.org/) JSON-Format.
@@ -37,6 +38,7 @@ Um Komplikationen zu vermeiden, wird empfohlen, beim Generieren der Stückliste 
 #### Überschreiben (nicht besonders empfohlen)
 
 Falls Ihrer BOM aus irgendeinem Grund ein Name oder eine Version fehlt oder diese fehlerhaft ist, bietet der BOMnipotent Client die Möglichkeit, dies über Befehlszeilenargumente zu beheben:
+
 {{< example bom_upload_overwrite >}}
 
 **Wichtig:** Der BOMnipotent Client **ändert in diesem Fall die Daten**, bevor sie an den Server gesendet werden. Die lokale Datei wird nicht geändert, da dies zu weit gehen würde. Das bedeutet, dass Ihre lokale Datei und die Daten auf dem Server nicht mehr synchron sind. Schlimmer noch: Falls Sie Ihre BOM signiert haben, ist Ihre Signatur nun ungültig.
@@ -51,6 +53,7 @@ Für Konsumenten verwaltet BOMnipotent den Datenzugriff über das [Traffic Light
 Um BOMnipotent mitzuteilen, wie ein Dokument klassifiziert werden soll, haben Sie zwei Möglichkeiten:
 1. Legen Sie in der Serverkonfiguration ein [Default-TLP-Label](/de/server/configuration/optional/tlp-config/) fest. Dieses wird dann für alle BOMs ohne weitere Spezifikationen verwendet.
 2. Geben Sie eine TLP-Klassifizierung per Kommandozeilenargument an:
+
 {{< example bom_upload_tlp >}}
 
 Falls Sie keines von beiden tun, behandelt BOMnipotent alle nicht klassifizierten Dokumente so, als wären sie mit dem Label {{< tlp-red >}} gekennzeichnet, und gibt jedes Mal eine Warnung aus, wenn dies erforderlich ist.
@@ -58,12 +61,15 @@ Falls Sie keines von beiden tun, behandelt BOMnipotent alle nicht klassifizierte
 ### Konfliktbehandlung
 
 Die Kombination aus Name und Version der Hauptkomponente einer BOM muss eindeutig sein. Der Versuch, ein weiteres Dokuement mit derselben Kombination hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+
 {{< example bom_upload_skip_existing >}}
+
 {{< example bom_upload_replace_existing >}}
 
 ## Ändern
 
 Im einfachsten Fall funktioniert das Ändern einer vorhandenen Stückliste ähnlich wie das Hochladen einer neuen.
+
 {{< example bom_modify >}}
 
 Dadurch werden Name und Version des Dokuments abgeleitet und der vorhandene Inhalt auf dem Server überschrieben. Sollten die Daten auf dem Server nicht vorhanden sein, wird ein 404-Fehler "Nicht gefunden" zurückgegeben.
@@ -73,17 +79,21 @@ Dadurch werden Name und Version des Dokuments abgeleitet und der vorhandene Inha
 Wenn der Stückliste zuvor ein TLP-Label zugewiesen wurde, wird dieses durch eine Änderung des Inhalts **nicht** automatisch geändert.
 
 Wenn Sie ein neues TLP-Label angeben möchten, können Sie dies über das folgende Argument tun:
+
 {{< example bom_modify_tlp>}}
 
 Wenn sich der Inhalt der Stückliste nicht geändert hat und Sie nur das TLP-Label ändern möchten, müssen Sie das Dokument nicht erneut hochladen. Anstatt einen Dateipfad anzugeben, können Sie Name und Version der neu zu klassifizierenden BOM angeben:
+
 {{< example bom_modify_only_tlp >}}
 
 Wenn Sie als TLP-Label "none", "default" oder "unlabelled" angeben, wird jede vorhandene Klassifizierung entfernt und der Server greift auf das [Default-TLP-Label](/de/server/configuration/optional/tlp-config/) der Serverkonfiguration zurück:
+
 {{< example bom_modify_remove_tlp >}}
 
 ### Name oder Version ändern
 
 Wenn das hochgeladene Dokument einen anderen Namen oder eine andere Version hat als die zu ändernden Daten, müssen Sie diese Informationen dem BOMnipotent-Client mithilfe der folgenden Befehlszeilenargumente mitteilen:
+
 {{< example bom_modify_name >}}
 
 BOMnipotent leitet die neuen Daten aus dem von Ihnen bereitgestellten Dokument ab und ändert die Datenbankeinträge entsprechend.
@@ -91,11 +101,13 @@ BOMnipotent leitet die neuen Daten aus dem von Ihnen bereitgestellten Dokument a
 ### Name oder Version überschreiben (nicht empfohlen)
 
 Wie beim Hochladen können Sie den im lokalen Dokument gespeicherten Namen und/oder die Version überschreiben:
+
 {{< example bom_modify_overwrite_name >}}
 
 **Wichtig:** Wie beim Hochladen werden die JSON-Daten vor dem Hochladen auf den Server geändert! Es gelten die gleichen Dinge zu bedenken.
 
 Wenn die Daten auf dem Server einen anderen Namen und/oder eine andere Version haben als im Dokument angegeben, können Sie die Angabe mit einem Überschreiben der Daten kombinieren:
+
 {{< example bom_modify_overwrite_name_extreme >}}
 
 Das Ändern von Name und/oder Version ohne Angabe des vollständigen Dokuments ist nicht unterstützt.
@@ -103,6 +115,7 @@ Das Ändern von Name und/oder Version ohne Angabe des vollständigen Dokuments i
 ## Löschen
 
 Das Löschen einer BOM ist sehr einfach:
+
 {{< example bom_delete >}}
 
 Falls die BOM nicht existiert, gibt der Server den Fehler 404 "Nicht gefunden" zurück. Ist sie vorhanden, wird sie aus der Datenbank entfernt.

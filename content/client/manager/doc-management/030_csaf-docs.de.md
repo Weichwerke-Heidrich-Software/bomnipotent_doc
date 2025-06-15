@@ -12,17 +12,21 @@ Ein [Common Security Advisory Framework](https://www.csaf.io/) (CSAF)-Dokument i
 ## Hochladen
 
 Um ein CSAF-Dokument hochzuladen, rufen Sie
+
 {{< example csaf_upload >}}
 
 Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
 CSAF Dokumente werden durch ihren, nun ja, Identifikator identifiziert, welcher eindeutig sein muss. Der Versuch, ein weiteres Dokuement mit derselben ID hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+
 {{< example csaf_upload_skip_existing >}}
+
 {{< example csaf_upload_replace_existing >}}
 
 ## Auflisten
 
 Sie können das Ergebnis des Vorgangs mit
+
 {{< example csaf_list >}}
 
 Alle Daten stammen aus dem CSAF-Dokument.
@@ -41,12 +45,15 @@ Falls das Dokument nicht den optionalen TLP-Labeleintrag enthält, wird es mit d
 ## Ändern
 
 Wenn sich der Status Ihres Dokuments ändert, Sie es neu klassifizieren möchten oder neue Informationen vorliegen, können Sie es ändern. Um die neue Version hochzuladen, rufen Sie Folgendes auf:
+
 {{< example csaf_modify >}}
 
 Der Befehl kann sogar die ID vom CSAF Dokument modifizieren. Da die bisheriger ID in diesem Fall nicht aus dem neuen Dokument abgeleitet werden kann, muss sie als optionales Argument angegeben werden:
+
 {{< example csaf_modify_id >}}
 
 ## Löschen
 
 Um ein CSAF-Dokument von Ihrem Server zu löschen (was Sie wirklich nur tun sollten, falls etwas komplett schiefgelaufen ist), rufen Sie einfach Folgendes auf:
+
 {{< example csaf_delete >}}

@@ -16,6 +16,7 @@ After a new account has been requested, it is up to a user manager to approve or
 ## List
 
 To list all users in your database, call
+
 {{< example user_list >}}
 
 You can see the email addresses or usernames of the users and their stati. 
@@ -25,25 +26,31 @@ You can see the email addresses or usernames of the users and their stati.
 An expiration date is also associated with each user, which is the point in time at which the public key is considered invalid and has to be renewed. The period for which a key is considered valid can [be freely configured](/server/configuration/optional/user-expiration-period/) in the server config.
 
 The list of users can be filtered by username, approval status, and whether or not they are expired:
+
 {{< example user_filtered_list >}}
 
 The "true" argument for the expired filter is optional:
+
 {{< example user_list_expired >}}
 
 ## Approve or Deny
 
 If you were expecting the user request, you can approve it via
+
 {{< example user_approve >}}
 
 If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the '--allow-unverified' option (there's no short version for options that bypass security measures):
+
 {{< example user_approve_unverified >}}
 
 If the account belongs to a robot, it can not be verified. In that case you can approve it with the '--robot' option.
+
 {{< example user_approve_robot >}}
 
 > **Important:** You should be absolutely certain that this is the account you want to approve.
 
 Analogously, you can decide agains allowing this user any special access:
+
 {{< example user_deny >}}
 
 Contrary to approval, this action does not care which status the user had before the denial.
@@ -53,6 +60,7 @@ Contrary to approval, this action does not care which status the user had before
 ## Remove
 
 If you want to get rid of a user account alltogether, call:
+
 {{< example user_remove >}}
 
 This also removes all roles associated with the user.
@@ -60,4 +68,5 @@ This also removes all roles associated with the user.
 ## Existence
 
 {{< exists-subcommand-en >}}
+
 {{< example user_exists >}}

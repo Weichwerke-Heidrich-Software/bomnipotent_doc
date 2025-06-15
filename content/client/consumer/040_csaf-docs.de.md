@@ -12,6 +12,7 @@ Eine der Hauptfunktionen von BOMnipotent besteht darin, die Verteilung von CSAF-
 ## Auflisten
 
 Das Ausführen des folgenden Befehls gibt eine Liste aller für Sie zugänglichen CSAF-Dokumente aus:
+
 {{< example csaf_list >}}
 
 Zugängliche CSAF-Dokumente sind diejenigen, die entweder mit {{<tlp-white>}}/{{<tlp-clear>}}, gekennzeichnet sind oder sich auf ein Produkt beziehen, für das Sie Zugriff erhalten haben.
@@ -32,6 +33,7 @@ Der "csaf list" Befehl erlaubt eine große Anzahl an Filtern, um nur manche der 
 ## Herunterladen
 
 Um alle für Sie zugänglichen CSAF-Dokumente lokal zu spiegeln, führen Sie den folgenden Befehl aus:
+
 {{< example csaf_download >}}
 
 Dies speichert die CSAF-Dokumente im angegebenen Ordner ("./csaf"in diesem Beispiel). Falls der Ordner noch nicht existiert, wird die Verzeichnisstruktur automatisch erstellt. Die CSAF-Dokumente werden in Dateipfaden abgelegt, die dem Namensschema "{tlp}/{initial_release_year}/{csaf_id}.json".
@@ -47,9 +49,11 @@ Es ist auch möglich, eine einzelne Datei herunterzuladen, indem der Pfad als zu
 {{< example csaf_download_single >}}
 
 BOMnipotent überschreibt existierende Dateien **nicht**, selbst falls sie sich auf dem Server geändert haben. Stattdessen gibt es eine Warnung aus:
+
 {{< example csaf_download_warn >}}
 
 Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrieben hätten, indem Sie die "--overwrite" flag nutzen:
+
 {{< example csaf_download_overwrite >}}
 
 Der Download Befehl akzeptiert exakt die [gleichen Filter](#filtern) wie der Befehl zum Auflisten, sodass Sie nur die Dokumente herunterladen können, welche relevant für Sie sind.

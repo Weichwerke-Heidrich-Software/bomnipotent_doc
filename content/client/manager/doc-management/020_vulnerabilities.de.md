@@ -14,6 +14,7 @@ Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalt
 BOMnipotent erkennt selbst keine neuen Schwachstellen. Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
 
 Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und an grype weiterleiten.
+
 {{< example bom_get_grype_output >}}
 
 Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und die Ergebnisse in das CycloneDX eingepflegt. Anschließend werden alle Ergebnisse in einer Datei namens "vuln.cdx.json" (oder einem anderen von Ihnen angegebenen Namen) gespeichert.
@@ -23,16 +24,19 @@ Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und 
 ## Aktualisierung
 
 Der Befehl zum Aktualisieren der mit einer BOM verknüpften Schwachstellen lautet:
+
 {{< example vuln_update >}}
 
 Das Argument "\<VULNERABILITIES\>" muss ein Pfad zu einer Datei im [CycloneDX JSON-Format](https://cyclonedx.org/) sein.
 
 Idealerweise enthält diese Datei den Namen und die Version der zugehörigen BOM. In diesem Fall werden diese automatisch gelesen. Falls einer der Werte fehlt (z. B. aufgrund eines [bekannten Fehlers](https://github.com/anchore/grype/issues/2418) in grype), können Sie ihn mit einem optionalen Argument angeben:
+
 {{< example vuln_update_name_version >}}
 
 Schwachstellen sollten regelmäßig aktualisiert werden. Dadurch werden alle vorherigen Schwachstellen, die mit einer BOM verknüpft sind, vollständig ersetzt. Das hochgeladene CycloneDX-Dokument muss daher eine vollständige Liste aller bekannten Schwachstellen enthalten.
 
 Sie können Schwachstellen nur für eine BOM aktualisieren, die auf dem Server vorhanden ist:
+
 {{< example vuln_update_nonexistent >}}
 
 ## Auflistung
@@ -40,9 +44,11 @@ Sie können Schwachstellen nur für eine BOM aktualisieren, die auf dem Server v
 Der Abschnitt zum [Auflisten von Schwachstellen](/de/client/consumer/vulnerabilities/) in der Dokumentation für Verbraucher behandelt die meisten Aspekte der Auflistung von Schwachstellen.
 
 Ein Aspekt, der dort nicht erwähnt wird, ist die Option "--unassessed". Damit listet der BOMnipotent-Client nur Schwachstellen auf, denen kein CSAF-Dokument zugeordnet ist.
+
 {{< example vuln_list_unassessed >}}
 
 In diesem Modus beendet der BOMnipotent Client den Vorgang mit einem Fehlercode genau dann wenn nicht bewertete Schwachstellen vorliegen. Dies erleichtert die Integration dieses Aufrufs in Ihre regelmäßige CI/CD.
 
 Sie können diese Option frei mit der Angabe eines Produktnamens oder einer Version kombinieren:
+
 {{< example vuln_list_unassessed_name >}}

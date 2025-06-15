@@ -12,10 +12,8 @@ One of the main functionalities of BOMnipotent is to make distribution of CSAF d
 ## List
 
 Running the following command will give you a list of all CSAF documents accessible to you:
+
 {{< example csaf_list >}}
-```
-./bomnipotent_client csaf list
-```
 
 Accesible CSAF documents are those that are either labeled {{<tlp-white>}}/{{<tlp-clear>}}, or that concern a product that you have been granted access to.
 
@@ -35,6 +33,7 @@ The "csaf list" command allows quite a large number of filters, to display only 
 ## Download
 
 To locally mirror all CSAF documents accessible to you, run
+
 {{< example csaf_download >}}
 
 This will store th CSAF documents in the provided folder ("./csaf", in this example). It will create the folder structure if it does not already exist. The CSAF documents are stored in file paths following the naming scheme "{tlp}/{initial_release_year}/{csaf_id}.json".
@@ -50,9 +49,11 @@ It is possible to only download a single file by providing the path as an additi
 {{< example csaf_download_single >}}
 
 BOMnipotent **does not** automatically replace existing files, even if they have changed on the server. It instead prints a warning message:
+
 {{< example csaf_download_warn >}}
 
 You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
+
 {{< example csaf_download_overwrite >}}
 
 The download command accepts exactly the [same filters](#filtering) as the list command does, allowing to only download those documents that are relevant to you.

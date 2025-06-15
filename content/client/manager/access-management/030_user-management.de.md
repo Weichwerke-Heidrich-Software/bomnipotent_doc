@@ -16,6 +16,7 @@ Nach der Beantragung eines neuen Kontos obliegt es einem Benutzermanager, die An
 ## Auflisten
 
 Um alle Benutzer in Ihrer Datenbank aufzulisten, rufen Sie
+
 {{< example user_list >}}
 
 So können Sie die E-Mail-Adressen und die Stati der Benutzer einsehen.
@@ -25,25 +26,31 @@ So können Sie die E-Mail-Adressen und die Stati der Benutzer einsehen.
 Jedem Benutzer ist außerdem ein Ablaufdatum zugeordnet. Ab diesem Zeitpunkt wird der öffentliche Schlüssel ungültig und muss erneuert werden. Die Gültigkeitsdauer eines Schlüssels kann in der Serverkonfiguration [frei konfiguriert](/de/server/configuration/optional/user-expiration-period/) werden.
 
 Die Liste der Nutzer kann nach Nutzername oder Genehmigungsstatus gefiltert werden, oder danach, ob das Nutzerkonto abgelaufen ist:
+
 {{< example user_filtered_list >}}
 
 Das "true" Argument für den "expired" Filter ist optional:
+
 {{< example user_list_expired >}}
 
 ## Genehmigen oder Ablehnen
 
 Wenn Sie die Benutzeranfrage erwartet haben, können Sie sie genehmigen:
+
 {{< example user_approve >}}
 
 Falls der Nutzer noch nicht bestätigt hat, Zugriff auf die Email Adresse zu haben, dann lehnt der Server die Genehmigung ab. Falls Sie absolut sicher sind, dass Sie wissen was Sie tun, können Sie dieses Verhalten mit der '--allow-unverified' Option überschreiben (es gibt keine Kurzformen für Befehle die Sicherheitsmaßnahmen überschreiben):
+
 {{< example user_approve_unverified >}}
 
 Falls das Konto zu einem Roboter gehört, kann es nicht verifiziert werden. In diesem Fall können Sie es mit der ' --robot' Option genehmigen:
+
 {{< example user_approve_robot >}}
 
 > **Wichtig:** Sie sollten absolut sicher sein, dass dies das Konto ist, welches Sie genehmigen wollen.
 
 Analog dazu können Sie diesem Benutzer stattdessen keinen Zugriff gewähren:
+
 {{< example user_deny >}}
 
 Im Gegensatz zum Genehmigen ist es dieser Aktion egal, welchen Status das Konto vor der Ablehnung hatte.
@@ -53,6 +60,7 @@ Im Gegensatz zum Genehmigen ist es dieser Aktion egal, welchen Status das Konto 
 ## Entfernen
 
 Wenn Sie ein Benutzerkonto vollständig löschen möchten, rufen Sie
+
 {{< example user_remove >}}
 
 Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
@@ -60,4 +68,5 @@ Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
 ## Existenz
 
 {{< exists-subcommand-de >}}
+
 {{< example user_exists >}}

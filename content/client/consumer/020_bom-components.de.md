@@ -6,9 +6,11 @@ description = "Katalogisiert die Komponenten eines Produkts mit BOMnipotent Clie
 +++
 
 Der Zweck eines Stücklistenverzeichnisses (Bill of Materials, BOM) besteht darin, die Komponenten eines Produkts zu katalogisieren. BOMnipotent Client kann verwendet werden, um alle Pakete usw. aufzulisten, die in einem Produkt enthalten sind, welches über Ihr Benutzerkonto zugänglich ist. Rufen Sie einfach den Client mit den Argumenten "component", "list" und anschließend dem Namen und der Version des Produkts auf:
+
 {{< example component_list >}}
 
 Der Befehl akzeptiert die optionalen Filter "name", "version", "type", "cpe" und "purl" (der Kürze zuliebe hier nicht alle genutzt):
+
 {{< example component_filtered_list >}}
 
 Diese Ausgabe ist in erster Linie für den Menschen lesbar. Die Verwendung der Option `--output=raw` macht sie prinzipiell maschinenlesbar, aber [das vollständige Herunterladen der BOM ](/de/client/consumer/boms/) ist höchstwahrscheinlich vorzuziehen, anstatt diese Tabellenausgabe zu parsen.

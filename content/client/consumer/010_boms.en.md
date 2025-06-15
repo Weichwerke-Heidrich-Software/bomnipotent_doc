@@ -10,16 +10,19 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 ## List
 
 Running the following command will list all BOMs accessible to you:
+
 {{< example bom_list >}}
 
 BOMs with label {{<tlp-white>}} / {{<tlp-clear>}} are visible to everyone. In this example, your account has access to one BOM with label {{<tlp-amber>}}.
 
 The command accepts the optional filters "name" and "version":
+
 {{< example bom_filtered_list >}}
 
 ## Download
 
 To create a local copy of all boms the server exposes to you, run:
+
 {{< example bom_download >}}
 
 This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder structure if it does not already exist. The BOMs are stored in files following the naming scheme `{product name}_{product version}.cdx.json`.
@@ -31,23 +34,29 @@ This will store the BOMs in the provided folder ("./boms", in this example). It 
 Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.
 
 BOMnipotent **does not** automatically replace existing files, even if they have changed on the server. It instead prints a warning message:
+
 {{< example bom_download_warn >}}
 
 You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
+
 {{< example bom_download_overwrite >}}
 
 Analogously to the [list](#list) command, the download command accepts the filters "name" and "version", to only download a subset of BOMs:
+
 {{< example bom_filtered_download >}}
 
 ## Get
 
 You can directly display the contents of a single BOM to the console output by calling
+
 {{< example bom_get >}}
 
 This is especially useful if you want to use the contents of this BOM in a script. For example, to [check for vulnerabilities](/integration/grype/) in the supply chain, you could call:
+
 {{< example bom_get_grype >}}
 
 ## Existence
 
 {{< exists-subcommand-en >}}
+
 {{< example bom_exists >}}

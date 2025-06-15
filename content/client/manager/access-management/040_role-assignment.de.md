@@ -14,14 +14,17 @@ Zu Ihrer Bequemlichkeit werden beim ersten Start des BOMnipotent-Servers mehrere
 ## Auflisten
 
 Um alle Rollen aller Benutzer aufzulisten, rufen Sie
+
 {{< example user_role_list >}}
 
 Die Ausgabe kann nach Nutzer oder Rolle gefiltert werden:
+
 {{< example user_role_filtered_list >}}
 
 ## Hinzufügen
 
 Um einem Benutzer eine neue Rolle hinzuzufügen, rufen Sie
+
 {{< example user_role_add >}}
 
 Der Benutzeraccount muss zu diesem Zeitpunkt bereits auf dem Server existieren, die Rolle jedoch nicht.
@@ -31,9 +34,11 @@ Der Benutzeraccount muss zu diesem Zeitpunkt bereits auf dem Server existieren, 
 ## Entfernen
 
 Um einem Benutzer eine Rolle zu entfernen, rufen Sie Folgendes auf:
+
 {{< example user_role_remove >}}
 
 Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
+
 {{< example user_role_remove_wrong >}}
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können die Admin-Rolle von anderen Benutzern entfernen.
@@ -41,4 +46,5 @@ Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
 ## Existenz
 
 {{< exists-subcommand-de >}}
+
 {{< example user_role_exists >}}
