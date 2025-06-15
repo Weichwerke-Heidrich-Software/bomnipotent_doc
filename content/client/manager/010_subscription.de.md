@@ -18,45 +18,22 @@ Kurz nach Abschluss Ihres Abonnements erhalten Sie eine E-Mail mit Ihrem Abonnem
 ## Aktivieren
 
 Um Ihr neues Abonnement zu aktivieren, rufen Sie einfach Folgendes auf:
-```
-bomnipotent_client subscription activate <IHR-ABONNEMENTSCHLÜSSEL>
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Successfully stored subscription key.
-```
+{{< example subscription_activate >}}
 
 Der Server benachrichtigt Sie, falls bei der Aktivierung ein Fehler auftritt:
-``` {wrap="false" title="Ausgabe"}
-[ERROR] Received response:
-404 Not Found
-Failed to activate subscription key: The subscription is missing in the sever database. Please visit https://www.wwh-soft.com to acquire it.
-```
+{{< example subscription_activate_wrong >}}
 
 ## Status
 
 Um Informationen über den aktuellen Status Ihres Abonnements zu erhalten, rufen Sie:
-```
-bomnipotent_client subscription status
-```
-``` {wrap="false" title="Ausgabe"}
-╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
-│          │             │                     │                         │                         │ .                         │
-╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
-```
+{{< example subscription_status >}}
 
 Diese Ausgabe enthält eine verschleierte Variante Ihres Schlüssels, einen Status und einige zusätzliche Informationen.
 
 ## Entfernen
 
 Wenn Sie Ihr Abonnement von einer Instanz des BOMnipotent-Servers entfernen möchten (z. B. weil Sie es für eine andere Instanz verwenden möchten), rufen Sie Folgendes auf:
-```
-bomnipotent_client subscription remove <IHR-ABONNEMENTSCHLÜSSEL>
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Subscription key was removed
-```
+{{< example subscription_remove >}}
 
 Um zu vermeiden, dass eine BOMnipotent-Serverinstanz, auf die Sie Administratorzugriff haben, versehentlich deaktiviert wird, ist der korrekte Schlüssel als Argument erforderlich.
+{{< example subscription_remove_wrong >}}
