@@ -1,0 +1,2 @@
+bomnipotent_client user list -e true
+bomnipotent_client user list -e # does the same

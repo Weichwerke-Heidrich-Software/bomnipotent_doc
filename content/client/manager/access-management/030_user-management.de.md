@@ -16,18 +16,7 @@ Nach der Beantragung eines neuen Kontos obliegt es einem Benutzermanager, die An
 ## Auflisten
 
 Um alle Benutzer in Ihrer Datenbank aufzulisten, rufen Sie
-```
-bomnipotent_client user list
-```
-
-``` {wrap="false" title="Ausgabe"}
-╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
-│ User Email         │ Status    │ Expires                 │ Last Updated            │
-├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
-│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
-│ info@wildeheide.de │ VERIFIED  │ 2026-03-23 03:52:21 UTC │ 2025-03-22 03:52:21 UTC │
-╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
-```
+{{< example user_list >}}
 
 So können Sie die E-Mail-Adressen und die Stati der Benutzer einsehen.
 
@@ -36,84 +25,26 @@ So können Sie die E-Mail-Adressen und die Stati der Benutzer einsehen.
 Jedem Benutzer ist außerdem ein Ablaufdatum zugeordnet. Ab diesem Zeitpunkt wird der öffentliche Schlüssel ungültig und muss erneuert werden. Die Gültigkeitsdauer eines Schlüssels kann in der Serverkonfiguration [frei konfiguriert](/de/server/configuration/optional/user-expiration-period/) werden.
 
 Die Liste der Nutzer kann nach Nutzername oder Genehmigungsstatus gefiltert werden, oder danach, ob das Nutzerkonto abgelaufen ist:
-
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-``` {wrap="false" title="Ausgabe"}
-╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
-│ User Email         │ Status    │ Expires                 │ Last Updated            │
-├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
-│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
-╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
-```
+{{< example user_filtered_list >}}
 
 Das "true" Argument für den "expired" Filter ist optional:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user list --expired=true
-bomnipotent_client user list --expired # tut dasselbe
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user list -e true
-bomnipotent_client user list -e # tut dasselbe
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example user_list_expired >}}
 
 ## Genehmigen oder Ablehnen
 
 Wenn Sie die Benutzeranfrage erwartet haben, können Sie sie genehmigen:
-```
-bomnipotent_client user approve <EMAIL>
-```
-
-``` {wrap="false" title="Ausgabe"}
-[INFO] Changed status of info@wildeheide.de to APPROVED
-```
+{{< example user_approve >}}
 
 Falls der Nutzer noch nicht bestätigt hat, Zugriff auf die Email Adresse zu haben, dann lehnt der Server die Genehmigung ab. Falls Sie absolut sicher sind, dass Sie wissen was Sie tun, können Sie dieses Verhalten mit der '--allow-unverified' Option überschreiben (es gibt keine Kurzformen für Befehle die Sicherheitsmaßnahmen überschreiben):
-```
-bomnipotent_client user approve <EMAIL> --allow-unverified
-```
+{{< example user_approve_unverified >}}
 
 Falls das Konto zu einem Roboter gehört, kann es nicht verifiziert werden. In diesem Fall können Sie es mit der ' --robot' Option genehmigen:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user approve <Nutzername> --robot
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user approve <Nutzername> -r
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example user_approve_robot >}}
 
 > **Wichtig:** Sie sollten absolut sicher sein, dass dies das Konto ist, welches Sie genehmigen wollen.
 
 Analog dazu können Sie diesem Benutzer stattdessen keinen Zugriff gewähren:
-```
-bomnipotent_client user deny <EMAIL>
-```
-
-``` {wrap="false" title="output"}
-[INFO] Changed status of info@wildeheide.de to DENIED
-```
+{{< example user_deny >}}
 
 Im Gegensatz zum Genehmigen ist es dieser Aktion egal, welchen Status das Konto vor der Ablehnung hatte.
 
@@ -122,29 +53,11 @@ Im Gegensatz zum Genehmigen ist es dieser Aktion egal, welchen Status das Konto 
 ## Entfernen
 
 Wenn Sie ein Benutzerkonto vollständig löschen möchten, rufen Sie
-```
-bomnipotent_client user remove <EMAIL>
-```
-
-``` {wrap="false" title="output"}
-[INFO] Deleted user info@wildeheide.de
-```
+{{< example user_remove >}}
 
 Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
 
 ## Existenz
 
 {{< exists-subcommand-de >}}
-
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client user exists --status=APPROVED
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client user exists -s APPROVED
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example user_exists >}}
