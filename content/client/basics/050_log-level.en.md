@@ -86,7 +86,7 @@ bomnipotent_client -l trace health
     domain: Some(
         "https://localhost:62443",
     ),
-    email: Some(
+    user: Some(
         "admin@wwh-soft.com",
     ),
     log_level: Some(

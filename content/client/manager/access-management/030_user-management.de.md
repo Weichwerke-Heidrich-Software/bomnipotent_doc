@@ -13,7 +13,7 @@ Nach der Beantragung eines neuen Kontos obliegt es einem Benutzermanager, die An
 
 > Für die meisten Benutzerinteraktionen, einschließlich der Auflistung, benötigen Sie die Berechtigung {{<user-management-de>}}.
 
-## Auflistung
+## Auflisten
 
 Um alle Benutzer in Ihrer Datenbank aufzulisten, rufen Sie
 ```
@@ -35,7 +35,46 @@ So können Sie die E-Mail-Adressen und die Stati der Benutzer einsehen.
 
 Jedem Benutzer ist außerdem ein Ablaufdatum zugeordnet. Ab diesem Zeitpunkt wird der öffentliche Schlüssel ungültig und muss erneuert werden. Die Gültigkeitsdauer eines Schlüssels kann in der Serverkonfiguration [frei konfiguriert](/de/server/configuration/optional/user-expiration-period/) werden.
 
-## Genehmigung oder Ablehnung
+Die Liste der Nutzer kann nach Nutzername oder Genehmigungsstatus gefiltert werden, oder danach, ob das Nutzerkonto abgelaufen ist:
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+``` {wrap="false" title="Ausgabe"}
+╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
+│ User Email         │ Status    │ Expires                 │ Last Updated            │
+├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
+│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
+╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
+```
+
+Das "true" Argument für den "expired" Filter ist optional:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client user list --expired=true
+bomnipotent_client user list --expired # tut dasselbe
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client user list -e true
+bomnipotent_client user list -e # tut dasselbe
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+## Genehmigen oder Ablehnen
 
 Wenn Sie die Benutzeranfrage erwartet haben, können Sie sie genehmigen:
 ```
@@ -92,3 +131,20 @@ bomnipotent_client user remove <EMAIL>
 ```
 
 Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
+
+## Existenz
+
+{{< exists-subcommand-de >}}
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client user exists --status=APPROVED
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client user exists -s APPROVED
+```
+{{% /tab %}}
+{{< /tabs >}}

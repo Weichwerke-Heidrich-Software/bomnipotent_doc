@@ -84,6 +84,35 @@ bomnipotent_client bom upload <PATH/TO/BOM> -t <LABEL>
 
 If you do neither, BOMnipotent will treat any unclassified documents as if they were labelled {{< tlp-red >}}, and will log a warning every time it has to do that.
 
+### Conflict Handling
+
+The combination of name and version of the main component of a BOM need to be unique. Trying to upload another document with the same combination results in an error. You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom upload <PATH/TO/BOM> --on-existing=skip
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom upload <PATH/TO/BOM> -o skip
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client bom upload <PATH/TO/BOM> --on-existing=replace
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client bom upload <PATH/TO/BOM> -o replace
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## Modifying
 

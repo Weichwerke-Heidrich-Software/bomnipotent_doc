@@ -1,5 +1,5 @@
 +++
-title = "Listing Components"
+title = "Components"
 slug = "bom-components"
 weight = 20
 description = "Learn how to use BOMnipotent Client to list all components of a product, including their names, versions, types, CPEs, and PURLs, with example commands."
@@ -26,6 +26,29 @@ bomnipotent_client component list vulny 0.1.0
 │              │         │         │ :0.69.5:*:*:*:*:*:*:*     │                           │
 
 ...
+```
+
+The command accepts the optional filters "name", "version", "type", "cpe" and "purl" (not all used here for the sake of breviy):
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client component list vulny 0.1.0 --name=aho-corasick --version=1.1.3 --type=library
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client component list vulny 0.1.0 -n aho-corasick -v 1.1.3 -t library
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="output"}
+╭──────────────┬─────────┬─────────┬───────────────────────────┬───────────────────────────╮
+│ Name         │ Version │ Type    │ CPE                       │ PURL                      │
+├──────────────┼─────────┼─────────┼───────────────────────────┼───────────────────────────┤
+│ aho-corasick │ 1.1.3   │ library │ cpe:2.3:a:aho-corasick:ah │ pkg:cargo/aho-corasick@1. │
+│              │         │         │ o-corasick:1.1.3:*:*:*:*: │ 1.3                       │
+│              │         │         │ *:*:*                     │                           │
+╰──────────────┴─────────┴─────────┴───────────────────────────┴───────────────────────────╯
 ```
 
 This output is primarily meant to be human-readable. Using the `--output=raw` option makes it machine-readable in principle, but [downloading the complete BOM](/client/consumer/boms/) is most likely preferable to parsing this table output.

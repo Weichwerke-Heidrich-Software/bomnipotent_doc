@@ -54,7 +54,7 @@ Cannot modify admin role permissions
 
 The admin role has all permissions that can be granted, and then [some more](/client/manager/access-management/permissions/#special-admin-permissions).
 
-## Listing
+## List
 
 To list all roles and their associated permissions, call:
 ```
@@ -77,7 +77,29 @@ bomnipotent_client role-permission list
 ╰──────────────┴─────────────────┴───────────────────────────╯
 ```
 
-## Adding
+The output can be filtered by role or permission:
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client role-permission list --role=bom_manager --permission=BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client role-permission list -r bom_manager -p BOM_MANAGEMENT
+```
+{{% /tab %}}
+{{< /tabs >}}
+``` {wrap="false" title="output"}
+╭──────────────┬─────────────────┬───────────────────────────╮
+│ Role         │ Permission      │ Last Updated              │
+├──────────────┼─────────────────┼───────────────────────────┤
+│ bom_manager  │ BOM_MANAGEMENT  │ 2025-03-20 10:38:27.29648 │
+│              │                 │ 0 UTC                     │
+╰──────────────┴─────────────────┴───────────────────────────╯
+```
+
+## Add
 
 Because roles without permissions are meaningless, the two always come in pairs. There is no dedicated mechanism to create a new role: rather, you add a permission to a role, and henceforth it exists.
 
@@ -129,7 +151,7 @@ bomnipotent_client role-permission add clam_manager CLAM_MANAGEMENT
 Failed to parse permission: Invalid UserPermission string: CLAM_MANAGEMENT
 ```
 
-## Removing
+## Remove
 
 To remove a permission from a role, simply call:
 ```
@@ -142,3 +164,20 @@ bomnipotent_client role-permission remove <ROLE> <PERMISSION>
 Once you have removed the last role from a permission, that role does no longer exist.
 
 > To prevent oopsie-moments, BOMnipotent does not support deleting whole batches of role-permissions.
+
+## Existence
+
+{{< exists-subcommand-en >}}
+
+{{< tabs >}}
+{{% tab title="long" %}}
+```
+bomnipotent_client role-permission exists --role=bom_manager
+```
+{{% /tab %}}
+{{% tab title="short" %}}
+```
+bomnipotent_client role-permission exists -r bom_manager
+```
+{{% /tab %}}
+{{< /tabs >}}

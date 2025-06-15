@@ -74,7 +74,7 @@ After setting up BOMnipotent Client and generating the BOM, it can be uploaded w
 
 ```yaml {{ title="Typical upload snippet" }}
 - name: Upload BOM
-  uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
+  uses: Weichwerke-Heidrich-Software/upload-bom-action@v1
   with:
     bom: './bom.cdx.json'
     name: '${{ github.event.repository.name }}'
@@ -131,7 +131,7 @@ Once you have [set up BOMnipotent Client](#setup-bomnipotent-client) on the agen
 
 ```yaml {{ title="Typical vulnerability snippet" }}
 - name: Update Vulnerabilities
-  uses: Weichwerke-Heidrich-Software/vulnerability-action@v0
+  uses: Weichwerke-Heidrich-Software/vulnerability-action@v1
 ```
 
 A complete example can be found in the [GitHub marketplace](https://github.com/marketplace/actions/bomnipotent-server-vulnerability-check).

@@ -22,6 +22,36 @@ bomnipotent_client csaf upload <PFAD/ZUM/CSAF> auf.
 
 Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
+CSAF Dokumente werden durch ihren, nun ja, Identifikator identifiziert, welcher eindeutig sein muss. Der Versuch, ein weiteres Dokuement mit derselben ID hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf upload <PFAD/ZUM/CSAF> --on-existing=skip
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf upload <PFAD/ZUM/CSAF> -o skip
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+{{< tabs >}}
+{{% tab title="lang" %}}
+```
+bomnipotent_client csaf upload <PFAD/ZUM/CSAF> --on-existing=replace
+```
+{{% /tab %}}
+{{% tab title="kurz" %}}
+```
+bomnipotent_client csaf upload <PFAD/ZUM/CSAF> -o replace
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+## Auflisten
+
 Sie können das Ergebnis des Vorgangs mit
 ```
 bomnipotent_client csaf list

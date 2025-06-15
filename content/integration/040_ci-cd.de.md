@@ -74,7 +74,7 @@ Nachdem der BOMnipotent-Client eingerichtet und die BOM generiert wurde, kann es
 
 ```yaml {{ title="Typischer Hochladen Ausschnitt" }}
 - name: BOM Hochladen
-  uses: Weichwerke-Heidrich-Software/upload-bom-action@v0
+  uses: Weichwerke-Heidrich-Software/upload-bom-action@v1
   with:
     bom: './bom.cdx.json'
     name: '${{ github.event.repository.name }}'
@@ -131,7 +131,7 @@ Sobald sie auf dem Agent [BOMnipotent Client aufgesetzt haben](#bomnipotent-clie
 
 ```yaml {{ title="Typical vulnerability snippet" }}
 - name: Update Vulnerabilities
-  uses: Weichwerke-Heidrich-Software/vulnerability-action@v0
+  uses: Weichwerke-Heidrich-Software/vulnerability-action@v1
 ```
 
 Ein vollständiges Beispiel finden Sie im [GitHub Marketplace](https://github.com/marketplace/actions/bomnipotent-server-vulnerability-check).
