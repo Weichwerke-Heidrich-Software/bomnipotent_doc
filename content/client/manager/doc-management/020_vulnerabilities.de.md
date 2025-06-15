@@ -14,7 +14,7 @@ Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalt
 BOMnipotent erkennt selbst keine neuen Schwachstellen. Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
 
 Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und an grype weiterleiten.
-{{< example bom_get_grype >}}
+{{< example bom_get_grype_output >}}
 
 Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und die Ergebnisse in das CycloneDX eingepflegt. Anschließend werden alle Ergebnisse in einer Datei namens "vuln.cdx.json" (oder einem anderen von Ihnen angegebenen Namen) gespeichert.
 

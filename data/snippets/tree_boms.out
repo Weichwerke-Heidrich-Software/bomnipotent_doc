@@ -1,0 +1,6 @@
+./boms/
+├── bomnipotent_1.0.0.cdx.json
+├── bomnipotent_1.0.1.cdx.json
+└── vulny_0.1.0.cdx.json
+
+1 directory, 3 files
