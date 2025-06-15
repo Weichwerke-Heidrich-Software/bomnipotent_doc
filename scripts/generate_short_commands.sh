@@ -6,9 +6,39 @@ cd "$(git rev-parse --show-toplevel)"
 
 # This map maps long options to their corresponding short variants.
 declare -A OPTION_MAP=(
+  [--after]=-a
+  [--before]=-b
+  [--cpe]=-c
+  [--csaf]=-c
   [--domain]=-d
+  [--email]=-e
+  [--expired]=-e
+  [--filename]=-f
+  [--help]=-h
+  [--id]=-i
+  [--json]=-j
+  [--log-level]=-l
+  [--log-file]=-f
+  [--name]=-n
+  [--name-overwrite]=-n
+  [--on-existing]=-o
+  [--output-mode]=-o
+  [--overwrite]=-o
+  [--permission]=-p
+  [--purl]=-p
   [--robot]=-r
+  [--role]=-r
+  [--secret-key]=-s
+  [--status]=-s
+  [--tlp]=-t
+  [--trusted-root]=-t
+  [--type]=-t
+  [--unassessed]=-u
   [--user]=-u
+  [--version]=-v
+  [--version-overwrite]=-v
+  [--vulnerability]=-v
+  [--year]=-y
 )
 
 input_files=$(find data/snippets -type f -name "*.in")
@@ -21,6 +51,14 @@ for file in $input_files; do
         short="${OPTION_MAP[$long]}"
         long_with_arg="${long}="
         short_with_arg="${short} "
+
+        # Some special cases handling
+        if [[ "$long" == "--name-overwrite" || "$long" == "--version-overwrite" ]]; then
+            if grep -q "bom modify" "$file"; then
+                continue
+            fi
+        fi
+
         if grep -q -- "$long" "$file"; then
             if [ ! -f "$tmp_file" ]; then
                 cp "$file" "$tmp_file"
