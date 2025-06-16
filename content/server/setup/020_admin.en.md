@@ -9,42 +9,12 @@ Several interactions with BOMnipotent require a user with admin rights. One of t
 
 ## Step 1: Create User
 First, you will need to [create a user account](/client/basics/account-creation):
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <your-email>
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <your-email>
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
+{{< example admin_user_request >}}
 
 To make things a litle less verbose, let's store the domain of your server and your email address in a [user session](/client/basics/user-session/):
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> --user=<your-email> session login
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> -u <your-email> session login
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="output"}
-[INFO] Storing session data in /home/simon/.config/bomnipotent/session.toml
-```
+{{< example admin_session_login >}}
 
 ## Step 2: Mark User as TMP Admin
 
@@ -73,20 +43,11 @@ docker logs bomnipotent_server
 
 The server now treats authenticated requests from that user as if that user was an admin. To become a permanent admin, you first need to approve your user request. Back on the client, call
 
-```
-bomnipotent_client user approve <your-email>
-```
-``` {wrap="false" title="output"}
-[INFO] Changed status of info@wwh-soft.com to APPROVED
-```
+{{< example admin_user_approve >}}
 
 Now you can make yourself a full server admin:
-```
-bomnipotent_client user-role add <your-email> admin
-```
-``` {wrap="false" title="output"}
-[INFO] Added role to user
-```
+
+{{< example admin_user_role_add >}}
 
 ## Step 4: Remove TMP Admin Mark
 
