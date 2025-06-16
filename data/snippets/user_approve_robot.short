@@ -1,1 +1,1 @@
-bomnipotent_client user approve <Username> --robot
+bomnipotent_client user approve <Username> -r$
