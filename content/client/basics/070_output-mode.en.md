@@ -41,13 +41,13 @@ This can come in handy if you want to use BOMnipotent Client in a script:
 #!/bin/bash
 set -e # Return on error
 # ...other code...
-./bomnipotent_client \
+bomnipotent_client \
     --output-mode=code \
     --domain=$domain \
     --log-level=debug \
     --log-file="/tmp/loggy.log" \
     session login
-code=$(./bomnipotent_client health)
+code=$(bomnipotent_client health)
 if (( code != 200 )); then
     echo "Server at $domain is not healthy!"
     cat /tmp/loggy.log

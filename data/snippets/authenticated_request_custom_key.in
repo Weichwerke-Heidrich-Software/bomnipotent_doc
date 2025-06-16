@@ -1,0 +1,1 @@
+bomnipotent_client --domain=<server> --user=<your-email> --secret-key=<path/to/key> <command>

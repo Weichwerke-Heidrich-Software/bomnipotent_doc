@@ -1,0 +1,1 @@
+bomnipotent_client -d <server> -u <your-email> -s <path/to/key> <command>

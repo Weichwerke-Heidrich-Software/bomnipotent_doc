@@ -50,7 +50,7 @@ Falls Sie diesen Befehl verwenden möchten, um programmatisch zu prüfen, ob Sit
 ``` bash
 #!/bin/bash
 
-output=$(./bomnipotent_client --output raw session status)
+output=$(bomnipotent_client --output raw session status)
 if [ -n "$output" ]; then
     echo "Found session data:"
     echo "$output"
@@ -61,7 +61,7 @@ fi
 {{% /tab %}}
 {{% tab title="powershell" %}}
 ``` ps1
-$output = ./bomnipotent_client --output raw session status
+$output = bomnipotent_client --output raw session status
 if ($output) {
     Write-Output "Found session data:"
     Write-Output $output
