@@ -13,6 +13,7 @@ declare -A OPTION_MAP=(
   [--domain]=-d
   [--email]=-e
   [--expired]=-e
+  [--fail-on]=-f # This is grype syntax
   [--filename]=-f
   [--help]=-h
   [--id]=-i
