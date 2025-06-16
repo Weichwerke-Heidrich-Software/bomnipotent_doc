@@ -64,7 +64,7 @@ for file in $input_files; do
             fi
             sed -i "s/$long /$short /g" "$tmp_file"
             sed -i "s/$long=/$short /g" "$tmp_file"
-            sed -i "s/$long\$/$short\$/g" "$tmp_file"
+            sed -i "s/$long\$/$short/g" "$tmp_file"
         fi
     done
 

@@ -2,7 +2,7 @@
 title = "Vulnerabilities"
 slug = "vulnerabilities"
 weight = 30
-description = "Learn how to list known vulnerabilities affecting a product using the bomnipotent_client command and understand the output details, including CVSS, TLP, and CSAF."
+description = "Learn how to list known vulnerabilities affecting a product using BOMnipotent Client and understand the output details, including CVSS, TLP, and CSAF."
 +++
 
 ## List

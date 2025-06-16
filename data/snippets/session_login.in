@@ -1,0 +1,1 @@
+bomnipotent_client --domain=<server> --user=<your-email> --output=<mode> --secret-key=<path/to/key> --trusted-root=<path/to/cert> login

@@ -1,0 +1,1 @@
+bomnipotent_client -d <other-server> -u <your-email> -o <mode> login # Will set secret-key and trusted-root to none.

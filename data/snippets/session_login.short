@@ -1,0 +1,1 @@
+bomnipotent_client -d <server> -u <your-email> -o <mode> -s <path/to/key> -t <path/to/cert> login

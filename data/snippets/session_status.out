@@ -1,0 +1,4 @@
+domain = "https://localhost:62443"
+user = "admin@wwh-soft.com"
+secret_key_path = "/home/simon/git/bomnipotent/test_cryptofiles/admin"
+trusted_root_path = "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt"
