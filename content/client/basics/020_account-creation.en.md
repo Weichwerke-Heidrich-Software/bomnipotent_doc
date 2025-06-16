@@ -12,26 +12,10 @@ Permissions are linked to user accounts. For more information on how permissions
 ## Creating a new Account
 
 To create a new user account, run
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <your-email>
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <your-email>
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request" >}}
 
 If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your local userfolder.
-
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
 
 > The secret key is more commonly called "private key", but the author believes that "secret" is a more apt description and reduces the chance to confuse it with the public key.
 
@@ -48,38 +32,18 @@ After your request is made and your email verified, you need to wait for a user 
 ## Requesting a Robot Account
 
 Not all accounts are necessarily associated with human users. BOMnipotent is built with pipeline integration in mind. To create an account to be used in a automation, add the '--robot' option to the request:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <name-for-robot> --robot
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <name-for-robot> -r
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request_robot" >}}
+
 This request will mark the account as a robot, and not send a verification mail.
 
 ## Using stored Keys
 
 If you have a key pair stored in the default user location (which depends on your platform), BOMnipotent Client will automatically read and use it.
 
-If you would instead like to reuse an existing stored at a different location, you can add the path as a positional argument:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <your-email> <path/to/key>
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <your-email> <path/to/key>
-```
-{{% /tab %}}
-{{< /tabs >}}
+If you would instead like to reuse an existing key stored at a different location, you can add the path as a positional argument:
 
+{{< example "user_request_stored_key" >}}
 
 > For this to work the key needs to have been generated using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519), and it needs to be stored in [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format. If you insist on managing keys yourself, or would like to see an example, then the easiest way to generate such a pair is to call `openssl genpkey -algorithm ED25519 -out secret_key.pem` to generate a secret key, and then `openssl pkey -in secret_key.pem -pubout -out public_key.pem` to generate the corresponding public key.
 

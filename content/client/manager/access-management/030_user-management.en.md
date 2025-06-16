@@ -16,18 +16,8 @@ After a new account has been requested, it is up to a user manager to approve or
 ## List
 
 To list all users in your database, call
-```
-bomnipotent_client user list
-```
 
-``` {wrap="false" title="output"}
-╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
-│ User Email         │ Status    │ Expires                 │ Last Updated            │
-├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
-│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
-│ info@wildeheide.de │ VERIFIED  │ 2026-03-23 03:52:21 UTC │ 2025-03-22 03:52:21 UTC │
-╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
-```
+{{< example user_list >}}
 
 You can see the email addresses or usernames of the users and their stati. 
 
@@ -37,83 +27,31 @@ An expiration date is also associated with each user, which is the point in time
 
 The list of users can be filtered by username, approval status, and whether or not they are expired:
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-``` {wrap="false" title="output"}
-╭────────────────────┬───────────┬─────────────────────────┬─────────────────────────╮
-│ User Email         │ Status    │ Expires                 │ Last Updated            │
-├────────────────────┼───────────┼─────────────────────────┼─────────────────────────┤
-│ admin@wwh-soft.com │ APPROVED  │ 2026-03-23 04:51:26 UTC │ 2025-03-22 04:51:26 UTC │
-╰────────────────────┴───────────┴─────────────────────────┴─────────────────────────╯
-```
+{{< example user_filtered_list >}}
 
 The "true" argument for the expired filter is optional:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user list --expired=true
-bomnipotent_client user list --expired # does the same
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user list -e true
-bomnipotent_client user list -e # does the same
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example user_list_expired >}}
 
 ## Approve or Deny
 
 If you were expecting the user request, you can approve it via
-```
-bomnipotent_client user approve <EMAIL>
-```
 
-``` {wrap="false" title="output"}
-[INFO] Changed status of info@wildeheide.de to APPROVED
-```
+{{< example user_approve >}}
 
 If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the '--allow-unverified' option (there's no short version for options that bypass security measures):
-```
-bomnipotent_client user approve <EMAIL> --allow-unverified
-```
+
+{{< example user_approve_unverified >}}
 
 If the account belongs to a robot, it can not be verified. In that case you can approve it with the '--robot' option.
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user approve <Username> --robot
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user approve <Username> -r
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example user_approve_robot >}}
 
 > **Important:** You should be absolutely certain that this is the account you want to approve.
 
 Analogously, you can decide agains allowing this user any special access:
-```
-bomnipotent_client user deny <EMAIL>
-```
 
-``` {wrap="false" title="output"}
-[INFO] Changed status of info@wildeheide.de to DENIED
-```
+{{< example user_deny >}}
 
 Contrary to approval, this action does not care which status the user had before the denial.
 
@@ -121,14 +59,9 @@ Contrary to approval, this action does not care which status the user had before
 
 ## Remove
 
-If you want to get rid of a user account alltogether, call
-```
-bomnipotent_client user remove <EMAIL>
-```
+If you want to get rid of a user account alltogether, call:
 
-``` {wrap="false" title="output"}
-[INFO] Deleted user info@wildeheide.de
-```
+{{< example user_remove >}}
 
 This also removes all roles associated with the user.
 
@@ -136,15 +69,4 @@ This also removes all roles associated with the user.
 
 {{< exists-subcommand-en >}}
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client user exists --status=APPROVED
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client user exists -s APPROVED
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example user_exists >}}

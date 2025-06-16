@@ -1,0 +1,3 @@
+[ERROR] Received response:
+422 Unprocessable Entity
+Failed to parse permission: Invalid UserPermission string: CLAM_MANAGEMENT

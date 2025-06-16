@@ -1,0 +1,2 @@
+NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
+ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium

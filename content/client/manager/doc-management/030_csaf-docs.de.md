@@ -12,59 +12,22 @@ Ein [Common Security Advisory Framework](https://www.csaf.io/) (CSAF)-Dokument i
 ## Hochladen
 
 Um ein CSAF-Dokument hochzuladen, rufen Sie
-```
-bomnipotent_client csaf upload <PFAD/ZUM/CSAF> auf.
-```
 
-``` {wrap="false" title="Ausgabe"}
-[INFO] Uploaded CSAF with id WID-SEC-W-2024-3470
-```
+{{< example csaf_upload >}}
 
 Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
 CSAF Dokumente werden durch ihren, nun ja, Identifikator identifiziert, welcher eindeutig sein muss. Der Versuch, ein weiteres Dokuement mit derselben ID hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client csaf upload <PFAD/ZUM/CSAF> --on-existing=skip
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client csaf upload <PFAD/ZUM/CSAF> -o skip
-```
-{{% /tab %}}
-{{< /tabs >}}
 
+{{< example csaf_upload_skip_existing >}}
 
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client csaf upload <PFAD/ZUM/CSAF> --on-existing=replace
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client csaf upload <PFAD/ZUM/CSAF> -o replace
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example csaf_upload_replace_existing >}}
 
 ## Auflisten
 
 Sie können das Ergebnis des Vorgangs mit
-```
-bomnipotent_client csaf list
-```
-``` {wrap="false" title="Ausgabe"}
-╭─────────────────────┬───────────────────────────┬─────────────────────────┬─────────────────────────┬────────┬───────────╮
-│ ID                  │ Title                     │ Initial Release         │ Current Release         │ Status │ TLP       │
-├─────────────────────┼───────────────────────────┼─────────────────────────┼─────────────────────────┼────────┼───────────┤
-│ WID-SEC-W-2024-3470 │ binutils: Schwachstelle e │ 2024-11-14 23:00:00 UTC │ 2024-11-17 23:00:00 UTC │ final  │ TLP:WHITE │
-│                     │ rmöglicht Denial of Servi │                         │                         │        │           │
-│                     │ ce                        │                         │                         │        │           │
-╰─────────────────────┴───────────────────────────┴─────────────────────────┴─────────────────────────┴────────┴───────────╯
-```
+
+{{< example csaf_list >}}
 
 Alle Daten stammen aus dem CSAF-Dokument.
 
@@ -83,33 +46,14 @@ Falls das Dokument nicht den optionalen TLP-Labeleintrag enthält, wird es mit d
 
 Wenn sich der Status Ihres Dokuments ändert, Sie es neu klassifizieren möchten oder neue Informationen vorliegen, können Sie es ändern. Um die neue Version hochzuladen, rufen Sie Folgendes auf:
 
-```
-bomnipotent_client csaf delete <PFAD/ZUM/CSAF>
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Modified CSAF with id BSI-2024-0001-unlabeled
-```
+{{< example csaf_modify >}}
 
 Der Befehl kann sogar die ID vom CSAF Dokument modifizieren. Da die bisheriger ID in diesem Fall nicht aus dem neuen Dokument abgeleitet werden kann, muss sie als optionales Argument angegeben werden:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client csaf delete <PFAD/ZUM/CSAF> --id=<ALTE-ID>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client csaf delete <PFAD/ZUM/CSAF> -i <ALTE-ID>
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example csaf_modify_id >}}
 
 ## Löschen
 
 Um ein CSAF-Dokument von Ihrem Server zu löschen (was Sie wirklich nur tun sollten, falls etwas komplett schiefgelaufen ist), rufen Sie einfach Folgendes auf:
-```
-bomnipotent_client csaf delete <CSAF-ID>
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Deleted CSAF with id WID-SEC-W-2024-3470
-```
+
+{{< example csaf_delete >}}

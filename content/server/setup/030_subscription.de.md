@@ -14,22 +14,9 @@ Kurz nachdem Sie ein Abonnement erworben haben, erhalten Sie eine E-Mail mit Ihr
 Abonnements können nur von einem Benutzer mit der Rolle "Administrator" verwaltet werden. [Erstellen Sie eines](/de/server/setup/admin/), falls Sie dies noch nicht getan haben.
 
 Als dieser Benutzer angemeldet, rufen Sie:
-```
-bomnipotent_client subscription activate <Ihr Abonnementschlüssel>
-```
-``` {wrap="false" title="Ausgabe"}
-[INFO] Successfully stored subscription key.
-```
+
+{{< example subscription_activate >}}
 
 Um den aktuellen Status Ihres Abonnements zu überprüfen, führen Sie Folgendes aus:
-```
-bomnipotent_client subscription status
-```
-``` {wrap="false" title="Ausgabe"}
-╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
-│          │             │                     │                         │                         │ .                         │
-╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
-```
+
+{{< example subscription_status >}}

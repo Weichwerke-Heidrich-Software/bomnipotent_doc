@@ -9,42 +9,12 @@ Für einige Interaktionen mit BOMnipotent ist ein Benutzer mit Administratorrech
 
 ## Schritt 1: Benutzer erstellen
 Zuerst müssen Sie [ein Benutzerkonto erstellen](/de/client/basics/account-creation):
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> user request <Ihre-E-Mail>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> user request <Ihre-E-Mail>
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
+{{< example admin_user_request >}}
 
 Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers und Ihre E-Mail-Adresse in einer [Benutzersitzung](/client/basics/user-session/):
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> --user=<Ihre-Email> session login
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> -u <Ihre-Email> session login
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="output"}
-[INFO] Storing session data in /home/simon/.config/bomnipotent/session.toml
-```
+{{< example admin_session_login >}}
 
 ## Schritt 2: Benutzer als TMP-Administrator markieren
 
@@ -73,20 +43,11 @@ docker logs bomnipotent_server
 
 Der Server behandelt authentifizierte Anfragen dieses Benutzers jetzt so, als wäre die Person ein Administrator. Um dauerhafter Administrator zu werden, müssen Sie zuerst Ihre Benutzeranfrage genehmigen. Zurück auf dem Client rufen Sie:
 
-```
-bomnipotent_client user approve <Ihre-Email>
-```
-``` {wrap="false" title="output"}
-[INFO] Changed status of info@wwh-soft.com to APPROVED
-```
+{{< example admin_user_approve >}}
 
 Jetzt können Sie sich selbst zum vollwertigen Serveradministrator machen:
-```
-bomnipotent_client user-role add <Ihre-Email> admin
-```
-``` {wrap="false" title="output"}
-[INFO] Added role to user
-```
+
+{{< example admin_user_role_add >}}
 
 ## Schritt 4: TMP-Administratormarkierung entfernen
 

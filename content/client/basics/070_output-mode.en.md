@@ -19,35 +19,21 @@ If on the other hand you do not specify a log-file, BOMnipotent still wants you 
 ### Code
 
 The code output prints only the [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) of the response to stdout.
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --output-mode=code health
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -o code health
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="output"}
-200
-```
+{{< example health_code >}}
 
 This can come in handy if you want to use BOMnipotent Client in a script:
 ``` bash
 #!/bin/bash
 set -e # Return on error
 # ...other code...
-./bomnipotent_client \
+bomnipotent_client \
     --output-mode=code \
     --domain=$domain \
     --log-level=debug \
     --log-file="/tmp/loggy.log" \
     session login
-code=$(./bomnipotent_client health)
+code=$(bomnipotent_client health)
 if (( code != 200 )); then
     echo "Server at $domain is not healthy!"
     cat /tmp/loggy.log
@@ -63,22 +49,7 @@ fi
 
 For calls to BOMnipotent Client that access some structured data, the raw output prints the response body, which is typically data in JSON format.
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --output-mode=raw bom list
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -o raw bom list
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-``` {wrap="false" title="output"}
-[{"name":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp":null,"components":350}]
-```
+{{< example bom_list_raw >}}
 
 The output can then easily be parsed and processed by your program logic.
 

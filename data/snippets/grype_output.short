@@ -1,0 +1,1 @@
+grype sbom:./sbom.cdx.json -o cyclonedx-json=./vuln.cdx.json

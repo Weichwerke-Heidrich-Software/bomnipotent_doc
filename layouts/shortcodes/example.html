@@ -1,0 +1,59 @@
+{{ $name := .Get 0 }}
+{{ $base := printf "data/snippets/%s" $name }}
+
+{{ $inVal    := readFile (printf "%s.in"    $base) }}
+{{ $shortPath := printf "%s.short" $base }}
+{{ $outPath := printf "%s.out"  $base }}
+
+{{ if eq (len $inVal) 0 }}
+    {{ errorf "Input file '%s.in' for example '%s' is empty." $base $name }}
+{{ end }}
+
+<div class="tab-nav">
+    {{ if fileExists $shortPath }}
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_long" }}</span>
+    {{ else }}
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input" }}</span>
+    {{ end }}
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight wrap-code" dir="auto">
+                <pre tabindex="0" class="pre-code"><code>{{ $inVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ if fileExists $shortPath }}
+    {{ $shortVal := readFile $shortPath }}
+<div class="tab-nav">
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_short" }}</span>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight wrap-code" dir="auto">
+                <pre tabindex="0" class="pre-code"><code>{{ $shortVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ if fileExists $outPath }}
+    {{ $outVal := readFile $outPath }}
+<div class="tab-nav">
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "output" }}</span>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            <div class="highlight" dir="auto">
+                <pre tabindex="0" class="pre-code" style="border: 0.3em solid #88888888;"><code>{{ $outVal }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -18,52 +18,27 @@ Shortly after you have acquired a subscription, you will receive an email contai
 ## Activating
 
 To activate your new subscription, simply call:
-```
-bomnipotent_client subscription activate <YOUR-SUBSCRIPTION-KEY>
-```
-``` {wrap="false" title="output"}
-[INFO] Successfully stored subscription key.
-```
+
+{{< example subscription_activate >}}
 
 The server will tell you if something goes wrong during activation:
-``` {wrap="false" title="output"}
-[ERROR] Received response:
-404 Not Found
-Failed to activate subscription key: The subscription is missing in the sever database. Please visit https://www.wwh-soft.com to acquire it.
-```
+
+{{< example subscription_activate_wrong >}}
 
 ## Status
 
 To get more information about your current subscription, call:
 
-```
-bomnipotent_client subscription status
-```
-``` {wrap="false" title="output"}
-╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
-│          │             │                     │                         │                         │ .                         │
-╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
-```
+{{< example subscription_status >}}
 
 This output contains an obfuscated print of your key, a status, and some additional information.
 
 ## Removing
 
 If you want to remove your subscription from an instance of BOMnipotent Server (because you for example want to use it for another instance), call
-```
-bomnipotent_client subscription remove <YOUR-SUBSCRIPTION-KEY>
-```
-``` {wrap="false" title="output"}
-[INFO] Subscription key was removed
-```
+
+{{< example subscription_remove >}}
 
 To avoid accidently deactivating a BOMnipotent Server instance that you have admin access to, this requires the correct key as an argument.
 
-``` {wrap="false" title="output"}
-[ERROR] Received response:
-403 Forbidden
-Subscription key does not match stored key
-```
+{{< example subscription_remove_wrong >}}

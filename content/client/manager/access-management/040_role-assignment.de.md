@@ -14,54 +14,18 @@ Zu Ihrer Bequemlichkeit werden beim ersten Start des BOMnipotent-Servers mehrere
 ## Auflisten
 
 Um alle Rollen aller Benutzer aufzulisten, rufen Sie
-```
-bomnipotent_client user-role list
-```
 
-``` {wrap="false" title="output"}
-╭──────────────────┬─────────────┬───────────────────────────╮
-│ User Email       │ User Role   │ Last Updated              │
-├──────────────────┼─────────────┼───────────────────────────┤
-│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
-│                  │             │ 7 UTC                     │
-│ info@wildeheide  │ bom_manager │ 2025-03-22 04:26:08.83708 │
-│                  │             │ 3 UTC                     │
-╰──────────────────┴─────────────┴───────────────────────────╯
-```
+{{< example user_role_list >}}
 
 Die Ausgabe kann nach Nutzer oder Rolle gefiltert werden:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client user-role list --user=info@quantumwire --role=bom_manager
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client user-role list -u info@quantumwire -r bom_manager
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="Ausgabe"}
-╭──────────────────┬─────────────┬───────────────────────────╮
-│ User Email       │ User Role   │ Last Updated              │
-├──────────────────┼─────────────┼───────────────────────────┤
-│ info@quantumwire │ bom_manager │ 2025-03-22 04:27:33.71579 │
-│                  │             │ 7 UTC                     │
-╰──────────────────┴─────────────┴───────────────────────────╯
-```
+{{< example user_role_filtered_list >}}
 
 ## Hinzufügen
 
 Um einem Benutzer eine neue Rolle hinzuzufügen, rufen Sie
-```
-bomnipotent_client user-role add <EMAIL> <ROLLE>
-```
 
-``` {wrap="false" title="Ausgabe"}
-[INFO] Added role to user
-```
+{{< example user_role_add >}}
 
 Der Benutzeraccount muss zu diesem Zeitpunkt bereits auf dem Server existieren, die Rolle jedoch nicht.
 
@@ -70,21 +34,12 @@ Der Benutzeraccount muss zu diesem Zeitpunkt bereits auf dem Server existieren, 
 ## Entfernen
 
 Um einem Benutzer eine Rolle zu entfernen, rufen Sie Folgendes auf:
-```
-bomnipotent_client user-role remove <EMAIL> <ROLLE>
-```
 
-``` {wrap="false" title="Ausgabe"}
-[INFO] Removed role bom_manager from user info@wildeheide
-```
+{{< example user_role_remove >}}
 
 Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
 
-``` {wrap="false" title="Ausgabe"}
-[ERROR] Received response:
-404 Not Found
-User with username "info@wildeheide" does not have role bom_manager.
-```
+{{< example user_role_remove_wrong >}}
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können die Admin-Rolle von anderen Benutzern entfernen.
 
@@ -92,15 +47,4 @@ User with username "info@wildeheide" does not have role bom_manager.
 
 {{< exists-subcommand-de >}}
 
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client user-role exists --role=bom_manager
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client user-role liexistst -r bom_manager
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example user_role_exists >}}

@@ -1,0 +1,8 @@
+[DEBUG] Looking for secret key
+[DEBUG] The provided key is a path: /home/simon/git/bomnipotent/test_cryptofiles/admin
+[DEBUG] Reading secret key from provided path "/home/simon/git/bomnipotent/test_cryptofiles/admin"
+[DEBUG] Adding trusted root certificate
+[DEBUG] Signing request
+[DEBUG] Assembled GET request to https://localhost:62443/health
+[DEBUG] starting new connection: https://localhost:62443/
+[INFO] Service is healthy

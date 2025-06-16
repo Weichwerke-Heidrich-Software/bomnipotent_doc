@@ -1,0 +1,3 @@
+[WARN] File ./boms/bomnipotent_1.0.0.cdx.json already exists.
+Use the "--overwrite" flag to replace it.
+Skipping download to prevent data loss.

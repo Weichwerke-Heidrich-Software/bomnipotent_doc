@@ -18,35 +18,21 @@ Falls Sie hingegen keine Logdatei angegeben haben, will BOMnipotent Sie dennoch 
 ## Code
 
 Der code-Modus gibt nur den [HTTP Statuscode](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) der Antwort aus.
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --output-mode=code health
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -o code health
-```
-{{% /tab %}}
-{{< /tabs >}}
 
-``` {wrap="false" title="Ausgabe"}
-200
-```
+{{< example health_code >}}
 
 Das ist besonders nützlich, wenn Sie BOMnipotent-Client in einem Skript verwendet möchten:
 ``` bash
 #!/bin/bash
 set -e # Return on error
 # ...other code...
-./bomnipotent_client \
+bomnipotent_client \
     --output-mode=code \
     --domain=$domain \
     --log-level=debug \
     --log-file="/tmp/loggy.log" \
     session login
-code=$(./bomnipotent_client health)
+code=$(bomnipotent_client health)
 if (( code != 200 )); then
     echo "Server at $domain is not healthy!"
     cat /tmp/loggy.log
@@ -64,22 +50,7 @@ fi
 
 Für Aufrufe, die auf strukturierte Daten zugreifen, gibt der raw-Modus die Daten aus dem Response Body aus, welche üblicherweise im JSON Format vorliegen.
 
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --output-mode=raw bom list
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -o raw bom list
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-``` {wrap="false" title="Ausgabe"}
-[{"name":"BOMnipotent","version":"1.0.0","timestamp":"2025-01-03T05:38:03Z","tlp":null,"components":350}]
-```
+{{< example bom_list_raw >}}
 
 Die Ausgabe kann dann einfach von der Programmlogik analysiert und weiterverarbeitet werden.
 

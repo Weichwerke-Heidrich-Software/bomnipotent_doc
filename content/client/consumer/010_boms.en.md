@@ -9,170 +9,54 @@ Bills of Materials stand at the forefront of both BOMnipotents functionality and
 
 ## List
 
-Running
-```
-bomnipotent_client bom list
-```
-will list all BOMs accessible to you:
-``` {wrap="false" title="output"}
-╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
-│ Product     │ Version │ Timestamp               │ TLP       │ Components │
-├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
-│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
-│ BOMnipotent │ 1.0.1   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
-│ vulny       │ 0.1.0   │ 2025-02-02 06:51:40 UTC │ TLP:AMBER │ 63         │
-╰─────────────┴─────────┴─────────────────────────┴───────────┴────────────╯
-```
+Running the following command will list all BOMs accessible to you:
+
+{{< example bom_list >}}
 
 BOMs with label {{<tlp-white>}} / {{<tlp-clear>}} are visible to everyone. In this example, your account has access to one BOM with label {{<tlp-amber>}}.
 
 The command accepts the optional filters "name" and "version":
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client bom list --name=BOMnipotent
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client bom list -n BOMnipotent
-```
-{{% /tab %}}
-{{< /tabs >}}
-``` {wrap="false" title="output"}
-╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
-│ Product     │ Version │ Timestamp               │ TLP       │ Components │
-├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
-│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
-│ BOMnipotent │ 1.0.1   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
-╰─────────────┴─────────┴─────────────────────────┴───────────┴────────────╯
-```
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client bom list --name=BOMnipotent --version=1.0.0
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client bom list -n BOMnipotent -v 1.0.0
-```
-{{% /tab %}}
-{{< /tabs >}}
-``` {wrap="false" title="output"}
-╭─────────────┬─────────┬─────────────────────────┬───────────┬────────────╮
-│ Product     │ Version │ Timestamp               │ TLP       │ Components │
-├─────────────┼─────────┼─────────────────────────┼───────────┼────────────┤
-│ BOMnipotent │ 1.0.0   │ 2025-02-01 03:31:50 UTC │ TLP:WHITE │ 363        │
-╰─────────────┴─────────┴─────────────────────────┴───────────┴────────────╯
-```
+{{< example bom_filtered_list >}}
 
 ## Download
 
 To create a local copy of all boms the server exposes to you, run:
-```
-bomnipotent_client bom download ./boms
-```
-``` {wrap="false" title="output"}
-[INFO] Storing BOMs under ./boms
-```
+
+{{< example bom_download >}}
 
 This will store the BOMs in the provided folder ("./boms", in this example). It will create the folder structure if it does not already exist. The BOMs are stored in files following the naming scheme `{product name}_{product version}.cdx.json`.
 
 > To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display a warning instead of silently overwriting a file.
 
-```
-tree ./boms/
-```
-``` {wrap="false" title="output"}
-./boms/
-├── bomnipotent_1.0.0.cdx.json
-├── bomnipotent_1.0.1.cdx.json
-└── vulny_0.1.0.cdx.json
-
-1 directory, 3 files
-```
+{{< example tree_boms >}}
 
 Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.
 
 BOMnipotent **does not** automatically replace existing files, even if they have changed on the server. It instead prints a warning message:
-``` {wrap="false" title="output"}
-[WARN] File ./boms/white/2023/wid-sec-w-2023-0001.json already exists.
-Use the "--overwrite" flag to replace it.
-Skipping download to prevent data loss.
-```
+
+{{< example bom_download_warn >}}
 
 You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client bom download ./boms --overwrite
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client bom download ./boms -o
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example bom_download_overwrite >}}
 
 Analogously to the [list](#list) command, the download command accepts the filters "name" and "version", to only download a subset of BOMs:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client bom download ./boms --name=BOMnipotent --version=1.0.0
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client bom download ./boms -n BOMnipotent -v 1.0.0
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example bom_filtered_download >}}
 
 ## Get
 
-You can directly display the contents of a single BOM to the consolte output by calling
-```
-bomnipotent_client bom get <NAME> <VERSION>
-```
-``` {wrap="false" title="output (cropped)"}
-{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
-  "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
-  "serialNumber": "urn:uuid:60d5a033-6d54-4ac4-a5fa-824d0b04c718",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-02-23T07:23:33+01:00",
-    "tools": {
-      "components": [
-...
-```
+You can directly display the contents of a single BOM to the console output by calling
+
+{{< example bom_get >}}
 
 This is especially useful if you want to use the contents of this BOM in a script. For example, to [check for vulnerabilities](/integration/grype/) in the supply chain, you could call:
-```
-bomnipotent_client bom get <NAME> <VERSION> | grype
-```
-``` {wrap="false" title="output"}
-NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
-ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
-```
+
+{{< example bom_get_grype >}}
 
 ## Existence
 
 {{< exists-subcommand-en >}}
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client bom exists --name=BOMnipotent --version=1.0.0
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client bom exists -n BOMnipotent -v 1.0.0
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example bom_exists >}}

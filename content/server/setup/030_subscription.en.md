@@ -14,22 +14,9 @@ Shortly after you have acquired a subscription, you will receive an email contai
 Subscriptions can only be managed by a user with the "admin" role. [Create one](/server/setup/admin/) if you haven't already.
 
 Logged in as that user, call
-```
-bomnipotent_client subscription activate <your-subscription-key>
-```
-``` {wrap="false" title="output"}
-[INFO] Successfully stored subscription key.
-```
+
+{{< example subscription_activate >}}
 
 To check the current status of your subscription, run
-```
-bomnipotent_client subscription status
-```
-``` {wrap="false" title="output"}
-╭──────────┬─────────────┬─────────────────────┬─────────────────────────┬─────────────────────────┬───────────────────────────╮
-│ Key      │ Product     │ Subscription Status │ Valid Until             │ Last Updated            │ Assessment                │
-├──────────┼─────────────┼─────────────────────┼─────────────────────────┼─────────────────────────┼───────────────────────────┤
-│ ***ccfb3 │ BOMnipotent │ active              │ 2025-04-10 17:26:29 UTC │ 2025-03-10 16:26:29 UTC │ The subscription is valid │
-│          │             │                     │                         │                         │ .                         │
-╰──────────┴─────────────┴─────────────────────┴─────────────────────────┴─────────────────────────┴───────────────────────────╯
-```
+
+{{< example subscription_status >}}

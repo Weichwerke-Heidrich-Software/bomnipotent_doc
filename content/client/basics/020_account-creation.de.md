@@ -12,26 +12,10 @@ Berechtigungen sind an Benutzerkonten gebunden. Weitere Informationen, wie Berec
 ## Erstellung eine neuen Benutzerkontos
 
 Ein neues Benutzerkonto erstellen Sie per
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> user request <Ihre-Email>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> user request <Ihre-Email>
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request" >}}
 
 Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://en.wikipedia.org/wiki/Public-key_cryptography) mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generieren. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
-
-``` {wrap="false" title="output"}
-[INFO] Generating new key pair
-[INFO] Storing secret key to "/home/simon/.config/bomnipotent/secret_key.pem" and public key to "/home/simon/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
-```
 
 > Der geheime Schlüssel wird auch häufig "privater Schlüssel" genannt. Der Autor glaubt aber, dass "geheimer Schlüssel" eine treffendere Beschreibung ist, und außerdem, vor allem im Englischen, die Chance auf Verwechslung mit dem öffentlichen Schlüssel verringert.
 
@@ -48,18 +32,9 @@ Nachdem Ihre Anfrage gestellt und Ihre Email verifiziert ist, müssen Sie darauf
 ## Erstellung eines Roboteraccount
 
 Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert. BOMnipotent ist gebaut, um in Pipelines integriert zu werden. Um ein Konto zu erstellen, welches in Automatisierung genutzt werden soll, fügen Sie der Anfrage die '--robot' Option hinzu:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-bomnipotent_client --domain=<server> user request <Name-des-Roboters> --robot
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-bomnipotent_client -d <server> user request <Name-des-Roboters> -r
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request_robot" >}}
+
 Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
 
 ## Gespeicherte Schlüssel nutzen
@@ -67,18 +42,8 @@ Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
 Falls Sie ein Schlüsselpaar im üblichen Nutzerordner (welcher auf Ihre Platform ankommt) gespeichert haben, wird BOMnipotent Client ihn automatisch lesen und nutzen.
 
 Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wollen, der an einem anderen Ord gespeichert ist, dann können Sie den Pfad als positionales Argument angeben:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-bomnipotent_client --domain=<Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-bomnipotent_client -d <Server> user request <Ihre-Email> <Pfad/zum/Schlüssel>
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example "user_request_stored_key" >}}
 
 
 > Damit dies funktioniert muss der Schlüssel mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generiert worden und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein. Falls Sie darauf bestehen, Ihre Schlüssel selber zu verwalten, oder falls Sie ein Beispiel sehen möchten, dann können Sie ein solches Paar am einfachsten wie folgt generieren: Rufen Sie `openssl genpkey -algorithm ED25519 -out secret_key.pem` um einen geheimen Schlüssel zu generieren, und dann `openssl pkey -in secret_key.pem -pubout -out public_key.pem` um den zugehörigen öffentlichen Schlüssel zu erstellen.
