@@ -5,6 +5,10 @@
 {{ $shortPath := printf "%s.short" $base }}
 {{ $outPath := printf "%s.out"  $base }}
 
+{{ if eq (len $inVal) 0 }}
+    {{ errorf "Input file '%s.in' for example '%s' is empty." $base $name }}
+{{ end }}
+
 <div class="tab-nav">
     {{ if fileExists $shortPath }}
     <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_long" }}</span>
