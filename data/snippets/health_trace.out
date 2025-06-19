@@ -1,39 +1,10 @@
 [bomnipotent_client] [TRACE] Running command Health with args Arguments {
-    domain: Some(
-        "https://localhost:62443",
-    ),
-    user: Some(
-        "admin@wwh-soft.com",
-    ),
-    log_level: Some(
-        Trace,
-    ),
-    log_file: None,
-    output_mode: None,
-    secret_key: Some(
-        "/home/simon/git/bomnipotent/test_cryptofiles/admin",
-    ),
-    trusted_root: Some(
-        "/home/simon/git/bomnipotent/test_cryptofiles/ca.crt",
-    ),
-    command: Health,
-}
-[bomnipotent_client::keys] [DEBUG] Looking for secret key
-[bomnipotent_client::keys] [DEBUG] The provided key is a path: /home/simon/git/bomnipotent/test_cryptofiles/admin
-[bomnipotent_client::keys] [DEBUG] Reading secret key from provided path "/home/simon/git/bomnipotent/test_cryptofiles/admin"
-[bomnipotent_client::request] [DEBUG] Adding trusted root certificate
-[reqwest::blocking::wait] [TRACE] (ThreadId(1)) park without timeout
-[reqwest::blocking::client] [TRACE] (ThreadId(14)) start runtime::block_on
-[bomnipotent_client::request] [DEBUG] Signing request
-[bomnipotent_client::request] [DEBUG] Assembled GET request to https://localhost:62443/health
-[reqwest::blocking::wait] [TRACE] wait at most 30s
-[reqwest::blocking::wait] [TRACE] (ThreadId(1)) park timeout 29.999994032s
-[reqwest::connect] [DEBUG] starting new connection: https://localhost:62443/
-[reqwest::blocking::wait] [TRACE] wait at most 30s
-[reqwest::blocking::client] [TRACE] closing runtime thread (ThreadId(14))
-[reqwest::blocking::client] [TRACE] signaled close for runtime thread (ThreadId(14))
-[reqwest::blocking::client] [TRACE] (ThreadId(14)) Receiver is shutdown
-[reqwest::blocking::client] [TRACE] (ThreadId(14)) end runtime::block_on
-[reqwest::blocking::client] [TRACE] (ThreadId(14)) finished
-[reqwest::blocking::client] [TRACE] closed runtime thread (ThreadId(14))
-[bomnipotent_client::output] [INFO] Service is healthy
+[wwh_core_utils::http::request] [TRACE] Using platform's default root certificates.
+[ureq::unversioned::resolver] [TRACE] Resolve: bomnipotent_server_of_your_choice:443
+[ureq::unversioned::transport::tcp] [TRACE] Try connect TcpStream to 172.20.0.3:443
+[ureq::tls::rustls] [TRACE] Try wrap in TLS
+[rustls::client::hs] [TRACE] Sending ClientHello Message {
+[ureq_proto::util] [TRACE] 4745 5420 2f68 6561 6c74 6820 4854 5450  GET./health.HTTP
+[ureq_proto::util] [TRACE] 2f31 2e31 0d0a 6163 6365 7074 3a20 2a2f  /1.1..accept:.*/
+[ureq_proto::util] [TRACE] 2a0d 0a68 6f73 743a 2062 6f6d 6e69 706f  *..host:.bomnipo
+[ureq_proto::util] [TRACE] 7465 6e74 5f73 6572 7665 725f 6f66 5f79  tent_server_of_y
