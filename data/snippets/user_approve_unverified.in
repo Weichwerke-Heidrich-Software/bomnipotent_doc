@@ -1,1 +1,1 @@
-bomnipotent_client user approve <EMAIL> --allow-unverified
+bomnipotent_client user approve other_user@example.com --allow-unverified

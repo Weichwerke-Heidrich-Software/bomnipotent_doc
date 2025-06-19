@@ -1,1 +1,1 @@
-bomnipotent_client user list --user=admin@wwh-soft.com --status=APPROVED --expired=false
+bomnipotent_client user list --user=admin@example.com --status=APPROVED --expired=false

@@ -1,2 +1,2 @@
-bomnipotent_client user list --expired=true
+bomnipotent_client user list --expired=true;
 bomnipotent_client user list --expired # does the same
