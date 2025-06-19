@@ -1,0 +1,1 @@
+docker logs bomnipotent_server -n 4

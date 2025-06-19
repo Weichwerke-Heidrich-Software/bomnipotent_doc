@@ -33,16 +33,6 @@ tmp_admin = "admin@example.com"
 
 Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
 
-```
-docker logs bomnipotent_server
-```
-``` {wrap="false" title="output"}
-...
-2025-03-06 11:30:15 +00:00 [INFO] Received POST request from 101.102.103.104 to https://bomnipotent.wwh-soft.com/user/info@wwh-soft.com
-2025-03-06 11:32:56 +00:00 [INFO] Configuration successfully reloaded from "/etc/bomnipotent_server/configs/config.toml"
-...
-```
-
 ## Step 3: Make User a full Admin
 
 The server now treats authenticated requests from that user as if that user was an admin. To become a permanent admin, you first need to approve your user request. Back on the client, call
@@ -56,15 +46,8 @@ Now you can make yourself a full server admin:
 ## Step 4: Remove TMP Admin Mark
 
 The stat of being a temporary admin is intended to be, well, temporary. The server logs a warning whenever you use temporary access rights:
-```
-docker logs bomnipotent_server -n 4
-```
-``` {wrap="false" title="output"}
-2025-03-06 14:51:35 +00:00 [INFO] Received POST request from info@wwh-soft.com to https://bomnipotent.wwh-soft.com/user/info@wwh-soft.com/roles
-2025-03-06 14:51:35 +00:00 [WARN] Temporary admin functionality is enabled for info@wwh-soft.com
-2025-03-06 14:51:35 +00:00 [INFO] User info@wwh-soft.com was authenticated as a temporary admin
-2025-03-06 14:51:35 +00:00 [INFO] Temporary admin info@wwh-soft.com has permission USER_MANAGEMENT to perform this action
-```
+
+{{< example tmp_admin_warn >}}
 
 But now that you have successfully made yourself a permanent admin, you can and should remove the "tmp_admin" field from the configuration file again.
 

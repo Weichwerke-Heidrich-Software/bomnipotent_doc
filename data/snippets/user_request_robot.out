@@ -1,1 +1,3 @@
+[INFO] Generating new key pair
+[INFO] Storing secret key to "/root/.config/bomnipotent/secret_key.pem" and public key to "/root/.config/bomnipotent/public_key.pem"
 [INFO] Request for robot user submitted. It now needs to be confirmed by a user manager.
