@@ -1,1 +1,1 @@
-bomnipotent_client role-permission add <ROLE> <PERMISSION>
+bomnipotent_client role-permission add rick_role "PRODUCT_ACCESS(BOMnipotent)"

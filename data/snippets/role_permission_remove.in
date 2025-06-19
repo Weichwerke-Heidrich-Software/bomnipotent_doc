@@ -1,1 +1,1 @@
-bomnipotent_client role-permission remove <ROLE> <PERMISSION>
+bomnipotent_client role-permission remove rick_role "PRODUCT_ACCESS(BOMnipotent)"
