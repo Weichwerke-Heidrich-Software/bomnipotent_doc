@@ -1,1 +1,1 @@
-bomnipotent_client user-role add <your-email> admin
+bomnipotent_client user-role add admin@example.com admin

@@ -22,7 +22,7 @@ Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers u
 
 Als Nächstes werden Sie zu dem Benutzermanager, der in der Serverantwort erwähnt wurde: Melden Sie sich bei Ihrem Servercomputer an und stellen Sie in Ihrer Serverkonfigurationsdatei die folgende Zeile an den Anfang:
 ```toml
-tmp_admin = "<Ihre-E-Mail>"
+tmp_admin = "admin@example.com"
 ```
 
 >  Es ist wichtig, diese Zeile **am Anfang** der Datei hinzuzufügen, da BOMnipotent sonst versuchen könnte, dieses Feld als Teil eines anderen Abschnitts zu interpretieren.

@@ -1,1 +1,1 @@
-bomnipotent_client -d <server> user request <your-email> <path/to/key>
+bomnipotent_client -d bomnipotent_server_of_your_choice user request <your-email> <path/to/key>

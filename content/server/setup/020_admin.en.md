@@ -22,7 +22,7 @@ To make things a litle less verbose, let's store the domain of your server and y
 
 Next, you will become the user manager that was mentioned in the server reply: Log onto your server machine, and in your server configuration file prepend
 ```toml
-tmp_admin = "<your-email>"
+tmp_admin = "admin@example.com"
 ```
 
 > It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this field as part of another section.
