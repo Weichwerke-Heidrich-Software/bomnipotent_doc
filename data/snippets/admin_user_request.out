@@ -1,3 +1,3 @@
 [INFO] Generating new key pair
 [INFO] Storing secret key to "/root/.config/bomnipotent/secret_key.pem" and public key to "/root/.config/bomnipotent/public_key.pem"
-[INFO] User request submitted. It now needs to be confirmed by a user manager.
+[INFO] User request submitted. A verification email has been sent to your inbox. The verification link expires after 1h.

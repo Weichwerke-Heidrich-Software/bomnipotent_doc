@@ -12,6 +12,10 @@ First, you will need to [create a user account](/client/basics/account-creation)
 
 {{< example admin_user_request >}}
 
+Once you have verified your email address, it will show up in the logs:
+
+{{< example admin_email_verification >}}
+
 To make things a litle less verbose, let's store the domain of your server and your email address in a [user session](/client/basics/user-session/):
 
 {{< example admin_session_login >}}

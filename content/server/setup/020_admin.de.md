@@ -12,6 +12,10 @@ Zuerst müssen Sie [ein Benutzerkonto erstellen](/de/client/basics/account-creat
 
 {{< example admin_user_request >}}
 
+Sobald Sie Ihre Email Adresse bestätigt haben, können Sie dies in den Logs sehen.
+
+{{< example admin_email_verification >}}
+
 Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers und Ihre E-Mail-Adresse in einer [Benutzersitzung](/client/basics/user-session/):
 
 {{< example admin_session_login >}}
