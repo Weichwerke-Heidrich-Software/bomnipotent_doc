@@ -1,1 +1,1 @@
-bomnipotent_client user list -u admin@wwh-soft.com -s APPROVED -e false
+bomnipotent_client user list -u admin@example.com -s APPROVED -e false

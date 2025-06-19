@@ -1,1 +1,1 @@
-bomnipotent_client user-role remove <EMAIL> <ROLE>
+bomnipotent_client user-role remove user@example.com rick_role

@@ -1,1 +1,2 @@
-bomnipotent_client user-role remove wrong_user wrong_role
+bomnipotent_client user-role remove admin@example.com wrong_role;
+bomnipotent_client user-role remove wrong_user admin

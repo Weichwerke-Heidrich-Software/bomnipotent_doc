@@ -1,1 +1,1 @@
-bomnipotent_client user-role list -u info@quantumwire -r bom_manager
+bomnipotent_client user-role list -u admin@example.com -r admin
