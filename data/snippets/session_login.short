@@ -1,1 +1,1 @@
-bomnipotent_client -d bomnipotent_server_of_your_choice -u <your-email> -o <mode> -s <path/to/key> -t <path/to/cert> login
+bomnipotent_client -d bomnipotent_server_of_your_choice -u user@example.com -o normal -s /home/some_secret_key.pem session login

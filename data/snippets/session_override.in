@@ -1,1 +1,1 @@
-bomnipotent_client --domain=<other-server> health # Will contact the other server
+bomnipotent_client --domain=bomnipotent.wwh-soft.com health # Will contact the other server

@@ -1,1 +1,1 @@
-bomnipotent_client -d bomnipotent_server_of_your_choice user request <your-email> <path/to/key>
+bomnipotent_client -d bomnipotent_server_of_your_choice user request other_user@example.com /home/some_public_key.pem

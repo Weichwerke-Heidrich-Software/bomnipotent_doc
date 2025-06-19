@@ -1,1 +1,1 @@
-bomnipotent_client --domain=<other-server> --user=<your-email> --output=<mode> login # Will set secret-key and trusted-root to none.
+bomnipotent_client --domain=some_other_bomnipotent_server --user=other_user@example.com session login # Will set secret-key and other non-specified options to none.
