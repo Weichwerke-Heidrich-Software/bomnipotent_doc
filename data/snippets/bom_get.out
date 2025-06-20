@@ -1,12 +1,15 @@
-{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
-  "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
-  "serialNumber": "urn:uuid:a9a29049-d8da-4e2a-befd-7ca10aa784fa",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-06-20T13:21:51Z",
-
-thread 'main' panicked at library/std/src/io/stdio.rs:1165:9:
-failed printing to stdout: Broken pipe (os error 32)
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+        "pkg:cargo/windows_i686_gnullvm@0.53.0?package-id=29929044dd6a721e",
+        "pkg:cargo/windows_i686_msvc@0.53.0?package-id=e26e1d514e5f3c76",
+        "pkg:cargo/windows_x86_64_gnu@0.53.0?package-id=447e4e93425a4b51",
+        "pkg:cargo/windows_x86_64_gnullvm@0.53.0?package-id=a44f13b8efe612c7",
+        "pkg:cargo/windows_x86_64_msvc@0.53.0?package-id=1e6fb164c784cda4"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/wit-bindgen-rt@0.39.0?package-id=5f5793a76380b2f8",
+      "dependsOn": [
+        "pkg:cargo/bitflags@2.9.1?package-id=16424958ff15c65d"
+      ]
+    }
+  ]
+}
