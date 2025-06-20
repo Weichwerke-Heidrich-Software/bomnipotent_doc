@@ -1,0 +1,1 @@
+SYFT_FORMAT_PRETTY=1 syft /home/your_project/Cargo.lock --output cyclonedx-json=/home/your_project/sbom.cdx.json --source-name="Your Project" --source-version="1.0.0"

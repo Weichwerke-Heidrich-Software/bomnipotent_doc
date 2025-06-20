@@ -1,0 +1,5 @@
+[info] checking github for the current release tag 
+[info] fetching release script for tag='v1.27.1' 
+[info] checking github for the current release tag 
+[info] using release tag='v1.27.1' version='1.27.1' os='linux' arch='amd64' 
+[info] installed /root/.local/bin/syft 

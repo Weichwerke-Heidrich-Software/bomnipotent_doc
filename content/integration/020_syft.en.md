@@ -15,6 +15,8 @@ The official [Syft GitHub repo](https://github.com/anchore/syft?tab=readme-ov-fi
 
 On some linux systems you may want to change the install path (the very last argument to the shell command) to "~/.local/bin", because "/usr/local/bin" requires root permissions to modify.
 
+{{< example install_syft >}}
+
 ## Usage
 
 The basic usage of Syft is:
@@ -28,18 +30,9 @@ Syft supports lockfiles, directories, container images and more as targets.
 ### Lockfile
 
 An example call looks like this:
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-SYFT_FORMAT_PRETTY=1 syft Cargo.lock --output cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-SYFT_FORMAT_PRETTY=1 syft Cargo.lock -o cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example syft_lockfile >}}
+
 Breakdown:
 - 'SYFT_FORMAT_PRETTY=1' is makes this call with an environment variable that tells Syft to use prettified output. This only serves to make the resulting json easier readable for humans. See [here](https://github.com/anchore/syft/wiki/configuration) for a full list of configurations.
 - 'syft' cals the Syft program.
@@ -57,18 +50,7 @@ Syft supports a wide range of ecosystems, which is listed on their [GitHub repo]
 
 Letting Syft loose on a whole directory is possible, but overdoes it in most situations. It will go through all subdirectories and collect everything that looks remotely like a lockfile, including all your test dependencies, development scripts and GitHub Actions.
 
-{{< tabs >}}
-{{% tab title="long" %}}
-```
-syft . --output cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
-```
-{{% /tab %}}
-{{% tab title="short" %}}
-```
-syft . -o cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Development Environment" --source-version=1.2.3
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example syft_dir >}}
 
 ### Container
 

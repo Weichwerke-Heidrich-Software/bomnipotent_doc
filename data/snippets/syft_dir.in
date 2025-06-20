@@ -1,0 +1,1 @@
+SYFT_FORMAT_PRETTY=1 syft /home/your_project/ --output cyclonedx-json=/home/your_project/dev_env_sbom.cdx.json --source-name="Your Development Environment" --source-version=1.2.3

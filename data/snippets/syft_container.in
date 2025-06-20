@@ -1,0 +1,1 @@
+syft /home/your_project/container.tar --output cyclonedx-json=/home/your_project/container_sbom.cdx.json --source-name="Your Project Container" --source-version=1.2.3

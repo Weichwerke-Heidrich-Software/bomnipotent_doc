@@ -15,6 +15,8 @@ Das offizielle [Syft GitHub Repository](https://github.com/anchore/syft?tab=read
 
 Auf manchen Linux-Systemen sollten Sie den Installationspfad (das letzte Argument des Shell-Befehls) auf "~/.local/bin" ändern, da für Änderungen an "/usr/local/bin" Root-Rechte erforderlich sind.
 
+{{< example install_syft >}}
+
 ## Verwendung
 
 Die grundlegende Verwendung von Syft lautet:
@@ -28,18 +30,8 @@ Syft unterstützt Lockfiles, Verzeichnisse, Container-Images und weitere Zieltyp
 ### Lockfile
 
 Ein Beispielaufruf sieht folgendermaßen aus:
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-SYFT_FORMAT_PRETTY=1 syft Cargo.lock --output cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-SYFT_FORMAT_PRETTY=1 syft Cargo.lock -o cyclonedx-json=./sbom.cdx.json --source-name="BOMnipotent" --source-version="1.0.0"
-```
-{{% /tab %}}
-{{< /tabs >}}
+
+{{< example syft_lockfile >}}
 
 Erklärung:
 - 'SYFT_FORMAT_PRETTY=1' setzt eine Umgebungsvariable, die Syft anweist, durch Menschen besser lesbare Ausgabe zu produzieren. Eine vollständige Liste der Konfigurationen befindet sich [hier](https://github.com/anchore/syft/wiki/configuration).
@@ -58,18 +50,7 @@ Syft unterstützt eine Vielzahl von Ökosystemen, welche [in Ihrem GitHub repo](
 
 Syft kann auf ein ganzes Verzeichnis angewendet werden, allerdings ist das oft übertrieben. Es durchsucht alle Unterverzeichnisse und erfasst alles, was entfernt wie eine Lockfile aussieht, einschließlich aller Testabhängigkeiten, Entwicklungsskripte und GitHub Actions.
 
-{{< tabs >}}
-{{% tab title="lang" %}}
-```
-syft . --output cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Entwicklungsumgebung" --source-version=1.2.3
-```
-{{% /tab %}}
-{{% tab title="kurz" %}}
-```
-syft . -o cyclonedx-json=./dev_env_sbom.cdx.json --source-name="BOMnipotent Entwicklungsumgebung" --source-version=1.2.3
-```
-{{% /tab %}}
-{{< /tabs >}}
+{{< example syft_dir >}}
 
 ### Container
 

@@ -13,6 +13,8 @@ Es gibt verschiedene Tools zur Überprüfung eines Produkts auf Schwachstellen i
 
 Das offizielle [Grype GitHub Repository](https://github.com/anchore/grype#installation) enthält Installationsanweisungen. Ähnlich wie bei Syft können Sie den Installationspfad (das letzte Argument des Shell-Befehls) auf '~/.local/bin' ändern, da '/usr/local/bin' Root-Berechtigungen zum Ändern erfordert.
 
+{{< example install_grype >}}
+
 ## Verwendung
 
 Sobald eine SBOM vorliegt, ist das Scannen auf Schwachstellen sehr einfach:
