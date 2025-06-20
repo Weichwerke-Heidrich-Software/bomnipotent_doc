@@ -2,7 +2,11 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:60d5a033-6d54-4ac4-a5fa-824d0b04c718",
+  "serialNumber": "urn:uuid:a9a29049-d8da-4e2a-befd-7ca10aa784fa",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-23T07:23:33+01:00",
+    "timestamp": "2025-06-20T13:21:51Z",
+
+thread 'main' panicked at library/std/src/io/stdio.rs:1165:9:
+failed printing to stdout: Broken pipe (os error 32)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

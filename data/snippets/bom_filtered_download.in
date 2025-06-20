@@ -1,1 +1,1 @@
-bomnipotent_client bom download ./boms --name=BOMnipotent --version=1.0.0
+bomnipotent_client bom download /home/boms --name="Your Project" --version="1.0.0"

@@ -1,2 +1,2 @@
-NAME  INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY 
-ring  0.17.10    0.17.12   rust-crate  GHSA-4p46-pwfr-66x6  Medium
+NAME    INSTALLED  FIXED-IN  TYPE        VULNERABILITY        SEVERITY  EPSS%  RISK  
+rustls  0.23.15    0.23.18   rust-crate  GHSA-qg5g-gv98-5ffh  Medium      N/A    N/A

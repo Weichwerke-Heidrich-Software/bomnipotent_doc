@@ -1,1 +1,1 @@
-bomnipotent_client bom get <NAME> <VERSION> | head -n 8
+bomnipotent_client bom get "Your Project" "1.0.0" | tail -n 8

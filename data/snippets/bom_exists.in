@@ -1,1 +1,1 @@
-bomnipotent_client bom exists --name=BOMnipotent --version=1.0.0
+bomnipotent_client bom exists --name="Your Project" --version="1.0.0"

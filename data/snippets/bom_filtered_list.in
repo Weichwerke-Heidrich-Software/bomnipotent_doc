@@ -1,1 +1,1 @@
-bomnipotent_client bom list --name=BOMnipotent --version=1.0.0
+bomnipotent_client bom list --name="Your Project" --version="1.0.0"
