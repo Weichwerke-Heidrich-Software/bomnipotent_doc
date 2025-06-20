@@ -60,7 +60,12 @@ If you do neither, BOMnipotent will treat any unclassified documents as if they 
 
 ### Conflict Handling
 
-The combination of name and version of the main component of a BOM need to be unique. Trying to upload another document with the same combination results in an error. You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
+The combination of name and version of the main component of a BOM need to be unique. Trying to upload another document with the same combination results in an error.
+
+{{< example bom_upload_err_on_existing >}}
+
+You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
+
 
 {{< example bom_upload_skip_existing >}}
 
@@ -111,7 +116,6 @@ If the data on the server has a different name and/or version than specified in 
 {{< example bom_modify_overwrite_name_extreme >}}
 
 Changing name and/or version without providing the complete document is not supported.
-
 
 ## Deleting
 

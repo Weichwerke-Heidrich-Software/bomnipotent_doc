@@ -1,3 +1,3 @@
-bomnipotent_client bom modify <PATH/TO/BOM> --tlp=none
-bomnipotent_client bom modify <PATH/TO/BOM> --tlp=default # Does the same
-bomnipotent_client bom modify <PATH/TO/BOM> --tlp=unlabelled # Does the same
+bomnipotent_client bom modify /home/your_project/sbom.cdx.json --tlp=none
+bomnipotent_client bom modify /home/your_project/sbom.cdx.json --tlp=default # Does the same
+bomnipotent_client bom modify /home/your_project/sbom.cdx.json --tlp=unlabeled # Does the same

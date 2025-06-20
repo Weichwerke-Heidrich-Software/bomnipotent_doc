@@ -1,1 +1,1 @@
-bomnipotent_client bom modify <PATH/TO/BOM> -n <OLD-NAME> -v <OLD-VERSION> --name-overwrite=<NEW-NAME> --version-overwrite=<NEW-VERSION>
+bomnipotent_client bom modify /home/your_project/dev_env_sbom.cdx.json -n "Other Project" -v "2.7.1" --name-overwrite="Best Project" --version-overwrite="3.1.4"

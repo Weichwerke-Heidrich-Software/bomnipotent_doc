@@ -1,1 +1,1 @@
-bomnipotent_client bom upload <PATH/TO/BOM> -n <NEW-NAME> -v <NEW-VERSION>
+bomnipotent_client bom upload /home/your_project/dev_env_sbom.cdx.json -n "Other Project" -v "2.7.1"

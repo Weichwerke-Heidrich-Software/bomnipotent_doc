@@ -1,1 +1,1 @@
-bomnipotent_client bom upload <PATH/TO/BOM> --on-existing=replace
+bomnipotent_client bom upload /home/your_project/sbom.cdx.json --on-existing=replace

@@ -60,7 +60,11 @@ Falls Sie keines von beiden tun, behandelt BOMnipotent alle nicht klassifizierte
 
 ### Konfliktbehandlung
 
-Die Kombination aus Name und Version der Hauptkomponente einer BOM muss eindeutig sein. Der Versuch, ein weiteres Dokuement mit derselben Kombination hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+Die Kombination aus Name und Version der Hauptkomponente einer BOM muss eindeutig sein. Der Versuch, ein weiteres Dokuement mit derselben Kombination hochzuladen, resultiert in einem Fehler.
+
+{{< example bom_upload_err_on_existing >}}
+
+Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
 
 {{< example bom_upload_skip_existing >}}
 
