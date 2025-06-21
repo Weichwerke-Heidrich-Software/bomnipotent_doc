@@ -1,15 +1,16 @@
-        "pkg:cargo/windows_i686_gnullvm@0.53.0?package-id=29929044dd6a721e",
-        "pkg:cargo/windows_i686_msvc@0.53.0?package-id=e26e1d514e5f3c76",
-        "pkg:cargo/windows_x86_64_gnu@0.53.0?package-id=447e4e93425a4b51",
-        "pkg:cargo/windows_x86_64_gnullvm@0.53.0?package-id=a44f13b8efe612c7",
-        "pkg:cargo/windows_x86_64_msvc@0.53.0?package-id=1e6fb164c784cda4"
-      ]
-    },
-    {
-      "ref": "pkg:cargo/wit-bindgen-rt@0.39.0?package-id=5f5793a76380b2f8",
-      "dependsOn": [
-        "pkg:cargo/bitflags@2.9.1?package-id=16424958ff15c65d"
-      ]
-    }
-  ]
-}
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:2eed0b5b-80d4-4774-baaa-36c7edbd8830",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-01-01T10:11:12Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.27.1"
+        }
