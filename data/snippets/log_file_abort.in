@@ -1,1 +1,1 @@
-bomnipotent_client --log-file=<PATH> <COMMAND>
+bomnipotent_client --log-file=/home/george_r_r_martin_not_a.log bom list
