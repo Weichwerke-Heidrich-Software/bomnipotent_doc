@@ -1,11 +1,8 @@
-╭─────────────┬─────────┬─────────────────────┬───────────────────────────┬───────┬──────────┬─────────┬─────────────────╮
-│ Product     │ Version │ Vulnerability       │ Description               │ Score │ Severity │ TLP     │ CSAF Assessment │
-├─────────────┼─────────┼─────────────────────┼───────────────────────────┼───────┼──────────┼─────────┼─────────────────┤
-│ BOMnipotent │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable  │       │ medium   │ Default │                 │
-│             │         │                     │ panic in `Acceptor::accep │       │          │         │                 │
-│             │         │                     │ t`                        │       │          │         │                 │
-│ vulny       │ 0.1.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable  │       │ medium   │ Default │                 │
-│             │         │                     │ panic in `Acceptor::accep │       │          │         │                 │
-│             │         │                     │ t`                        │       │          │         │                 │
-╰─────────────┴─────────┴─────────────────────┴───────────────────────────┴───────┴──────────┴─────────┴─────────────────╯
-[ERROR] Found 2 unassessed vulnerabilities.
+[INFO] 
+╭──────────────┬─────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬─────────────────╮
+│ Product      │ Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessment │
+├──────────────┼─────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼─────────────────┤
+│ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
+│              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
+╰──────────────┴─────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴─────────────────╯
+[ERROR] Found 1 unassessed vulnerabilities.

@@ -1,1 +1,2 @@
-bomnipotent_client vulnerability update <VULNERABILITIES> --name=Schlagsahne --version=1.0.1
+bomnipotent_client vulnerability update /home/your_project/vuln_wrong_metadata.cdx.json --name=Schlagsahne --version=2.7.1;
+bomnipotent_client vulnerability update /home/your_project/vuln_wrong_metadata.cdx.json --version=1.0.1;
