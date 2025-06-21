@@ -1,1 +1,1 @@
-bomnipotent_client user deny <EMAIL>
+bomnipotent_client user deny unwanted@example.com

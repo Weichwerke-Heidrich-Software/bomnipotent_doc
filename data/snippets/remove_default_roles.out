@@ -1,0 +1,5 @@
+[INFO] Removed permission BOM_MANAGEMENT from role bom_manager
+[INFO] Removed permission CSAF_MANAGEMENT from role csaf_manager
+[INFO] Removed permission ROLE_MANAGEMENT from role role_manager
+[INFO] Removed permission USER_MANAGEMENT from role user_manager
+[INFO] Removed permission VULN_MANAGEMENT from role vuln_manager

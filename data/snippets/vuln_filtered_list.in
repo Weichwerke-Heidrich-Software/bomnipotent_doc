@@ -1,1 +1,1 @@
-bomnipotent_client vulnerability list --name=vulny --version=0.1.0
+bomnipotent_client vulnerability list --name="Your Project" --version="1.0.0"

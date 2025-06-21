@@ -1,8 +1,26 @@
 [DEBUG] Looking for secret key
-[DEBUG] The provided key is a path: /home/simon/git/bomnipotent/test_cryptofiles/admin
-[DEBUG] Reading secret key from provided path "/home/simon/git/bomnipotent/test_cryptofiles/admin"
-[DEBUG] Adding trusted root certificate
-[DEBUG] Signing request
-[DEBUG] Assembled GET request to https://localhost:62443/health
-[DEBUG] starting new connection: https://localhost:62443/
+[DEBUG] The provided key is a path: /home/admin_secret_key.pem
+[DEBUG] Reading secret key from provided path "/home/admin_secret_key.pem"
+[DEBUG] Signing request.
+[DEBUG] Assembled GET request to https://bomnipotent_server_of_your_choice/health.
+[DEBUG] Call<Prepare>
+[DEBUG] GET https://bomnipotent_server_of_your_choice/******
+[DEBUG] Resolved: ArrayVec { len: 1, arr: [172.20.0.3:443] }
+[DEBUG] Connected TcpStream to 172.20.0.3:443
+[DEBUG] No cached session for DnsName("bomnipotent_server_of_your_choice")
+[DEBUG] Not resuming any session
+[DEBUG] Wrapped TLS
+[DEBUG] Call<SendRequest>
+[DEBUG] Request { method: GET, uri: https://bomnipotent_server_of_your_choice/******, version: HTTP/1.1, headers: {"accept": "*/*", "host": "bomnipotent_server_of_your_choice", "user-agent": "bomnipotent_client", "<NOTICE>": "5 HEADERS ARE REDACTED"} }
+[DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[DEBUG] Not resuming
+[DEBUG] TLS1.3 encrypted extensions: [ServerNameAck]
+[DEBUG] ALPN protocol is None
+[DEBUG] add_parsable_certificates processed 143 valid and 0 invalid certs
+[DEBUG] Loaded 143 CA certificates from the system
+[DEBUG] Call<RecvResponse>
+[DEBUG] Call<RecvBody>
+[DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "18", "date": "Wed, 01 Jan 2025 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
+[DEBUG] Call<Cleanup>
+[DEBUG] Pool gone: PoolKey { scheme: "https", authority: bomnipotent_server_of_your_choice, proxy: None }
 [INFO] Service is healthy

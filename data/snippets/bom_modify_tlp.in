@@ -1,1 +1,1 @@
-bomnipotent_client bom modify <PATH/TO/BOM> --tlp=<LABEL>
+bomnipotent_client bom modify /home/your_project/sbom.cdx.json --tlp=AMBER

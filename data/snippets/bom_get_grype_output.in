@@ -1,1 +1,1 @@
-bomnipotent_client bom get <BOM-NAME> <BOM-VERSION> | grype --output cyclonedx-json=./vuln.cdx.json
+bomnipotent_client bom get "Your Project" "1.0.0" | grype --output cyclonedx-json=/home/vuln.cdx.json

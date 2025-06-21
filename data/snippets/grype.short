@@ -1,1 +1,1 @@
-grype sbom:./sbom.cdx.json -f low
+grype sbom:/home/your_project/sbom.cdx.json -f low

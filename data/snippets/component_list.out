@@ -1,8 +1,16 @@
-╭──────────────┬─────────┬─────────┬───────────────────────────┬───────────────────────────╮
-│ Name         │ Version │ Type    │ CPE                       │ PURL                      │
-├──────────────┼─────────┼─────────┼───────────────────────────┼───────────────────────────┤
-│ aho-corasick │ 1.1.3   │ library │ cpe:2.3:a:aho-corasick:ah │ pkg:cargo/aho-corasick@1. │
-│              │         │         │ o-corasick:1.1.3:*:*:*:*: │ 1.3                       │
-│              │         │         │ *:*:*                     │                           │
-│ aws-lc-rs    │ 1.12.2  │ library │ cpe:2.3:a:aws-lc-rs:aws-l │ pkg:cargo/aws-lc-rs@1.12. │
-│              │         │         │ c-rs:1.12.2:*:*:*:*:*:*:* │ 2                         │
+[INFO] 
+╭────────────────────────────┬────────────────────────────┬─────────┬────────────────────────────┬────────────────────────────╮
+│ Name                       │ Version                    │ Type    │ CPE                        │ PURL                       │
+├────────────────────────────┼────────────────────────────┼─────────┼────────────────────────────┼────────────────────────────┤
+│ /home/your_project/Cargo.l │                            │ file    │                            │                            │
+│ ock                        │                            │         │                            │                            │
+│ aho-corasick               │ 1.1.3                      │ library │ cpe:2.3:a:aho-corasick:aho │ pkg:cargo/aho-corasick@1.1 │
+│                            │                            │         │ -corasick:1.1.3:*:*:*:*:*: │ .3                         │
+│                            │                            │         │ *:*                        │                            │
+│ aws-lc-rs                  │ 1.13.1                     │ library │ cpe:2.3:a:aws-lc-rs:aws-lc │ pkg:cargo/aws-lc-rs@1.13.1 │
+│                            │                            │         │ -rs:1.13.1:*:*:*:*:*:*:*   │                            │
+│ aws-lc-sys                 │ 0.29.0                     │ library │ cpe:2.3:a:aws-lc-sys:aws-l │ pkg:cargo/aws-lc-sys@0.29. │
+│                            │                            │         │ c-sys:0.29.0:*:*:*:*:*:*:* │ 0                          │
+│ bindgen                    │ 0.69.5                     │ library │ cpe:2.3:a:bindgen:bindgen: │ pkg:cargo/bindgen@0.69.5   │
+│                            │                            │         │ 0.69.5:*:*:*:*:*:*:*       │                            │
+│ bitflags                   │ 2.9.1                      │ library │ cpe:2.3:a:bitflags:bitflag │ pkg:cargo/bitflags@2.9.1   │

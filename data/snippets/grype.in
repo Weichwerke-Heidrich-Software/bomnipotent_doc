@@ -1,1 +1,1 @@
-grype sbom:./sbom.cdx.json --fail-on low
+grype sbom:/home/your_project/sbom.cdx.json --fail-on low

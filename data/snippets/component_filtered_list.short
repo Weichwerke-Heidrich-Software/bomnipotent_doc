@@ -1,1 +1,1 @@
-bomnipotent_client component list vulny 0.1.0 -n aho-corasick -v 1.1.3 -t library
+bomnipotent_client component list "Your Project" "1.0.0" -n aho-corasick -v 1.1.3 -t library

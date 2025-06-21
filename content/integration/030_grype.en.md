@@ -13,6 +13,8 @@ There are several tools for scanning a product for supply chain vulnerabilities.
 
 The official [Grype GitHub repo](https://github.com/anchore/grype#installation) contains installation instructions. Like for Syft, you may want to change the install path (the very last argument to the shell command) to '~/.local/bin', because '/usr/local/bin' requires root permissions to modify.
 
+{{< example install_grype >}}
+
 ## Usage
 
 With an SBOM at hand, scanning for vulnerabilities is very easy:

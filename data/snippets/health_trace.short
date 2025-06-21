@@ -1,1 +1,1 @@
-bomnipotent_client -l trace health
+bomnipotent_client -l trace health | grep "TRACE" | head -n 10

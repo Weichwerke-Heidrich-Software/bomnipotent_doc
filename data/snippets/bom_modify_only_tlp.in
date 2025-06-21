@@ -1,1 +1,1 @@
-bomnipotent_client bom modify --name=<NAME> --version=<VERSION> --tlp=<LABEL>
+bomnipotent_client bom modify --name="Other Project" --version="2.7.1" --tlp=GREEN

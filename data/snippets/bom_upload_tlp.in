@@ -1,1 +1,1 @@
-bomnipotent_client bom upload <PATH/TO/BOM> --tlp=<LABEL>
+bomnipotent_client bom upload /home/your_project/container_sbom.cdx.json --tlp=WHITE # This makes the BOM public.

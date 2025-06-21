@@ -1,1 +1,1 @@
-bomnipotent_client bom list -n BOMnipotent -v 1.0.0
+bomnipotent_client bom list -n "Your Project" -v "1.0.0"

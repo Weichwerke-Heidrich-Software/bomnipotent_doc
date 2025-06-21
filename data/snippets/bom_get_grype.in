@@ -1,1 +1,1 @@
-bomnipotent_client bom get <NAME> <VERSION> | grype
+bomnipotent_client bom get "Your Project" "1.0.0" | grype

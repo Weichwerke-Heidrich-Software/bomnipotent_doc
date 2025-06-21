@@ -1,1 +1,1 @@
-bomnipotent_client bom modify -n <NAME> -v <VERSION> -t <LABEL>
+bomnipotent_client bom modify -n "Other Project" -v "2.7.1" -t GREEN

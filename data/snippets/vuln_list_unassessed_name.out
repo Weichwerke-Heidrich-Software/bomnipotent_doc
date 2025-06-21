@@ -1,1 +1,5 @@
-[INFO] No unassessed vulnerabilities found
+error: unexpected argument 'Your Project' found
+
+Usage: bomnipotent_client vulnerability list [OPTIONS]
+
+For more information, try '--help'.

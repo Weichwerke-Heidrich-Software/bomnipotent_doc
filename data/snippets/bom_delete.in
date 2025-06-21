@@ -1,1 +1,1 @@
-bomnipotent_client bom delete <NAME> <VERSION>
+bomnipotent_client bom delete "Best Project" "3.1.4"

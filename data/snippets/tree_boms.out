@@ -1,6 +1,6 @@
-./boms/
-├── bomnipotent_1.0.0.cdx.json
-├── bomnipotent_1.0.1.cdx.json
-└── vulny_0.1.0.cdx.json
+/home/boms/
+|-- best_project_3.1.4.cdx.json
+|-- your_project_1.0.0.cdx.json
+`-- your_project_container_1.2.3.cdx.json
 
 1 directory, 3 files

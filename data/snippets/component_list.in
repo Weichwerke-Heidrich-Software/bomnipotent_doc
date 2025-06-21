@@ -1,1 +1,1 @@
-bomnipotent_client component list vulny 0.1.0 | head -n 8
+bomnipotent_client component list "Your Project" "1.0.0" | awk 'NR <= 16'
