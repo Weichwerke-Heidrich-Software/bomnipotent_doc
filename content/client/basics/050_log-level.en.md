@@ -36,6 +36,6 @@ The debug output mode prints some additional information which may be of interes
 
 ## Trace
 
-In output mode trace, BOMnipotent additionally prints the module where the log message originated. This is mainly interesting for finding the cause of an error *in the program itself*.
+In output mode trace, BOMnipotent prints everything it finds even the slightest bit interesting. This is mainly useful for finding the cause of an error *in the program itself*.
 
 {{< example health_trace >}}

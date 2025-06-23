@@ -36,6 +36,6 @@ Der Debug-Ausgabemodus gibt zusätzliche Informationen aus, die bei der Fehlersu
 
 ## Trace
 
-Im Trace-Modus gibt BOMnipotent zusätzlich das Modul aus, aus dem die Nachricht stammt. Dies ist primär nützlich, um Fehler *im Programm selbst* zu identifizieren.
+Im Trace-Modus gibt BOMnipotent alles aus, was es auch nur im Geringsten interessant findet. Dies ist primär nützlich, um Fehler *im Programm selbst* zu identifizieren.
 
 {{< example health_trace >}}
