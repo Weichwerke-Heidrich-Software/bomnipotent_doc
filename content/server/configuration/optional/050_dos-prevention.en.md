@@ -28,7 +28,7 @@ The HTTP request for creating a new user is typically not associated with any ex
 
 On the bright side, the request for a new user is something that is not expected to happen exceedingly often. This is why a global limit on requests for users exists. Its default values are much stricter, but they, too, can be modified:
 ```toml
-[user_request_dos_prevention]
+[new_user_dos_prevention]
 limit = 10 # Default is 3
 period = "20 seconds" # Default is "10 seconds"
 ```
