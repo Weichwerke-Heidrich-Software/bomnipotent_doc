@@ -1,16 +1,16 @@
-{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
-  "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
-  "serialNumber": "urn:uuid:57ba1269-431c-418d-b5bc-b04fc084320b",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-01-01T10:11:12Z",
-    "tools": {
-      "components": [
-        {
-          "type": "application",
-          "author": "anchore",
-          "name": "syft",
-          "version": "1.27.1"
-        }
+        "pkg:cargo/regex-automata@0.4.9?package-id=0003e0f2290ff61c",
+        "pkg:cargo/regex-syntax@0.8.5?package-id=9c4a23eb3c33e107"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/ring@0.17.14?package-id=c66763fec7810e29",
+      "dependsOn": [
+        "pkg:cargo/cc@1.2.24?package-id=f71620bae492ca41",
+        "pkg:cargo/cfg-if@1.0.0?package-id=a14d75511beda7d1",
+        "pkg:cargo/getrandom@0.2.16?package-id=606db9c426a4ebae",
+        "pkg:cargo/libc@0.2.172?package-id=f00b3692be64008f",
+        "pkg:cargo/untrusted@0.9.0?package-id=d2af0bb05866d696",
+        "pkg:cargo/windows-sys@0.52.0?package-id=c450cf75e67dfadd"
+      ]
+    },
+    {

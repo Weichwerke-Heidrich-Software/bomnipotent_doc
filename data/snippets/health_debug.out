@@ -20,7 +20,7 @@
 [DEBUG] Loaded 143 CA certificates from the system
 [DEBUG] Call<RecvResponse>
 [DEBUG] Call<RecvBody>
-[DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "18", "date": "Wed, 01 Jan 2025 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
+[DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "68", "date": "Wed, 01 Jan 2025 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
 [DEBUG] Call<Cleanup>
 [DEBUG] Pool gone: PoolKey { scheme: "https", authority: bomnipotent_server_of_your_choice, proxy: None }
-[INFO] Service is healthy
+[INFO] The service at https://bomnipotent_server_of_your_choice is healthy.

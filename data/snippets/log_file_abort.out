@@ -1,1 +1,1 @@
-Log-file "/home/george_r_r_martin_not_a.log" already exists and does not look like a log-file. Aborting before overwriting any data you do not want overwritten.
+Failed to set log target: Log-file "/home/george_r_r_martin_not_a.log" already exists and does not look like a log-file. Aborting before overwriting any data you do not want overwritten.
