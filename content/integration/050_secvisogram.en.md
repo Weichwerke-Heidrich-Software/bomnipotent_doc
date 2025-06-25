@@ -56,12 +56,9 @@ This classification has programatical consequences: A document classified as {{<
 
 If you do not specify a classification inside the document, BOMnipotent Server will use a configurable [default TLP](/server/configuration/optional/tlp-config/#default-tlp). This does however mean that the TLP information is lost once the document is downloaded from the server, which is why classifying inside the document is recommended.
 
-Please note 
+Please note that the [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32152-document-property---distribution---tlp) only allows classification with the deprecated [TLP 1.0](https://www.first.org/tlp/v1/) labels. As long as you strictly follow it, the URL in the document should be https://www.first.org/tlp/v1/.
 
-[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32152-document-property---distribution---tlp)
-
-
-https://www.first.org/tlp/v1/
+TODO: allow_tlp2
 
 ### Important Product Tree Properties
 
