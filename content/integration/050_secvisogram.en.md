@@ -26,10 +26,67 @@ TODO
 
 TODO
 
-### Important Branch Properties
+#### Title
+
+The [Title](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32111-document-property---title) of the document is meant to tell a human reader what this document is about. It makes sense to include the product name and the type of vulnerability in the title, but there are no formal restrictions.
+
+In Secvisogram, the title is found under "Document level meta-data".
+
+#### Publisher
+
+The [Publisher](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3218-document-property---publisher) section serves to uniquely identify you, the one publishing the document.
+
+It contains the required fields "name", "namespace" and "category", and the optional fields "issuing authority" and "contact details". The values you provide here should be identical to the ones in your [provider metadata](/server/configuration/required/provider-metadata/#publisher-data-inputs) configuration. The documentation page contains more details on the values you should provide here.
+
+#### Tracking
+
+The [Tracking](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32112-document-property---tracking) section contains important meta-data about the document. It is primarily meant to be machine readable. The most important fields are:
+
+- [ID:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#321124-document-property---tracking---id) Together with your publisher namespace, the ID is used to identify a document. It thus needs to be unique within your organisation. Apart from that, the standard only requires that the ID does not start or end with a whitespace. However, it is recommended to only use lowercase letters, digits, and the symbols '+', '-' and '_'. This is because the standard recommends that [filenames](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#51-filename) for CSAF documents follow this pattern. Deviating from it could lead to confusion and even conflicts. There is no good reason for an ID not to be identical to its filename.
+- [Initial Release Date](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#321125-document-property---tracking---initial-release-date) and [Current Release Date](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#321122-document-property---tracking---current-release-date) are blissfully self-explanatory fields.
+- [Status:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#321127-document-property---tracking---status) This must be one of "draft", "interim" and "final". The status serves to tell you consumers at which rate the document is expected to change. Before the initial release date, the status must be "draft".
+- [Version:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#321128-document-property---tracking---version) You can either use [semantic versioning](https://semver.org/), or a [natural number](https://www.cuemath.com/numbers/natural-numbers/) as your document version. Before the initial release date of your document, you may choose 0 as the (semantic) major version, or as the natural number version. After the initial release, the number must be at least 1. Whenever you change your document, you have to increment the version. For semantic versions this means increasing at least the patch version, while for natural number versions the number needs to increase at least by 1.
+
+
+#### Distribution - TLP
+
+Though you are not required to classify the CSAF document, you may want to. This is done using the [Traffic Light Protocol (TLP)](https://www.first.org/tlp/), with which you can limit the information to a single individual, an organisation and its clients, a whole community, or not at all.
+
+This classification has programatical consequences: A document classified as {{< tlp-white >}} or {{< tlp-clear >}} will be publicly shared by BOMnipotent, while documents with another classification require explicit authentication and access to be viewed.
+
+If you do not specify a classification inside the document, BOMnipotent Server will use a configurable [default TLP](/server/configuration/optional/tlp-config/#default-tlp). This does however mean that the TLP information is lost once the document is downloaded from the server, which is why classifying inside the document is recommended.
+
+Please note 
+
+[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32152-document-property---distribution---tlp)
+
+
+https://www.first.org/tlp/v1/
+
+### Important Product Tree Properties
+
+TODO
+
+#### Branches
+
+TODO
+
+#### Relationships
 
 TODO
 
 ### Important Vulnerabilities Properties
+
+TODO
+
+#### IDs
+
+TODO
+
+#### Product Status
+
+TODO
+
+#### Remedieations
 
 TODO
