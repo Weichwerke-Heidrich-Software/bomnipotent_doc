@@ -24,7 +24,7 @@ TODO
 
 ### Important Document Properties
 
-TODO
+Document properties provide information on the CSAF document itself. Among other things, they tell you how it can be identified, who created it when, and with whom you can share it.
 
 #### Title
 
@@ -56,34 +56,50 @@ This classification has programatical consequences: A document classified as {{<
 
 If you do not specify a classification inside the document, BOMnipotent Server will use a configurable [default TLP](/server/configuration/optional/tlp-config/#default-tlp). This does however mean that the TLP information is lost once the document is downloaded from the server, which is why classifying inside the document is recommended.
 
-Please note that the [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32152-document-property---distribution---tlp) only allows classification with the deprecated [TLP 1.0](https://www.first.org/tlp/v1/) labels. As long as you strictly follow it, the URL in the document should be https://www.first.org/tlp/v1/.
+Please note that the [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32152-document-property---distribution---tlp) only allows classification with the deprecated [TLP v1.0](https://www.first.org/tlp/v1/) labels. As long as you strictly follow it, the URL in the document should be https://www.first.org/tlp/v1/.
 
-TODO: allow_tlp2
+However, many CSAF issuers prefer to classify their documents with the TLP v2.0 label {{< tlp-amber-strict >}}, which only allows sharing within a single organisation. You can [configure BOMnipotent](/server/configuration/optional/tlp-config/#allowing-tlp-v20) to also accept CSAF documents classified using TLP v2.0 labels.
 
 ### Important Product Tree Properties
 
-TODO
+The product tree contains the information which products are covered by the advisory. They are grouped in branches, which, similar to namespaces, serve to structure your catalogue.
 
 #### Branches
 
-TODO
+Branches always have exactly 3 fields: A [name](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3123-branches-type---name), a [category](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3122-branches-type---category), and then either a product or more branches.
 
-#### Relationships
+This recursive devinition is meant to begin on a high-level overview, and then go down to individual releases. A very plausible structure is the following:
+- A top level branch with the category "vendor". The name is your organisation's name.
+- The "vendor" branch contains a branch with category "product_name" for each of your products. If they become too numerous, you may consider addionally grouping them in branches with the category "product_family".
+- Each "product" branch contains a branch for each "product_version". Here it is important that the name of the branch is actually a version, and not a version range. There is a separate category for that.
+- If you build for different architectures, you may want to include a sub-branch with category "architecture".
 
-TODO
+Whatever branch structure you settle on in the end, the lowermost branches need to contain a product field. It needs to contain the following fields:
+- [Name:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3131-full-product-name-type---name) A name, ideally unique, that helps human readers to identify the product. This may well just be the concatenation of all branch names leading to this leaf.
+- [Product ID:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#318-product-id-type) The product ID is used to reference this particular product within the current document. It has no particular requirements, besides being unique in the document.
+
+The product may contain a [product identification helper](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3133-full-product-name-type---product-identification-helper). This is primarily relevant to help others identify your product from outside the current document.
 
 ### Important Vulnerabilities Properties
 
 TODO
 
-#### IDs
+#### Title
 
-TODO
+The [title](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32315-vulnerabilities-property---title) is used so that human readers know which vulnerability is covered by this CSAF document.
+
+#### CVE and IDs
+
+This very important field is used for machines to identify a vulnerability. Several systems for identifying vulnerabilities exist. The most well known is the [Common Vulnerability Enumeration (CVE)](https://www.cve.org/), which you can TODO
+
+[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3232-vulnerabilities-property---cve)
+
+[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3236-vulnerabilities-property---ids)
 
 #### Product Status
 
-TODO
+[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3239-vulnerabilities-property---product-status)
 
-#### Remedieations
+#### Remediations
 
-TODO
+[TODO](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations)
