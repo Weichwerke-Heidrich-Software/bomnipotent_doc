@@ -2,6 +2,7 @@
 title = "CSAF Docs mit Secvisogram"
 slug = "secvisogram"
 weight = 50
+description = "Leitfaden zur Erstellung und Validierung von CSAF-Dokumenten mit Secvisogram: Tipps, Produktbaum, Vulnerabilities und TLP-Klassifizierung."
 +++
 
 Das [Common Security Advisory Framework](https://www.csaf.io/specification.html) (CSAF) ist ein maschinenlesbares Format und ein internationaler Standard für den Informationsaustausch über Cyber-Sicherheitslücken. Es informiert Nutzer Ihres Produkts über die richtige Reaktion: Müssen sie auf eine neuere Version aktualisieren? Müssen sie eine Konfiguration ändern? Ist Ihr Produkt überhaupt betroffen oder ruft es den betroffenen Teil der anfälligen Bibliothek möglicherweise nie auf?

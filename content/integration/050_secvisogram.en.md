@@ -2,6 +2,7 @@
 title = "CSAF Docs with Secvisogram"
 slug = "secvisogram"
 weight = 50
+description = "Learn how to create valid CSAF security advisories using Secvisogram, with practical guidance on key document fields and best practices."
 +++
 
 The [Common Security Advisory Framework](https://www.csaf.io/specification.html) (CSAF) is a machine-readable format and international standard for sharing information about cybersecurity vulnerabilities. Its purpose is to inform users of your product how they should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?
