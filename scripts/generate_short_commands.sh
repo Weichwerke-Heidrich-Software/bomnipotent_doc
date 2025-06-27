@@ -4,6 +4,8 @@ set -e
 
 cd "$(git rev-parse --show-toplevel)"
 
+echo "= Generating short command variants ="
+
 # This map maps long options to their corresponding short variants.
 declare -A OPTION_MAP=(
   [--after]=-a
