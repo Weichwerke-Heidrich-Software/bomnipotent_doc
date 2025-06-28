@@ -36,7 +36,7 @@ To locally mirror all CSAF documents accessible to you, run
 
 {{< example csaf_download >}}
 
-This will store th CSAF documents in the provided folder ("./csaf", in this example). It will create the folder structure if it does not already exist. The CSAF documents are stored in file paths following the naming scheme "{tlp}/{initial_release_year}/{csaf_id}.json".
+This will store th CSAF documents in the provided folder ("/home/csaf", in this example). It will create the folder structure if it does not already exist. The CSAF documents are stored in file paths following the naming scheme "{tlp}/{initial_release_year}/{csaf_id}.json".
 
 > The filenames of CSAF documents follow a naming scheme defined by the [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename): The ids are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different CSAF documents could lead to the same filepath. In that case, BOMnipotent will display an error instead of silently overwriting a file.
 

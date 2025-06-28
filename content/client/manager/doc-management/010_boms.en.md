@@ -66,7 +66,6 @@ The combination of name and version of the main component of a BOM need to be un
 
 You can override this behaviour with the "on-existing" option, telling BOMnipotent to either skip or replace conflicting documents:
 
-
 {{< example bom_upload_skip_existing >}}
 
 {{< example bom_upload_replace_existing >}}

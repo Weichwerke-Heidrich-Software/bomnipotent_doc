@@ -17,7 +17,13 @@ Um ein CSAF-Dokument hochzuladen, rufen Sie
 
 Bevor Ihr CSAF-Dokument hochgeladen wird, prüft der BOMnipotent Client, ob es gemäß dem [OASIS CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) gültig ist.
 
-CSAF Dokumente werden durch ihren, nun ja, Identifikator identifiziert, welcher eindeutig sein muss. Der Versuch, ein weiteres Dokuement mit derselben ID hochzuladen, resultiert in einem Fehler. Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
+### Konfliktbehandlung
+
+CSAF Dokumente werden durch ihren, nun ja, Identifikator identifiziert, welcher eindeutig sein muss. Der Versuch, ein weiteres Dokuement mit derselben ID hochzuladen, resultiert in einem Fehler:
+
+{{< example csaf_upload_err_on_existing >}}
+
+Sie können dieses Verhalten mit der "on-existing" Option überschreiben, und BOMnipotent anweisen, Dokumente im Konfliktfall entweder zu überspringen oder zu ersetzen:
 
 {{< example csaf_upload_skip_existing >}}
 

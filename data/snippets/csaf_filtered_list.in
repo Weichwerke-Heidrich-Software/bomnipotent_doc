@@ -1,1 +1,1 @@
-bomnipotent_client csaf list --after=2023-07-01T00:00Z --year=2023 --status=final --tlp=amber
+bomnipotent_client csaf list --before=2025-03-01T00:00:00Z --year=2025 --status=final --tlp=amber

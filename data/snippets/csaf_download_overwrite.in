@@ -1,1 +1,1 @@
-bomnipotent_client csaf download ./csaf --overwrite
+bomnipotent_client csaf download /home/csaf --overwrite

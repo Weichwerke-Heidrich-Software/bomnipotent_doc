@@ -1,1 +1,1 @@
-bomnipotent_client csaf modify <PATH/TO/CSAF>
+bomnipotent_client csaf modify /home/your_project/advisory.json

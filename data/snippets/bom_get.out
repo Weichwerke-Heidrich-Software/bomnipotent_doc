@@ -2,7 +2,6 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:57ba1269-431c-418d-b5bc-b04fc084320b",
   "version": 1,
   "metadata": {
     "timestamp": "2025-01-01T10:11:12Z",
@@ -14,3 +13,4 @@
           "name": "syft",
           "version": "1.27.1"
         }
+      ]

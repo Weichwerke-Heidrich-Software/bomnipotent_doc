@@ -4,5 +4,7 @@
 ├──────────────┼─────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼─────────────────┤
 │ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
 │              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
+│ Your Project │ 1.1.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
+│              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
 ╰──────────────┴─────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴─────────────────╯
-[ERROR] Found 1 unassessed vulnerabilities.
+[ERROR] Found 2 unassessed vulnerabilities.
