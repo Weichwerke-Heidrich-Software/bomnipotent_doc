@@ -1,0 +1,3 @@
+[ERROR] Received response:
+409 Conflict
+CSAF with id 'ghsa-qg5g-gv98-5ffh_advisory' already exists in the database.

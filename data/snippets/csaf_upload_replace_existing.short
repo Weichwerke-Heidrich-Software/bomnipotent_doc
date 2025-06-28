@@ -1,1 +1,1 @@
-bomnipotent_client csaf upload <PATH/TO/CSAF> -o replace
+bomnipotent_client csaf upload /home/your_project/advisory.json -o replace

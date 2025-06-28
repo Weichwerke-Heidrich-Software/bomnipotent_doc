@@ -4,6 +4,8 @@ set -e
 
 toplevel="$(git rev-parse --show-toplevel)"
 
+echo "= Making slugs and weights consistent ="
+
 fileendings=(".en.md" ".de.md")
 
 collect_paths() {

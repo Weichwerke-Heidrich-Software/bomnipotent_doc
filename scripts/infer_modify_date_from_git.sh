@@ -4,6 +4,8 @@ set -e
 
 toplevel="$(git rev-parse --show-toplevel)"
 
+echo "= Inferring modification dates from Git ="
+
 paths=$(find $toplevel/content/* -iname "*.md" | sort)
 
 for path in $paths; do

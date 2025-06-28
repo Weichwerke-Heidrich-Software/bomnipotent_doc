@@ -1,4 +1,6 @@
-./csaf/
-└── white
-    └── 2022
-        └── bsi-2022-0001.json
+/home/csaf/
+`-- amber
+    `-- 2025
+        `-- ghsa-qg5g-gv98-5ffh_advisory.json
+
+3 directories, 1 file
