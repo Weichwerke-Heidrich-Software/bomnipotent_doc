@@ -1,1 +1,1 @@
-bomnipotent_client csaf get <ID> | head -n 8
+bomnipotent_client csaf get ghsa-qg5g-gv98-5ffh_advisory | tail -n 16
