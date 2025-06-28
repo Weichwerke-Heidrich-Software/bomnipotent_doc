@@ -36,7 +36,7 @@ Um alle für Sie zugänglichen CSAF-Dokumente lokal zu spiegeln, führen Sie den
 
 {{< example csaf_download >}}
 
-Dies speichert die CSAF-Dokumente im angegebenen Ordner ("./csaf"in diesem Beispiel). Falls der Ordner noch nicht existiert, wird die Verzeichnisstruktur automatisch erstellt. Die CSAF-Dokumente werden in Dateipfaden abgelegt, die dem Namensschema "{tlp}/{initial_release_year}/{csaf_id}.json".
+Dies speichert die CSAF-Dokumente im angegebenen Ordner ("/home/csaf"in diesem Beispiel). Falls der Ordner noch nicht existiert, wird die Verzeichnisstruktur automatisch erstellt. Die CSAF-Dokumente werden in Dateipfaden abgelegt, die dem Namensschema "{tlp}/{initial_release_year}/{csaf_id}.json".
 
 > Die Dateinamen der CSAF-Dokumente folgen einem vom [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) vorgegebenen Namensschema: Die IDs werden in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen werden durch einen Unterstrich '_' ersetzt. Das bedeutet, dass theoretisch verschiedene CSAF-Dokumente zum selben Dateipfad führen könnten. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt eine Datei stillschweigend zu überschreiben.
 

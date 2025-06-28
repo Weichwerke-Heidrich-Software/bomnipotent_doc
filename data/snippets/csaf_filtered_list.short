@@ -1,1 +1,1 @@
-bomnipotent_client csaf list -b 2025-03-01T00:00Z -y 2025 -s final -t amber
+bomnipotent_client csaf list -b 2025-03-01T00:00:00Z -y 2025 -s final -t amber
