@@ -43,7 +43,9 @@ You can only update vulnerabilities for a BOM that exists on the server:
 
 The section about [listing vulnerabilities](/client/consumer/vulnerabilities/) in the documentation for consumers covers most aspects of listing vulnerabilities.
 
-One aspect not mentioned there is the "--unassessed" option. With it, BOMnipotent Client lists only those vulnerabilities that have no CSAF document associated with it.
+One aspect not mentioned there is the "--unassessed" option. With it, BOMnipotent Client lists only those vulnerabilities that do not have a CSAF document with status "final" associated with it.
+
+> For this association to work, the CSAF document **must** contain [product_name and product_version](/integration/secvisogram/#association-with-boms) entries for the BOM in its branches.
 
 {{< example vuln_list_unassessed >}}
 

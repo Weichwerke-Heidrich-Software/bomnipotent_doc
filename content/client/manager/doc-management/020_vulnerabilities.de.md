@@ -21,7 +21,7 @@ Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und 
 
 > Grype hat derzeit einen kleinen [bekannten Fehler](https://github.com/anchore/grype/issues/2418), der dazu führt, dass die Version der Hauptkomponente beim Hinzufügen der Schwachstellen vergessen wird. Dies ist problematisch, da BOMnipotent die Version zur eindeutigen Identifizierung eines Produkts benötigt. Eine mögliche Problemumgehung besteht darin, die Version erneut zum Dokument hinzuzufügen, beispielsweise über `jq '.metadata.component.version = "<VERSION>"' "vuln.cdx.json" > "vuln_with_version.cdx.json"`. Ab BOMnipotent v0.3.1 können Sie die Version stattdessen direkt beim Hochladen der Schwachstelle angeben, wie unten beschrieben.
 
-## Aktualisierung
+## Aktualisieren
 
 Der Befehl zum Aktualisieren der mit einer BOM verknüpften Schwachstellen lautet:
 
@@ -39,11 +39,13 @@ Sie können Schwachstellen nur für eine BOM aktualisieren, die auf dem Server v
 
 {{< example vuln_update_nonexistent >}}
 
-## Auflistung
+## Auflisten
 
 Der Abschnitt zum [Auflisten von Schwachstellen](/de/client/consumer/vulnerabilities/) in der Dokumentation für Verbraucher behandelt die meisten Aspekte der Auflistung von Schwachstellen.
 
-Ein Aspekt, der dort nicht erwähnt wird, ist die Option "--unassessed". Damit listet der BOMnipotent-Client nur Schwachstellen auf, denen kein CSAF-Dokument zugeordnet ist.
+Ein Aspekt, der dort nicht erwähnt wird, ist die Option "--unassessed". Damit listet der BOMnipotent-Client nur Schwachstellen auf, denen kein CSAF-Dokument mit Status "final" zugeordnet ist.
+
+> Damit diese Zuordnung geschehen kann, **muss** das CSAF Dokument [Produktname und Produktversion](/de/integration/secvisogram/#zuordnung-zu-boms) für die BOM in seinen Branches enthalten.
 
 {{< example vuln_list_unassessed >}}
 
