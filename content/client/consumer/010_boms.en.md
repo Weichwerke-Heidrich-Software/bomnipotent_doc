@@ -57,6 +57,6 @@ This is especially useful if you want to use the contents of this BOM in a scrip
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example bom_exists >}}
+{{< example bom_exist >}}

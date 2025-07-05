@@ -58,6 +58,6 @@ Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterve
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example bom_exists >}}
+{{< example bom_exist >}}

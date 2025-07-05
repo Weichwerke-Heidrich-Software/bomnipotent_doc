@@ -45,6 +45,6 @@ This will show an error if either does not exist:
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example user_role_exists >}}
+{{< example user_role_exist >}}

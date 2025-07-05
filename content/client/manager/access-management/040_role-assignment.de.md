@@ -45,6 +45,6 @@ Wenn eine der beiden Rollen nicht vorhanden ist, wird ein Fehler angezeigt:
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example user_role_exists >}}
+{{< example user_role_exist >}}

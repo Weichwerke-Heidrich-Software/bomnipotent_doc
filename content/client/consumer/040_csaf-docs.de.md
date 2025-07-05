@@ -68,6 +68,6 @@ Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skri
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example csaf_exists >}}
+{{< example csaf_exist >}}

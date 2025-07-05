@@ -31,6 +31,6 @@ Das CSAF-Dokument ist ein entscheidender Bestandteil, da es Ihnen als Nutzer des
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example vuln_exists >}}
+{{< example vuln_exist >}}

@@ -68,6 +68,6 @@ This is especially useful if you want to use the contents of this CSAF doc in a 
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example csaf_exists >}}
+{{< example csaf_exist >}}

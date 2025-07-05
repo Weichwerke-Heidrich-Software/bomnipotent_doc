@@ -67,6 +67,6 @@ Dies löscht zusätzlich alle dem Benutzer zugewiesenen Rollen.
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example user_exists >}}
+{{< example user_exist >}}

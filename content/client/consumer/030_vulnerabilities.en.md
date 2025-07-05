@@ -31,6 +31,6 @@ The CSAF document is a crucial part of vulnerability handling, because it tells 
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example vuln_exists >}}
+{{< example vuln_exist >}}

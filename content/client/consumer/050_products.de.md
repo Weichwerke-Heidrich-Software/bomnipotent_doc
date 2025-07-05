@@ -17,6 +17,6 @@ Der Befehl akzeptiert die optionalen Filter "name", "vulnerability", "status" un
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example product_exists >}}
+{{< example product_exist >}}
