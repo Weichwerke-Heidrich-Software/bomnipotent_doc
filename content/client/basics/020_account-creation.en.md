@@ -25,6 +25,10 @@ Subsequent calls to BOMnipotent Client will reuse an existing key pair.
 
 Most BOMnipotent Server instances will require you to confirm that you have access to the provided email address. They will send you a verification link, which expires after some time.
 
+If you missed the time window or something else went wrong, simply send the same request to the server again. It will then generate a new verification email for you:
+
+{{< example "user_request_resend" >}}
+
 After your request is made and your email verified, you need to wait for a user manager of the server to approve your account. Once that happened you can start making [authenticated requests](/client/basics/authenticating/).
 
 > If you are said user manager and are looking for how approve users, consult the section about [User Management](/client/manager/access-management/user-management/).
