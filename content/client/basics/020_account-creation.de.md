@@ -25,6 +25,10 @@ Alle nun folgenden Aufrufe vom BOMnipotent Client werden das existierende Schlü
 
 Die meisten Instanzen von BOMnipotent Server werden fordern, dass Sie bestätigen, dass Sie Zugriff auf die angegebene Email Adresse haben. Dafür senden diese Ihnen einen Verifizierungslink, welcher nach einer Weile abläuft.
 
+Falls Sie das Zeitfenster verpasst haben oder etwas anderes schiefgegangen ist, schicken Sie einfach die gleiche Anfrage noch einmal an den Server. Dieser generiert dann eine neue Verifizierungsmail für Sie:
+
+{{< example "user_request_resend" >}}
+
 Nachdem Ihre Anfrage gestellt und Ihre Email verifiziert ist, müssen Sie darauf warten, dass ein Nutzermanager Sie bestätigt. Sobald das geschehen ist können Sie [authentifizierte Anfragen](/de/client/basics/authenticating) stellen.
 
 > Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerverwaltung](/de/client/manager/access-management/user-management/).
