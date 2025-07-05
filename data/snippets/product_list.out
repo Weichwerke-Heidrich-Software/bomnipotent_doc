@@ -1,11 +1,14 @@
 [INFO] 
 ╭────────────────────────────┬────────────────────────────┬────────────────┬────────────────────────────┬───────────╮
-│ Product                    │ Vulnerability              │ Status         │ CSAF ID                    │ TLP       │
+│ Full Product Name          │ Vulnerability              │ Status         │ CSAF ID                    │ TLP       │
 ├────────────────────────────┼────────────────────────────┼────────────────┼────────────────────────────┼───────────┤
-│ Best Vendor's Your Product │ Rustls network-reachable p │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ anic                       │                │ ry                         │           │
-│ Best Vendor's Your Product │ Rustls network-reachable p │ fixed          │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ anic                       │                │ ry                         │           │
-│ Best Vendor's Your Product │ Rustls network-reachable p │ recommended    │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ anic                       │                │ ry                         │           │
+│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
+│                            │ anic                       │                │                            │           │
+│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ fixed          │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
+│                            │ anic                       │                │                            │           │
+│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ recommended    │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
+│                            │ anic                       │                │                            │           │
 ╰────────────────────────────┴────────────────────────────┴────────────────┴────────────────────────────┴───────────╯
