@@ -1,5 +1,8 @@
-error: unexpected argument 'Your Project' found
-
-Usage: bomnipotent_client vulnerability list [OPTIONS]
-
-For more information, try '--help'.
+[INFO] 
+╭──────────────┬─────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬─────────────────╮
+│ Product      │ Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessment │
+├──────────────┼─────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼─────────────────┤
+│ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
+│              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
+╰──────────────┴─────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴─────────────────╯
+[ERROR] Found 1 unassessed vulnerabilities.

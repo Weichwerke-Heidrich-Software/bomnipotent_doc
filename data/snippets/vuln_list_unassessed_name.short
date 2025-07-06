@@ -1,1 +1,1 @@
-bomnipotent_client vulnerability list "Your Project" "1.0.0" -u
+bomnipotent_client vulnerability list -n "Your Project" -v "1.0.0" -u
