@@ -1,3 +1,5 @@
-[WARN] File ./boms/bomnipotent_1.0.0.cdx.json already exists.
-Use the "--overwrite" flag to replace it.
+[INFO] Storing BOMs under /home/boms
+[WARN] Error: File /home/boms/best_project_3.1.4.cdx.json already exists.
+The existing BOM doc has name "BEST%PROJECT" and version "3.1.4" while the new one has name "Best Project" and version "3.1.4".
+Note that to avoid shenangians with the filesystem, both are mapped to the same filename "best_project_3.1.4.cdx.json".
 Skipping download to prevent data loss.
