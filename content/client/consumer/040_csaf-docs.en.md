@@ -30,6 +30,8 @@ The "csaf list" command allows quite a large number of filters, to display only 
 
 {{< example csaf_filtered_list >}}
 
+{{< example csaf_filtered_list_time_precision >}}
+
 ## Download
 
 To locally mirror all CSAF documents accessible to you, run

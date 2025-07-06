@@ -30,6 +30,8 @@ Der "csaf list" Befehl erlaubt eine große Anzahl an Filtern, um nur manche der 
 
 {{< example csaf_filtered_list >}}
 
+{{< example csaf_filtered_list_time_precision >}}
+
 ## Herunterladen
 
 Um alle für Sie zugänglichen CSAF-Dokumente lokal zu spiegeln, führen Sie den folgenden Befehl aus:
