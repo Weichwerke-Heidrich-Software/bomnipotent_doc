@@ -11,7 +11,7 @@
 [DEBUG] Not resuming any session
 [DEBUG] Wrapped TLS
 [DEBUG] Call<SendRequest>
-[DEBUG] Request { method: GET, uri: https://bomnipotent_server_of_your_choice/******, version: HTTP/1.1, headers: {"accept": "*/*", "host": "bomnipotent_server_of_your_choice", "user-agent": "bomnipotent_client", "<NOTICE>": "5 HEADERS ARE REDACTED"} }
+[DEBUG] Request { method: GET, uri: https://bomnipotent_server_of_your_choice/******, version: HTTP/1.1, headers: {"accept": "*/*", "host": "bomnipotent_server_of_your_choice", "user-agent": "bomnipotent_client", "<NOTICE>": "4 HEADERS ARE REDACTED"} }
 [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
 [DEBUG] Not resuming
 [DEBUG] TLS1.3 encrypted extensions: [ServerNameAck]
