@@ -1,1 +1,1 @@
-bomnipotent_client vulnerability list "Your Project" "1.0.0" --unassessed
+bomnipotent_client vulnerability list --name="Your Project" --version="1.0.0" --unassessed
