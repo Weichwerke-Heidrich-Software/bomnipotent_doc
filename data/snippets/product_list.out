@@ -1,14 +1,14 @@
 [INFO] 
-╭────────────────────────────┬────────────────────────────┬────────────────┬────────────────────────────┬───────────╮
-│ Full Product Name          │ Vulnerability              │ Status         │ CSAF ID                    │ TLP       │
-├────────────────────────────┼────────────────────────────┼────────────────┼────────────────────────────┼───────────┤
-│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
-│                            │ anic                       │                │                            │           │
-│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ fixed          │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
-│                            │ anic                       │                │                            │           │
-│ Best Vendor's Your Product │ GHSA-qg5g-gv98-5ffh        │ recommended    │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
-│  v1.0.0                    │ Rustls network-reachable p │                │ ry                         │           │
-│                            │ anic                       │                │                            │           │
-╰────────────────────────────┴────────────────────────────┴────────────────┴────────────────────────────┴───────────╯
+╭────────────────────────────┬──────────────┬─────────────┬────────────────────────────┬────────────────┬────────────────────────────┬───────────╮
+│ Full Product Name          │ BOM Name     │ BOM Version │ Vulnerability              │ Status         │ CSAF ID                    │ TLP       │
+├────────────────────────────┼──────────────┼─────────────┼────────────────────────────┼────────────────┼────────────────────────────┼───────────┤
+│ Best Vendor's Your Project │ Your Project │ 1.0.0       │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │              │             │ Rustls network-reachable p │                │ ry                         │           │
+│                            │              │             │ anic                       │                │                            │           │
+│ Best Vendor's Your Project │ Your Project │ 1.1.0       │ GHSA-qg5g-gv98-5ffh        │ fixed          │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.1.0                    │              │             │ Rustls network-reachable p │                │ ry                         │           │
+│                            │              │             │ anic                       │                │                            │           │
+│ Best Vendor's Your Project │ Your Project │ 1.1.0       │ GHSA-qg5g-gv98-5ffh        │ recommended    │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.1.0                    │              │             │ Rustls network-reachable p │                │ ry                         │           │
+│                            │              │             │ anic                       │                │                            │           │
+╰────────────────────────────┴──────────────┴─────────────┴────────────────────────────┴────────────────┴────────────────────────────┴───────────╯

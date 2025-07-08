@@ -1,4 +1,4 @@
-          "your_product_1.1.0"
+          "your_project_1.1.0"
         ]
       },
       "remediations": [
@@ -7,7 +7,7 @@
           "date": "2025-01-01T11:00:00.000Z",
           "details": "Update to version 1.1.0.",
           "product_ids": [
-            "your_product_1.0.0"
+            "your_project_1.0.0"
           ]
         }
       ]
