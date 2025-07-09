@@ -1,4 +1,12 @@
 [INFO] 
-╭──────────────┬─────────────────┬───────────────┬─────────────┬───────┬──────────┬─────┬──────────────────╮
-│ Product Name │ Product Version │ Vulnerability │ Description │ Score │ Severity │ TLP │ CSAF Assessments │
-├──────────────┼─────────────────┼───────────────┼─────────────┼───────┼──────────┼─────┼──────────────────┤
+╭──────────────┬─────────────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬────────────────────────────╮
+│ Product Name │ Product Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessments           │
+├──────────────┼─────────────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼────────────────────────────┤
+│ Your Project │ 1.0.0           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │ known_affected, according  │
+│              │                 │                     │ anic in `Acceptor::accept` │       │          │         │ to ghsa-qg5g-gv98-5ffh_adv │
+│              │                 │                     │                            │       │          │         │ isory                      │
+│ Your Project │ 1.1.0           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │ fixed, according to ghsa-q │
+│              │                 │                     │ anic in `Acceptor::accept` │       │          │         │ g5g-gv98-5ffh_advisory, re │
+│              │                 │                     │                            │       │          │         │ commended, according to gh │
+│              │                 │                     │                            │       │          │         │ sa-qg5g-gv98-5ffh_advisory │
+╰──────────────┴─────────────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴────────────────────────────╯
