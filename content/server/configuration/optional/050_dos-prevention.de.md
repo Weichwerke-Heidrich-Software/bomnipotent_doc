@@ -28,7 +28,7 @@ Die HTTP-Anfrage zum Anlegen eines neuen Benutzers ist typischerweise keinem bes
 
 Zum Glück ist die Anfrage nach einem neuen Benutzer etwas, was eher selten erwartet wird. Aus diesem Grund gibt es ein globales Limit für Benutzeranfragen. Die Standardwerte sind deutlich strenger, können aber ebenfalls angepasst werden:
 ```toml
-[new_user_dos_prevention]
+[user.new_user_dos_prevention]
 limit = 10 # Standard ist 3
 period = "20 seconds" # Standard ist "10 seconds"
 ```
