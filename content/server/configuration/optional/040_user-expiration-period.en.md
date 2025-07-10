@@ -57,3 +57,13 @@ expiration_period = "5 days"
 > If you really hate your users you could also use "hours", "minutes", seconds", "ms", "us" or "ns" as units. BOMnipotent does not question how realistic your expectations are.
 
 Changing this configuration **does not** affect the expiration dates of existing users! It will only influence how much time is given to newly requested users.
+
+## Removal Period
+
+To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database.
+
+This time period is configurable with the "removal_period" parameter, which is also found under "[user]":
+```toml
+[user]
+removal_period = "5 days"
+```
