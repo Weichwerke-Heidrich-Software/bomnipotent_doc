@@ -24,12 +24,11 @@ Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers u
 
 > Aus Sicherheitsgründen muss der Benutzer zu diesem Zeitpunkt bereits in der Datenbank vorhanden sein. Andernfalls könnte ein böswilliger Akteur die E-Mail-Adresse, die Sie für Ihren Administrator verwenden, erraten und zu einem geeigneten Zeitpunkt eine eigene Anfrage stellen. Um dies zu verhindern, blockiert der TMP-Admin-Mechanismus alle Anfragen, diesen bestimmten Benutzer neu zur Datenbank hinzuzufügen.
 
-Als Nächstes werden Sie zu dem Benutzermanager, der in der Serverantwort erwähnt wurde: Melden Sie sich bei Ihrem Servercomputer an und stellen Sie in Ihrer Serverkonfigurationsdatei die folgende Zeile an den Anfang:
+Als Nächstes werden Sie zu dem Benutzermanager, der in der Serverantwort erwähnt wurde: Melden Sie sich bei Ihrem Servercomputer an und stellen Sie in Ihrer Serverkonfigurationsdatei die folgende Zeile an das Ende:
 ```toml
+[user]
 tmp_admin = "admin@example.com"
 ```
-
->  Es ist wichtig, diese Zeile **am Anfang** der Datei hinzuzufügen, da BOMnipotent sonst versuchen könnte, dieses Feld als Teil eines anderen Abschnitts zu interpretieren.
 
 Ihre Serverprotokolle sollten jetzt zeigen, dass die Konfiguration zusätzlich zu der Benutzeranfrage, die Sie zuvor gestellt haben, neu geladen wurde.
 

@@ -24,12 +24,11 @@ To make things a litle less verbose, let's store the domain of your server and y
 
 > Due to security reasons, the user needs to already exist in the database at this point. Otherwise, a malicious actor could anticipate the email address you use for your admin, and make their own request at an opportune time. To prevent this, the tmp admin mechanism blocks all requests to newly add this particular user to the database.
 
-Next, you will become the user manager that was mentioned in the server reply: Log onto your server machine, and in your server configuration file prepend
+Next, you will become the user manager that was mentioned in the server reply: Log onto your server machine, and in your server configuration file append
 ```toml
+[user]
 tmp_admin = "admin@example.com"
 ```
-
-> It is important to add this line **at the beginning** of the file, otherwise BOMnipotent might try to interpret this field as part of another section.
 
 Your server logs should now show that the configuration has been reloaded, in addition to the user request you made earlier.
 

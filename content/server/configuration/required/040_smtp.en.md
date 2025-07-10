@@ -42,10 +42,11 @@ STARTTLS is one option to encrypt sending emails, the other being SMTPS. Since 2
 
 ## Skipping User Verification
 
-If you do not (yet) have access to an SMTP server, you can eliminate the need for the smtp configuration by adding the following line to the global context (meaning at the beginning) of your config.toml:
+If you do not (yet) have access to an SMTP server, you can eliminate the need for the smtp configuration by adding the following lines to your config.toml:
 
 ```toml
-skip_user_verification = true
+[user]
+skip_verification = true
 ```
 
 BOMnipotent Server will then *not* send a verification email to newly requested users. It will instead log a warning message each time it does *not* send said mail, because this configuration reduces the security of your server.

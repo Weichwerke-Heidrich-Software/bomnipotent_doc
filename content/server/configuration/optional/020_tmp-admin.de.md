@@ -8,6 +8,7 @@ description = "Erfahren Sie, wie Sie temporäre Adminrechte mit dem Konfiguratio
 Nur ein Administrator kann einem Benutzer Administratorrechte erteilen. Um den ersten Administrator zu erstellen, müssen Sie diese Rechte daher über einen anderen, temporären Pfad aktivieren. Dies geschieht mit dem Konfigurationsparameter "tmp_admin", der die E-Mail-Adresse eines Benutzers als Eingabe verwendet:
 
 ```toml
+[user]
 tmp_admin = "<email>"
 ```
 

@@ -8,6 +8,7 @@ description = "Learn how to enable temporary admin permissions in your server co
 Only an admin can give admin permissions to a user. In order to create the first admin, you therefore need to enable these permissions via another, temporary path. This is done with the config parameter "tmp_admin", which takes the email address of a user as an input:
 
 ```toml
+[user]
 tmp_admin = "<email>"
 ```
 
