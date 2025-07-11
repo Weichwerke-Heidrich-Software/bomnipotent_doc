@@ -57,6 +57,8 @@ Im Gegensatz zum Genehmigen ist es dieser Aktion egal, welchen Status das Konto 
 
 > Es ist möglich, einem bereits genehmigten Benutzer den Zugriff wieder zu verweigern, wodurch das Konto effektiv widerrufen wird.
 
+Ein Nutzer, dessen vorherige Anfrage für einen Nutzeraccount abgelehnt wurde, kann keine weiteren Nutzeraccounts anfragen.
+
 ## Entfernen
 
 Wenn Sie ein Benutzerkonto vollständig löschen möchten, rufen Sie
