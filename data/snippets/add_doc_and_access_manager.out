@@ -1,5 +1,5 @@
-[INFO] Added permission BOM_MANAGEMENT to role
-[INFO] Added permission CSAF_MANAGEMENT to role
-[INFO] Added permission VULN_MANAGEMENT to role
-[INFO] Added permission ROLE_MANAGEMENT to role
-[INFO] Added permission USER_MANAGEMENT to role
+[INFO] Added permission BOM_MANAGEMENT to role doc_manager.
+[INFO] Added permission CSAF_MANAGEMENT to role doc_manager.
+[INFO] Added permission VULN_MANAGEMENT to role doc_manager.
+[INFO] Added permission ROLE_MANAGEMENT to role access_manager.
+[INFO] Added permission USER_MANAGEMENT to role access_manager.

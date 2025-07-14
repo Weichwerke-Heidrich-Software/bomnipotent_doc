@@ -1,6 +1,6 @@
 [ERROR] Received response:
 404 Not Found
-User with username "admin@example.com" does not have role wrong_role.
+User with username 'admin@example.com' does not have role wrong_role.
 [ERROR] Received response:
 404 Not Found
-No user with username "wrong_user" was found: Record not found
+No user with username 'wrong_user' was found: Record not found
