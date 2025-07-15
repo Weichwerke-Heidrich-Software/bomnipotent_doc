@@ -2,6 +2,7 @@
 title = "Imprint"
 slug = "imprint"
 weight = 40
+description = "Weichwerke Heidrich Software is based in Germany."
 robots = "noindex"
 +++
 

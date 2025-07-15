@@ -2,6 +2,7 @@
 title = "Terms and Conditions"
 slug = "terms"
 weight = 30
+description = "A set of legal matters when interacting with Weichwerke Heidrich Software."
 robots = "noindex"
 +++
 
