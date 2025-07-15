@@ -6,4 +6,4 @@ description = "Ein paar rechtliche Angelegenheiten im Kontext mit der Interaktio
 robots = "noindex"
 +++
 
-Für die rechtlich geltenden Nutzungsbedingungen, konsultieren Sie bitte die [englische Seite](/legal-stuff/terms).
+Für die rechtlich geltenden Nutzungsbedingungen, konsultieren Sie bitte die [englische Seite](/legal-stuff/terms/).

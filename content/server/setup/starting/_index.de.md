@@ -9,4 +9,4 @@ Hier werden mehrere Einrichtungsvarianten vorgestellt. Sie können diejenige aus
 - Das [Setup mit Proxy](/de/server/setup/starting/docker-compose-with-proxy/) ist sehr ähnlich, setzt aber zusätzlich einen Reverse-Proxy auf. Wählen Sie diese Methode, falls sie potenziell mehr als einen Service von demselben System mit der derselben IP anbieten wollen.
 - Das [freistehende Setup](/de/server/setup/starting/standalone/) vermeidet den Overhead der Kontainerisierung, auf Kosten der, nun ja, Kontainerisierung. Wählen Sie diese Methode, falls Sie erfahren in klassischeren Server Setups sind.
 
-Nachdem Sie die Schritte einer der Varianten befolgt haben, hat Ihr Server eine Standardkonfiguration und sollte über das Internet erreichbar sein. Danach sollten Sie [einen Admin User Account hinzufügen](/de/server/setup/admin).
+Nachdem Sie die Schritte einer der Varianten befolgt haben, hat Ihr Server eine Standardkonfiguration und sollte über das Internet erreichbar sein. Danach sollten Sie [einen Admin User Account hinzufügen](/de/server/setup/admin/).

@@ -12,7 +12,7 @@ Nur ein Administrator kann einem Benutzer Administratorrechte erteilen. Um den e
 tmp_admin = "<email>"
 ```
 
-Das gesamte Verfahren ist in der[Anleitung zum Aufsetzen des Servers](/de/server/setup/admin) beschrieben.
+Das gesamte Verfahren ist in der[Anleitung zum Aufsetzen des Servers](/de/server/setup/admin/) beschrieben.
 
 Aus Sicherheitsgründen sind die Regeln für die temporäre Administratorrolle recht streng und erlauben nur eine bestimmte Reihenfolge der Vorgänge:
 1. Fordern Sie einen neuen Benutzer an. Der Parameter "tmp_admin" darf an dieser Stelle noch nicht in der Konfigurationsdatei stehen, da die Anforderung sonst vom Server abgelehnt wird. Eine Anforderung für einen neuen Benutzer mit derselben E-Mail-Adresse wird ebenfalls abgelehnt.

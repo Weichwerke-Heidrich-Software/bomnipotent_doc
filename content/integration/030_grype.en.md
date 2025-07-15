@@ -7,7 +7,7 @@ description = "Learn how to use Anchore's Grype to scan SBOMs for vulnerabilitie
 
 Once your SBOM is generated, it is time to continuously scan it for vulnerabilities. Note that some laws, for example the EU's Cyber Resiliance Act, require that products are released without any known vulnerability. The first scan should therefore happen before a release.
 
-There are several tools for scanning a product for supply chain vulnerabilities. This tutorial uses Anchore's Grype, because it integrates well with Anchore's Syft from the [SBOM tutorial](/integration/syft). Like Syft, Grype is an open source command line utility.
+There are several tools for scanning a product for supply chain vulnerabilities. This tutorial uses Anchore's Grype, because it integrates well with Anchore's Syft from the [SBOM tutorial](/integration/syft/). Like Syft, Grype is an open source command line utility.
 
 ## Setup
 

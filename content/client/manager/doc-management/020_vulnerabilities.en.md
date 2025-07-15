@@ -11,7 +11,7 @@ An activity at the core of supply chain security is to compare the contents of a
 
 ## Detecting
 
-BOMnipotent does not itself detect new vulnerabilities. One tool that can be used in combination with BOMnipotent is [grype](https://github.com/anchore/grype), which takes a BOM as input and produces a list of vulnerabilities as output. The [grype tutorial](/integration/grype/) contains some additional information on its usage. Other tools can be used as long as they provide output in [CycloneDX JSON format](https://cyclonedx.org/).
+BOMnipotent does not itself detect new vulnerabilities. One tool that can be used in combination with BOMnipotent is [grype](https://github.com/anchore/grype/), which takes a BOM as input and produces a list of vulnerabilities as output. The [grype tutorial](/integration/grype/) contains some additional information on its usage. Other tools can be used as long as they provide output in [CycloneDX JSON format](https://cyclonedx.org/).
 
 Using the BOMnipotent Client, you can directly print the contents of a BOM and pipe it to grype.
 

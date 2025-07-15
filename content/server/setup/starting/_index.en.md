@@ -9,4 +9,4 @@ Several setup variants are presented here. You can pick the one best suited to y
 - The [setup including a proxy](/server/setup/starting/docker-compose-with-proxy/) is very similar, but also sets up a reverse proxy. Choose this method if you potentially want to offer more than one service from the same system and IP.
 - The [standalone setup](/server/setup/starting/standalone/) avoids the overhead of containerisation, at the cost of, well, containerisation. Choose this method if you are experienced in more classical server setups.
 
-After following the steps of one of the variants, your server has a default configuration and should be reachable from the internet. After that, you should [create an admin user account](/server/setup/admin).
+After following the steps of one of the variants, your server has a default configuration and should be reachable from the internet. After that, you should [create an admin user account](/server/setup/admin/).

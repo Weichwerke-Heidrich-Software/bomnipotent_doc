@@ -6,4 +6,4 @@ description = "Diese Webseite speichert nur die Nutzerdaten, welche absolut notw
 robots = "noindex"
 +++
 
-Für die rechtlich geltenden Datenschutzbestimmungen, konsultieren Sie bitte die [englische Seite](/legal-stuff/privacy-policy).
+Für die rechtlich geltenden Datenschutzbestimmungen, konsultieren Sie bitte die [englische Seite](/legal-stuff/privacy-policy/).

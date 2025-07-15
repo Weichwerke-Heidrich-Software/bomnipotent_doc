@@ -7,7 +7,7 @@ description = "Erfahren Sie, wie Sie mit Grype SBOMs auf Sicherheitslücken scan
 
 Sobald Ihre SBOM (Software Bill of Materials) erstellt wurde, ist es an der Zeit, sie kontinuierlich auf Schwachstellen zu scannen. Beachten Sie, dass einige Gesetze, wie beispielsweise der Cyber Resilience Act der EU, vorschreiben, dass Produkte ohne bekannte Schwachstellen veröffentlicht werden. Der erste Scan sollte daher vor einer Veröffentlichung erfolgen.
 
-Es gibt verschiedene Tools zur Überprüfung eines Produkts auf Schwachstellen in der Lieferkette. Dieses Tutorial verwendet Grype von Anchore, da es sich gut mit Syft von Anchore aus dem [SBOM tutorial](/de/integration/syft) integriert. Genau wie Syft ist Grype ein Open-Source-Befehlszeilenprogramm.
+Es gibt verschiedene Tools zur Überprüfung eines Produkts auf Schwachstellen in der Lieferkette. Dieses Tutorial verwendet Grype von Anchore, da es sich gut mit Syft von Anchore aus dem [SBOM tutorial](/de/integration/syft/) integriert. Genau wie Syft ist Grype ein Open-Source-Befehlszeilenprogramm.
 
 ## Einrichtung
 

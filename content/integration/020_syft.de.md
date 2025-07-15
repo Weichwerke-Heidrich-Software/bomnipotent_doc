@@ -78,4 +78,4 @@ Was wird an den Kunden ausgeliefert? In welchem Umfang sind Sie für die Lieferk
 
 Sobald die SBOM generiert ist, kann sie mit dem BOMnipotent Client auf dem [BOMnipotent Server hochgeladen](/de/client/manager/doc-management/uploading-boms/) werden.
 
-Danach können Sie Grype nutzen, um regelmäßig [nach Sicherheitslücken zu scannen](/de/integration/grype).
+Danach können Sie Grype nutzen, um regelmäßig [nach Sicherheitslücken zu scannen](/de/integration/grype/).

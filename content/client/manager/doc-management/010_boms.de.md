@@ -17,7 +17,7 @@ Um eine BOM hochzuladen, rufen Sie Folgendes auf:
 
 BOMnipotent erwartet seine BOM im strukturierten [CycloneDX](https://cyclonedx.org/) JSON-Format.
 
-> Im [Syft-Tutorial](/de/integration/syft) erfahren Sie, wie Sie eine BOM für Ihr Produkt erstellen.
+> Im [Syft-Tutorial](/de/integration/syft/) erfahren Sie, wie Sie eine BOM für Ihr Produkt erstellen.
 
 Der BOMnipotent Client ließt die Datei unter dem angegebenen Pfad und lädt ihren Inhalt hoch. Die BOM kann dann von Konsumenten mit entsprechenden Berechtigungen eingesehen werden.
 
@@ -33,7 +33,7 @@ BOMnipotent verwendet Name und Version zur Identifizierung einer Stückliste. Di
 
 Wenn keine Version angegeben ist, verwendet BOMnipotent stattdessen das Datum von "metadata.timestamp", sofern verfügbar.
 
-Um Komplikationen zu vermeiden, wird empfohlen, beim Generieren der Stückliste Name und Version anzugeben, wie im [Syft-Tutorial](/de/integration/syft) beschrieben.
+Um Komplikationen zu vermeiden, wird empfohlen, beim Generieren der Stückliste Name und Version anzugeben, wie im [Syft-Tutorial](/de/integration/syft/) beschrieben.
 
 #### Überschreiben (nicht besonders empfohlen)
 

@@ -78,4 +78,4 @@ When deciding on a target, it is important to think about the scope of your appl
 
 Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](/client/manager/doc-management/uploading-boms/).
 
-After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype).
+After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype/).

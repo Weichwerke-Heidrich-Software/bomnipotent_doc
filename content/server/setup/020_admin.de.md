@@ -8,7 +8,7 @@ description = "Erfahren Sie, wie Sie einen Admin-Benutzer in BOMnipotent erstell
 Für einige Interaktionen mit BOMnipotent ist ein Benutzer mit Administratorrechten erforderlich. Eine davon ist die Gewährung von Administratorrechten an einen neuen Benutzer. Dies bedeutet, dass eine Art Bootstrapping-Mechanismus erforderlich ist.
 
 ## Schritt 1: Benutzer erstellen
-Zuerst müssen Sie [ein Benutzerkonto erstellen](/de/client/basics/account-creation):
+Zuerst müssen Sie [ein Benutzerkonto erstellen](/de/client/basics/account-creation/):
 
 {{< example admin_user_request >}}
 

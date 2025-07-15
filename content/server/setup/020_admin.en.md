@@ -8,7 +8,7 @@ description = "Learn how to create an admin in BOMnipotent, including user creat
 Several interactions with BOMnipotent require a user with admin rights. One of these is granting a new user admin rights. This means that some kind of bootstrapping mechanism is required.
 
 ## Step 1: Create User
-First, you will need to [create a user account](/client/basics/account-creation):
+First, you will need to [create a user account](/client/basics/account-creation/):
 
 {{< example admin_user_request >}}
 

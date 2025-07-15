@@ -11,7 +11,7 @@ Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalt
 
 ## Erkennen
 
-BOMnipotent erkennt selbst keine neuen Schwachstellen. Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
+BOMnipotent erkennt selbst keine neuen Schwachstellen. Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype/). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
 
 Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und an grype weiterleiten.
 
@@ -29,7 +29,7 @@ Der Befehl zum Aktualisieren der mit einer BOM verknüpften Schwachstellen laute
 
 Das Argument "\<VULNERABILITIES\>" muss ein Pfad zu einer Datei im [CycloneDX JSON-Format](https://cyclonedx.org/) sein.
 
-Idealerweise enthält diese Datei den Namen und die Version der zugehörigen BOM. In diesem Fall werden diese automatisch gelesen. Falls einer der Werte fehlt (z. B. aufgrund eines [bekannten Fehlers](https://github.com/anchore/grype/issues/2418) in grype), können Sie ihn mit einem optionalen Argument angeben:
+Idealerweise enthält diese Datei den Namen und die Version der zugehörigen BOM. In diesem Fall werden diese automatisch gelesen. Falls einer der Werte fehlt (z. B. aufgrund eines [bekannten Fehlers](https://github.com/anchore/grype/issues/2418) in grype/), können Sie ihn mit einem optionalen Argument angeben:
 
 {{< example vuln_update_name_version >}}
 

@@ -21,7 +21,7 @@ Um nur diejenigen Sicherheitslücken anzuzeigen, welche noch nicht durch ein CSA
 
 {{< example vuln_list_unassessed >}}
 
-Das Verhalten ist hier besonders: Falls es unbehandelte Sicherheitslücken gibt, gibt der Client einen Fehlercode zurück. Das dient dazu, die Integration mit Skripten zu erleichtern, welche regelmäßig auf neue Sicherheitslücken prüfen, wie es zum Beispiel im [Abschnitt über CI/CD](/de/integration/ci-cd) beschrieben ist.
+Das Verhalten ist hier besonders: Falls es unbehandelte Sicherheitslücken gibt, gibt der Client einen Fehlercode zurück. Das dient dazu, die Integration mit Skripten zu erleichtern, welche regelmäßig auf neue Sicherheitslücken prüfen, wie es zum Beispiel im [Abschnitt über CI/CD](/de/integration/ci-cd/) beschrieben ist.
 
 Es ist auch möglich, lediglich die Sicherheitslücken aufzulisten, welche bereits mit einem Advisory verknüpft sind, allerdings legt der Client hier kein besonderes Verhalten an den Tag:
 

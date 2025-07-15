@@ -7,7 +7,7 @@ description = "Learn how to create a new user account in BOMnipotent, manage key
 
 Most interactions with BOMnipotent require some permission. The sole exception is accessing data classified as {{<tlp-white>}} / {{<tlp-clear>}}.
 
-Permissions are linked to user accounts. For more information on how permissions are granted, see the section about [Access Management](/client/manager/access-management).
+Permissions are linked to user accounts. For more information on how permissions are granted, see the section about [Access Management](/client/manager/access-management/).
 
 ## Creating a new Account
 
