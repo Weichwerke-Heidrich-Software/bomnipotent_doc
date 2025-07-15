@@ -7,7 +7,7 @@ description = "Lernen Sie, wie sie BOMnipotent Server für das Versenden von Ema
 
 ## Direkte SMTP-Server-Kommunikation
 
-Damit der BOMnipotent Server direkt mit Ihrem E-Mail-Server kommunizieren kann, richten Sie den [SMTP-Teil](/server/configuration/required/smtp/) Ihrer Konfigurationsdatei in etwa so ​​ein:
+Damit der BOMnipotent Server direkt mit Ihrem E-Mail-Server kommunizieren kann, richten Sie den [SMTP-Teil](/de/server/configuration/required/smtp/) Ihrer Konfigurationsdatei in etwa so ​​ein:
 ```toml
 [smtp]
 user = "you@yourdomain.com"
