@@ -76,6 +76,6 @@ For compiled languages the results will be vastly different, because most inform
 
 When deciding on a target, it is important to think about the scope of your application: What do you ship to the customer? Up to which extend are you responsible for the supply chain of your product? If in doubt, there's no harm in uploading more than one variant of a BOM, as long as product name or version are different.
 
-Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](/client/manager/doc-management/uploading-boms/).
+Once your SBOM is generated, you can use BOMnipotent Client to [upload it to BOMnipotent Server](/client/manager/doc-management/boms/#uploading).
 
 After that you can use Grype to periodically [scan for vulnerabilities](/integration/grype/).

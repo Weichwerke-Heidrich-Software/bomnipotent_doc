@@ -58,7 +58,7 @@ You can tell BOMnipotent that you really want this file overwritten by using the
 
 {{< example csaf_download_overwrite >}}
 
-The download command accepts exactly the [same filters](#filtering) as the list command does, allowing to only download those documents that are relevant to you.
+The download command accepts exactly the [same filters](#filter) as the list command does, allowing to only download those documents that are relevant to you.
 
 ## Get
 

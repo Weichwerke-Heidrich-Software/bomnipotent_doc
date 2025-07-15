@@ -42,7 +42,7 @@ Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrie
 
 {{< example bom_download_overwrite >}}
 
-Analog zum [list](#auflistung) Befehl akzeptiert der download Befehl die Filter "name" und "version", sodass nur ein Teil der BOMs heruntergeladen wird:
+Analog zum [list](#auflisten) Befehl akzeptiert der download Befehl die Filter "name" und "version", sodass nur ein Teil der BOMs heruntergeladen wird:
 
 {{< example bom_filtered_download >}}
 
