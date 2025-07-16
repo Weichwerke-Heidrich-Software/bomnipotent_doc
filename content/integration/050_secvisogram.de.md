@@ -17,7 +17,7 @@ Stattdessen wird die Verwendung von [Secvisogram](https://github.com/secvisogram
 
 ### Lokaler Editor
 
-Der wohl bequemste Einstieg in das Schreiben von CSAF-Dokumenten ist das Forken des Repositorys [local_csaf_editor](https://github.com/aunovis/local_csaf_editor) der [AUNOVIS GmbH](https://www.aunovis.de/). Es enthält ein kleines Bash-Skript zum lokalen Klonen und Ausführen von Secvisogram. Es ermunter Sie weiterhin dazu, versionierte CSAF-Vorlagen zu speichern, da einige Eigenschaften von Advisory zu Advisory immer gleich bleiben.
+Der wohl bequemste Einstieg in das Schreiben von CSAF-Dokumenten ist das Forken des Repositorys [local_csaf_editor](https://github.com/aunovis/local_csaf_editor) der [AUNOVIS GmbH](https://www.aunovis.de/). Es enthält ein kleines Bash-Skript zum lokalen Klonen und Ausführen von Secvisogram. Es ermuntert Sie weiterhin dazu, versionierte CSAF-Vorlagen zu speichern, da einige Eigenschaften von Advisory zu Advisory immer gleich bleiben.
 
 ## Wichtige Einträge
 
