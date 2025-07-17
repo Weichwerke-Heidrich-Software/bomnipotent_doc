@@ -43,6 +43,24 @@ defaultContentLanguage = 'en'
     languageCode = 'de'
     languageName = 'Deutsch'
 
+[[languages.en.menu.shortcuts]]
+  pre = '<i class="fa-solid fa-download"></i> '
+  name = 'Download BOMnipotent'
+  url = 'https://www.bomnipotent.de/downloads/'
+[[languages.en.menu.shortcuts]]
+  pre = '<i class="fa-fw fab fa-github"></i> '
+  name = 'Report an issue'
+  url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
+
+[[languages.de.menu.shortcuts]]
+  pre = '<i class="fa-solid fa-download"></i> '
+  name = 'BOMnipotent Herunterladen'
+  url = 'https://www.bomnipotent.de/de/downloads/'
+[[languages.de.menu.shortcuts]]
+  pre = '<i class="fa-fw fab fa-github"></i> '
+  name = 'Problem melden'
+  url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
+
 [outputs]
   # activate the feature to print whole chapters
   home = ['html', 'rss', 'print']
