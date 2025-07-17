@@ -47,19 +47,44 @@ defaultContentLanguage = 'en'
   pre = '<i class="fa-solid fa-download"></i> '
   name = 'Download BOMnipotent'
   url = 'https://www.bomnipotent.de/downloads/'
+  weight = 100
 [[languages.en.menu.shortcuts]]
-  pre = '<i class="fa-fw fab fa-github"></i> '
+  pre = '<i class="fab fa-docker"></i> '
+  name = 'Get the container'
+  url = 'https://hub.docker.com/u/wwhsoft'
+  weight = 101
+[[languages.en.menu.shortcuts]]
+  pre = '<i class="fa-brands fa-github"></i> '
   name = 'Report an issue'
   url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
+  weight = 102
+[[languages.en.menu.shortcuts]]
+  pre = '<i class="fa-brands fa-linkedin"></i> '
+  name = 'Read Marketing'
+  url = 'https://www.linkedin.com/company/weichwerke-heidrich-software'
+  weight = 103
+
 
 [[languages.de.menu.shortcuts]]
   pre = '<i class="fa-solid fa-download"></i> '
   name = 'BOMnipotent Herunterladen'
   url = 'https://www.bomnipotent.de/de/downloads/'
+  weight = 100
 [[languages.de.menu.shortcuts]]
-  pre = '<i class="fa-fw fab fa-github"></i> '
+  pre = '<i class="fab fa-docker"></i> '
+  name = 'Container nutzen'
+  url = 'https://hub.docker.com/u/wwhsoft'
+  weight = 101
+[[languages.de.menu.shortcuts]]
+  pre = '<i class="fa-brands fa-github"></i> '
   name = 'Problem melden'
   url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
+  weight = 102
+[[languages.de.menu.shortcuts]]
+  pre = '<i class="fa-brands fa-linkedin"></i> '
+  name = 'Marketing lesen'
+  url = 'https://www.linkedin.com/company/weichwerke-heidrich-software'
+  weight = 103
 
 [outputs]
   # activate the feature to print whole chapters
