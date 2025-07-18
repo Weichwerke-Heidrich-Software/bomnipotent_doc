@@ -5,8 +5,8 @@
 [DEBUG] Assembled GET request to https://bomnipotent_server_of_your_choice/health.
 [DEBUG] Call<Prepare>
 [DEBUG] GET https://bomnipotent_server_of_your_choice/******
-[DEBUG] Resolved: ArrayVec { len: 1, arr: [172.21.0.3:443] }
-[DEBUG] Connected TcpStream to 172.21.0.3:443
+[DEBUG] Resolved: ArrayVec { len: 1, arr: [172.20.0.3:443] }
+[DEBUG] Connected TcpStream to 172.20.0.3:443
 [DEBUG] No cached session for DnsName("bomnipotent_server_of_your_choice")
 [DEBUG] Not resuming any session
 [DEBUG] Wrapped TLS
