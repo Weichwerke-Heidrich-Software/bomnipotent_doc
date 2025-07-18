@@ -83,6 +83,31 @@ Whatever branch structure you settle on in the end, the lowermost branches need 
 
 The product may contain a [product identification helper](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3133-full-product-name-type---product-identification-helper). This is primarily relevant to help others identify your product from outside the current document.
 
+##### Association with BOMs
+
+BOMnipotent uses the product_name and product_version entries from your branches to associate product ids from the CSAF documents with BOMs. This enables it to [check](/client/manager/doc-management/vulnerabilities/#listing) if a vulnerability found in a BOM is assessed by any CSAF document.
+
+**Important:** If the CSAF branch leading to a product does not contain a product_name or product_version, BOMnipotent will not be able to associate the product id with any BOM.
+
+If the branch on the other hand contains *more* than one product_name or product_version, BOMnipotent will use the *most specific* value, which is the one *farthest* down the tree structure.
+
+As an example, consider the following (schematic) branch structure:
+```
+product_name: Umbrella
+    product_version: 1.0.0
+        product_id: umbrella_1.0.0
+    product_version: 1.1.0
+        product_name: Flowersheet
+            product_id: umbrella_1.1.0_flowersheet
+    architecture: linux
+        product_id: umbrella_linux
+```
+
+Here, BOMnipotent would associate
+- the id "umbrella_1.0.0" with the BOM with name "Umbrella" and version "1.0.0".
+- the id "umbrella_1.1.0_flowersheet" with the BOM with name "Flowersheet" and version "1.1.0" ("Flowersheet" gets precedence as the product name, because it is further down the structure than "Umbrella").
+- the id "umbrella_linux" with no BOM, because it is lacking a product version.
+
 ### Important Vulnerabilities Entries
 
 [Vulnerabilities](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#323-vulnerabilities-property) are entries that tell your users which products are (not) affected by a vulnerability, and which actions need to be taken.

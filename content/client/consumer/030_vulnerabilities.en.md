@@ -21,7 +21,7 @@ To display only those vulnerabilities that are not yet covered by a CSAF advisor
 
 {{< example vuln_list_unassessed >}}
 
-The behaviour here is special: If there are any unassessed vulnerabilities, the client will return an error code. This is meant to ease the integration with scripts that regularly check for new vulnerabilities, as is for example described in the [section about CI/CD](/integration/ci-cd).
+The behaviour here is special: If there are any unassessed vulnerabilities, the client will return an error code. This is meant to ease the integration with scripts that regularly check for new vulnerabilities, as is for example described in the [section about CI/CD](/integration/ci-cd/).
 
 Listing only vulnerabilities that have an advisory is also possible, but does not exhibit any special client behaviour:
 
@@ -31,6 +31,6 @@ The CSAF document is a crucial part of vulnerability handling, because it tells 
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example vuln_exists >}}
+{{< example vuln_exist >}}

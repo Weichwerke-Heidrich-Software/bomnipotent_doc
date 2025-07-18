@@ -2,6 +2,7 @@
 title = "Impressum"
 slug = "imprint"
 weight = 40
+description = "Weichwerke Heidrich Software hat seinen Sitz in Deutschland."
 robots = "noindex"
 +++
 

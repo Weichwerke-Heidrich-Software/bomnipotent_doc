@@ -17,7 +17,7 @@ Stattdessen wird die Verwendung von [Secvisogram](https://github.com/secvisogram
 
 ### Lokaler Editor
 
-Der wohl bequemste Einstieg in das Schreiben von CSAF-Dokumenten ist das Forken des Repositorys [local_csaf_editor](https://github.com/aunovis/local_csaf_editor) der [AUNOVIS GmbH](https://www.aunovis.de/). Es enthält ein kleines Bash-Skript zum lokalen Klonen und Ausführen von Secvisogram. Es ermunter Sie weiterhin dazu, versionierte CSAF-Vorlagen zu speichern, da einige Eigenschaften von Advisory zu Advisory immer gleich bleiben.
+Der wohl bequemste Einstieg in das Schreiben von CSAF-Dokumenten ist das Forken des Repositorys [local_csaf_editor](https://github.com/aunovis/local_csaf_editor) der [AUNOVIS GmbH](https://www.aunovis.de/). Es enthält ein kleines Bash-Skript zum lokalen Klonen und Ausführen von Secvisogram. Es ermuntert Sie weiterhin dazu, versionierte CSAF-Vorlagen zu speichern, da einige Eigenschaften von Advisory zu Advisory immer gleich bleiben.
 
 ## Wichtige Einträge
 
@@ -82,6 +82,31 @@ Für welche Zweigstruktur Sie sich auch entscheiden, die untersten Zweige müsse
 - [Produkt-ID:](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#318-product-id-type) Die Produkt-ID dient zur Referenzierung dieses Produkts im aktuellen Dokument. Es gelten keine besonderen Anforderungen, außer dass sie im Dokument eindeutig sein muss.
 
 Das Produkt kann einen [Produktidentifizierungshelfer](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#3133-full-product-name-type---product-identification-helper) enthalten. Dieser ist in erster Linie relevant, um anderen Personen die Identifizierung Ihres Produkts von außerhalb des aktuellen Dokuments zu erleichtern.
+
+##### Zuordnung zu BOMs
+
+BOMnipotent nutzt die product_name und product_version Einträge Ihrer Branches, um Produkt IDs von CSAF Dokumenten mit BOMs zu assoziieren. Dies befähigt es, zu [prüfen](/de/client/manager/doc-management/vulnerabilities/#auflisten), ob eine in einer BOM gefundene Sicherheitslücke von einem CSAF Dokument abgedeckt wird.
+
+**Wichtig:** Falls der CSAF Branch, der zu einem Produkt führt, keinen product_name oder product_version Eintrag enthält, ist BOMnipotent nicht in der Lage, die Produkt ID mit einer BOM zu assoziieren.
+
+Falls der Branch hingegen *mehr* als einen product_name oder product_version Eintrag hat, nutzt BOMnipotent jweils den *spezifischsten* Wert, welches der ist, der *am weitesten* unten in der Baumstruktur ist.
+
+Als Beispiel betrachten Sie die folgende (schematische) Baumstruktur:
+```
+product_name: Umbrella
+    product_version: 1.0.0
+        product_id: umbrella_1.0.0
+    product_version: 1.1.0
+        product_name: Flowersheet
+            product_id: umbrella_1.1.0_flowersheet
+    architecture: linux
+        product_id: umbrella_linux
+```
+
+Hier würde BOMnipotent die folgenden Zuordnungen machen:
+- Die ID "umbrella_1.0.0" mit der BOM mit dem Namen "Umbrella" und der Version "1.0.0".
+- Die ID "umbrella_1.1.0_flowersheet" mit der BOM mit Namen "Flowersheet" und Version "1.1.0" ("Flowersheet" wird als Produktname bevorzugt, weil es weiter unten in der Baumstruktur ist als "Umbrella").
+- Die ID "umbrella_linux" mit gar keiner BOM, da sie keinen Eintrag für product_version hat.
 
 ### Wichtige Vulnerabilities Einträge
 

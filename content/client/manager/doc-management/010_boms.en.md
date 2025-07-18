@@ -17,7 +17,7 @@ To upload a BOM, call:
 
 BOMnipotent expects its BOMs in the structured [CycloneDX](https://cyclonedx.org/) JSON format.
 
-> Consult the [Syft tutorial](/integration/syft) to learn how to generate a BOM for your product.
+> Consult the [Syft tutorial](/integration/syft/) to learn how to generate a BOM for your product.
 
 The BOMnipotent Client will read the file at the provided path and upload its content. It can then be viewed by the consumers with appropriate permissions.
 
@@ -33,7 +33,7 @@ BOMnipotent uses name and version to identify a BOM. It tries to infer these fro
 
 If no version is specified, BOMnipotent instead uses the date of "metadata.timestamp", if available.
 
-To avoid any complications, it is recommended that you specify a name and version when generating the BOM, as is shown in the [Syft tutorial](/integration/syft).
+To avoid any complications, it is recommended that you specify a name and version when generating the BOM, as is shown in the [Syft tutorial](/integration/syft/).
 
 #### Overwriting (not particularly recommended)
 

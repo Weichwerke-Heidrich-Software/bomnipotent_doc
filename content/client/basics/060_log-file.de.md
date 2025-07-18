@@ -19,4 +19,4 @@ Falls eine existierende Datei nicht wie eine Logdatei aussieht, wird BOMnipotent
 
 {{< example log_file_abort >}}
 
-Da die Befehle ["bom get"](/de/client/consumer/boms/#get) / ["csaf get"](/de/client/consumer/csaf-docs/#get) und "fetch" dafür gedacht sind, von Maschinen verarbeitet zu werden, schreiben sie ihre Ausgabe in stdout, **selbst wenn eine Logdatei konfiguriert ist**. Diese Trennung der Ausgaben macht es möglich, gleichzeitig die Daten zu verarbeiten und mögliche Fehlermeldungen zu speichern.
+Da die Befehle ["bom get"](/de/client/consumer/boms/#anzeigen) / ["csaf get"](/de/client/consumer/csaf-docs/#anzeigen) und "fetch" dafür gedacht sind, von Maschinen verarbeitet zu werden, schreiben sie ihre Ausgabe in stdout, **selbst wenn eine Logdatei konfiguriert ist**. Diese Trennung der Ausgaben macht es möglich, gleichzeitig die Daten zu verarbeiten und mögliche Fehlermeldungen zu speichern.

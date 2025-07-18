@@ -22,13 +22,15 @@ Zugängliche CSAF-Dokumente sind diejenigen, die entweder mit {{<tlp-white>}}/{{
 Der "csaf list" Befehl erlaubt eine große Anzahl an Filtern, um nur manche der CSAF Dokuemente anzuzeigen:
 - *id*: Die ID eines CSAF Dokuments ist eindeutig, sodass dieser Filter höchstens ein Ergebnis liefern kann.
 - *filename*: Laut dem [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) erlauben CSAF IDs mehr Zeichen als deren Dateinamen. Aus diesem Grund ist der Dateiname eines CSAF Dokuments nicht zwingend eindeutig.
-- *after*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum hinter einem bestimmten Zeitpunkt liegen. Die Eingabe sollte im [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) Format erfolgen, mit Datum, Uhrzeit und Zeitzone.
-- *before*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum vor einem bestimmten Zeitpunkt liegen.
+- *before*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum vor einem bestimmten Zeitpunkt liegen. Die Eingabe kann in den Formaten "YYYY", "YYYY-MM", "YYYY-MM-DD", "YYYY-MM-DD HH", "YYYY-MM-DD HH:MM" oder "YYYY-MM-DD HH:MM:SS" erfolgen. Falls die Eingabe weniger als auf die Sekunde genau ist, wird der *niedrigste* Wert angenommen. Dies bedeutet, dass "before 2025-08" nach Dokumenten filtert, die vor 2025-08-01 00:00:00 veröffentlicht wurden. Als Zeitzohne wird UTC angenommen, es sei denn sie spezifizieren eine andere, indem Sie einen Offset (z.B. "+02:00") an den Input anfügen.
+- *after*: Zeigt nur CSAF Dokumente, deren initiales Veröffentlichungsdatum hinter einem bestimmten Zeitpunkt liegen. Falls die Eingabe weniger als auf die Sekunde genau ist, wie der *höchste* Wert angenommen. Dies bedeutet, dass "after 2025-08" nach Dokumenten filtert, die nach 2025-08-31 13:59:59 veröffentlicht wurden.
 - *year*: Zeigt nur CSAF Dokuemente, dere initiales Veröffentlichungsdatum in einem gegebenen Jahr liegen.
 - *status*: Filtert nach Dokumentenstatus. Der [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321127-document-property---tracking---status) listet alle erlaubten Werte.
 - *tlp*: Zeigt nur CSAF Dokumente mit einer gewissen [TLP](https://www.first.org/tlp/) Klassifizierung. Zusätzlich zu den TLP1 und TLP2 Labeln sind auch "default", "none", "unclassified" und "unlabeled" hier valide Eingaben (welche alle dasselbe meinen).
 
 {{< example csaf_filtered_list >}}
+
+{{< example csaf_filtered_list_time_precision >}}
 
 ## Herunterladen
 
@@ -68,6 +70,6 @@ Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skri
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example csaf_exists >}}
+{{< example csaf_exist >}}

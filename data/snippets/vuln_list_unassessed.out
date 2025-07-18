@@ -1,10 +1,8 @@
 [INFO] 
-╭──────────────┬─────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬─────────────────╮
-│ Product      │ Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessment │
-├──────────────┼─────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼─────────────────┤
-│ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
-│              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
-│ Your Project │ 1.1.0   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                 │
-│              │         │                     │ anic in `Acceptor::accept` │       │          │         │                 │
-╰──────────────┴─────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴─────────────────╯
-[ERROR] Found 2 unassessed vulnerabilities.
+╭──────────────┬─────────────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬───────────┬──────────────────╮
+│ Product Name │ Product Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP       │ CSAF Assessments │
+├──────────────┼─────────────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼───────────┼──────────────────┤
+│ Best Project │ 3.1.4           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ TLP:GREEN │                  │
+│              │                 │                     │ anic in `Acceptor::accept` │       │          │           │                  │
+╰──────────────┴─────────────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴───────────┴──────────────────╯
+[ERROR] Found 1 unassessed vulnerabilities.

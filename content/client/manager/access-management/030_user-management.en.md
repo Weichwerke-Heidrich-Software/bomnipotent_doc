@@ -57,6 +57,8 @@ Contrary to approval, this action does not care which status the user had before
 
 > It is possible to deny a user that has already been approved, effectively revoking the account.
 
+A user whose previous request for an account was denied cannot request new user accounts.
+
 ## Remove
 
 If you want to get rid of a user account alltogether, call:
@@ -67,6 +69,6 @@ This also removes all roles associated with the user.
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example user_exists >}}
+{{< example user_exist >}}

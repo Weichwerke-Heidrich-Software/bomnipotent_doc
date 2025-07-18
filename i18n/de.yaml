@@ -6,3 +6,5 @@
   translation: "Eingabe (kurze Variante)"
 - id: output
   translation: "Ausgabe"
+- id: shortcuts-menuTitle
+  translation: "Links"

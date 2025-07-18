@@ -20,31 +20,36 @@ This key has an expiration data, after which it is not accepted anymore. This ca
 ╰───────────────────┴──────────┴───────────────────────────┴───────────────────────────╯
 ```
 
-By default, the key is valid for a little over a year after it was requested. This time can be configured with the "user_expiration_period" parameter. As values it accepts a time period in the human readable format "<number> <unit>", where "<unit>" can be any of "year", "month", "week", "day", or their plural variants.
+By default, the key is valid for a little over a year after it was requested. This time can be configured with the "expiration_period" parameter, which is located under "[user]". As values it accepts a time period in the human readable format "<number> <unit>", where "<unit>" can be any of "year", "month", "week", "day", or their plural variants.
 {{< tabs >}}
 {{% tab title="default time" %}}
 ```toml
-user_expiration_period = "366 days"
+[user]
+expiration_period = "366 days"
 ```
 {{% /tab %}}
 {{% tab title="several years" %}}
 ```toml
-user_expiration_period = "5 years"
+[user]
+expiration_period = "5 years"
 ```
 {{% /tab %}}
 {{% tab title="one month" %}}
 ```toml
-user_expiration_period = "1 month"
+[user]
+expiration_period = "1 month"
 ```
 {{% /tab %}}
 {{% tab title="three weeks" %}}
 ```toml
-user_expiration_period = "3 weeks"
+[user]
+expiration_period = "3 weeks"
 ```
 {{% /tab %}}
 {{% tab title="five days" %}}
 ```toml
-user_expiration_period = "5 days"
+[user]
+expiration_period = "5 days"
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -52,3 +57,13 @@ user_expiration_period = "5 days"
 > If you really hate your users you could also use "hours", "minutes", seconds", "ms", "us" or "ns" as units. BOMnipotent does not question how realistic your expectations are.
 
 Changing this configuration **does not** affect the expiration dates of existing users! It will only influence how much time is given to newly requested users.
+
+## Removal Period
+
+To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database.
+
+This time period is configurable with the "removal_period" parameter, which is also found under "[user]":
+```toml
+[user]
+removal_period = "5 days"
+```

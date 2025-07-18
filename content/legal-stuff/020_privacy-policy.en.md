@@ -2,6 +2,7 @@
 title = "Privacy Policy"
 slug = "privacy-policy"
 weight = 20
+description = "This website only tracks the user data it absolutely needs to provide its service, which is none."
 robots = "noindex"
 +++
 

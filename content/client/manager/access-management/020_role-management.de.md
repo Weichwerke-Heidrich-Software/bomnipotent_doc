@@ -74,6 +74,6 @@ Sobald Sie die letzte Rolle aus einer Berechtigung entfernt haben, existiert die
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example role_permission_exists >}}
+{{< example role_permission_exist >}}

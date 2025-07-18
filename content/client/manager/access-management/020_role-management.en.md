@@ -74,6 +74,6 @@ Once you have removed the last role from a permission, that role does no longer 
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example role_permission_exists >}}
+{{< example role_permission_exist >}}

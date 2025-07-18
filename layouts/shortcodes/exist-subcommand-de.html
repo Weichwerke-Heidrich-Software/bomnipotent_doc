@@ -1,0 +1,13 @@
+<p>
+    Der Sub-Befehl "exist" prüft, wie viele Einträge auf dem Server mit bestimmten Filtern übereinstimmt. Er ist für alle Befehle verfügbar, die den <a href="#auflisten" class="highlight"><span>"list"</span></a> Sub-Befehl akzeptieren, und akzeptiert dieselben Filter.
+</p>
+
+<p>
+    Basierend auf dem Ausgabeformat gibt der Client Folgendes aus:
+</p>
+
+<ul>
+    <li>Normaler Modus: Ein Satz, der die Anzahl der gefundenen Objekte enthält.</li>
+    <li>code: Den String "200", falls mindestens ein Element gefunden wurde, oder "404", falls keine gefunden wurden.</li>
+    <li>raw: Die Anzahl der Einträge, die gefunden wurden.</li>
+</ul>

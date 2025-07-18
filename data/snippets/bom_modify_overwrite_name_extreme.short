@@ -1,1 +1,1 @@
-bomnipotent_client bom modify /home/your_project/dev_env_sbom.cdx.json -n "Your Development Environment" -v "1.2.3" --name-overwrite="Best Project" --version-overwrite="3.1.4"
+bomnipotent_client bom modify /home/your_project/dev_env_sbom.cdx.json -n "Fearsome Breadcrump" -v "6.2.8" --name-overwrite="Best Project" --version-overwrite="3.1.4"

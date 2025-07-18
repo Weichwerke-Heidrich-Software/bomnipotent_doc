@@ -11,7 +11,7 @@ An activity at the core of supply chain security is to compare the contents of a
 
 ## Detecting
 
-BOMnipotent does not itself detect new vulnerabilities. One tool that can be used in combination with BOMnipotent is [grype](https://github.com/anchore/grype), which takes a BOM as input and produces a list of vulnerabilities as output. The [grype tutorial](/integration/grype/) contains some additional information on its usage. Other tools can be used as long as they provide output in [CycloneDX JSON format](https://cyclonedx.org/).
+BOMnipotent does not itself detect new vulnerabilities. One tool that can be used in combination with BOMnipotent is [grype](https://github.com/anchore/grype/), which takes a BOM as input and produces a list of vulnerabilities as output. The [grype tutorial](/integration/grype/) contains some additional information on its usage. Other tools can be used as long as they provide output in [CycloneDX JSON format](https://cyclonedx.org/).
 
 Using the BOMnipotent Client, you can directly print the contents of a BOM and pipe it to grype.
 
@@ -43,7 +43,9 @@ You can only update vulnerabilities for a BOM that exists on the server:
 
 The section about [listing vulnerabilities](/client/consumer/vulnerabilities/) in the documentation for consumers covers most aspects of listing vulnerabilities.
 
-One aspect not mentioned there is the "--unassessed" option. With it, BOMnipotent Client lists only those vulnerabilities that have no CSAF document associated with it.
+One aspect not mentioned there is the "--unassessed" option. With it, BOMnipotent Client lists only those vulnerabilities that do not have a CSAF document with status "final" associated with it.
+
+> For this association to work, the CSAF document **must** contain [product_name and product_version](/integration/secvisogram/#association-with-boms) entries for the BOM in its branches.
 
 {{< example vuln_list_unassessed >}}
 

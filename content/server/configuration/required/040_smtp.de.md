@@ -42,10 +42,11 @@ STARTTLS ist eine Möglichkeit, E-Mails zu verschlüsseln, die andere ist SMTPS.
 
 ## Benutzerverifizierung überspringen
 
-Wenn Sie (noch) keinen Zugriff auf einen SMTP-Server haben, können Sie die SMTP-Konfiguration umgehen, indem Sie die folgende Zeile im globalen Kontext (also am Anfang) Ihrer config.toml hinzufügen:
+Wenn Sie (noch) keinen Zugriff auf einen SMTP-Server haben, können Sie die SMTP-Konfiguration umgehen, indem Sie die folgende Zeilen in Ihrer config.toml hinzufügen:
 
 ```toml
-skip_user_verification = true
+[user]
+skip_verification = true
 ```
 
 Der BOMnipotent Server sendet dann *keine* Verifizierungs-E-Mail an neu angemeldete Benutzer. Stattdessen wird jedes Mal eine Warnmeldung ausgegeben, wenn die E-Mail *nicht* versendet wird, da diese Konfiguration die Sicherheit Ihres Servers beeinträchtigt.

@@ -22,13 +22,15 @@ Accesible CSAF documents are those that are either labeled {{<tlp-white>}}/{{<tl
 The "csaf list" command allows quite a large number of filters, to display only some of all CSAF documents:
 - *id*: The ID of a CSAF document is unique, so this filter will display at most one result.
 - *filename*: According to the [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename), CSAF IDs allow more characters than filenames. Thus, a CSAF doc's filename is not necessarily unique.
-- *after*: Show only CSAF documents that were initially released after a certain datetime. The input should be in [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) format, including date, time, and timezone.
-- *before*: Show only CSAF documents that were initially released before a certain datetime.
+- *before*: Show only CSAF documents that were initially released before a certain datetime. The input can be of the forms "YYYY", "YYYY-MM", "YYYY-MM-DD", "YYYY-MM-DD HH", "YYYY-MM-DD HH:MM" or "YYYY-MM-DD HH:MM:SS". If the input is less precise than seconds, it is assumend to be *minimal*. This means that "before 2025-08" filters for documents that were released before 2025-08-01 00:00:00. UTC is assumed as the timezone, unless you explicitly specify another one by adding an offset ("+02:00" for example) to the input.
+- *after*: Show only CSAF documents that were initially released after a certain datetime. If the input is less precise than seconds, it is assumed to be *maximal*. This means that "after 2025-08" filters for documents that were release after 2025-08-31 13:59:59.
 - *year*: Show only CSAF documents that were initially released within a given year.
 - *status*: Filter by document status. The [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#321127-document-property---tracking---status) lists all allowed values.
 - *tlp*: Show only CSAF document with a certain [TLP](https://www.first.org/tlp/) classification. In addition to the labels of TLP1 and TLP2, "default", "none", "unclassified" and "unlabeled" are valid inputs here (all denoting the same thing).
 
 {{< example csaf_filtered_list >}}
+
+{{< example csaf_filtered_list_time_precision >}}
 
 ## Download
 
@@ -56,7 +58,7 @@ You can tell BOMnipotent that you really want this file overwritten by using the
 
 {{< example csaf_download_overwrite >}}
 
-The download command accepts exactly the [same filters](#filtering) as the list command does, allowing to only download those documents that are relevant to you.
+The download command accepts exactly the [same filters](#filter) as the list command does, allowing to only download those documents that are relevant to you.
 
 ## Get
 
@@ -68,6 +70,6 @@ This is especially useful if you want to use the contents of this CSAF doc in a 
 
 ## Existence
 
-{{< exists-subcommand-en >}}
+{{< exist-subcommand-en >}}
 
-{{< example csaf_exists >}}
+{{< example csaf_exist >}}

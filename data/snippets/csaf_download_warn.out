@@ -1,7 +1,7 @@
 [INFO] Storing CSAF documents under /home/csaf
-[WARN] Error: File /home/csaf/amber/2025/ghsa-qg5g-gv98-5ffh_advisory.json already exists.
-The existing CSAF doc has ID "GHSA-QG5G-GV98-5FFH%ADVISORY" while the new one has ID "ghsa-qg5g-gv98-5ffh_advisory".
-Note that according to the OASIS standard, both IDs are mapped to the same filename "ghsa-qg5g-gv98-5ffh_advisory.json".
+[WARN] File /home/csaf/amber/2025/ghsa-qg5g-gv98-5ffh_advisory.json already exists.
+The existing CSAF doc has ID 'GHSA-QG5G-GV98-5FFH%ADVISORY' while the new one has ID 'ghsa-qg5g-gv98-5ffh_advisory'.
+Note that according to the OASIS standard, both IDs are mapped to the same filename 'ghsa-qg5g-gv98-5ffh_advisory.json'.
 For more information, see Section 5.1 of
 https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename
 Skipping download to prevent data loss.

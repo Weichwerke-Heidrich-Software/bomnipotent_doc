@@ -2,6 +2,7 @@
 title = "OSS Licenses"
 slug = "oss-licenses"
 weight = 10
+description = "A list of all open source licenses used in BOMnipotent."
 robots = "noindex"
 +++
 

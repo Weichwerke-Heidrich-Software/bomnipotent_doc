@@ -42,7 +42,7 @@ Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrie
 
 {{< example bom_download_overwrite >}}
 
-Analog zum [list](#auflistung) Befehl akzeptiert der download Befehl die Filter "name" und "version", sodass nur ein Teil der BOMs heruntergeladen wird:
+Analog zum [list](#auflisten) Befehl akzeptiert der download Befehl die Filter "name" und "version", sodass nur ein Teil der BOMs heruntergeladen wird:
 
 {{< example bom_filtered_download >}}
 
@@ -58,6 +58,6 @@ Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterve
 
 ## Existenz
 
-{{< exists-subcommand-de >}}
+{{< exist-subcommand-de >}}
 
-{{< example bom_exists >}}
+{{< example bom_exist >}}

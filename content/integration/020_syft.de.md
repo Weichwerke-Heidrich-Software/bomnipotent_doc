@@ -76,6 +76,6 @@ Bei kompilierten Sprachen können die Ergebnisse stark abweichen, da die meisten
 Bei der Auswahl eines Ziels ist es wichtig, den Umfang der Anwendung zu berücksichtigen:
 Was wird an den Kunden ausgeliefert? In welchem Umfang sind Sie für die Lieferkette des Produkts verantwortlich? Bei Unentschlossenheit spricht nichts dagegen, mehrere Varianten einer SBOM hochzuladen – solange der Produktname oder die Version unterschiedlich ist.
 
-Sobald die SBOM generiert ist, kann sie mit dem BOMnipotent Client auf dem [BOMnipotent Server hochgeladen](/de/client/manager/doc-management/uploading-boms/) werden.
+Sobald die SBOM generiert ist, kann sie mit dem BOMnipotent Client auf dem [BOMnipotent Server hochgeladen](/de/client/manager/doc-management/boms/#hochladen) werden.
 
-Danach können Sie Grype nutzen, um regelmäßig [nach Sicherheitslücken zu scannen](/de/integration/grype).
+Danach können Sie Grype nutzen, um regelmäßig [nach Sicherheitslücken zu scannen](/de/integration/grype/).

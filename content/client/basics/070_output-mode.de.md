@@ -9,7 +9,7 @@ Ohne das irgendein Ausgabemodus angegeben ist, schreibt BOMnipotent Client seine
 
 ## Ausgaben
 
-In den Ausgabemodi "code" oder "raw" wird nur der HTTP Code oder der Response Body zu stdout ausgegeben. Falls Sie [eine Logdatei konfiguriert haben](/de/client/basics/log-file/), werden alle Logs bis zu dem angegebenen [Log-Level](/client/basics/log-level/) dort gespeichert.
+In den Ausgabemodi "code" oder "raw" wird nur der HTTP Code oder der Response Body zu stdout ausgegeben. Falls Sie [eine Logdatei konfiguriert haben](/de/client/basics/log-file/), werden alle Logs bis zu dem angegebenen [Log-Level](/de/client/basics/log-level/) dort gespeichert.
 
 Falls Sie hingegen keine Logdatei angegeben haben, will BOMnipotent Sie dennoch wissen lassen, falls etwas schiefgeht. Deswegen werden in diesem Fall Lognachrichten mit den Schweregraden "error" oder "warn" zu stderr ausgegeben.
 
