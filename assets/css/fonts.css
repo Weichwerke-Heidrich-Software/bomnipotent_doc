@@ -3,7 +3,6 @@
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
   src: url('../../webfonts/Cormorant-Regular.woff2') format('woff2');
 }
@@ -20,4 +19,8 @@ h1 {
 .logo-title {
   font-family: var(--MAIN-font);
   font-weight: bold;
+}
+
+code {
+  line-height: 1.4;
 }
