@@ -18,7 +18,7 @@ To grasp an idea of what OpenPGP is, it is perhaps best to contrast it to what i
 
 [RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) is a *mathematical algorithm* for asymetric key encryption. It specifies what a public and secret key look like, and how they can be used to encrypt, decrypt, sign and verify data.
 
-There are several other such algorithms, but for a long time RSA was and probably still is the most widely used.
+> There are several other such algorithms, but for a long time RSA was and probably still is the most widely used.
 
 OpenPGP on the other hand is an *abstraction*. It is designed to be mostly algorithm-agnostic, meaning that for the most part you do not need to know which algorithm is used during an operation.
 
@@ -28,7 +28,7 @@ The [standard of 2024](https://www.rfc-editor.org/rfc/rfc9580) does not support 
 
 OpenPGP is a *standard*, meaning a set of formal rules that a program has to follow in order to be interoperable with other programs complying with the same standard.
 
-PGP is *one such program* implementing the OpenPGP standard. It even predates the standard by 7 years, being released in 1991. Due to legal concerns, the open standard was derived *from* PGP and first released in 1998.
+PGP is *one such program* implementing the OpenPGP standard. In fact, it is the first program to implement the standard, because it predates OpenPGP by 7 years, being released in 1991. Due to legal concerns, the open standard was derived *from* PGP, and not the other way round.
 
 As a commercial program, PGP changed ownership several times, and is currently developed by [Broadcom](https://www.broadcom.com/products/cybersecurity/information-protection/encryption).
 
