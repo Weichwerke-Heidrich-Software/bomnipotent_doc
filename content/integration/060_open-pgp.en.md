@@ -8,6 +8,8 @@ weight = 60
 
 Open Pretty Good Privacy (OpenPGP) is an open standard for several file formats in the context of cryptography. Its most prominent use is the end-to-end encryption of emails, but it can also be used to cryptographically sign any data, including other OpenPGP files.
 
+> "Signing" means adding a "signature" to a message, a bit of text allowing anyone with a public key to verify that it has been approved by the person with the corresponding secret key.
+
 The earliest version of the standard stems from [1998](https://www.rfc-editor.org/rfc/rfc2440), the latest (at the time of writing) version 6 from [2024](https://www.rfc-editor.org/rfc/rfc9580). During this timespan, it has been adopted by many people and products, especially in the cybersecurity community, because it is pretty good. Also during and before this timespan, several closely related and not so aptly named concepts and products were developed, which can be pretty confusing.
 
 To grasp an idea of what OpenPGP is, it is perhaps best to contrast it to what it is not.
