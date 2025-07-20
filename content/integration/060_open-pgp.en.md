@@ -84,3 +84,25 @@ cargo install --locked sequoia-sq
 ```
 
 This will build Sequoia-PGP and make the "sq" command available in your terminal.
+
+### Key Generation
+
+> [!INFO] Key Terminology
+> When it comes to asymetric cryptography, BOMnipotent and this documentation use the term "public key" for the key that you can freely share with the world, and the term "secret key" for the key only you should have access to. Sequoia-PGP and its documentation on the other hand use the term "cert" or "certificate" for public keys, and simply the term "key" for secret keys.
+
+Once Sequoia-PGP is installed, you can generate a new key with the command:
+```
+sq key generate --own-key --name "Your Name" --email info@example.com --profile rfc4880
+```
+This will directly add it to your keystore, meaning that Sequoia-PGP knows of it. The keystore specific to Sequoia-PGP, and it is a slightly different concept than the(operating system wide) keyring.
+
+The "own-key" parameter tells the program that you have the highest level of trust in this key. The other viable parameter is "shared-key". One of the two needs to appear in the command.
+
+The parameters "name" and "email" are used to identify the owner of the key. This not only tells others who this key belongs to, but is also helps you when interacting with your keys.
+
+The option "profile" with the value "rfc4880" tell Sequoia-PGP to use [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) of the OpenPGP standard. While this is not the latest standard, it ensures that the keys are compatible with tools like GPG that neither do nor will support OpenPGP [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
+
+More options can be found in the [documentation](https://book.sequoia-pgp.org/sq_key_generation.html), or by calling:
+```
+sq key generate --help
+```
