@@ -10,8 +10,7 @@ This article covers what the OpenPGP standard is and is not, and then goes into 
 
 Open Pretty Good Privacy (OpenPGP) is an open standard for several file formats in the context of cryptography. Its most prominent use is the end-to-end encryption of emails, but it can also be used to cryptographically sign any data, including other OpenPGP files.
 
-> [!INFO]
-> "Signing" means adding a "signature" to a message, a bit of text allowing anyone with a public key to verify that it has been approved by the person with the corresponding secret key.
+> If the concept of signing is unfamiliar to you, there's a high-level description [down below](#signatures).
 
 The earliest version of the standard stems from [1998](https://www.rfc-editor.org/rfc/rfc2440), the latest (at the time of writing) [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) from 2024. Another important milestone that will become important in this article is [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007.
 
@@ -135,3 +134,21 @@ In order to allow BOMnipotent to sign documents for you, you will also need to e
 sq key export --cert-email info@example.com --output example_secret.key
 ```
 This file can of course **not** be freely shared, but should rather be treated like a password.
+
+### Signatures
+
+A signature is an object (think of it as a string, some bytes, or a large number) that verifies that some data (an email, a text file, a program) has been approved by someone (the signer) in the current state. If you trust the signer and verify the signature, you can then be sure that the data has not been tempered with. On a high level, the whole process works like this:
+1. The signer calculates a cryptographic hash of the data. A hash can be thought of as a lengthy string that is vastly different for only slightly different data input.
+1. The signer sort of encrypts that hash using their secret key, in a way that it can be decrypted with their public key. The result is the signature. Note that this key usage is the opposite of what asymetric encryption typically looks like.
+1. The verifier decrypts the signature, using the public key of the signer. The result is the hash. Now the verifier knows that the hash comes from the signer, because only they have the secret key to encrypt a string in such a way that the public key decrypts it.
+1. The verifier also independently calculates the hash from the data. If the value agrees with that from the signer, then the verifier knows that the data has not been modified.
+
+Signatures can either be *inlined*, meaning they are directly appended to the data they sign, or they can come in a separate *signature file*, if the original data does not allow appending a signature. Sequoia-PGP can handle both cases.
+
+#### Verifying
+
+TODO
+
+#### Signing
+
+TODO
