@@ -92,11 +92,13 @@ This will build Sequoia-PGP and make the "sq" command available in your terminal
 
 Once Sequoia-PGP is installed, you can generate a new key with the command:
 ```
-sq key generate --own-key --name "Your Name" --email info@example.com --profile rfc4880
+sq key generate --shared-key --name "Your Name" --email info@example.com --profile rfc4880
 ```
+The command will prompt you for a password. If you leave it empty, the file is unencrypted.
+
 This will directly add it to your keystore, meaning that Sequoia-PGP knows of it. The keystore specific to Sequoia-PGP, and it is a slightly different concept than the(operating system wide) keyring.
 
-The "own-key" parameter tells the program that you have the highest level of trust in this key. The other viable parameter is "shared-key". One of the two needs to appear in the command.
+The "shared-key" parameter tells the program that you do not have the highest level of trust in this key. The other viable parameter is "own-key", meaning you fully trust it. One of the two needs to appear in the command.
 
 The parameters "name" and "email" are used to identify the owner of the key. This not only tells others who this key belongs to, but is also helps you when interacting with your keys.
 
@@ -106,3 +108,30 @@ More options can be found in the [documentation](https://book.sequoia-pgp.org/sq
 ```
 sq key generate --help
 ```
+
+You can list all your keys with the command:
+```
+sq key list
+```
+
+### Exporting Keys
+
+#### Public Keys
+
+To export a public key (a "certificate") from your keystore, call:
+```
+sq cert export --cert-email info@example.com --output example.cert
+```
+This command leverages the fact that you specified an email address when [generating](#key-generation) the key. Otherwise you would need to lookup and use the footprint to identify the public key you want to export.
+
+Without the "output" option, the key is simply printed to the standard terminal output.
+
+You can now for example host this file at the root level of your server, and point to it in the encryption section of your [security.txt](https://securitytxt.org/).
+
+#### Secret Keys
+
+In order to allow BOMnipotent to sign documents for you, you will also need to export your secret key:
+```
+sq key export --cert-email info@example.com --output example_secret.key
+```
+This file can of course **not** be freely shared, but should rather be treated like a password.
