@@ -63,22 +63,20 @@ OpenPGP on the other hand uses a "web of trust". *Everyone* can testify to the a
 
 ## Using OpenPGP
 
-To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://sequoia-pgp.org/) command line tool. It is a commercially-backed open-source implementation of the OpenPGP standard. This means that there is financial motivation to maintain the project, while the code can be inspected by security researchers.
+To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://sequoia-pgp.org/) command line tool. It is a commercially-backed open-source implementation of the OpenPGP standard. This means that there is financial motivation to maintain the project, while the code can be inspected by security researchers. The program is furthermore very [well documented](https://book.sequoia-pgp.org/).
 
-It is furthermore written in Rust, making it rather platform-agnostic, and it is very [well documented](https://book.sequoia-pgp.org/).
-
-> [!NOTE]
+> [!NOTE] Why not GPG?
 > The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). You can use them instead, *as long as* they generate keys compatible with OpenPGP version 4 / RFC 4880. However, Sequoia-PGP may be the more future-proof option, especially since it offers you to select the OpenPGP version used for key generation.
 
 ### Installation
 
-The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms.
+The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms. It does not directly support Windows, though. Instead, it recommends using the Windows Subsystem for Linux (WSL), which is thankfully easy to [set up](https://learn.microsoft.com/en-gb/windows/wsl/install).
 
-Regular Debian users will not be surprised to hear that the program version in the repository is roughly 3 years behind. Windows users may note that there is no binary directly shipped to their platform, but that the instructions rather recommend to use WSL. MacOS users will rejoice at the fact that the program version in brew is up to date.
+Regular Debian users will not be surprised to hear that the program version in the repository is roughly 3 years behind. For Debian (and Windows-WSL), this guide thus recommends to follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources. This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
 
-For most platforms, this guide thus recommends to follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources. This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
+> Windows users, remember to run the Linux installation inside the WSL.
 
-Afterwards, you need to install some system libraries as outlined in the instructions, because Sequoia-PGP is not written in pure Rust.
+Afterwards, you need to install some system libraries as [outlined in the instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
 
 Finally, call:
 ```
