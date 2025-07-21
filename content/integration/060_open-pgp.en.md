@@ -67,6 +67,9 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 > [!NOTE] Why not GPG?
 > The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). You can use them instead, *as long as* they generate keys compatible with OpenPGP version 4 / RFC 4880. However, Sequoia-PGP may be the more future-proof option, especially since it offers you to select the OpenPGP version used for key generation.
 
+> [!INFO]
+> To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenGPG keys, it is not the focus of this guide.
+
 ### Installation
 
 The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms. It does not directly support Windows, though. Instead, it recommends using the Windows Subsystem for Linux (WSL), which is thankfully easy to [set up](https://learn.microsoft.com/en-gb/windows/wsl/install).
@@ -78,6 +81,7 @@ Regular Debian users will not be surprised to hear that the program version in t
 Afterwards, you need to install some system libraries as [outlined in the instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
 
 Finally, call:
+
 ```
 cargo install --locked sequoia-sq
 ```
@@ -90,9 +94,11 @@ This will build Sequoia-PGP and make the "sq" command available in your terminal
 > When it comes to asymetric cryptography, BOMnipotent and this documentation use the term "public key" for the key that you can freely share with the world, and the term "secret key" for the key only you should have access to. Sequoia-PGP and its documentation on the other hand use the term "cert" or "certificate" for public keys, and simply the term "key" for secret keys.
 
 Once Sequoia-PGP is installed, you can generate a new key with the command:
+
 ```
 sq key generate --shared-key --name "Your Name" --email info@example.com --profile rfc4880
 ```
+
 The command will prompt you for a password. If you leave it empty, the file is unencrypted.
 
 This will directly add it to your keystore, meaning that Sequoia-PGP knows of it. The keystore specific to Sequoia-PGP, and it is a slightly different concept than the(operating system wide) keyring.
@@ -104,11 +110,13 @@ The parameters "name" and "email" are used to identify the owner of the key. Thi
 The option "profile" with the value "rfc4880" tell Sequoia-PGP to use [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) of the OpenPGP standard. While this is not the latest standard, it ensures that the keys are compatible with tools like GPG that neither do nor will support OpenPGP [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
 
 More options can be found in the [documentation](https://book.sequoia-pgp.org/sq_key_generation.html), or by calling:
+
 ```
 sq key generate --help
 ```
 
 You can list all your keys with the command:
+
 ```
 sq key list
 ```
@@ -118,9 +126,11 @@ sq key list
 #### Public Keys
 
 To export a public key (a "certificate") from your keystore, call:
+
 ```
 sq cert export --cert-email info@example.com --output example.cert
 ```
+
 This command leverages the fact that you specified an email address when [generating](#key-generation) the key. Otherwise you would need to lookup and use the footprint to identify the public key you want to export.
 
 Without the "output" option, the key is simply printed to the standard terminal output.
@@ -130,9 +140,11 @@ You can now for example host this file at the root level of your server, and poi
 #### Secret Keys
 
 In order to allow BOMnipotent to sign documents for you, you will also need to export your secret key:
+
 ```
 sq key export --cert-email info@example.com --output example_secret.key
 ```
+
 This file can of course **not** be freely shared, but should rather be treated like a password.
 
 ### Signatures
@@ -151,4 +163,36 @@ TODO
 
 #### Signing
 
-TODO
+To create an inline signature of (for example) a text file, call:
+
+```
+sq sign message.txt --signer-file example_secret.key --output signed_message.txt --cleartext
+```
+
+This tells Sequoia-PGP to sign the contents of "message.txt", using the secret key in "example_secret.key", and storing the result in "signed_message.txt".
+
+The "cleartext" parameter specifies that the original data shall still be readable by a human. The resulting structure will be:
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+[Original Message]
+-----BEGIN PGP SIGNATURE-----
+[Signature in Base64]
+-----END PGP SIGNATURE-----
+```
+
+With the alternative "message" parameter, the output is instead of the form:
+
+```
+-----BEGIN PGP MESSAGE-----
+[Message and Signature in Base64]
+-----END PGP MESSAGE-----
+```
+
+If you do not want to include the data, instead creating a separate signature file, call:
+
+```
+sq sign message.txt --signer-file example_secret.key --signature-file signature.asc
+```
+
+The [documentation](https://book.sequoia-pgp.org/signing.html) contains more variants for creating signatures.
