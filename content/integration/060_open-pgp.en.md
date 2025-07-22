@@ -159,6 +159,8 @@ This file can of course **not** be freely shared, but should rather be treated l
 
 ### Signatures
 
+#### Principles of Signing
+
 A signature is an object (think of it as a string, some bytes, or a large number) that verifies that some data (an email, a text file, a program) has been approved by someone (the signer) in the current state. If you trust the signer and verify the signature, you can then be sure that the data has not been tempered with. On a high level, the whole process works like this:
 1. The signer calculates a cryptographic hash of the data. A hash can be thought of as a lengthy string that is vastly different for only slightly different data input.
 1. The signer sort of encrypts that hash using their secret key, in a way that it can be decrypted with their public key. The result is the signature. Note that this key usage is the opposite of what asymetric encryption typically looks like.
@@ -167,7 +169,31 @@ A signature is an object (think of it as a string, some bytes, or a large number
 
 Signatures can either be *inlined*, meaning they are directly appended to the data they sign, or they can come in a separate *signature file*, if the original data does not allow appending a signature. Sequoia-PGP can handle both cases.
 
-#### Signing
+#### Cleartext vs. Message
+
+For inline signatures, OpenPGP (and by extension Sequoia-PGP) recognises the "cleartext" and "message" variants. Inline-signed cleartext data is contained in the output in its original form. The resulting structure is:
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+[Original Data]
+-----BEGIN PGP SIGNATURE-----
+[Signature in Base64]
+-----END PGP SIGNATURE-----
+```
+
+This is useful if the original data is readable by a human, and is for example recommended when signing a Security.txt.
+
+In case of the "message" variant, the data is instead encoded in Base64 and combined with the signature. The output will then instead be of the form:
+
+```
+-----BEGIN PGP MESSAGE-----
+[Data and Signature in Base64]
+-----END PGP MESSAGE-----
+```
+
+This is more compact, but a human cannot read the original data before decoding it.
+
+### Signing Data
 
 To create an inline signature of (for example) a text file, call:
 
@@ -177,25 +203,9 @@ sq sign message.txt --signer-file example_secret.key --output signed_message.txt
 
 This tells Sequoia-PGP to sign the contents of "message.txt", using the secret key in "example_secret.key", and storing the result in "signed_message.txt".
 
-The "cleartext" parameter specifies that the original data shall still be readable by a human. The resulting structure will be:
+The "cleartext" parameter specifies that the original data is included in the output in its original form (see [above](#cleartext-vs-message)). 
 
-```
------BEGIN PGP SIGNED MESSAGE-----
-[Original Message]
------BEGIN PGP SIGNATURE-----
-[Signature in Base64]
------END PGP SIGNATURE-----
-```
-
-With the alternative "message" parameter, the output is instead of the form:
-
-```
------BEGIN PGP MESSAGE-----
-[Message and Signature in Base64]
------END PGP MESSAGE-----
-```
-
-If you do not want to include the data, instead creating a separate signature file, call:
+If you do not want to include the data in the output but instead create a separate signature file, call:
 
 ```
 sq sign message.txt --signer-file example_secret.key --signature-file signature.asc
@@ -203,6 +213,24 @@ sq sign message.txt --signer-file example_secret.key --signature-file signature.
 
 The [documentation](https://book.sequoia-pgp.org/signing.html) contains more variants for creating signatures.
 
-#### Verifying
+### Verifying Signatures
 
-TODO
+Verifying a separate signature file is very straightforward:
+
+```
+sq verify message.txt --signature-file=signature.asc --signer-file example.cert
+```
+
+This specifies the file containing the original message, the corresponding signature file, and the file containing the public key of the signer.
+
+Verifying an inline signature works similarly:
+
+```
+sq verify signed_message.txt --cleartext --signer-file example.cert
+```
+
+The "cleartext" option tells Sequoia-PGP that the signed_message.txt contains the original message in clear text (see [above](#cleartext-vs-message)).
+
+> If your assumption about the format is wrong, Sequoia-PGP will notice and correct it for you. Why is the parameter still required, when all the information is already stored in the message? Probably historical reasons.
+
+The command prints the original message to the standard output, and the evaluation (signature is valid / invalid) to standard error. If you only care for the evaluation, append " > /dev/null" to the command above to ignore the standard output.
