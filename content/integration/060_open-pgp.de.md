@@ -1,0 +1,138 @@
++++
+title = "OpenPGP Keys mit Sequoia"
+slug = "open-pgp"
+weight = 60
++++
+
+Dieser Artikel behandelt, was der OpenPGP Standard ist, und was er nicht ist. Danach bietet er ein paar Beispiele wie er genutzt werden kann.
+
+Falls Sie nur für den praktischen Teil hier sind, springen Sie gern [dorthin](#openpgp-nutzen) vor.
+
+## Was ist OpenPGP (nicht)?
+
+Open Pretty Good Privacy (OpenPGP) ist ein offener Standard für mehrere Dateiformate im Kontext der Kryptografie. Seine bekannteste Anwendung ist die für Ende-zu-Ende Verschlüsselung von Emails, aber er kann auch genutzt werden, um beliebige Daten, auch andere OpenPGP Dateien, kryptografisch zu signieren.
+
+> Für den Fall, dass das Konzept von Signaturen Ihnen neu ist, befindet sich [weiter unten](#signaturen) ein oberflächliche Beschreibung.
+
+Die erste Version des Standards stammt aus dem Jahre [1998](https://www.rfc-editor.org/rfc/rfc2440), die aktuellste (zum Zeitpunkt des Schreibens) [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) von 2024. Ein weiterer Meilenstein, welcher in diesem Artikel noch relevant werden wird, ist [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) von 2007.
+
+Während seiner Lebenszeit wurde OpenPGP von vielen Personen und Produkten adaptiert, vor allem in der Cybersecurity Community, denn es ist ganz schön gut. Ebenfalls während und vor diesem Zeitraum wurden viele nah verwandte und nicht ganz optimal benannte Konzepte und Produkte entwickelt, was ganz schön verwirrend sein kann.
+
+Um eine Idee davon zu bekommen, was OpenPGP ist, ist es vielleicht am besten, es mit dem zu vergleichen, was es nicht ist.
+
+### OpenPGP vs. RSA
+
+[RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) ist ein *mathematischer Algorithmus* für asymetrische Verschlüsselung. Es spezifiziert, wie ein öffentlicher und geheimer Schlüssel auszusehen haben, und wie sie genutzt werden können, um Daten zu verschlüsseln, zu entschlüsseln, zu signieren und zu verifizieren.
+
+> Es gibt mehrere solcher Algorithmen, aber RSA war für lange Zeit der am meisten genutzte, und ist es vermutlich noch immer.
+
+OpenPGP auf der anderen Seite ist eine *Abstraktion*. Es ist möglichst Algorithmus-agnostisch designt, was bedeutet dass Sie die meiste Zeit gar nicht wissen müssen, welcher Algorithmus während einer Operation genutzt wird. Der [Standard von 2024](https://www.rfc-editor.org/rfc/rfc9580) enthält noch keine Unterstützung für Post-Quanten Verschlüsselungsalgorithmen, aber das deutsche [Bundesamt für Sicherheit in der Informationstechnik](https://www.bsi.bund.de/) (BSI) hat vor, dies mit einer [zukünftigen Version](https://datatracker.ietf.org/doc/draft-ietf-openpgp-pqc/) zu ändern.
+
+### OpenPGP vs. PGP
+
+OpenPGP ist ein *Standard*, also eine Reihe formaler Regeln, die ein Programm befolgen muss, um mit anderen Programmen desselben Standards kompatibel zu sein.
+
+PGP ist *ein solches Programm*, welches den OpenPGP-Standard implementiert. Es ist sogar das erste Programm, welches den Standard implementiert, da es 1991 veröffentlicht wurde und damit sieben Jahre älter als OpenPGP ist. Der offene Standard wurde *von* PGP abgeleitet und nicht umgekehrt.
+
+Als kommerzielles Programm hat PGP mehrmals den Eigentümer gewechselt und wird derzeit von [Broadcom](https://www.broadcom.com/products/cybersecurity/information-protection/encryption) weiterentwickelt.
+
+### OpenPGP vs. GPG
+
+[GNU Privacy Guard](https://gnupg.org/) (GPG) ist *ein weiteres Programm*, welches den OpenPGP-*Standard* implementiert. Im Gegensatz zum kommerziellen PGP-Programm wird es unter einer freien [GNU General Public License](https://de.wikipedia.org/wiki/GNU_General_Public_License) vertrieben. Die Entwickler [haben diskutiert](https://lists.gnupg.org/pipermail/gnupg-devel/1998-February/014190.html?utm_source=chatgpt.com), ob der Name zu sehr an PGP erinnert, und sind zu dem Schluss gekommen, dass dies nicht der Fall sei. Da GPG eine freie Software ist, steht Ihnen frei anderer Meinung sein.
+
+Genauer gesagt ist GPG ein Programm, welches *LibrePGP* und OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) implementiert, aber *nicht* die aktuellere [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
+
+### OpenPGP vs. LibrePGP
+
+Im Jahr 2023, als [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) des OpenPGP-Standards [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) aus dem Jahr 2007 ersetzen sollte, haben mehrere Personen die vorgeschlagenen Änderungen als zu disruptiv empfunden. Insbesondere die Entwickler von [GPG](https://gnupg.org/) und [RNP](https://www.rnpgp.org/) (einer Erweiterung für Thunderbird) haben sich [entschieden](https://lwn.net/Articles/953797/), den aktuelleren Standard *nicht* zu übernehmen und stattdessen den *neuen, konkurrierenden Standard* [LibrePGP](https://librepgp.org/) basierend auf OpenPGP Version 4 zu entwickeln.
+
+Da GPG und seine Windows-Variante [Gpg4win](https://gpg4win.de/index-de.html) so weit verbreitet sind, ist es (zum Zeitpunkt der Erstellung dieses Artikels, Juli 2025) wahrscheinlich ratsam, den letzten gemeinsamen Vorgänger, Version 4 / RFC 4880, zu verwenden, bis beide Standards allgemein unterstützt werden.
+
+### OpenPGP vs. S/MIME
+
+[Secure Multipurpose Internet Mail Extensions](https://de.wikipedia.org/wiki/S/MIME) (S/MIME) ist wie OpenPGP ein *Standard*, der primär auf die Ende-zu-Ende-Verschlüsselung von E-Mails abzielt. Die beiden Standards verfügen über ähnliche Funktionen, sind aber *nicht* interoperabel.
+
+Der wichtigste konzeptionelle Unterschied zwischen S/MIME und OpenPGP liegt in der Beantwortung der Frage: „Kann ich diesem öffentlichen Schlüssel vertrauen?“
+
+S/MIME basiert auf [X.509-Zertifikaten](https://de.wikipedia.org/wiki/X.509), die eine „Vertrauenskette“ bilden. Den Anfang dieser Kette bildet eine *zentrale* Zertifizierungsstelle, die mit einem auf Ihrem Computer gespeicherten öffentlichen Schlüssel verknüpft ist. Diese Zertifizierungsstelle signiert andere Zertifikate (in der Regel gegen Bezahlung und Vorlage eines Ausweises) und signalisiert Ihrem Computer damit, dass er ihnen vertraut. Da Ihr Computer der Zertifizierungsstelle vertraut, vertraut er auch diesen signierten Zertifikaten.
+
+OpenPGP hingegen nutzt ein „Vertrauensnetz“. Jeder kann die Authentizität anderer bestätigen. Wenn genügend Personen, denen Ihr Computer vertraut, ein bestimmtes Zertifikat signiert haben, kann Ihr Computer entscheiden, diesem Zertifikat ebenfalls zu vertrauen.
+
+> Im Kontext der E-Mail-Verschlüsselung ist S/MIME eine absolut valide Alternative zu OpenPGP, insbesondere für Unternehmen. BOMnipotent benötigt jedoch OpenPGP-Schlüssel.
+
+## OpenPGP nutzen
+
+Zur Verwaltung von OpenPGP-Schlüsseln empfiehlt diese Anleitung die Verwendung des Kommandozeilentools [Sequoia-PGP](https://sequoia-pgp.org/). Es handelt sich um eine kommerziell unterstützte Open-Source-Implementierung des OpenPGP-Standards. Das bedeutet, dass die Pflege des Projekts finanziell motiviert ist und der Code gleichzeitig von Sicherheitsforschenden eingesehen werden kann. Das Programm ist zudem sehr gut [dokumentiert](https://book.sequoia-pgp.org/).
+
+> [!NOTE] Warum nicht GPG?
+> Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des neuesten OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert. Sie können diese stattdessen verwenden, sofern sie Schlüssel generieren, die mit OpenPGP Version 4 / RFC 4880 kompatibel sind. Sequoia-PGP ist jedoch möglicherweise die zukunftssicherere Option, da Sie hier die für die Schlüsselgenerierung verwendete OpenPGP-Version auswählen können.
+
+> [!INFO]
+> Zum Ver- und Entschlüsseln von E-Mails benötigen Sie ein für Ihr E-Mail-Programm geeignetes Plugin. Dies ist zwar die Hauptanwendung von OpenGPG-Schlüsseln, steht aber nicht im Mittelpunkt dieser Anleitung.
+
+### Installieren
+
+#### Aus einem Repository
+
+Die Sequoia-PGP-Dokumentation bietet verschiedene Möglichkeiten zur [Installation](https://book.sequoia-pgp.org/installation.html) des Programms auf verschiedenen Plattformen. Windows wird jedoch nicht direkt unterstützt. Stattdessen wird die Verwendung des Windows-Subsystems für Linux (WSL) empfohlen, das sich erfreulicherweise einfach [aufsetzen](https://learn.microsoft.com/de-de/windows/wsl/install) lässt.
+
+#### Aus dem Quellcode (Debian 12 und früher)
+
+Regelmäßige Debian-Nutzer werden nicht überrascht sein, dass die Programmversion im Repository mehrere Jahre zurückliegen kann. Diese Anleitung basiert auf Sequoia-PGP Version 1.3.1, die mit Debian 13 "Trixie" ausgeliefert wird. Wenn Sie sich nicht sicher sind, welche Version Ihr Repository enthält, führen Sie Folgendes aus:
+
+```
+apt info sq | grep -i version
+```
+
+Für Debian 12 ergibt dies etwa "0.27.0". In diesem Fall wird empfohlen, stattdessen die Schritte zum [Bauen des Programms](https://book.sequoia-pgp.org/installation.html#install-from-source) aus den Quellen zu befolgen (oder auf ein neueres Betriebssystem zu aktualisieren). Dies erfordert die Rust-Toolchain. Glücklicherweise ist die Installation auch [erfreulich unkompliziert](https://www.rust-lang.org/tools/install).
+
+> Windows-Nutzer, denken Sie datan die **Linux**-Installation **innerhalb** des WSL auszuführen.
+
+Anschließend müssen Sie einige Systembibliotheken wie in der [Anleitung](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404) beschrieben installieren, da Sequoia-PGP nicht in reinem Rust geschrieben ist (weshalb es nicht mit Windows kompatibel ist).
+
+Führen Sie abschließend den Befehl aus:
+
+```
+cargo install --locked sequoia-sq
+```
+
+Dadurch wird Sequoia-PGP gebaut und der Befehl "sq" in Ihrem Terminal verfügbar.
+
+### Schlüssel generieren
+
+> [!INFO] Schlüsselbegriffe
+> Im Bereich der asymmetrischen Kryptografie verwenden BOMnipotent und diese Dokumentation den Begriff "public key" ("öffentlicher Schlüssel") für den Schlüssel, den Sie frei mit der Welt teilen können, und den Begriff "secret key" ("geheimer Schlüssel") für den Schlüssel, auf den nur Sie Zugriff haben sollten. Sequoia-PGP und dessen Dokumentation verwenden hingegen den Begriff "certificate" ("Zertifikat") für öffentliche Schlüssel und einfach den Begriff "key" ("Schlüssel") für geheime Schlüssel.
+
+Nach der Installation von Sequoia-PGP können Sie mit folgendem Befehl einen neuen Schlüssel generieren:
+
+```
+sq key generate --shared-key --name "Ihr Name" --email info@example.com --profile rfc4880
+```
+
+Der Befehl fordert Sie zur Eingabe eines Passworts auf. Wenn Sie dieses leer lassen, ist die Datei unverschlüsselt.
+
+Dadurch wird die Datei direkt Ihrem Schlüsselspeicher hinzugefügt, sodass Sequoia-PGP sie kennt. Der Schlüsselspeicher is spezifisch für Sequoia-PGP, und unterscheidet sich leicht vom (betriebssystemweiten) Schlüsselbund.
+
+Der Parameter "shared-key" teilt dem Programm mit, dass Sie diesem Schlüssel nicht die höchste Vertrauensstufe einräumen. Der andere mögliche Parameter ist "own-key", was bedeutet, dass Sie ihm voll vertrauen. Einer der beiden muss im Befehl enthalten sein.
+
+Die Parameter "name" und "email" dienen der Identifizierung des Schlüsselinhabers. Dies zeigt nicht nur anderen, wem dieser Schlüssel gehört, sondern erleichtert Ihnen auch die Interaktion mit Ihren Schlüsseln.
+
+Die Option "profile" mit dem Wert "rfc4880" weist Sequoia-PGP an, Version 4 / RFC 4880 des OpenPGP-Standards zu verwenden. Dies entspricht zwar nicht dem neuesten Standard, stellt aber sicher, dass die Schlüssel mit Tools wie GPG kompatibel sind, die OpenPGP [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) weder unterstützen noch unterstützen werden.
+
+Weitere Optionen finden Sie in der [Dokumentation](https://book.sequoia-pgp.org/sq_key_generation.html) oder durch Aufruf von:
+
+```
+sq key generate --help
+```
+
+Sie können alle Ihre Schlüssel mit folgendem Befehl auflisten:
+
+```
+sq key list
+```
+
+### Schlüssel exportieren
+
+#### Öffentliche Schlüssel
+
+TODO

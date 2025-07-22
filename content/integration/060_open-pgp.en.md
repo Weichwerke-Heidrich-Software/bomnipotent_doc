@@ -14,7 +14,7 @@ Open Pretty Good Privacy (OpenPGP) is an open standard for several file formats 
 
 > If the concept of signing is unfamiliar to you, there's a high-level description [down below](#signatures).
 
-The earliest version of the standard stems from [1998](https://www.rfc-editor.org/rfc/rfc2440), the latest (at the time of writing) [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) from 2024. Another important milestone that will become important in this article is [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007.
+The earliest version of the standard stems from [1998](https://www.rfc-editor.org/rfc/rfc2440), the latest (at the time of writing) [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) from 2024. Another milestone that will become important in this article is [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007.
 
 During its lifetime, OpenPGP has been adopted by many people and products, especially in the cybersecurity community, because it is pretty good. Also during and before this timespan, several closely related and not so aptly named concepts and products were developed, which can be pretty confusing.
 
@@ -34,7 +34,7 @@ The [standard of 2024](https://www.rfc-editor.org/rfc/rfc9580) does not support 
 
 OpenPGP is a *standard*, meaning a set of formal rules that a program has to follow in order to be interoperable with other programs complying with the same standard.
 
-PGP is *one such program* implementing the OpenPGP standard. In fact, it is the first program to implement the standard, because it predates OpenPGP by 7 years, being released in 1991. Due to legal concerns, the open standard was derived *from* PGP, and not the other way round.
+PGP is *one such program* implementing the OpenPGP standard. In fact, it is the first program to implement the standard, because it predates OpenPGP by seven years, being released in 1991. The open standard was derived *from* PGP, and not the other way round.
 
 As a commercial program, PGP changed ownership several times, and is currently developed by [Broadcom](https://www.broadcom.com/products/cybersecurity/information-protection/encryption).
 
@@ -42,15 +42,15 @@ As a commercial program, PGP changed ownership several times, and is currently d
 
 [GNU Privacy Guard](https://gnupg.org/) (GPG) is *another program* implementing the OpenPGP *standard*. Contrary to the commercial PGP program, it is distributed under a free [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License). The devlopers [discussed](https://lists.gnupg.org/pipermail/gnupg-devel/1998-February/014190.html?utm_source=chatgpt.com) whether the name is too similar to PGP, and decided that it is not. Since GPG is free software, you are free to disagree.
 
-More precisely, GPG is a program implementing *LibrePGP*, which implies that it is implementing OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880), but not the more current [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
+More precisely, GPG is a program implementing *LibrePGP* as well as OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880), but *not* the more current [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
 
 ### OpenPGP vs. LibrePGP
 
-In 2023, when [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) of the OpenPGP standard was about to replace [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007, several people considered the proposed changes to be too disruptive. Most notably, the developers of [GPG](https://gnupg.org/) and [RNP](https://www.rnpgp.org/) (an extension for thunderbird) [decided](https://lwn.net/Articles/953797/) **not** to adopt the new standard, and to instead create the *new, competing standard* [LibrePGP](https://librepgp.org/) based on OpenPGP version 4.
+In 2023, when [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) of the OpenPGP standard was about to replace [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007, several people considered the proposed changes to be too disruptive. Most notably, the developers of [GPG](https://gnupg.org/) and [RNP](https://www.rnpgp.org/) (an extension for thunderbird) [decided](https://lwn.net/Articles/953797/) *not* to adopt the more current standard, and to instead create the *new, competing standard* [LibrePGP](https://librepgp.org/) based on OpenPGP version 4.
 
 Because GPG and its Windows variant [Gpg4win](https://gpg4win.de/index.html) are so widely used, it is (at the time of writing, July 2025) probably advisable to use the last common ancestor version 4 / RFC 4880 whenever given the choice, until both standards are widely supported.
 
-### OpenPGP vs S/MIME
+### OpenPGP vs. S/MIME
 
 [Secure Multipurpose Internet Mail Extensions](https://en.wikipedia.org/wiki/S/MIME) (S/MIME), like OpenPGP, is a *standard* primarily aimed at offering end-to-end encryption for emails. The two standards have similar capabilities, but they are *not* interoperable.
 
@@ -78,9 +78,9 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 
 The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms. It does not directly support Windows, though. Instead, it recommends using the Windows Subsystem for Linux (WSL), which is thankfully easy to [set up](https://learn.microsoft.com/en-gb/windows/wsl/install).
 
-#### From Sources (Debian 12 and below)
+#### From Sources (Debian 12 and earlier)
 
-Regular Debian users will not be surprised to hear that the program version can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
+Regular Debian users will not be surprised to hear that the program version in the repository can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
 
 ```
 apt info sq | grep -i version
@@ -90,7 +90,7 @@ For Debian 12 this will yield something like "0.27.0". If that is the case for y
 
 > Windows users, remember to run the **Linux** installation **inside** the WSL.
 
-Afterwards, you need to install some system libraries as [outlined in the instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
+Afterwards, you need to install some system libraries as outlined in the [instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
 
 Finally, call:
 
@@ -113,7 +113,7 @@ sq key generate --shared-key --name "Your Name" --email info@example.com --profi
 
 The command will prompt you for a password. If you leave it empty, the file is unencrypted.
 
-This will directly add it to your keystore, meaning that Sequoia-PGP knows of it. The keystore specific to Sequoia-PGP, and it is a slightly different concept than the(operating system wide) keyring.
+This will directly add it to your keystore, meaning that Sequoia-PGP knows of it. The keystore specific to Sequoia-PGP, and it is a slightly different concept than the (operating system wide) keyring.
 
 The "shared-key" parameter tells the program that you do not have the highest level of trust in this key. The other viable parameter is "own-key", meaning you fully trust it. One of the two needs to appear in the command.
 
