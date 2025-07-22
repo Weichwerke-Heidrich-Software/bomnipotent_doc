@@ -2,6 +2,7 @@
 title = "OpenPGP Keys with Sequoia"
 slug = "open-pgp"
 weight = 60
+description = "Learn how to generate, export, and manage OpenPGP keys using Sequoia-PGP, with practical examples and key cryptography concepts explained."
 +++
 
 This article covers what the OpenPGP standard is and is not, and then goes into some examples on how to use it.
