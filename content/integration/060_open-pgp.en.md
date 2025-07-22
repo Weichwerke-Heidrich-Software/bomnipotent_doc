@@ -72,11 +72,21 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 
 ### Installation
 
+#### From Repository
+
 The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms. It does not directly support Windows, though. Instead, it recommends using the Windows Subsystem for Linux (WSL), which is thankfully easy to [set up](https://learn.microsoft.com/en-gb/windows/wsl/install).
 
-Regular Debian users will not be surprised to hear that the program version in the repository is roughly 3 years behind. For Debian (and Windows-WSL), this guide thus recommends to follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources. This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
+#### From Sources (Debian 12 and below)
 
-> Windows users, remember to run the Linux installation inside the WSL.
+Regular Debian users will not be surprised to hear that the program version can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
+
+```
+apt info sq | grep -i version
+```
+
+For Debian 12 this will yield something like "0.27.0". If that is the case for you, it is recommended to instead follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources (or update to a new operating system). This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
+
+> Windows users, remember to run the **Linux** installation **inside** the WSL.
 
 Afterwards, you need to install some system libraries as [outlined in the instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
 
@@ -157,10 +167,6 @@ A signature is an object (think of it as a string, some bytes, or a large number
 
 Signatures can either be *inlined*, meaning they are directly appended to the data they sign, or they can come in a separate *signature file*, if the original data does not allow appending a signature. Sequoia-PGP can handle both cases.
 
-#### Verifying
-
-TODO
-
 #### Signing
 
 To create an inline signature of (for example) a text file, call:
@@ -196,3 +202,7 @@ sq sign message.txt --signer-file example_secret.key --signature-file signature.
 ```
 
 The [documentation](https://book.sequoia-pgp.org/signing.html) contains more variants for creating signatures.
+
+#### Verifying
+
+TODO
