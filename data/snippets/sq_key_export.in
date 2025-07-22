@@ -1,0 +1,1 @@
+sq key export --cert-email info@example.com --output example_secret.key

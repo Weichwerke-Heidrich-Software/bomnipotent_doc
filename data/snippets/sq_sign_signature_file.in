@@ -1,0 +1,1 @@
+sq sign message.txt --signer-file example_secret.key --signature-file signature.asc

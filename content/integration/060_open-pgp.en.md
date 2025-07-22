@@ -107,9 +107,7 @@ This will build Sequoia-PGP and make the "sq" command available in your terminal
 
 Once Sequoia-PGP is installed, you can generate a new key with the command:
 
-```
-sq key generate --shared-key --name "Your Name" --email info@example.com --profile rfc4880
-```
+{{< example sq_generate >}}
 
 The command will prompt you for a password. If you leave it empty, the file is unencrypted.
 
@@ -139,9 +137,7 @@ sq key list
 
 To export a public key (a "certificate") from your keystore, call:
 
-```
-sq cert export --cert-email info@example.com --output example.cert
-```
+{{< example sq_cert_export >}}
 
 This command leverages the fact that you specified an email address when [generating](#key-generation) the key. Otherwise you would need to lookup and use the footprint to identify the public key you want to export.
 
@@ -153,9 +149,7 @@ You can now for example host this file at the root level of your server, and poi
 
 In order to allow BOMnipotent to sign documents for you, you will also need to export your secret key:
 
-```
-sq key export --cert-email info@example.com --output example_secret.key
-```
+{{< example sq_key_export >}}
 
 This file can of course **not** be freely shared, but should rather be treated like a password.
 
@@ -201,9 +195,7 @@ This is more compact, but a human cannot read the original data before decoding 
 
 To create an inline signature of (for example) a text file, call:
 
-```
-sq sign message.txt --signer-file example_secret.key --output signed_message.txt --cleartext
-```
+{{< example sq_sign_inline >}}
 
 This tells Sequoia-PGP to sign the contents of "message.txt", using the secret key in "example_secret.key", and storing the result in "signed_message.txt".
 
@@ -211,9 +203,7 @@ The "cleartext" parameter specifies that the original data is included in the ou
 
 If you do not want to include the data in the output but instead create a separate signature file, call:
 
-```
-sq sign message.txt --signer-file example_secret.key --signature-file signature.asc
-```
+{{< example sq_sign_signature_file >}}
 
 The [documentation](https://book.sequoia-pgp.org/signing.html) contains more variants for creating signatures.
 
@@ -221,17 +211,13 @@ The [documentation](https://book.sequoia-pgp.org/signing.html) contains more var
 
 Verifying a separate signature file is very straightforward:
 
-```
-sq verify message.txt --signature-file=signature.asc --signer-file example.cert
-```
+{{< example sq_verify_inline >}}
 
 This command specifies the file containing the original message, the corresponding signature file, and the file containing the public key of the signer.
 
 Verifying an inline signature works similarly:
 
-```
-sq verify signed_message.txt --cleartext --signer-file example.cert
-```
+{{< example sq_verify_signature_file >}}
 
 The "cleartext" option tells Sequoia-PGP that the signed_message.txt contains the original message in clear text (see [above](#cleartext-vs-message)).
 
