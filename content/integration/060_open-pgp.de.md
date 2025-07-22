@@ -135,4 +135,104 @@ sq key list
 
 #### Öffentliche Schlüssel
 
-TODO
+Um einen öffentlichen Schlüssel (ein "Zertifikat") aus Ihrem Schlüsselspeicher zu exportieren, rufen Sie Folgendes auf:
+
+```
+sq cert export --cert-email info@example.com --output example.cert
+```
+
+Dieser Befehl nutzt die Tatsache, dass Sie beim [Generieren](#schlüssel-generieren) des Schlüssels eine E-Mail-Adresse angegeben haben. Andernfalls müssten Sie den Footprint herausfinden und verwenden, um den zu exportierenden öffentlichen Schlüssel zu identifizieren.
+
+Ohne die Option "output" wird der Schlüssel einfach in der Standard-Ausgabe wiedergegeben.
+
+Sie können diese Datei nun beispielsweise im Stammverzeichnis Ihres Servers hosten und im Bereich "encryption" Ihrer [security.txt](https://securitytxt.org/) darauf verweisen.
+
+#### Geheime Schlüssel
+
+Damit BOMnipotent Dokumente für Sie signieren kann, müssen Sie außerdem Ihren geheimen Schlüssel exportieren:
+
+```
+sq key export --cert-email info@example.com --output example_secret.key
+```
+
+Diese Datei kann natürlich **nicht** frei weitergegeben werden, sondern sollte wie ein Passwort behandelt werden.
+
+### Signaturen
+
+#### Grundlegendes Prinzip
+
+Eine Signatur ist ein Objekt (man denke an eine Zeichenfolge, einige Bytes oder eine große Zahl), welches bestätigt, dass bestimmte Daten (eine E-Mail, eine Textdatei, ein Programm) von jemandem (dem Unterzeichner) im aktuellen Zustand freigegeben wurden. Wenn Sie dem Unterzeichner vertrauen und die Signatur überprüfen, können Sie sicher sein, dass die Daten nicht manipuliert wurden. Der gesamte Prozess funktioniert im Wesentlichen folgendermaßen:
+1. Der Unterzeichner berechnet ein kryptografisches Hash der Daten. Ein Hash kann als lange Zeichenfolge betrachtet werden, die sich bei nur geringfügig abweichenden Dateneingaben stark unterscheidet.
+1. Der Unterzeichner verschlüsselt dieses Hash mit dem geheimen Schlüssel so, dass es mit dem öffentlichen Schlüssel entschlüsselt werden kann. Das Ergebnis ist die Signatur. Beachten Sie, dass die Verwendung der Schlüssel hier genau gegenteilig zur typischen asymmetrischen Verschlüsselung ist.
+1. Der Prüfer entschlüsselt die Signatur mit dem öffentlichen Schlüssel des Unterzeichners. Das Ergebnis ist das Hash. Der Prüfer weiß nun, dass das Hash vom Unterzeichner stammt, da nur dieser den geheimen Schlüssel besitzt, um eine Zeichenfolge so zu verschlüsseln, dass der öffentliche Schlüssel sie entschlüsseln kann.
+1. Der Prüfer berechnet das Hash nun weiterhin selbstständig aus den Daten. Stimmt der Wert mit dem des Unterzeichners überein, weiß er, dass die Daten nicht verändert wurden.
+
+Signaturen können entweder *inline* sein, werden also direkt an die zu signierenden Daten angehängt, oder sie können in einer separaten *Signaturdatei* vorliegen, wenn die Originaldaten das Anhängen einer Signatur nicht zulassen. Sequoia-PGP kann beide Fälle verarbeiten.
+
+#### Cleartext vs. Message
+
+Für Inline-Signaturen erkennt OpenPGP (und damit auch Sequoia-PGP) die Varianten "cleartext" ("Klartext") und "mesage" ("Nachricht").
+
+Inline-signierte "cleartext" Daten sind in ihrer ursprünglichen Form in der Ausgabe enthalten. Die resultierende Struktur ist:
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+[Originaldaten]
+-----BEGIN PGP SIGNATURE-----
+[Signatur in Base64]
+-----END PGP SIGNATURE-----
+```
+
+Dies ist nützlich, falls die Originaldaten von Menschen lesbar sind, und wird beispielsweise beim Signieren einer Security.txt empfohlen.
+
+Bei der Variante "message" werden die Daten stattdessen in Base64 kodiert und mit der Signatur kombiniert. Die Ausgabe sieht dann folgendermaßen aus:
+
+```
+-----BEGIN PGP MESSAGE-----
+[Daten und Signatur in Base64]
+-----END PGP MESSAGE-----
+```
+
+Diese Variante ist kompakter, ein Mensch kann die Originaldaten jedoch vor der Dekodierung nicht mehr lesen.
+
+### Daten signieren
+
+Um eine Inline-Signatur von (beispielsweise) einer Textdatei zu erstellen, rufen Sie Folgendes auf:
+
+```
+sq sign message.txt --signer-file example_secret.key --output signed_message.txt --cleartext
+```
+
+Damit signiert Sequoia-PGP den Inhalt von "message.txt" mit dem geheimen Schlüssel in "example_secret.key" und speichert das Ergebnis in "signed_message.txt".
+
+Der Parameter "cleartext" gibt an, dass die Originaldaten in ihrer ursprünglichen Form in die Ausgabe übernommen werden (siehe [oben](#cleartext-vs-message)).
+
+Wenn Sie die Daten nicht in die Ausgabe aufnehmen, sondern eine separate Signaturdatei erstellen möchten, rufen Sie Folgendes auf:
+
+```
+sq sign message.txt --signer-file example_secret.key --signature-file signature.asc
+```
+
+Die [Dokumentation](https://book.sequoia-pgp.org/signing.html) enthält weitere Varianten zur Signaturerstellung.
+
+### Signaturen verifizieren
+
+Die Überprüfung einer separaten Signaturdatei ist recht einfach:
+
+```
+sq verify message.txt --signature-file=signature.asc --signer-file example.cert
+```
+
+Dieser Befehl gibt die Datei mit der Originalnachricht, die zugehörige Signaturdatei und den öffentlichen Schlüssel des Unterzeichners an.
+
+Die Überprüfung einer Inline-Signatur funktioniert ähnlich:
+
+```
+sq verify signed_message.txt --cleartext --signer-file example.cert
+```
+
+Die Option "cleartext" teilt Sequoia-PGP mit, dass die Datei signed_message.txt die Originalnachricht im Klartext enthält (siehe [oben](#cleartext-vs-message)).
+
+> Falls Ihre Annahme bezüglich des Formats falsch ist, erkennt Sequoia-PGP dies und korrigiert es für Sie. Warum wird der Parameter überhaupt benötigt, wenn alle Informationen bereits in der Nachricht gespeichert sind? Wahrscheinlich aus historischen Gründen.
+
+Der Befehl gibt die Originalmeldung auf die Standardausgabe und die Auswertung (Signatur ist gültig / ungültig) auf die Standardfehlerausgabe aus. Wenn Sie nur die Auswertung benötigen, fügen Sie dem obigen Befehl " > /dev/null" hinzu, um die Standardausgabe zu ignorieren.

@@ -161,7 +161,7 @@ This file can of course **not** be freely shared, but should rather be treated l
 
 ### Signatures
 
-#### Principles of Signing
+#### Basic Principle
 
 A signature is an object (think of it as a string, some bytes, or a large number) that verifies that some data (an email, a text file, a program) has been approved by someone (the signer) in the current state. If you trust the signer and verify the signature, you can then be sure that the data has not been tempered with. On a high level, the whole process works like this:
 1. The signer calculates a cryptographic hash of the data. A hash can be thought of as a lengthy string that is vastly different for only slightly different data input.
@@ -173,7 +173,9 @@ Signatures can either be *inlined*, meaning they are directly appended to the da
 
 #### Cleartext vs. Message
 
-For inline signatures, OpenPGP (and by extension Sequoia-PGP) recognises the "cleartext" and "message" variants. Inline-signed cleartext data is contained in the output in its original form. The resulting structure is:
+For inline signatures, OpenPGP (and by extension Sequoia-PGP) recognises the "cleartext" and "message" variants.
+
+Inline-signed "cleartext" data is contained in the output in its original form. The resulting structure is:
 
 ```
 -----BEGIN PGP SIGNED MESSAGE-----
@@ -223,7 +225,7 @@ Verifying a separate signature file is very straightforward:
 sq verify message.txt --signature-file=signature.asc --signer-file example.cert
 ```
 
-This specifies the file containing the original message, the corresponding signature file, and the file containing the public key of the signer.
+This command specifies the file containing the original message, the corresponding signature file, and the file containing the public key of the signer.
 
 Verifying an inline signature works similarly:
 
