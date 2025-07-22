@@ -1,0 +1,1 @@
+sq cert export --cert-email info@example.com --output example.cert

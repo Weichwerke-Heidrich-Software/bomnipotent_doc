@@ -1,0 +1,1 @@
+sq verify message.txt --signature-file=signature.asc --signer-file example.cert
