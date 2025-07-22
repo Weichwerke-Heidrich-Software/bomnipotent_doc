@@ -1,10 +1,12 @@
 +++
-title = "OpenPGP Keys"
+title = "OpenPGP Keys with Sequoia"
 slug = "open-pgp"
 weight = 60
 +++
 
 This article covers what the OpenPGP standard is and is not, and then goes into some examples on how to use it.
+
+If you are only here for the practical part, feel free to [skip ahead](#using-openpgp).
 
 ## What is OpenPGP (not)?
 
