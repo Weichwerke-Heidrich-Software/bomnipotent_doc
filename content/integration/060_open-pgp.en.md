@@ -89,7 +89,9 @@ For Debian 12 this will yield something like "0.27.0". If that is the case for y
 
 > Windows users, remember to run the **Linux** installation **inside** the WSL.
 
-Afterwards, you need to install some system libraries as outlined in the [instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
+Afterwards, you need to install some system libraries as [outlined](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404) in the instructions, because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows):
+
+{{< example install_sq_deps >}}
 
 Finally, call:
 

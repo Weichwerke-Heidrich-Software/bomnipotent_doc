@@ -1,0 +1,1 @@
+sudo apt install clang nettle-dev pkg-config libssl-dev capnproto libsqlite3-dev
