@@ -59,6 +59,9 @@ for file in $input_files; do
                 continue
             fi
         fi
+        if grep -q "^sq " "$file"; then
+            continue # Sequoia-PGP does not support short options
+        fi
 
         if grep -q -e "$long " -e "$long=" -e "$long\$" "$file"; then
             if [ ! -f "$tmp_file" ]; then
