@@ -1,5 +1,0 @@
-[info] checking github for the current release tag 
-[info] fetching release script for tag='v0.96.0' 
-[info] checking github for the current release tag 
-[info] using release tag='v0.96.0' version='0.96.0' os='linux' arch='amd64' 
-[info] installed /root/.local/bin/grype 
