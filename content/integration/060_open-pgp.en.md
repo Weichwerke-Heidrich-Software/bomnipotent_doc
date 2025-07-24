@@ -71,7 +71,7 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 > The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). You can use them instead, *as long as* they generate keys compatible with OpenPGP version 4 / RFC 4880. However, Sequoia-PGP may be the more future-proof option, especially since it offers you to select the OpenPGP version used for key generation.
 
 > [!INFO]
-> To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenGPG keys, it is not the focus of this guide.
+> To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenPGP keys, it is not the focus of this guide.
 
 ### Installation
 
