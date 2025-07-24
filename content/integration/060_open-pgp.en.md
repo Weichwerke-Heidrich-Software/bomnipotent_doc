@@ -83,7 +83,7 @@ The Sequoia-PGP documentation offers several options [how to install](https://bo
 
 Regular Debian users will not be surprised to hear that the program version in the repository can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
 
-{{< example apt_info_sq >}}
+{{< example apt_cache_policy_sq >}}
 
 For Debian 12 this will yield something like "0.27.0". If that is the case for you, it is recommended to instead follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources (or update to a new operating system). This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
 
