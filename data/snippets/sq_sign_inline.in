@@ -1,1 +1,1 @@
-sq sign message.txt --signer-file example_secret.key --output signed_message.txt --cleartext
+sq sign /home/message.txt --signer-file=/home/example_secret.key --output=/home/signed_message.txt --cleartext
