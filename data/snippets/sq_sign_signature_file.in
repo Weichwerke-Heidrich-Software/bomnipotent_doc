@@ -1,1 +1,1 @@
-sq sign message.txt --signer-file example_secret.key --signature-file signature.asc
+sq sign /home/message.txt --signer-file=/home/example_secret.key --signature-file=/home/signature.asc

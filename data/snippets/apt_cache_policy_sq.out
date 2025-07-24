@@ -1,0 +1,6 @@
+sq:
+  Installed: (none)
+  Candidate: 0.27.0-2+b1
+  Version table:
+     0.27.0-2+b1 500
+        500 http://deb.debian.org/debian bookworm/main amd64 Packages

@@ -1,1 +1,1 @@
-sq verify signed_message.txt --cleartext --signer-file example.cert
+sq verify /home/signed_message.txt --cleartext --signer-file=/home/example.cert

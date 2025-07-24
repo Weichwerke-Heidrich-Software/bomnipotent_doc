@@ -69,7 +69,7 @@ Zur Verwaltung von OpenPGP-Schlüsseln empfiehlt diese Anleitung die Verwendung 
 > Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des neuesten OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert. Sie können diese stattdessen verwenden, sofern sie Schlüssel generieren, die mit OpenPGP Version 4 / RFC 4880 kompatibel sind. Sequoia-PGP ist jedoch möglicherweise die zukunftssicherere Option, da Sie hier die für die Schlüsselgenerierung verwendete OpenPGP-Version auswählen können.
 
 > [!INFO]
-> Zum Ver- und Entschlüsseln von E-Mails benötigen Sie ein für Ihr E-Mail-Programm geeignetes Plugin. Dies ist zwar die Hauptanwendung von OpenGPG-Schlüsseln, steht aber nicht im Mittelpunkt dieser Anleitung.
+> Zum Ver- und Entschlüsseln von E-Mails benötigen Sie ein für Ihr E-Mail-Programm geeignetes Plugin. Dies ist zwar die Hauptanwendung von OpenPGP-Schlüsseln, steht aber nicht im Mittelpunkt dieser Anleitung.
 
 ### Installieren
 
@@ -81,21 +81,19 @@ Die Sequoia-PGP-Dokumentation bietet verschiedene Möglichkeiten zur [Installati
 
 Regelmäßige Debian-Nutzer werden nicht überrascht sein, dass die Programmversion im Repository mehrere Jahre zurückliegen kann. Diese Anleitung basiert auf Sequoia-PGP Version 1.3.1, die mit Debian 13 "Trixie" ausgeliefert wird. Wenn Sie sich nicht sicher sind, welche Version Ihr Repository enthält, führen Sie Folgendes aus:
 
-```
-apt info sq | grep -i version
-```
+{{< example apt_cache_policy_sq >}}
 
 Für Debian 12 ergibt dies etwa "0.27.0". In diesem Fall wird empfohlen, stattdessen die Schritte zum [Bauen des Programms](https://book.sequoia-pgp.org/installation.html#install-from-source) aus den Quellen zu befolgen (oder auf ein neueres Betriebssystem zu aktualisieren). Dies erfordert die Rust-Toolchain. Glücklicherweise ist die Installation auch [erfreulich unkompliziert](https://www.rust-lang.org/tools/install).
 
-> Windows-Nutzer, denken Sie datan die **Linux**-Installation **innerhalb** des WSL auszuführen.
+> Windows-Nutzer, denken Sie daran die **Linux**-Installation **innerhalb** des WSL auszuführen.
 
-Anschließend müssen Sie einige Systembibliotheken wie in der [Anleitung](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404) beschrieben installieren, da Sequoia-PGP nicht in reinem Rust geschrieben ist (weshalb es nicht mit Windows kompatibel ist).
+Anschließend müssen Sie einige Systembibliotheken wie in der Anleitung [beschrieben](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404) installieren, da Sequoia-PGP nicht in reinem Rust geschrieben ist (weshalb es nicht mit Windows kompatibel ist):
+
+{{< example install_sq_deps >}}
 
 Führen Sie abschließend den Befehl aus:
 
-```
-cargo install --locked sequoia-sq
-```
+{{< example install_sq >}}
 
 Dadurch wird Sequoia-PGP gebaut und der Befehl "sq" in Ihrem Terminal verfügbar.
 
@@ -110,7 +108,7 @@ Nach der Installation von Sequoia-PGP können Sie mit folgendem Befehl einen neu
 
 Der Befehl fordert Sie zur Eingabe eines Passworts auf. Wenn Sie dieses leer lassen, ist die Datei unverschlüsselt.
 
-Dadurch wird die Datei direkt Ihrem Schlüsselspeicher hinzugefügt, sodass Sequoia-PGP sie kennt. Der Schlüsselspeicher is spezifisch für Sequoia-PGP, und unterscheidet sich leicht vom (betriebssystemweiten) Schlüsselbund.
+Dadurch wird die Datei direkt Ihrem Schlüsselspeicher hinzugefügt, sodass Sequoia-PGP sie kennt. Der Schlüsselspeicher ist spezifisch für Sequoia-PGP, und unterscheidet sich leicht vom (betriebssystemweiten) Schlüsselbund.
 
 Der Parameter "shared-key" teilt dem Programm mit, dass Sie diesem Schlüssel nicht die höchste Vertrauensstufe einräumen. Der andere mögliche Parameter ist "own-key", was bedeutet, dass Sie ihm voll vertrauen. Einer der beiden muss im Befehl enthalten sein.
 
@@ -120,15 +118,11 @@ Die Option "profile" mit dem Wert "rfc4880" weist Sequoia-PGP an, Version 4 / RF
 
 Weitere Optionen finden Sie in der [Dokumentation](https://book.sequoia-pgp.org/sq_key_generation.html) oder durch Aufruf von:
 
-```
-sq key generate --help
-```
+{{< example sq_generate_help >}}
 
 Sie können alle Ihre Schlüssel mit folgendem Befehl auflisten:
 
-```
-sq key list
-```
+{{< example sq_key_list >}}
 
 ### Schlüssel exportieren
 

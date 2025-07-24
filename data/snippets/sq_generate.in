@@ -1,1 +1,1 @@
-sq key generate --shared-key --name "Ihr Name" --email info@example.com --profile rfc4880
+sq key generate --shared-key --name "Your Name" --email info@example.com --profile rfc4880

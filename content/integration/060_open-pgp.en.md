@@ -71,7 +71,7 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 > The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). You can use them instead, *as long as* they generate keys compatible with OpenPGP version 4 / RFC 4880. However, Sequoia-PGP may be the more future-proof option, especially since it offers you to select the OpenPGP version used for key generation.
 
 > [!INFO]
-> To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenGPG keys, it is not the focus of this guide.
+> To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenPGP keys, it is not the focus of this guide.
 
 ### Installation
 
@@ -83,21 +83,19 @@ The Sequoia-PGP documentation offers several options [how to install](https://bo
 
 Regular Debian users will not be surprised to hear that the program version in the repository can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
 
-```
-apt info sq | grep -i version
-```
+{{< example apt_cache_policy_sq >}}
 
 For Debian 12 this will yield something like "0.27.0". If that is the case for you, it is recommended to instead follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources (or update to a new operating system). This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
 
 > Windows users, remember to run the **Linux** installation **inside** the WSL.
 
-Afterwards, you need to install some system libraries as outlined in the [instructions](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404), because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows).
+Afterwards, you need to install some system libraries as [outlined](https://book.sequoia-pgp.org/installation.html#install-the-dependencies-debian-12-bookworm--ubuntu-2404) in the instructions, because Sequoia-PGP is not written in pure Rust (which is the reason it is incompatible with Windows):
+
+{{< example install_sq_deps >}}
 
 Finally, call:
 
-```
-cargo install --locked sequoia-sq
-```
+{{< example install_sq >}}
 
 This will build Sequoia-PGP and make the "sq" command available in your terminal.
 
@@ -122,15 +120,11 @@ The option "profile" with the value "rfc4880" tell Sequoia-PGP to use [version 4
 
 More options can be found in the [documentation](https://book.sequoia-pgp.org/sq_key_generation.html), or by calling:
 
-```
-sq key generate --help
-```
+{{< example sq_generate_help >}}
 
 You can list all your keys with the command:
 
-```
-sq key list
-```
+{{< example sq_key_list >}}
 
 ### Exporting Keys
 
