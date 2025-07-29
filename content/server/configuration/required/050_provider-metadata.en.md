@@ -49,7 +49,7 @@ This optional field allows you to offer contact details for general or security 
 
 ### Generated Document
 
-Once you have provided the data and started the server, the generated document will host it under "your-domain/.well-known/csaf/provider-metadata.json". You can see a live example [here](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) and a static example here:
+Once you have provided the data and started the server, the generated document will host it under "\<your-domain\>/.well-known/csaf/provider-metadata.json". You can see a live example [here](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) and a static example here:
 
 ```json {wrap="false" title="provider-metadata.json"}
 {
@@ -97,7 +97,7 @@ Once you have provided the data and started the server, the generated document w
         "name": "Weichwerke Heidrich Software",
         "namespace": "https://wwh-soft.com"
     },
-    "role": "csaf_provider"
+    "role": "csaf_trusted_provider"
 }
 ```
 
@@ -107,7 +107,7 @@ The "last_updated" field is generated from the last modification timestamp of yo
 
 BOMnipotent assumes that you want your CSAF documents listed and mirrored on publicly available repositories. This only concerns the documents labeled {{<tlp-white>}} / {{<tlp-clear>}}! The aggregators do not have access to any documents classified otherwisely.
 
-BOMnipotent helps you fulfil all requirements to be a [CSAF Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider), according to the OASIS standard.
+BOMnipotent now fulfils all requirements for you to be a [CSAF Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider), according to the OASIS standard. If you additionally provide an [OpenPGP configuration](/server/configuration/optional/open-pgp/), BOMnipotent will instead make you a [CSAF Trusted Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#723-role-csaf-trusted-provider).
 
 
 ## Providing Filepath
