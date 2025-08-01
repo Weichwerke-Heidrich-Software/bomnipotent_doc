@@ -20,6 +20,10 @@ Um etwas Arbeit beim Tippen zu sparen, speichern Sie die Domäne Ihres Servers u
 
 {{< example admin_session_login >}}
 
+Um zu überprüfen, ob alles bis hierhin funktioniert hat, rufen Sie:
+
+{{< example health >}}
+
 ## Schritt 2: Benutzer als TMP-Administrator markieren
 
 > Aus Sicherheitsgründen muss der Benutzer zu diesem Zeitpunkt bereits in der Datenbank vorhanden sein. Andernfalls könnte ein böswilliger Akteur die E-Mail-Adresse, die Sie für Ihren Administrator verwenden, erraten und zu einem geeigneten Zeitpunkt eine eigene Anfrage stellen. Um dies zu verhindern, blockiert der TMP-Admin-Mechanismus alle Anfragen, diesen bestimmten Benutzer neu zur Datenbank hinzuzufügen.

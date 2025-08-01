@@ -101,7 +101,8 @@ BOMNIPOTENT_DB_PW=<your-database-password>
 SMTP_SECRET=<your-smtp-authentication-secret>
 ```
 
-If you are using a versioning system to store your setup, do not forget to add ".env" to your .gitignore or analogous ignore file!
+> [!NOTE]
+> If you are using a versioning system to store your setup, do not forget to add ".env" to your .gitignore or analogous ignore file!
 
 ## config.toml
 

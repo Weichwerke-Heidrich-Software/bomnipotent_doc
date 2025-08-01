@@ -102,7 +102,8 @@ BOMNIPOTENT_DB_PW=<Ihr-Datenbank-Passwort>
 SMTP_SECRET=<Ihr-smtp-Authentifizierungs-Geheimnis>
 ```
 
-Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
+> [!NOTE]
+> Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
 
 ## config.toml
 
