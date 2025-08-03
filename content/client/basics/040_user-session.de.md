@@ -33,7 +33,7 @@ Um die Parameter der aktuellen Sitzung auszugeben, rufen Sie "session status". D
 
 {{< example session_status >}}
 
-Falls Sie JSON bevorzugen, fügen Sie einfach die "--json" Option hinzu:
+Falls Sie JSON bevorzugen, fügen Sie einfach die "json" Option hinzu:
 
 {{< example session_status_json >}}
 

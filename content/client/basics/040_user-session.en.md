@@ -33,7 +33,7 @@ To print the current parameters of your session, call "session status". The outp
 
 {{< example session_status >}}
 
-If you prefer JSON, merely append the "--json" option:
+If you prefer JSON, merely append the "json" option:
 
 {{< example session_status_json >}}
 
