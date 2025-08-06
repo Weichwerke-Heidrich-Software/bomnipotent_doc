@@ -42,6 +42,8 @@ Dies speichert die CSAF-Dokumente im angegebenen Ordner ("/home/csaf"in diesem B
 
 > Die Dateinamen der CSAF-Dokumente folgen einem vom [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) vorgegebenen Namensschema: Die IDs werden in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen werden durch einen Unterstrich '_' ersetzt. Das bedeutet, dass theoretisch verschiedene CSAF-Dokumente zum selben Dateipfad führen könnten. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt eine Datei stillschweigend zu überschreiben.
 
+Falls [OpenPGP](/de/server/configuration/optional/open-pgp/) auf dem Server konfiguriert ist, lädt der Client weiterhin kryptografische Signaturen für die CSAF Dokumente herunter. Diese werden in ".json.asc" Dateien gespeichert, und können zum Beispiel mit [Sequoia-PGP](/de/integration/open-pgp/) verifiziert werden.
+
 {{< example tree_csaf >}}
 
 Bevor Dateien zum Download angefordert werden, erstellt der BOMnipotent-Client eine Inventarliste der bereits im Ordner vorhandenen CSAF-Dokumente und lädt nur die fehlenden herunter.
