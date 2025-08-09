@@ -145,7 +145,7 @@ It is not unusual that a vulnerability in your supply chain does not actually af
 
 #### Remediations
 
-For every product that is affected (or under investigation), you need to create at least one entry describing a [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations). It must contain:
+For every product that is affected (or under investigation), you are encouraged (though not required) to create at least one entry describing a [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations). It must contain:
 - a category, for example "mitigation", "workaround" or "no_fix_planned" (risk acceptance is a viable strategy).
 - details on how the remediation is applied, or why no fix is planned.
 - a reference to at least one product id.

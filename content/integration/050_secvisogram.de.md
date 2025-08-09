@@ -145,7 +145,7 @@ Es kommt nicht selten vor, dass eine Sicherheitslücke in Ihrer Lieferkette Ihr 
 
 #### Remediations
 
-Für jedes betroffene (oder aktuell untersuchte) Produkt müssen Sie mindestens einen Eintrag erstellen, der eine [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations) (Abhilfemaßnahme) beschreibt. Der Eintrag muss Folgendes enthalten:
+Für jedes betroffene (oder aktuell untersuchte) Produkt sind Sie ermutigt (jedoch nicht verpflichtet), mindestens einen Eintrag zu erstellen, der eine [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations) (Abhilfemaßnahme) beschreibt. Der Eintrag muss Folgendes enthalten:
 - eine Kategorie, zum Beispiel "mitigation", "workaround" oder "no_fix_planned" (Risikoakzeptanz ist eine valide Strategie).
 - Einzelheiten zur Anwendung der Abhilfemaßnahme oder warum keine Fehlerbehebung geplant ist.
 - Ein Verweis auf mindestens eine Produkt-ID.
