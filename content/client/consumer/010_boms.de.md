@@ -32,6 +32,8 @@ Dies speichert die BOMs im angegebenen Ordner ("./boms" in diesem Beispiel). Fal
 
 Der Client lädt auch mehrere Dateien herunter, die ein Hash und den Dateinamen der gehashten Datei enthalten.
 
+Falls [OpenPGP](/de/server/configuration/optional/open-pgp/) auf dem Server konfiguriert ist, lädt der Client weiterhin kryptografische Signaturen für die BOMs herunter. Diese werden in ".json.asc" Dateien gespeichert, und können zum Beispiel mit [Sequoia-PGP](/de/integration/open-pgp/) verifiziert werden.
+
 {{< example tree_boms >}}
 
 Bevor BOMnipotent Client Dateien zum Download anfordert, erstellt er eine Inventarliste der bereits im Ordner vorhandenen BOMs und lädt nur die fehlenden Dateien herunter.
