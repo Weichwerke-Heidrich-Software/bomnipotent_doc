@@ -32,7 +32,8 @@ BOMNIPOTENT_DB_PW=<Ihr-Datenbank-Passwort>
 SMTP_SECRET=<Ihr-smtp-Authentifizierungs-Geheimnis>
 ```
 
-Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
+> [!NOTE]
+> Falls Sie ein Versionierungssystem zum Speichern Ihres Setups verwenden, vergessen Sie nicht, ".env" zu Ihrer .gitignore oder analogen Ignore-Datei hinzuzufügen!
 
 ## config.toml
 
@@ -330,12 +331,12 @@ Speichern Sie diese Datei als "compose.yaml". Dann rufen Sie:
 {{< tabs >}}
 {{% tab title="lang" %}}
 ```
-docker compose --detach
+docker compose up --detach
 ```
 {{% /tab %}}
 {{% tab title="kurz" %}}
 ```
-docker compose -d
+docker compose up -d
 ```
 {{% /tab %}}
 {{< /tabs >}}

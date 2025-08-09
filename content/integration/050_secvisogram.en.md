@@ -5,7 +5,7 @@ weight = 50
 description = "Learn how to create valid CSAF security advisories using Secvisogram, with practical guidance on key document fields and best practices."
 +++
 
-The [Common Security Advisory Framework](https://www.csaf.io/specification.html) (CSAF) is a machine-readable format and international standard for sharing information about cybersecurity vulnerabilities. Its purpose is to inform users of your product how they should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?
+The [Common Security Advisory Framework](https://www.csaf.io/) (CSAF) is a machine-readable format and international standard for sharing information about cybersecurity vulnerabilities. Its purpose is to inform users of your product how they should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?
 
 The [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html) by OASIS Open aims to cover a very wide range of scenarios. As such, it can be very overwhelming at first. This page serves to highlight the key components a CSAF document requires, and to offer a practical guide to get started right away.
 
@@ -145,7 +145,7 @@ It is not unusual that a vulnerability in your supply chain does not actually af
 
 #### Remediations
 
-For every product that is affected (or under investigation), you need to create at least one entry describing a [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations). It must contain:
+For every product that is affected (or under investigation), you are encouraged (though not required) to create at least one entry describing a [remediation](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html#32312-vulnerabilities-property---remediations). It must contain:
 - a category, for example "mitigation", "workaround" or "no_fix_planned" (risk acceptance is a viable strategy).
 - details on how the remediation is applied, or why no fix is planned.
 - a reference to at least one product id.

@@ -20,6 +20,10 @@ To make things a litle less verbose, let's store the domain of your server and y
 
 {{< example admin_session_login >}}
 
+To check that everything worked up until here, call:
+
+{{< example health >}}
+
 ## Step 2: Mark User as TMP Admin
 
 > Due to security reasons, the user needs to already exist in the database at this point. Otherwise, a malicious actor could anticipate the email address you use for your admin, and make their own request at an opportune time. To prevent this, the tmp admin mechanism blocks all requests to newly add this particular user to the database.
