@@ -1,6 +1,7 @@
 +++
 title = "OpenPGP-Konfiguration"
 slug = "open-pgp"
+description = "Erfahren Sie, wie Sie OpenPGP-Schlüssel im BOMnipotent Server konfigurieren, um Dokumente zu signieren und als CSAF Trusted Provider aufzutreten."
 weight = 35
 +++
 
