@@ -1,5 +1,5 @@
 +++
-title = "TLP Konfiguration"
+title = "TLP-Konfiguration"
 slug = "tlp-config"
 weight = 30
 description = "Konfigurieren Sie TLP v1.0 und v2.0 für CSAF-Dokumente im BOMnipotent Server. Erfahren Sie, wie Sie TLP-Labels korrekt anwenden und verwalten."

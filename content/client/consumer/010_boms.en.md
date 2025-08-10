@@ -29,6 +29,10 @@ This will store the BOMs in the provided folder ("./boms", in this example). It 
 
 > To avoid inconsistent behaviour accross operating systems, the name and version of the product are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different products could lead to the same filename. In that case, BOMnipotent will display a warning instead of silently overwriting a file.
 
+The client also downloads several files containing a hash and the filename of the hashed file.
+
+If [OpenPGP](/server/configuration/optional/open-pgp/) is configured on the server, the client furthermore downloads cryptografic signatures for the BOMs. They are saved in ".json.asc" files, and can for example be verified using [Sequoia-PGP](/integration/open-pgp/).
+
 {{< example tree_boms >}}
 
 Before requesting files for download, BOMnipotent Client makes an inventory of the BOMs already present in the folder, and downloads only the missing ones.

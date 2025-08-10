@@ -15,7 +15,7 @@ To create a new user account, run
 
 {{< example "user_request" >}}
 
-If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519). A key pair consists of a public and a secret key. Both are stored in your local userfolder.
+If you call this for the first time, it will create a new [key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) following the [OpenPGP](/integration/open-pgp/) standard. A key pair consists of a public and a secret key. Both are stored in your local userfolder.
 
 > The secret key is more commonly called "private key", but the author believes that "secret" is a more apt description and reduces the chance to confuse it with the public key.
 
@@ -49,6 +49,6 @@ If you would instead like to reuse an existing key stored at a different locatio
 
 {{< example "user_request_stored_key" >}}
 
-> For this to work the key needs to have been generated using the [ED25519 Algorithm](https://en.wikipedia.org/wiki/EdDSA#Ed25519), and it needs to be stored in [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format. If you insist on managing keys yourself, or would like to see an example, then the easiest way to generate such a pair is to call `openssl genpkey -algorithm ED25519 -out secret_key.pem` to generate a secret key, and then `openssl pkey -in secret_key.pem -pubout -out public_key.pem` to generate the corresponding public key.
+> For this to work the key needs to follow the [OpenPGP](/integration/open-pgp/) standard, and it needs to be stored in [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
 
 If you accidently specify the path to your *secret* key, BOMnipotent Client will throw an error before sending it to the server.

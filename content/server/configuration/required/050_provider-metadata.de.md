@@ -49,7 +49,7 @@ In dem optionalen Feld "contact_details" können Sie Kontaktdaten für allgemein
 
 ### Generiertes Dokument
 
-Sobald Sie die Daten bereitgestellt und den Server gestartet haben, wird das generierte Dokument unter "Ihre-Domain/.well-known/csaf/provider-metadata.json" gehostet. Sie können [hier](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) ein Live-Beispiel und hier ein statisches Beispiel sehen:
+Sobald Sie die Daten bereitgestellt und den Server gestartet haben, wird das generierte Dokument unter "\<Ihre-Domain\>/.well-known/csaf/provider-metadata.json" gehostet. Sie können [hier](https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json) ein Live-Beispiel und hier ein statisches Beispiel sehen:
 ```json {wrap="false" title="provider-metadata.json"}
 {
     "canonical_url": "https://bomnipotent.wwh-soft.com/.well-known/csaf/provider-metadata.json",
@@ -96,7 +96,7 @@ Sobald Sie die Daten bereitgestellt und den Server gestartet haben, wird das gen
         "name": "Weichwerke Heidrich Software",
         "namespace": "https://wwh-soft.com"
     },
-    "role": "csaf_provider"
+    "role": "csaf_trusted_provider"
 }
 ```
 
@@ -106,7 +106,7 @@ Das Feld "last_updated" wird aus dem letzten Modifizierungszeitstempel Ihrer Kon
 
 BOMnipotent geht davon aus, dass Sie Ihre CSAF-Dokumente auf öffentlich verfügbaren Repositorien aufgelistet und gespiegelt haben möchten. Dies betrifft nur die mit {{<tlp-white>}} / {{<tlp-clear>}} gekennzeichneten Dokumente! Die Aggregatoren haben keinen Zugriff auf anderweitig klassifizierte Dokumente.
 
-BOMnipotent hilft Ihnen, alle Anforderungen zu erfüllen, um ein [CSAF-Anbieter](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider) gemäß dem OASIS-Standard zu sein.
+BOMnipotent erfüllt nun alle Anforderungen, damit Sie ein [CSAF Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider) gemäß dem OASIS-Standard sind. Falls Sie zusätzlich eine [OpenPGP Konfiguration](/de/server/configuration/optional/open-pgp/) angeben, macht BOMnipotent Sie stattdessen zum [CSAF Trusted Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#723-role-csaf-trusted-provider).
 
 ## Dateipfad angeben
 

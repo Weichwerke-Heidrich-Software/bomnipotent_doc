@@ -30,6 +30,10 @@ Dies speichert die BOMs im angegebenen Ordner ("./boms" in diesem Beispiel). Fal
 
 > Um inkonsistentes Verhalten zwischen verschiedenen Betriebssystemen zu vermeiden, werden der Name und die Version des Produkts in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen durch einen Unterstrich '_' ersetzt. Dadurch könnte es theoretisch vorkommen, dass verschiedene Produkte zum selben Dateinamen führen. In einem solchen Fall zeigt BOMnipotent eine Warnung an, anstatt die Datei stillschweigend zu überschreiben.
 
+Der Client lädt auch mehrere Dateien herunter, die ein Hash und den Dateinamen der gehashten Datei enthalten.
+
+Falls [OpenPGP](/de/server/configuration/optional/open-pgp/) auf dem Server konfiguriert ist, lädt der Client weiterhin kryptografische Signaturen für die BOMs herunter. Diese werden in ".json.asc" Dateien gespeichert, und können zum Beispiel mit [Sequoia-PGP](/de/integration/open-pgp/) verifiziert werden.
+
 {{< example tree_boms >}}
 
 Bevor BOMnipotent Client Dateien zum Download anfordert, erstellt er eine Inventarliste der bereits im Ordner vorhandenen BOMs und lädt nur die fehlenden Dateien herunter.

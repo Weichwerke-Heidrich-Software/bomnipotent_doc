@@ -15,7 +15,7 @@ Ein neues Benutzerkonto erstellen Sie per
 
 {{< example "user_request" >}}
 
-Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://en.wikipedia.org/wiki/Public-key_cryptography) mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generieren. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
+Wenn Sie dies zum ersten Mal rufen, wird es ein neues [Schlüsselpaar](https://de.wikipedia.org/wiki/Asymmetrisches_Kryptosystem) generieren, welches dem [OpenPGP](/de/integration/open-pgp/) Standard folgt. Ein Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Beide werden lokal in Ihrem Nutzerordner gespeichert.
 
 > Der geheime Schlüssel wird auch häufig "privater Schlüssel" genannt. Der Autor glaubt aber, dass "geheimer Schlüssel" eine treffendere Beschreibung ist, und außerdem, vor allem im Englischen, die Chance auf Verwechslung mit dem öffentlichen Schlüssel verringert.
 
@@ -50,6 +50,6 @@ Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wolle
 {{< example "user_request_stored_key" >}}
 
 
-> Damit dies funktioniert muss der Schlüssel mit dem [ED25519 Algorithmus](https://en.wikipedia.org/wiki/EdDSA#Ed25519) generiert worden und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein. Falls Sie darauf bestehen, Ihre Schlüssel selber zu verwalten, oder falls Sie ein Beispiel sehen möchten, dann können Sie ein solches Paar am einfachsten wie folgt generieren: Rufen Sie `openssl genpkey -algorithm ED25519 -out secret_key.pem` um einen geheimen Schlüssel zu generieren, und dann `openssl pkey -in secret_key.pem -pubout -out public_key.pem` um den zugehörigen öffentlichen Schlüssel zu erstellen.
+> Damit dies funktioniert muss der Schlüssel dem [OpenPGP](/de/integration/open-pgp/) folgen und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein.
 
 Falls Sie hier aus Versehen den Pfad zu ihrem *geheimen* Schlüssel angeben wirft BOMnipotent Client eine Fehlermeldung anstatt ihn zum Server zu schicken.

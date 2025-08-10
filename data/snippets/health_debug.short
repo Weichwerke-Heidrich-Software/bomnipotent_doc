@@ -1,1 +1,1 @@
-bomnipotent_client -l debug health
+bomnipotent_client -l debug health | tail -n 10

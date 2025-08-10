@@ -1,1 +1,1 @@
-bomnipotent_client --domain=bomnipotent_server_of_your_choice user request other_user@example.com /home/some_public_key.pem
+bomnipotent_client --domain=bomnipotent_server_of_your_choice user request other_user@example.com /home/keys/stored_public_key.pem

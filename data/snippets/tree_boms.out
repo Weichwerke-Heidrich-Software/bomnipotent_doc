@@ -1,7 +1,19 @@
 /home/boms/
 |-- best_project_3.1.4.cdx.json
+|-- best_project_3.1.4.cdx.json.asc
+|-- best_project_3.1.4.cdx.json.sha256
+|-- best_project_3.1.4.cdx.json.sha512
 |-- your_project_1.0.0.cdx.json
+|-- your_project_1.0.0.cdx.json.asc
+|-- your_project_1.0.0.cdx.json.sha256
+|-- your_project_1.0.0.cdx.json.sha512
 |-- your_project_1.1.0.cdx.json
-`-- your_project_container_1.2.3.cdx.json
+|-- your_project_1.1.0.cdx.json.asc
+|-- your_project_1.1.0.cdx.json.sha256
+|-- your_project_1.1.0.cdx.json.sha512
+|-- your_project_container_1.2.3.cdx.json
+|-- your_project_container_1.2.3.cdx.json.asc
+|-- your_project_container_1.2.3.cdx.json.sha256
+`-- your_project_container_1.2.3.cdx.json.sha512
 
-1 directory, 4 files
+1 directory, 16 files

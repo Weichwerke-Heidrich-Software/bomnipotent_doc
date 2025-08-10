@@ -1,5 +1,6 @@
 [TRACE] Running command Health with args Arguments {
 [TRACE] Using platform's default root certificates.
+[TRACE] Armored signature:
 [TRACE] Resolve: bomnipotent_server_of_your_choice:443
 [TRACE] Try connect TcpStream to 172.20.0.3:443
 [TRACE] Try wrap in TLS
@@ -7,4 +8,3 @@
 [TRACE] 4745 5420 2f68 6561 6c74 6820 4854 5450  GET./health.HTTP
 [TRACE] 2f31 2e31 0d0a 6163 6365 7074 3a20 2a2f  /1.1..accept:.*/
 [TRACE] 2a0d 0a68 6f73 743a 2062 6f6d 6e69 706f  *..host:.bomnipo
-[TRACE] 7465 6e74 5f73 6572 7665 725f 6f66 5f79  tent_server_of_y

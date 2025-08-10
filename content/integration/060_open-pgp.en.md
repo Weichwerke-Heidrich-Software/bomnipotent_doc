@@ -9,6 +9,8 @@ This article covers what the OpenPGP standard is and is not, and then goes into 
 
 If you are only here for the practical part, feel free to [skip ahead](#using-openpgp).
 
+> If you are looking to include your OpenPGP key pair in your instance of BOMnipotent Server, read the [section](/server/configuration/optional/open-pgp/) about the corresponding configuration.
+
 ## What is OpenPGP (not)?
 
 Open Pretty Good Privacy (OpenPGP) is an open standard for several file formats in the context of cryptography. Its most prominent use is the end-to-end encryption of emails, but it can also be used to cryptographically sign any data, including other OpenPGP files.
