@@ -1,1 +1,1 @@
-bomnipotent_client --log-level=debug health
+bomnipotent_client --log-level=debug health | tail -n 10

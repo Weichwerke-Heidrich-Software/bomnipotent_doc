@@ -1,19 +1,3 @@
-[DEBUG] Looking for secret key
-[DEBUG] The provided key is a path: /home/admin_secret_key.pem
-[DEBUG] Reading secret key from provided path '/home/admin_secret_key.pem'
-[DEBUG] Signing request.
-[DEBUG] Assembled GET request to https://bomnipotent_server_of_your_choice/health.
-[DEBUG] Call<Prepare>
-[DEBUG] GET https://bomnipotent_server_of_your_choice/******
-[DEBUG] Resolved: ArrayVec { len: 1, arr: [172.20.0.3:443] }
-[DEBUG] Connected TcpStream to 172.20.0.3:443
-[DEBUG] No cached session for DnsName("bomnipotent_server_of_your_choice")
-[DEBUG] Not resuming any session
-[DEBUG] Wrapped TLS
-[DEBUG] Call<SendRequest>
-[DEBUG] Request { method: GET, uri: https://bomnipotent_server_of_your_choice/******, version: HTTP/1.1, headers: {"accept": "*/*", "host": "bomnipotent_server_of_your_choice", "user-agent": "bomnipotent_client", "<NOTICE>": "4 HEADERS ARE REDACTED"} }
-[DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
-[DEBUG] Not resuming
 [DEBUG] TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
 [DEBUG] ALPN protocol is None
 [DEBUG] add_parsable_certificates processed 143 valid and 0 invalid certs
