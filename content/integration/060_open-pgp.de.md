@@ -29,7 +29,7 @@ Um eine Idee davon zu bekommen, was OpenPGP ist, ist es vielleicht am besten, es
 
 > Es gibt mehrere solcher Algorithmen, aber RSA war für lange Zeit der am meisten genutzte, und ist es vermutlich noch immer.
 
-OpenPGP auf der anderen Seite ist eine *Abstraktion*. Es ist möglichst Algorithmus-agnostisch designt, was bedeutet dass Sie die meiste Zeit gar nicht wissen müssen, welcher Algorithmus während einer Operation genutzt wird. Der [Standard von 2024](https://www.rfc-editor.org/rfc/rfc9580) enthält noch keine Unterstützung für Post-Quanten Verschlüsselungsalgorithmen, aber das deutsche [Bundesamt für Sicherheit in der Informationstechnik](https://www.bsi.bund.de/) (BSI) hat vor, dies mit einer [zukünftigen Version](https://datatracker.ietf.org/doc/draft-ietf-openpgp-pqc/) zu ändern.
+OpenPGP auf der anderen Seite ist eine *Abstraktion*. Es ist möglichst Algorithmus-agnostisch designt, was bedeutet dass Sie die meiste Zeit gar nicht wissen müssen, welcher Algorithmus während einer Operation genutzt wird. Der [Standard von 2024](https://www.rfc-editor.org/rfc/rfc9580) enthält noch keine Unterstützung für Post-Quanten Verschlüsselungsalgorithmen, aber das deutsche [Bundesamt für Sicherheit in der Informationstechnik](https://www.bsi.bund.de/DE/home_node.html) (BSI) hat vor, dies mit einer [zukünftigen Version](https://datatracker.ietf.org/doc/draft-ietf-openpgp-pqc/) zu ändern.
 
 ### OpenPGP vs. PGP
 
