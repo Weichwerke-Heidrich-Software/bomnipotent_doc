@@ -43,12 +43,6 @@ If the user has not yet verified their email address, the server denies the appr
 
 {{< example user_approve_unverified >}}
 
-If the account belongs to a robot, it can not be verified. In that case you can approve it with the '--robot' option.
-
-{{< example user_approve_robot >}}
-
-> **Important:** You should be absolutely certain that this is the account you want to approve.
-
 Analogously, you can decide agains allowing this user any special access:
 
 {{< example user_deny >}}

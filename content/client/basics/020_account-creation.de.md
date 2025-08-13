@@ -33,14 +33,6 @@ Nachdem Ihre Anfrage gestellt und Ihre Email verifiziert ist, müssen Sie darauf
 
 > Falls Sie dieser Nutzermanager sind und herausfinden wollen, wie Sie Nutzer bestätigen können, konsultieren Sie den Abschnitt über [Nutzerverwaltung](/de/client/manager/access-management/user-management/).
 
-## Erstellung eines Roboteraccount
-
-Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert. BOMnipotent ist gebaut, um in Pipelines integriert zu werden. Um ein Konto zu erstellen, welches in Automatisierung genutzt werden soll, fügen Sie der Anfrage die '--robot' Option hinzu:
-
-{{< example "user_request_robot" >}}
-
-Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
-
 ## Gespeicherte Schlüssel nutzen
 
 Falls Sie ein Schlüsselpaar im üblichen Nutzerordner (welcher auf Ihre Platform ankommt) gespeichert haben, wird BOMnipotent Client ihn automatisch lesen und nutzen.

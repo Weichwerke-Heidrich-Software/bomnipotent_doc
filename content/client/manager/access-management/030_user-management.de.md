@@ -43,12 +43,6 @@ Falls der Nutzer noch nicht bestätigt hat, Zugriff auf die Email Adresse zu hab
 
 {{< example user_approve_unverified >}}
 
-Falls das Konto zu einem Roboter gehört, kann es nicht verifiziert werden. In diesem Fall können Sie es mit der ' --robot' Option genehmigen:
-
-{{< example user_approve_robot >}}
-
-> **Wichtig:** Sie sollten absolut sicher sein, dass dies das Konto ist, welches Sie genehmigen wollen.
-
 Analog dazu können Sie diesem Benutzer stattdessen keinen Zugriff gewähren:
 
 {{< example user_deny >}}
