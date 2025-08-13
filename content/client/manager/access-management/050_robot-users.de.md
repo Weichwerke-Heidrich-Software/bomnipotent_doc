@@ -8,9 +8,7 @@ Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert
 
 {{< example "user_request_robot" >}}
 
-Dies markiert das Konto als Roboter, und verschickt keine Verifizierungsmail.
-
-Falls das Konto zu einem Roboter gehört, kann es nicht verifiziert werden. In diesem Fall können Sie es mit der 'robot' Option genehmigen:
+Dies markiert das Konto als Roboter, und verschickt **keine** Verifizierungsmail. Um ein solches Konto zu genehmigen, müssen Sie die 'robot' Option nutzen:
 
 {{< example user_approve_robot >}}
 
@@ -20,3 +18,5 @@ Falls das Konto zu einem Roboter gehört, kann es nicht verifiziert werden. In d
 Ein plausibles Setup ist, dem Roboternutzer Rollen mit den Berechtigungen {{<bom-management-de>}} und {{<vuln-management-de>}} zu geben, sodass er BOMs hochladen und Sicherheitslücken aktualisieren kann:
 
 {{< example user_role_add_robot >}}
+
+Nun können Sie die Zugangsdaten Ihres Roboters in Ihrer [CI/CD](/de/integration/ci-cd/) Pipeline verwenden.

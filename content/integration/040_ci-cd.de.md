@@ -15,7 +15,7 @@ Weichwerke Heidrich Software hat mehrere einsatzbereite GitHub-Actions zur Integ
 
 Dieses Setup setzt voraus, dass Sie eine BOMnipotent-Serverinstanz installiert haben. Falls dies noch nicht der Fall ist, lesen Sie die [Setup-Anleitung](/de/server/setup/).
 
-Die Pipeline erfordert außerdem, dass der Server über ein genehmigtes Roboter-Benutzerkonto mit den Berechtigungen BOM_MANAGEMENT und VULN_MANAGEMENT verfügt. Die Abschnitte zur [Kontoerstellung](/de/client/basics/account-creation/) und [Zugriffsverwaltung](/de/client/manager/access-management/) enthalten weitere Informationen zur Einrichtung.
+Die Pipeline erfordert außerdem, dass der Server über ein genehmigtes [Roboter-Benutzerkonto](/de/client/manager/access-management/robot-users/) mit den Berechtigungen {{<bom-management-de>}} und {{<vuln-management-de>}} verfügt.
 
 ## BOMnipotent-Client einrichten
 

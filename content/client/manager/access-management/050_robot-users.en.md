@@ -8,9 +8,7 @@ Not all accounts are necessarily associated with human users. BOMnipotent is bui
 
 {{< example "user_request_robot" >}}
 
-This request will mark the account as a robot, and not send a verification mail.
-
-If the account belongs to a robot, it can not be verified. In that case you can approve it with the 'robot' option.
+This request will mark the account as a robot, and **not** send a verification mail. To approve such an account, you have to provide the 'robot' option.
 
 {{< example user_approve_robot >}}
 
@@ -20,3 +18,5 @@ If the account belongs to a robot, it can not be verified. In that case you can 
 A plausible setup is to give the robot user roles with the permissions {{<bom-management-en>}} and {{<vuln-management-en>}}, enabling them to upload BOMs and update vulnerabilities:
 
 {{< example user_role_add_robot >}}
+
+Now you can use your robot's credentials in your [CI/CD](/integration/ci-cd/) pipeline.
