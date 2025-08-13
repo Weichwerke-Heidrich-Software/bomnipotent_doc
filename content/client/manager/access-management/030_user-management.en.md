@@ -39,7 +39,7 @@ If you were expecting the user request, you can approve it via
 
 {{< example user_approve >}}
 
-If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the '--allow-unverified' option (there's no short version for options that bypass security measures):
+If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the 'allow-unverified' option (there's no short version for options that bypass security measures):
 
 {{< example user_approve_unverified >}}
 

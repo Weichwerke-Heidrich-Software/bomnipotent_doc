@@ -58,7 +58,7 @@ BOMnipotent **does not** automatically replace existing files, even if they have
 
 {{< example csaf_download_warn >}}
 
-You can tell BOMnipotent that you really want this file overwritten by using the "--overwrite" flag:
+You can tell BOMnipotent that you really want this file overwritten by using the "overwrite" flag:
 
 {{< example csaf_download_overwrite >}}
 

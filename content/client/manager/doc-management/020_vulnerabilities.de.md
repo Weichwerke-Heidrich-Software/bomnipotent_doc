@@ -43,7 +43,7 @@ Sie können Schwachstellen nur für eine BOM aktualisieren, die auf dem Server v
 
 Der Abschnitt zum [Auflisten von Schwachstellen](/de/client/consumer/vulnerabilities/) in der Dokumentation für Verbraucher behandelt die meisten Aspekte der Auflistung von Schwachstellen.
 
-Ein Aspekt, der dort nicht erwähnt wird, ist die Option "--unassessed". Damit listet der BOMnipotent-Client nur Schwachstellen auf, denen kein CSAF-Dokument mit Status "final" zugeordnet ist.
+Ein Aspekt, der dort nicht erwähnt wird, ist die Option "unassessed". Damit listet der BOMnipotent-Client nur Schwachstellen auf, denen kein CSAF-Dokument mit Status "final" zugeordnet ist.
 
 > Damit diese Zuordnung geschehen kann, **muss** das CSAF Dokument [Produktname und Produktversion](/de/integration/secvisogram/#zuordnung-zu-boms) für die BOM in seinen Branches enthalten.
 

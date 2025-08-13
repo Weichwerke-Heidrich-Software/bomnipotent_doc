@@ -39,7 +39,7 @@ Wenn Sie die Benutzeranfrage erwartet haben, können Sie sie genehmigen:
 
 {{< example user_approve >}}
 
-Falls der Nutzer noch nicht bestätigt hat, Zugriff auf die Email Adresse zu haben, dann lehnt der Server die Genehmigung ab. Falls Sie absolut sicher sind, dass Sie wissen was Sie tun, können Sie dieses Verhalten mit der '--allow-unverified' Option überschreiben (es gibt keine Kurzformen für Befehle die Sicherheitsmaßnahmen überschreiben):
+Falls der Nutzer noch nicht bestätigt hat, Zugriff auf die Email Adresse zu haben, dann lehnt der Server die Genehmigung ab. Falls Sie absolut sicher sind, dass Sie wissen was Sie tun, können Sie dieses Verhalten mit der 'allow-unverified' Option überschreiben (es gibt keine Kurzformen für Befehle die Sicherheitsmaßnahmen überschreiben):
 
 {{< example user_approve_unverified >}}
 
