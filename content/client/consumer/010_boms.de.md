@@ -42,7 +42,7 @@ BOMnipotent überschreibt existierende Dateien **nicht**, selbst falls sie sich 
 
 {{< example bom_download_warn >}}
 
-Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrieben hätten, indem Sie die "--overwrite" flag nutzen:
+Sie können BOMnipotentn mitteilen, dass Sie die Datei wirklich gern überschrieben hätten, indem Sie die "overwrite" flag nutzen:
 
 {{< example bom_download_overwrite >}}
 

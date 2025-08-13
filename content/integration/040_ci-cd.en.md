@@ -15,7 +15,7 @@ Weichwerke Heidrich Software has created several ready-to-use GitHub A to integr
 
 This setup assumes that you have a BOMnipotent Server instance up and running. Consult the [setup instructions](/server/setup/) if that is not yet the case.
 
-The pipeline further requires that the server contains an approved robot user account with the BOM_MANAGEMENT and VULN_MANAGEMENT permissions. The sections on [account creation](/client/basics/account-creation/) and [access management](/client/manager/access-management/) contain more information on how to creat one.
+The pipeline further requires that the server contains an approved [robot user account](/client/manager/access-management/robot-users/) with the {{<bom-management-en>}} and {{<vuln-management-en>}} permissions.
 
 ## Setup BOMnipotent Client
 

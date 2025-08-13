@@ -39,15 +39,9 @@ If you were expecting the user request, you can approve it via
 
 {{< example user_approve >}}
 
-If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the '--allow-unverified' option (there's no short version for options that bypass security measures):
+If the user has not yet verified their email address, the server denies the approval. If you are absolutely sure that you know what you are doing, you can overwrite this behaviour with the 'allow-unverified' option (there's no short version for options that bypass security measures):
 
 {{< example user_approve_unverified >}}
-
-If the account belongs to a robot, it can not be verified. In that case you can approve it with the '--robot' option.
-
-{{< example user_approve_robot >}}
-
-> **Important:** You should be absolutely certain that this is the account you want to approve.
 
 Analogously, you can decide agains allowing this user any special access:
 
