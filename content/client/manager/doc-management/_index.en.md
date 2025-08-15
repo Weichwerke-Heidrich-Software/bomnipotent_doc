@@ -12,3 +12,6 @@ A typical document management workflow looks like this:
 1. Another tooling or script regularly [checks](/client/manager/doc-management/vulnerabilities/) the BOMnipotent Server for new vulnerabilities and sounds an alarm when it finds one. A human mind is needed!
 1. The human thoroughly analyses the vulnerability and determines if and how your customers have to react. They create a CSAF document, using for example [secvisogram](https://github.com/secvisogram/secvisogram). The CSAF document is [uploaded](/client/manager/doc-management/csaf-docs/) to BOMnipotent Server.
 1. Your consumers will now find the new CSAF document when they [poll](/client/consumer/boms/) your instance of BOMnipotent Server.
+
+Here you can see some exemplary interactions:
+<script src="https://asciinema.org/a/733705.js" id="asciicast-733705" async="true"></script>

@@ -12,3 +12,6 @@ Once that is done, a typical workflow for introducing a new user to your BOMnipo
 1. A new user [requests access](/client/basics/account-creation/) to your server. During this step, BOMnipotent Client sends a public key associated with the account to your server, where it is stored and marked as "requested".
 1. You [approve](/client/manager/access-management/user-management/) the request. The new user account is now accepted as valid, but it does not have any permissions yet.
 1. You [assign](/client/manager/access-management/role-assignment/) one or more roles to the new user account.
+
+Here you can see some exemplary interactions:
+<script src="https://asciinema.org/a/733706.js" id="asciicast-733706" async="true"></script>

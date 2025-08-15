@@ -12,3 +12,6 @@ Sobald dies erledigt ist, sieht ein typischer Workflow zur Einführung eines neu
 1. Ein neuer Nutzer [erfragt Zugriff](/de/client/basics/account-creation/) zu Ihrem Server. Dabei sendet der BOMnipotent-Client einen mit dem Konto verknüpften öffentlichen Schlüssel an Ihren Server, wo er gespeichert und als "REQUESTED" gekennzeichnet wird.
 1. Sie [genehmigen](/de/client/manager/access-management/user-management/) die Anfrage. Das neue Benutzerkonto wird nun als gültig akzeptiert, verfügt aber noch über keine Berechtigungen.
 1. Sie [weisen](/de/client/manager/access-management/role-assignment/) dem neuen Benutzerkonto eine oder mehrere Rollen zu.
+
+Hier sind ein paar beispielhafte Interaktionen zu sehen:
+<script src="https://asciinema.org/a/733706.js" id="asciicast-733706" async="true"></script>

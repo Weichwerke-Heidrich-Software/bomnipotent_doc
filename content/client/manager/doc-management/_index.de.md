@@ -12,3 +12,6 @@ Eine typische Herangehensweise an das Dokumentenmanagement sieht folgendermaßen
 1. Ein weiteres Tool oder Skript [prüft](/de/client/manager/doc-management/vulnerabilities/) den BOMnipotent-Server regelmäßig auf neue Schwachstellen und schlägt Alarm, falls eine gefunden wird. Menschliches Denken ist gefragt!
 1. Der Mitarbeitende analysiert die Schwachstelle gründlich und ermittelt, ob und wie Ihre Kunden reagieren müssen. Er erstellt ein CSAF-Dokument, beispielsweise mithilfe von [secvisogram](https://github.com/secvisogram/secvisogram). Das CSAF-Dokument wird auf den BOMnipotent-Server [hochgeladen](/de/client/manager/doc-management/csaf-docs/).
 1. Ihre Nutzer finden jetzt das neue CSAF-Dokument, wenn sie bei Ihrer Instanz des BOMnipotent-Servers [anfragen](/de/client/consumer/boms/).
+
+Hier sind ein paar beispielhafte Interaktionen zu sehen:
+<script src="https://asciinema.org/a/733705.js" id="asciicast-733705" async="true"></script>
