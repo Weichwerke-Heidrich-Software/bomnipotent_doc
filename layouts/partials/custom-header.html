@@ -3,12 +3,6 @@
 <meta name="googlebot" content="{{ .Params.robots }}">
 {{ end }}
 
-{{- if .IsHome -}}
- <meta name="description" content="{{ site.Params.description }}" />
-{{- else -}}
- <meta name="description" content="{{ .Params.description }}" />
-{{- end }}
-
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <link rel="icon" href="/favicon.ico">

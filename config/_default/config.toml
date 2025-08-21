@@ -1,9 +1,11 @@
 baseURL = 'https://doc.bomnipotent.de/'
-languageCode = 'en-us'
-title = 'BOMnipotent'
-theme = 'relearn'
+canonifyURLs = true
 copyright = "© {currentYear} Weichwerke Heidrich Software"
 enableRobotsTXT = true
+languageCode = 'en-us'
+title = 'BOMnipotent Documentation'
+theme = 'relearn'
+uglyURLs = false
 
 [frontmatter]
 lastmod = ["lastmod", ":fileModTime"]
@@ -13,11 +15,12 @@ date = ["date", "lastmod", ":fileModTime"]
   tag = "tags"
 
 [params]
-themeVariantAuto = ['wwh-light', 'wwh-dark']
-collapsibleMenu = true # Display icon next to expandable menu items
 alwaysopen = false
 author.name = 'Weichwerke Heidrich Software'
 author.emailname = 'info@wwh-soft.com'
+collapsibleMenu = true # Display icon next to expandable menu items
+disableExplicitIndexURLs = true
+themeVariantAuto = ['wwh-light', 'wwh-dark']
 titleSeparator = '|'
 
 [[params.themeVariant]]
@@ -93,8 +96,6 @@ defaultContentLanguage = 'en'
   page = ['html', 'rss', 'print']
 
 [sitemap]
-  changefreq = "monthly"
-  priority = 0.5
   filename = "sitemap.xml"
 
 # Render HTML code in Markdown.
