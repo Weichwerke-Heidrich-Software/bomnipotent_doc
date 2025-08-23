@@ -1,6 +1,10 @@
 {{ $name := .Get 0 }}
 {{ $min_version := .Get 1 }}
-{{ $base := cond $min_version (printf "data/snippets/%s/%s" $min_version $name) (printf "data/snippets/%s" $name) }}
+
+{{ $base := (printf "data/snippets/%s" $name) }}
+{{ if $min_version }}
+    {{ $base = (printf "data/snippets/%s/%s" $min_version $name) }}
+{{ end }}
 
 {{ $inVal := readFile (printf "%s.in" $base) }}
 {{ $shortPath := printf "%s.short" $base }}
@@ -10,11 +14,16 @@
     {{ errorf "Input file '%s.in' for example '%s' is empty." $base $name }}
 {{ end }}
 
+{{ $min_version_note := "" }}
+{{ if $min_version }}
+    {{ $min_version_note = printf " (%s %s)" (i18n "min_version") $min_version }}
+{{ end }}
+
 <div class="tab-nav">
     {{ if fileExists $shortPath }}
-    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_long" }}</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input_long" }} {{ $min_version_note }}</span>
     {{ else }}
-    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input" }}</span>
+    <span class="tab-nav-text" style="font-size: 90%;">{{ i18n "input" }} {{ $min_version_note }}</span>
     {{ end }}
 </div>
 <div class="tab-content-container">
