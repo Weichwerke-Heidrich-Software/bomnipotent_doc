@@ -2,6 +2,7 @@
 title = "Roboternutzer"
 slug = "robot-users"
 weight = 50
+description = "Erfahren Sie, wie Sie in BOMnipotent Roboternutzer für sichere Automatisierung, CI/CD-Integration und rollenbasierte Rechte erstellen und verwalten."
 +++
 
 Nicht alle Konten sind notwendigerweise mit einem menschlichen Nutzer assoziiert. BOMnipotent ist gebaut, um in Pipelines integriert zu werden. Um ein Konto zu erstellen, welches in Automatisierung genutzt werden soll, fügen Sie der Anfrage die 'robot' Option hinzu:

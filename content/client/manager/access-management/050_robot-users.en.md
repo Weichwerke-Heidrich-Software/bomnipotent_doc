@@ -2,6 +2,7 @@
 title = "Robot Users"
 slug = "robot-users"
 weight = 50
+description = "Learn how to create and manage robot user accounts in BOMnipotent for secure automation, CI/CD integration, and role-based permissions."
 +++
 
 Not all accounts are necessarily associated with human users. BOMnipotent is built with pipeline integration in mind. To create an account to be used in automation, add the 'robot' option to the request:
