@@ -40,6 +40,12 @@ A locally running SMTP relay does not necessarily require a password to accept m
 
 STARTTLS is one option to encrypt sending emails, the other being SMTPS. Since 2018, the Internet Engineering Task Force [recommends against using STARTTLS](https://datatracker.ietf.org/doc/html/rfc8314). However, if your mailserver does not support SMTPS, STARTTLS is better than no encryption, which is why it is still supported by BOMnipotent Server.
 
+### Verification
+
+To verify that you have set up everything correctly, you can make BOMnipotent send a test email:
+
+{{< example "test_email" "1.1.0" >}}
+
 ## Skipping User Verification
 
 If you do not (yet) have access to an SMTP server, you can eliminate the need for the smtp configuration by adding the following lines to your config.toml:

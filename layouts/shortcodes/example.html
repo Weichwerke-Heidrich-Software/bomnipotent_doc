@@ -1,7 +1,8 @@
 {{ $name := .Get 0 }}
-{{ $base := printf "data/snippets/%s" $name }}
+{{ $min_version := .Get 1 }}
+{{ $base := cond $min_version (printf "data/snippets/%s/%s" $min_version $name) (printf "data/snippets/%s" $name) }}
 
-{{ $inVal    := readFile (printf "%s.in"    $base) }}
+{{ $inVal := readFile (printf "%s.in" $base) }}
 {{ $shortPath := printf "%s.short" $base }}
 {{ $outPath := printf "%s.out"  $base }}
 
