@@ -4,6 +4,10 @@ slug = "privacy-policy"
 weight = 20
 description = "This website only tracks the user data it absolutely needs to provide its service, which is none."
 robots = "noindex"
+[sitemap]
+disable = true
+[params]
+disableSeoHiddenPages = true
 +++
 
 *Powered by [Termly](https://termly.io)*

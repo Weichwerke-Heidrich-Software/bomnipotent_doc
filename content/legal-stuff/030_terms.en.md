@@ -4,6 +4,10 @@ slug = "terms"
 weight = 30
 description = "A set of legal matters when interacting with Weichwerke Heidrich Software."
 robots = "noindex"
+[sitemap]
+disable = true
+[params]
+disableSeoHiddenPages = true
 +++
 
 *Powered by [Termly](https://termly.io)*
