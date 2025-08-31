@@ -4,6 +4,10 @@ slug = "imprint"
 weight = 40
 description = "Weichwerke Heidrich Software is based in Germany."
 robots = "noindex"
+[sitemap]
+disable = true
+[params]
+disableSeoHiddenPages = true
 +++
 
 Weichwerke Heidrich Software

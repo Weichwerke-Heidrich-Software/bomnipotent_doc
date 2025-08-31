@@ -4,6 +4,10 @@ slug = "oss-licenses"
 weight = 10
 description = "Eine Liste aller Open Source Lizenzen, die in BOMnipotent genutzt werden."
 robots = "noindex"
+[sitemap]
+disable = true
+[params]
+disableSeoHiddenPages = true
 +++
 
 BOMnipotent basiert auf vielerlei Open Source Software Projekten. Mehrere (obgleich nicht alle) davon haben eine Lizenz, welche verlangt, dass der volle Lizenztext in der Dokumentation gelistet wird. Diese Seite erfüllt dieses Versprechen.
