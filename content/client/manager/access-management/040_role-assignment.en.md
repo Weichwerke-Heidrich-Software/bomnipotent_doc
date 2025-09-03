@@ -31,6 +31,10 @@ The user account needs to exist on the server at this point, the role does not.
 
 > Only users with the [admin role](/client/manager/access-management/role-management/#admin-role) can add the admin role to other users.
 
+If you add a role to a user that is not associated with any permissions, a warning is printed:
+
+{{< example user_role_add_nonexistent 1.1.0 >}}
+
 ## Remove
 
 To remove a role from a user, call:

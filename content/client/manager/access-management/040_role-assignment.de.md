@@ -31,6 +31,10 @@ Der Benutzeraccount muss zu diesem Zeitpunkt bereits auf dem Server existieren, 
 
 > Nur Benutzer mit der [Admin-Rolle](/de/client/manager/access-management/role-management/#admin-rolle) können anderen Benutzern die Admin-Rolle zuweisen.
 
+Falls Sie einem Nutzer eine Rolle hinzufügen, die mit keinen Berechtigungen assoziiert ist, wird eine Warnung ausgegeben:
+
+{{< example user_role_add_nonexistent 1.1.0 >}}
+
 ## Entfernen
 
 Um einem Benutzer eine Rolle zu entfernen, rufen Sie Folgendes auf:

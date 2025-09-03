@@ -1,0 +1,1 @@
+bomnipotent_client user-role add user@example.com this_role_does_not_exist
