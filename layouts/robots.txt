@@ -4,5 +4,6 @@ User-agent: *
 Disallow: {{ .RelPermalink }}
 {{- end -}}
 {{ end }}
+Disallow: /*index.print.html
 
 Sitemap: https://doc.bomnipotent.de/sitemap.xml
