@@ -1,10 +1,10 @@
+[DEBUG] Not resuming
 [DEBUG] TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
 [DEBUG] ALPN protocol is None
-[DEBUG] add_parsable_certificates processed 143 valid and 0 invalid certs
-[DEBUG] Loaded 143 CA certificates from the system
 [DEBUG] Call<RecvResponse>
 [DEBUG] Call<RecvBody>
 [DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "68", "date": "Wed, 01 Jan 2025 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
+[DEBUG] No additional log messages received.
 [DEBUG] Call<Cleanup>
 [DEBUG] Pool gone: PoolKey { scheme: "https", authority: bomnipotent_server_of_your_choice, proxy: None }
 [INFO] The service at https://bomnipotent_server_of_your_choice is healthy.
