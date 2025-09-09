@@ -1,1 +1,1 @@
-bomnipotent_client user request some_robot --robot /home/robot
+bomnipotent_client user request ci_cd_robot --robot /home/ci_cd_robot
