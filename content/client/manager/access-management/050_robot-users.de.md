@@ -16,6 +16,10 @@ Dies markiert das Konto als Roboter, und verschickt **keine** Verifizierungsmail
 > [!NOTE]
 > Da Roboternutzer nicht verifiziert werden, und üblicherweise erhöhte Rechte haben, sollten Sie absolut sicher sein, dass dies das Konto ist, welches Sie genehmigen wollen.
 
+Um die generierten Schlüssel nicht aus dem etwas versteckten Nutzerordner heraussuchen zu müssen, können Sie bei der Generierung einen Wunsch-Ablageort angeben:
+
+{{< example "user_request_store_custom" "1.1.0" >}}
+
 Ein plausibles Setup ist, dem Roboternutzer Rollen mit den Berechtigungen {{<bom-management-de>}} und {{<vuln-management-de>}} zu geben, sodass er BOMs hochladen und Sicherheitslücken aktualisieren kann:
 
 {{< example user_role_add_robot >}}

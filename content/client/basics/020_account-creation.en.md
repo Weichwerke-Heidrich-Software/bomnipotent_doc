@@ -44,3 +44,11 @@ If you would instead like to reuse an existing key stored at a different locatio
 > For this to work the key needs to follow the [OpenPGP](/integration/open-pgp/) standard, and it needs to be stored in [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
 
 If you accidently specify the path to your *secret* key, BOMnipotent Client will throw an error before sending it to the server.
+
+## Storing Keys at custom location
+
+If the optional positional argument is instead the path of a valid but not existing file, the newly generated keys are stored there:
+
+{{< example "user_request_store_custom" "1.1.0" >}}
+
+This is particularly useful when requesting a [robot user](/client/manager/access-management/robot-users/), because you typically want to export the generated keys to a CI/CD pipeline aftwerards.
