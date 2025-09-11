@@ -13,6 +13,6 @@ Der Befehl akzeptiert die optionalen Filter "name", "version", "type", "cpe" und
 
 {{< example component_filtered_list >}}
 
-Diese Ausgabe ist in erster Linie für den Menschen lesbar. Die Verwendung der Option `--output=raw` macht sie prinzipiell maschinenlesbar, aber [das vollständige Herunterladen der BOM ](/de/client/consumer/boms/) ist höchstwahrscheinlich vorzuziehen, anstatt diese Tabellenausgabe zu parsen.
+Diese Ausgabe ist in erster Linie für den Menschen lesbar. Die Verwendung der Option `--output-mode=raw` macht sie prinzipiell maschinenlesbar, aber [das vollständige Herunterladen der BOM ](/de/client/consumer/boms/) ist höchstwahrscheinlich vorzuziehen, anstatt diese Tabellenausgabe zu parsen.
 
 Ein Anbieter eines Produkts sollte die BOM eines Produkts regelmäßig auf Schwachstellen überprüfen, beispielsweise mit Tools wie [grype](/de/integration/grype/). Der [nächste Abschnitt](/de/client/consumer/vulnerabilities/) erklärt, wie Sie als Nutzer eines Produkts auf diese Listen zugreifen können.
