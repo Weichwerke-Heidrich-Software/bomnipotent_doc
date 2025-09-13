@@ -51,7 +51,7 @@ More precisely, GPG is a program implementing *LibrePGP* as well as OpenPGP [ver
 
 In 2023, when [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) of the OpenPGP standard was about to replace [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) from 2007, several people considered the proposed changes to be too disruptive. Most notably, the developers of [GPG](https://gnupg.org/) and [RNP](https://www.rnpgp.org/) (an extension for thunderbird) [decided](https://lwn.net/Articles/953797/) *not* to adopt the more current standard, and to instead create the *new, competing standard* [LibrePGP](https://librepgp.org/) based on OpenPGP version 4.
 
-Because GPG and its Windows variant [Gpg4win](https://gpg4win.de/) are so widely used, it is (at the time of writing, July 2025) probably advisable to use the last common ancestor version 4 / RFC 4880 whenever given the choice, until both standards are widely supported.
+Version 4 / RFC 4880 has been obsoleted by version 6 / RFC 9580 for a reason, and the German BSI (which financially supports GPG) recommends using version 6 in Part 3 of its [technical guidelines](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html) for the Cyber Resiliience Act. This guide therefore also recommends using version 6, even though the widely used GPG and its Windows variant [Gpg4win](https://gpg4win.de/) do not support it at the time of writing (September 2025).
 
 ### OpenPGP vs. S/MIME
 
@@ -70,7 +70,7 @@ OpenPGP on the other hand uses a "web of trust". *Everyone* can testify to the a
 To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://sequoia-pgp.org/) command line tool. It is a commercially-backed open-source implementation of the OpenPGP standard. This means that there is financial motivation to maintain the project, while the code can be inspected by security researchers. The program is furthermore very [well documented](https://book.sequoia-pgp.org/).
 
 > [!NOTE] Why not GPG?
-> The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880). You can use them instead, *as long as* they generate keys compatible with OpenPGP version 4 / RFC 4880. However, Sequoia-PGP may be the more future-proof option, especially since it offers you to select the OpenPGP version used for key generation.
+> The developers of the more popular programs [GnuPG](https://gnupg.org) and its Windows variant [Gpg4Win](https://www.gpg4win.org) have decided against implementing the [latest and recommended](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP standard. They instead created their own standard [LibrePGP](https://librepgp.org/), which is based on OpenPGP [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880).
 
 > [!INFO]
 > To en- and decrypt emails you will need to use a plugin suitable for your email program. While this may be the primary use of OpenPGP keys, it is not the focus of this guide.
@@ -122,7 +122,7 @@ The "shared-key" parameter tells the program that you do not have the highest le
 
 The parameters "name" and "email" are used to identify the owner of the key. This not only tells others who this key belongs to, but is also helps you when interacting with your keys.
 
-The option "profile" with the value "rfc4880" tell Sequoia-PGP to use [version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) of the OpenPGP standard. While this is not the latest standard, it ensures that the keys are compatible with tools like GPG that neither do nor will support OpenPGP [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580).
+The option "profile" with the value "rfc9580" tell Sequoia-PGP to use the recommended [version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) of the OpenPGP standard.
 
 More options can be found in the [documentation](https://book.sequoia-pgp.org/sq_key_generation.html), or by calling:
 

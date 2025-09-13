@@ -49,7 +49,7 @@ Genauer gesagt ist GPG ein Programm, welches *LibrePGP* und OpenPGP [Version 4 /
 
 Im Jahr 2023, als [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) des OpenPGP-Standards [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) aus dem Jahr 2007 ersetzen sollte, haben mehrere Personen die vorgeschlagenen Änderungen als zu disruptiv empfunden. Insbesondere die Entwickler von [GPG](https://gnupg.org/) und [RNP](https://www.rnpgp.org/) (einer Erweiterung für Thunderbird) haben sich [entschieden](https://lwn.net/Articles/953797/), den aktuelleren Standard *nicht* zu übernehmen und stattdessen den *neuen, konkurrierenden Standard* [LibrePGP](https://librepgp.org/) basierend auf OpenPGP Version 4 zu entwickeln.
 
-Da GPG und seine Windows-Variante [Gpg4win](https://gpg4win.de/index-de.html) so weit verbreitet sind, ist es (zum Zeitpunkt der Erstellung dieses Artikels, Juli 2025) wahrscheinlich ratsam, den letzten gemeinsamen Vorgänger, Version 4 / RFC 4880, zu verwenden, bis beide Standards allgemein unterstützt werden.
+Version 4 / RFC 4880 wurde nicht ohne Grund von Version 6 / RFC 9580 abgelöst, und das BSI (welches GPG finanziell unterstützt) empfiehlt in Teil 3 seiner [technischen Richtlinie](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html) zum Cyber Resilience Act, Version 6 / RFC 9580 zu verwenden. Deswegen empfiehlt auch diese Anleitung, Version 6 zu verwenden, obgleich das vielgenutzte GPG und seine Windows Variante [Gpg4win](https://gpg4win.de/index-de.html) diese zum Zeitpunkt des Schreibens (September 2025) nicht unterstützen.
 
 ### OpenPGP vs. S/MIME
 
@@ -68,7 +68,7 @@ OpenPGP hingegen nutzt ein „Vertrauensnetz“. Jeder kann die Authentizität a
 Zur Verwaltung von OpenPGP-Schlüsseln empfiehlt diese Anleitung die Verwendung des Kommandozeilentools [Sequoia-PGP](https://sequoia-pgp.org/). Es handelt sich um eine kommerziell unterstützte Open-Source-Implementierung des OpenPGP-Standards. Das bedeutet, dass die Pflege des Projekts finanziell motiviert ist und der Code gleichzeitig von Sicherheitsforschenden eingesehen werden kann. Das Programm ist zudem sehr gut [dokumentiert](https://book.sequoia-pgp.org/).
 
 > [!NOTE] Warum nicht GPG?
-> Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des neuesten OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert. Sie können diese stattdessen verwenden, sofern sie Schlüssel generieren, die mit OpenPGP Version 4 / RFC 4880 kompatibel sind. Sequoia-PGP ist jedoch möglicherweise die zukunftssicherere Option, da Sie hier die für die Schlüsselgenerierung verwendete OpenPGP-Version auswählen können.
+> Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des [neuesten und empfohlenen](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert.
 
 > [!INFO]
 > Zum Ver- und Entschlüsseln von E-Mails benötigen Sie ein für Ihr E-Mail-Programm geeignetes Plugin. Dies ist zwar die Hauptanwendung von OpenPGP-Schlüsseln, steht aber nicht im Mittelpunkt dieser Anleitung.
@@ -120,7 +120,7 @@ Der Parameter "shared-key" teilt dem Programm mit, dass Sie diesem Schlüssel ni
 
 Die Parameter "name" und "email" dienen der Identifizierung des Schlüsselinhabers. Dies zeigt nicht nur anderen, wem dieser Schlüssel gehört, sondern erleichtert Ihnen auch die Interaktion mit Ihren Schlüsseln.
 
-Die Option "profile" mit dem Wert "rfc4880" weist Sequoia-PGP an, Version 4 / RFC 4880 des OpenPGP-Standards zu verwenden. Dies entspricht zwar nicht dem neuesten Standard, stellt aber sicher, dass die Schlüssel mit Tools wie GPG kompatibel sind, die OpenPGP [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) weder unterstützen noch unterstützen werden.
+Die Option "profile" mit dem Wert "rfc9580" weist Sequoia-PGP an, die empfohlene [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) des OpenPGP-Standards zu verwenden.
 
 Weitere Optionen finden Sie in der [Dokumentation](https://book.sequoia-pgp.org/sq_key_generation.html) oder durch Aufruf von:
 
