@@ -81,13 +81,17 @@ To manage OpenPGP keys, this guide recommends using the [Sequoia-PGP](https://se
 
 The Sequoia-PGP documentation offers several options [how to install](https://book.sequoia-pgp.org/installation.html) the program on various platforms. It does not directly support Windows, though. Instead, it recommends using the Windows Subsystem for Linux (WSL), which is thankfully easy to [set up](https://learn.microsoft.com/en-gb/windows/wsl/install).
 
-#### From Sources (Debian 12 and earlier)
-
-Regular Debian users will not be surprised to hear that the program version in the repository can be several years behind. This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
+This guide is based on Sequoia-PGP version 1.3.1, which is shipped with Debian 13 "Trixie". If you are uncertain which version your repository contains, try running:
 
 {{< example apt_cache_policy_sq >}}
 
-For Debian 12 this will yield something like "0.27.0". If that is the case for you, it is recommended to instead follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources (or update to a new operating system). This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
+If the version is above 1.0.0 you can in good concience install from this source:
+
+{{< example install_sq_apt >}}
+
+#### From Sources (Debian 12 and earlier)
+
+Regular Debian users will not be surprised to hear that the program version in the repository can be several years behind. Debian 12 ships with SequoiaPGP v0.27.0. If your repository version is this far behind, it is recommended to instead follow the steps to [build the program](https://book.sequoia-pgp.org/installation.html#install-from-source) from the sources (or to update to a newer operating system). This requires the Rust toolchain. Luckily, installing it is also [pleasantly straightforward](https://www.rust-lang.org/tools/install).
 
 > Windows users, remember to run the **Linux** installation **inside** the WSL.
 
