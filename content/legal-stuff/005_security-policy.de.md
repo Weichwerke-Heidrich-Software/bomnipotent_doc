@@ -74,3 +74,10 @@ UR2E5r7Tm4kfrMWSmf/ktEIvmQM=
 =MK9h
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+## Hall of Fame
+
+| **Name** | **Referenz** | **Sicherheitslücke** | **Datum** |
+|:---|:---|:---|:---|
+
+Weichwerke Heidrich Software dankt allen, die Sicherheitslücken gemeldet haben, einschließlich denjenigen, die anonym bleiben möchten.
