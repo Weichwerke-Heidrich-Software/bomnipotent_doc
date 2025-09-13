@@ -14,7 +14,9 @@ The suggested file structure in the favourite directory of your server looks lik
 ├── .env
 ├── bomnipotent_config
 │   ├── config.toml
-│   └── config.toml.default
+│   ├── config.toml.default
+│   ├── open_pgp_public_key.asc
+│   └── open_pgp_secret_key.asc
 └── compose.yaml
 ```
 
@@ -22,13 +24,16 @@ This tutorial will walk through the files and explain them one by one.
 
 ## .env
 
-BOMnipotent server communicates with a database. Currently, only [PostgreSQL](https://www.postgresql.org/) is supported as a backend. The database is protected by a password. It is best practice to store the password inside a separate .env file instead of directly in the compose.yaml.
+BOMnipotent Server requires some protected information. This includes the passwords for the SQL database, for the secret OpenPGP key, and for the SMTP server.
+
+It is best practice to store these password inside a separate .env file instead of directly in the compose.yaml.
 
 > The name of the file must be ".env", otherwise docker will not recognise it.
 
 Your .env file should look like this:
 ```
 BOMNIPOTENT_DB_PW=<your-database-password>
+PGP_PASSPHRASE=<the-passphrase-for-your-open-pgp-key>
 SMTP_SECRET=<your-smtp-authentication-secret>
 ```
 
@@ -41,13 +46,22 @@ BOMnipotent Server needs a configuration file, which is explained in more detail
 
 > The name of the file is arbitrary in principle, but the ready-to-deploy BOMnipotent Server docker container is set up to look for "config.toml".
 
-A minimal configuration looks like this:
+An exemplary configuration looks like this:
 ```toml {wrap="false" title="config.toml"}
 # The db_url has the structure [db_client]://[user]:[password]@[container]:[port]/[db]
 # Note that ${BOMNIPOTENT_DB_PW} references an environment variable.
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain behind which bomnipotent server will be hosted
 domain = "https://bomnipotent.<your-domain>.<top-level>"
+
+# Optional, but recommended
+[open_pgp]
+# The path to your public OpenPGP key
+public_key_path = "/etc/bomnipotent_server/configs/open_pgp_public_key.asc"
+# The path to your secret OpenPGP key
+secret_key_path = "/etc/bomnipotent_server/configs/open_pgp_secret_key.asc"
+# An optional passphrase to access your secret OpenPGP key
+passphrase = "${PGP_PASSPHRASE}"
 
 [tls]
 # The path to your full TLS certificate chain
@@ -84,12 +98,26 @@ The publisher data is used to comply with the [OASIS CSAF standard](https://docs
 > The [section about provider-metadata](/server/configuration/required/provider-metadata/) goes into more details what the fields actually mean.
 
 It is recommended to store your config.toml file inside a dedicated directory, "bomnipotent_config" in this example. The docker compose file will grant read access to this folder. This setup has two advantages:
-* In the unlikely case of a security breach of the BOMnipotent Server container, an attacker would only have access to you config directory, and nothing else on your server.
-* BOMnipotent Server will watch the directory for changes and will try to reload the configuration file if it has changed. This does **not** work when exposing only a single file to the docker container.
+- In the unlikely case of a security breach of the BOMnipotent Server container, an attacker would only have access to you config directory, and nothing else on your server.
+- BOMnipotent Server will watch the directory for changes and will try to reload the configuration file if it has changed. This does **not** work when exposing only a single file to the docker container.
 
 > Many configuration values support hot reloading, meaning they can be modified without restarting the server.
 
 After having set up your config.toml, you may want to copy it as for example config.toml.default, to be able to quickly restore your initial configuration. This is entirely optional, though.
+
+## open_pgp_*_key.asc
+
+OpenPGP is a standard for encrypting and signing files and messages. [Another page](/integration/open-pgp/) of this documentation contains an overview and a comprehensive introduction to the topic.
+
+The secret key is used to sign the downloaded [BOMs](/client/consumer/boms/#herunterladen) and [CSAF Dokuments](/client/consumer/csaf-docs/#herunterladen).
+
+If your secret key is protected by a passphrase, you have to provide it in the [.env](#env) file and use it in the [config.toml](#configtoml). Otherwise you can omit this argument.
+
+The public key is required by the users of your server to verify the signature. For this reason, it is found under "\<your-domain\>/openpgp-key.asc".
+
+> BOMnipotent Server realises if you accidently mixed up public and secret key, or if they do not fit together.
+
+Only if you provide both key files in the [config.toml](#configtoml) can BOMnipotent Server mark you as a [csaf_trusted_provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#723-role-csaf-trusted-provider).
 
 ## compose.yaml
 

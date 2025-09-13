@@ -14,7 +14,9 @@ Die vorgeschlagene Dateistruktur im Lieblingsverzeichnis Ihres Servers sieht fol
 ├── .env
 ├── bomnipotent_config
 │   ├── config.toml
-│   └── config.toml.default
+│   ├── config.toml.default
+│   ├── open_pgp_public_key.asc
+│   └── open_pgp_secret_key.asc
 ├── proxy_config
 │   └── conf.d
 │       └── default.conf
@@ -72,14 +74,17 @@ Sie möchten wahrscheinlich weitere "Server" Blöcke hinzufügen -- warum sonst 
 
 ## .env
 
-Der BOMnipotent-Server kommuniziert mit einer Datenbank. Derzeit wird nur [PostgreSQL](https://www.postgresql.org/) als Backend unterstützt. Die Datenbank ist durch ein Passwort geschützt. Es empfiehlt sich, das Passwort in einer separaten .env-Datei zu speichern, anstatt direkt im compose.yaml.
+BOMnipotent-Server benötigt einige geschützte Informationen. Dazu gehören die Passwörter für die SQL Datenbank, für den geheimen OpenPGP Schlüssel, und für den SMTP Server.
+
+Es empfiehlt sich, diese Passwörter in einer separaten .env-Datei zu speichern, anstatt direkt im compose.yaml.
 
 > Der Name der Datei muss ".env" lauten, ansonsten erkennt Docker sie nicht.
 
 Ihre .env-Datei sollte so aussehen:
 ```
 BOMNIPOTENT_DB_PW=<Ihr-Datenbank-Passwort>
-SMTP_SECRET=<Ihr-smtp-Authentifizierungs-Geheimnis>
+PGP_PASSPHRASE=<Die-Passphrase-zu-Ihrem-OpenPGP-Schlüssel>
+SMTP_SECRET=<Ihr-SMTP-Authentifizierungs-Geheimnis>
 ```
 
 > [!NOTE]
@@ -98,6 +103,15 @@ Eine minimale Konfiguration für einen BOMnipotent Server hinter einem Reverse-P
 db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/bomnipotent_db"
 # Domain, hinter der der Bomnipotent-Server gehostet wird
 domain = "https://bomnipotent.<Ihre-Domain>.<Top-Level>"
+
+# Optional, aber empfohlen
+[open_pgp]
+# Der Pfad zu Ihrem öffentlichen OpenPGP Schlüssel
+public_key_path = "/etc/bomnipotent_server/configs/open_pgp_public_key.asc"
+# Der Pfad zu Ihrem geheimen OpenPGP Schlüssel
+secret_key_path = "/etc/bomnipotent_server/configs/open_pgp_secret_key.asc"
+# Eine optionale Passphrase um auf ihren geheimen OpenPGP Schlüssel zuzugreifen
+passphrase = "${PGP_PASSPHRASE}"
 
 [tls]
 # Die TLS-Verschlüsselung erfolgt über den Reverse-Proxy,
@@ -131,12 +145,26 @@ Die Herausgeberdaten werden verwendet, um dem [OASIS CSAF-Standard](https://docs
 > Der [Abschnitt über Provider-Metadata](/de/server/configuration/required/provider-metadata/) enthält mehr Details dazu was die verschiedenen Felder bedeuten.
 
 Es wird empfohlen, Ihre config.toml-Datei in einem dedizierten Verzeichnis zu speichern, in diesem Beispiel "bomnipotent_config". Die Docker-Compose-Datei gewährt Lesezugriff auf diesen Ordner. Dieses Setup hat zwei Vorteile:
-* Im unwahrscheinlichen Fall einer Sicherheitsverletzung des BOMnipotent Server-Containers hätte ein Angreifer nur Zugriff auf Ihr Konfigurationsverzeichnis und sonst nichts auf Ihrem Server.
-* BOMnipotent Server überwacht das Verzeichnis auf Änderungen und versucht, die Konfigurationsdatei neu zu laden, wenn sie geändert wurde. Dies funktioniert **nicht**, wenn nur eine einzige Datei dem Docker-Container zugänglich gemacht wird.
+- Im unwahrscheinlichen Fall einer Sicherheitsverletzung des BOMnipotent Server-Containers hätte ein Angreifer nur Zugriff auf Ihr Konfigurationsverzeichnis und sonst nichts auf Ihrem Server.
+- BOMnipotent Server überwacht das Verzeichnis auf Änderungen und versucht, die Konfigurationsdatei neu zu laden, wenn sie geändert wurde. Dies funktioniert **nicht**, wenn nur eine einzige Datei dem Docker-Container zugänglich gemacht wird.
 
 > Viele Konfigurationseinstellungen unterstützen Hot Reloading, d. h. sie können geändert werden, ohne den Server neu zu starten.
 
 Nachdem Sie Ihre config.toml eingerichtet haben, möchten Sie sie möglicherweise beispielsweise als config.toml.default kopieren, um Ihre ursprüngliche Konfiguration schnell wiederherstellen zu können. Dies ist jedoch völlig optional.
+
+## open_pgp_*_key.asc
+
+OpenPGP ist ein Standard zum Verschlüsseln und Signieren von Dateien und Nachrichten. Eine [andere Seite](/de/integration/open-pgp/) dieser Dokumentation bietet einen Überblick sowie einen leichten Einstieg in das Thema.
+
+Der geheime Schlüssel wird verwendet, um heruntergeladene [BOMs](/de/client/consumer/boms/#herunterladen) und [CSAF Dokumente](/de/client/consumer/csaf-docs/#herunterladen) zu signieren.
+
+Falls Ihr geheimer Schlüssel durch eine Passphrase geschützt ist, müssen Sie diese in der [.env](#env) Datei angeben und in der [config.toml](#configtoml) verwenden. Andernfalls können Sie das Argument weglassen.
+
+Der öffentliche Schlüssel wird von den Verwendern Ihres Servers benötigt, um die Signatur zu überprüfen. Er ist deswegen unter der URL "\<Ihre-Domain\>/openpgp-key.asc" zu finden.
+
+> BOMnipotent Server bemerkt, falls Sie aus Versehen öffentlichen und geheimen Schlüssel vertauschen, oder falls diese nicht zusammenpassen.
+
+Nur falls Sie beide Schlüsseldateien in der [config.toml](#configtoml) angeben darf BOMnipotent Server sie als [csaf_trusted_provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#723-role-csaf-trusted-provider) ausweisen.
 
 ## compose.yaml
 
