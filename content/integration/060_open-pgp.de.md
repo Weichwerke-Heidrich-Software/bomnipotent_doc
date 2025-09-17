@@ -49,8 +49,6 @@ Genauer gesagt ist GPG ein Programm, welches *LibrePGP* und OpenPGP [Version 4 /
 
 Im Jahr 2023, als [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) des OpenPGP-Standards [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) aus dem Jahr 2007 ersetzen sollte, haben mehrere Personen die vorgeschlagenen Änderungen als zu disruptiv empfunden. Insbesondere die Entwickler von [GPG](https://gnupg.org/) und [RNP](https://www.rnpgp.org/) (einer Erweiterung für Thunderbird) haben sich [entschieden](https://lwn.net/Articles/953797/), den aktuelleren Standard *nicht* zu übernehmen und stattdessen den *neuen, konkurrierenden Standard* [LibrePGP](https://librepgp.org/) basierend auf OpenPGP Version 4 zu entwickeln.
 
-Da GPG und seine Windows-Variante [Gpg4win](https://gpg4win.de/index-de.html) so weit verbreitet sind, ist es (zum Zeitpunkt der Erstellung dieses Artikels, Juli 2025) wahrscheinlich ratsam, den letzten gemeinsamen Vorgänger, Version 4 / RFC 4880, zu verwenden, bis beide Standards allgemein unterstützt werden.
-
 ### OpenPGP vs. S/MIME
 
 [Secure Multipurpose Internet Mail Extensions](https://de.wikipedia.org/wiki/S/MIME) (S/MIME) ist wie OpenPGP ein *Standard*, der primär auf die Ende-zu-Ende-Verschlüsselung von E-Mails abzielt. Die beiden Standards verfügen über ähnliche Funktionen, sind aber *nicht* interoperabel.
@@ -63,12 +61,22 @@ OpenPGP hingegen nutzt ein „Vertrauensnetz“. Jeder kann die Authentizität a
 
 > Im Kontext der E-Mail-Verschlüsselung ist S/MIME eine absolut valide Alternative zu OpenPGP, insbesondere für Unternehmen. BOMnipotent benötigt jedoch OpenPGP-Schlüssel.
 
+## Welche Version wählen?
+
+Version 4 / RFC 4880 wurde nicht ohne Grund von Version 6 / RFC 9580 abgelöst, und das BSI (welches GPG finanziell unterstützt) empfiehlt in Teil 3 seiner [technischen Richtlinie](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html) zum Cyber Resilience Act, Version 6 / RFC 9580 zu verwenden.
+
+Allerdings ist der Standard noch immer recht jung und noch nicht so gut wie Version 4 getestet. Es scheint zum Beispiel aktuell einen [Fehler](https://gitlab.com/sequoia-pgp/sequoia/-/issues/1202) beim Generieren von verschlüsselten Version 6 Schlüsseln in SequoiaPGP zu geben.
+
+Zusätzlich hegt das vielgenutzte GPG und seine Windows Variante [Gpg4win](https://gpg4win.de/index-de.html) keinerlei Pläne, Version 6 zu unterstützen.
+
+Aus den genannten Gründen empfiehlt diese Anleitung aktuell (September 2025), Schlüssel im bewährten [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) Standard zu generieren. Diese Empfehlung wird sich in der Zukunft ändern.
+
 ## OpenPGP nutzen
 
 Zur Verwaltung von OpenPGP-Schlüsseln empfiehlt diese Anleitung die Verwendung des Kommandozeilentools [Sequoia-PGP](https://sequoia-pgp.org/). Es handelt sich um eine kommerziell unterstützte Open-Source-Implementierung des OpenPGP-Standards. Das bedeutet, dass die Pflege des Projekts finanziell motiviert ist und der Code gleichzeitig von Sicherheitsforschenden eingesehen werden kann. Das Programm ist zudem sehr gut [dokumentiert](https://book.sequoia-pgp.org/).
 
 > [!NOTE] Warum nicht GPG?
-> Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des neuesten OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert. Sie können diese stattdessen verwenden, sofern sie Schlüssel generieren, die mit OpenPGP Version 4 / RFC 4880 kompatibel sind. Sequoia-PGP ist jedoch möglicherweise die zukunftssicherere Option, da Sie hier die für die Schlüsselgenerierung verwendete OpenPGP-Version auswählen können.
+> Die Entwickler der bekannteren Programme [GnuPG](https://gnupg.org) und seiner Windows-Variante [Gpg4Win](https://www.gpg4win.org/index-de.html) haben sich gegen die Implementierung des [neuesten](https://www.rfc-editor.org/rfc/rfc9580) OpenPGP-Standards entschieden. Stattdessen haben sie ihren eigenen Standard [LibrePGP](https://librepgp.org/) entwickelt, der auf OpenPGP [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) basiert.
 
 > [!INFO]
 > Zum Ver- und Entschlüsseln von E-Mails benötigen Sie ein für Ihr E-Mail-Programm geeignetes Plugin. Dies ist zwar die Hauptanwendung von OpenPGP-Schlüsseln, steht aber nicht im Mittelpunkt dieser Anleitung.
@@ -79,13 +87,17 @@ Zur Verwaltung von OpenPGP-Schlüsseln empfiehlt diese Anleitung die Verwendung 
 
 Die Sequoia-PGP-Dokumentation bietet verschiedene Möglichkeiten zur [Installation](https://book.sequoia-pgp.org/installation.html) des Programms auf verschiedenen Plattformen. Windows wird jedoch nicht direkt unterstützt. Stattdessen wird die Verwendung des Windows-Subsystems für Linux (WSL) empfohlen, das sich erfreulicherweise einfach [aufsetzen](https://learn.microsoft.com/de-de/windows/wsl/install) lässt.
 
-#### Aus dem Quellcode (Debian 12 und früher)
-
-Regelmäßige Debian-Nutzer werden nicht überrascht sein, dass die Programmversion im Repository mehrere Jahre zurückliegen kann. Diese Anleitung basiert auf Sequoia-PGP Version 1.3.1, die mit Debian 13 "Trixie" ausgeliefert wird. Wenn Sie sich nicht sicher sind, welche Version Ihr Repository enthält, führen Sie Folgendes aus:
+Diese Anleitung basiert auf Sequoia-PGP Version 1.3.1, die mit Debian 13 "Trixie" ausgeliefert wird. Wenn Sie sich nicht sicher sind, welche Version Ihr Repository enthält, führen Sie Folgendes aus:
 
 {{< example apt_cache_policy_sq >}}
 
-Für Debian 12 ergibt dies etwa "0.27.0". In diesem Fall wird empfohlen, stattdessen die Schritte zum [Bauen des Programms](https://book.sequoia-pgp.org/installation.html#install-from-source) aus den Quellen zu befolgen (oder auf ein neueres Betriebssystem zu aktualisieren). Dies erfordert die Rust-Toolchain. Glücklicherweise ist die Installation auch [erfreulich unkompliziert](https://www.rust-lang.org/tools/install).
+Falls die Version größer als 1.0.0 ist können Sie guten Gewissens aus dieser Quelle installieren:
+
+{{< example install_sq_apt >}}
+
+#### Aus dem Quellcode (Debian 12 und früher)
+
+Regelmäßige Debian-Nutzer werden nicht überrascht sein, dass die Programmversion im Repository mehrere Jahre zurückliegen kann. Debian 12 kommt mit SequoiaPGP v0.27.0. Falls Ihre Repository Version so weit zurückliegt, wird empfohlen, stattdessen die Schritte zum [Bauen des Programms](https://book.sequoia-pgp.org/installation.html#install-from-source) aus den Quellen zu befolgen (oder auf ein neueres Betriebssystem zu aktualisieren). Dies erfordert die Rust-Toolchain. Glücklicherweise ist die Installation auch [erfreulich unkompliziert](https://www.rust-lang.org/tools/install).
 
 > Windows-Nutzer, denken Sie daran die **Linux**-Installation **innerhalb** des WSL auszuführen.
 
@@ -116,7 +128,7 @@ Der Parameter "shared-key" teilt dem Programm mit, dass Sie diesem Schlüssel ni
 
 Die Parameter "name" und "email" dienen der Identifizierung des Schlüsselinhabers. Dies zeigt nicht nur anderen, wem dieser Schlüssel gehört, sondern erleichtert Ihnen auch die Interaktion mit Ihren Schlüsseln.
 
-Die Option "profile" mit dem Wert "rfc4880" weist Sequoia-PGP an, Version 4 / RFC 4880 des OpenPGP-Standards zu verwenden. Dies entspricht zwar nicht dem neuesten Standard, stellt aber sicher, dass die Schlüssel mit Tools wie GPG kompatibel sind, die OpenPGP [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580) weder unterstützen noch unterstützen werden.
+Die Option "profile" mit dem Wert "rfc4880" weist Sequoia-PGP an, die empfohlene [Version 4 / RFC 4880](https://www.rfc-editor.org/rfc/rfc4880) des OpenPGP-Standards zu verwenden.
 
 Weitere Optionen finden Sie in der [Dokumentation](https://book.sequoia-pgp.org/sq_key_generation.html) oder durch Aufruf von:
 
