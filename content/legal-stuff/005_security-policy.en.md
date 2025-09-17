@@ -74,3 +74,10 @@ UR2E5r7Tm4kfrMWSmf/ktEIvmQM=
 =MK9h
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+## Hall of Fame
+
+| **Name** | **Reference** | **Vulnerability** | **Date** |
+|:---|:---|:---|:---|
+
+Weichwerke Heidrich Software extends their gratitude to everyone who has disclosed vulnerabilities to them, including those who prefer to remain anonymous.
