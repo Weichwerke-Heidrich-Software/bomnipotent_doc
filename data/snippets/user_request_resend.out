@@ -1,3 +1,4 @@
 [INFO] All requests are unauthenticated: No username was provided for signing request.
+[INFO] Reading public key from '/root/.config/bomnipotent/public_key.pem'.
 [INFO] All requests are unauthenticated: No username was provided for signing request.
 [INFO] User request for 'user@example.com' re-submitted. A brand new verification email has been sent to your inbox. The verification link expires after 1h.

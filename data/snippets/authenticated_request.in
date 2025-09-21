@@ -1,1 +1,1 @@
-bomnipotent_client --domain=<server> --user=<your-email> <command>
+bomnipotent_client --domain=bomnipotent_server_of_your_choice --user=user@example.com whoami

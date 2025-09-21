@@ -1,1 +1,1 @@
-bomnipotent_client -d bomnipotent_server_of_your_choice -u <your-email> -s <path/to/key> <command>
+bomnipotent_client -d bomnipotent_server_of_your_choice -u other_user@example.com -s /home/keys/stored_secret_key.pem whoami
