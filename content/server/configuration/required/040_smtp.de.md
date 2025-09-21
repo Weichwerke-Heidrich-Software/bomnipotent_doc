@@ -40,6 +40,12 @@ Ein lokal laufendes SMTP-Relay benötigt nicht unbedingt ein Passwort zum Empfan
 
 STARTTLS ist eine Möglichkeit, E-Mails zu verschlüsseln, die andere ist SMTPS. Seit 2018 rät die Internet Engineering Task Force [von der Verwendung von STARTTLS ab](https://datatracker.ietf.org/doc/html/rfc8314). Sollte Ihr Mailserver jedoch kein SMTPS unterstützen, ist STARTTLS besser als gar keine Verschlüsselung. Daher wird es von BOMnipotent Server weiterhin unterstützt.
 
+### Überprüfung
+
+Um zu verifizieren, dass Sie alles richtig aufgesetzt haben, können Sie BOMnipotent eine Test Email verschicken lassen:
+
+{{< example "test_email" "1.1.0" >}}
+
 ## Benutzerverifizierung überspringen
 
 Wenn Sie (noch) keinen Zugriff auf einen SMTP-Server haben, können Sie die SMTP-Konfiguration umgehen, indem Sie die folgende Zeilen in Ihrer config.toml hinzufügen:

@@ -45,3 +45,11 @@ Falls Sie stattdessen gerne einen existierenden Schlüssel wiederverwenden wolle
 > Damit dies funktioniert muss der Schlüssel dem [OpenPGP](/de/integration/open-pgp/) folgen und im [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) Format gespeichert sein.
 
 Falls Sie hier aus Versehen den Pfad zu ihrem *geheimen* Schlüssel angeben wirft BOMnipotent Client eine Fehlermeldung anstatt ihn zum Server zu schicken.
+
+## Schlüssel an beliebiger Stelle speichern
+
+Falls das optionale positionelle Argument stattdessen ein valider aber nicht existierender Pfad für eine Datei ist, werden neu generierte Schlüssel dort gespeichert:
+
+{{< example "user_request_store_custom" "1.1.0" >}}
+
+Dies ist besonders praktisch falls sie einen [Roboternutzer](/de/client/manager/access-management/robot-users/) anlegen, da Sie typischerweise die generierten Schlüssel im Anschluss in eine CI/CD Pipeline exportieren wollen.

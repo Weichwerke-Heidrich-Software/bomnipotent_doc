@@ -3,6 +3,7 @@
 │ Username               │ Status    │ Expires                 │ User Type │ Last Updated            │
 ├────────────────────────┼───────────┼─────────────────────────┼───────────┼─────────────────────────┤
 │ admin@example.com      │ APPROVED  │ 2025-01-01 10:11:12 UTC │ HUMAN     │ 2025-01-01 10:11:12 UTC │
+│ ci_cd_robot            │ REQUESTED │ 2025-01-01 10:11:12 UTC │ ROBOT     │ 2025-01-01 10:11:12 UTC │
 │ example_robot          │ REQUESTED │ 2025-01-01 10:11:12 UTC │ ROBOT     │ 2025-01-01 10:11:12 UTC │
 │ other_user@example.com │ REQUESTED │ 2025-01-01 10:11:12 UTC │ HUMAN     │ 2025-01-01 10:11:12 UTC │
 │ user@example.com       │ VERIFIED  │ 2025-01-01 10:11:12 UTC │ HUMAN     │ 2025-01-01 10:11:12 UTC │

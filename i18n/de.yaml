@@ -4,6 +4,8 @@
   translation: "Eingabe (lange Variante)"
 - id: input_short
   translation: "Eingabe (kurze Variante)"
+- id: min_version
+  translation: "verfügbar seit Version"
 - id: output
   translation: "Ausgabe"
 - id: shortcuts-menuTitle

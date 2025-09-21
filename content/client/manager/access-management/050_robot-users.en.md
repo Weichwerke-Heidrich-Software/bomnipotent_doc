@@ -16,6 +16,10 @@ This request will mark the account as a robot, and **not** send a verification m
 > [!NOTE]
 > Since robot users are not verified, and typically have elevated permissions, you should be absolutely certain that this is the account you want to approve.
 
+In ordner not to have to fish the generated keys from the somewhat hidden user folder, you can specify a desired path to store them:
+
+{{< example "user_request_store_custom" "1.1.0" >}}
+
 A plausible setup is to give the robot user roles with the permissions {{<bom-management-en>}} and {{<vuln-management-en>}}, enabling them to upload BOMs and update vulnerabilities:
 
 {{< example user_role_add_robot >}}

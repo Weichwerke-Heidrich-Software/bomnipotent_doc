@@ -8,6 +8,8 @@ echo "= Generating short command variants ="
 
 # This map maps long options to their corresponding short variants.
 declare -A OPTION_MAP=(
+  [component]=comp
+  [vulnerability]=vuln
   [--after]=-a
   [--before]=-b
   [--cpe]=-c

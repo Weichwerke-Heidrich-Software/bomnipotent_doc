@@ -1,4 +1,4 @@
-[WARN] Temporary admin functionality is enabled for admin@example.com
-[INFO] User admin@example.com was authenticated as a temporary admin
+[WARN] Temporary admin functionality is enabled for 'admin@example.com'.
+[INFO] User 'admin@example.com' was authenticated as the temporary admin.
 [INFO] Temporary admin 'admin@example.com' has permission USER_MANAGEMENT to perform this action.
 [INFO] Added role to user.

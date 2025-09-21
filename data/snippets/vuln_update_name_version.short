@@ -1,1 +1,1 @@
-bomnipotent_client vulnerability update /home/your_project/vuln_wrong_metadata.cdx.json -n "Your Project" -v "1.0.0"
+bomnipotent_client vuln update /home/your_project/vuln_wrong_metadata.cdx.json -n "Your Project" -v "1.0.0"
