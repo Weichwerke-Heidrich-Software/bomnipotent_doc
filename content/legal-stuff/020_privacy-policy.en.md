@@ -2,7 +2,7 @@
 title = "Privacy Policy"
 slug = "privacy-policy"
 weight = 20
-description = "This website only tracks the user data it absolutely needs to provide its service, which is none."
+description = "This website only tracks the user data it absolutely needs to provide its service, which is almost none."
 robots = "noindex"
 [sitemap]
 disable = true
@@ -10,11 +10,11 @@ disable = true
 disableSeoHiddenPages = true
 +++
 
-*Powered by [Termly](https://termly.io)*
+*Originally powered by [Termly](https://termly.io)*
 
-**Last updated February 23, 2025**
+**Last updated/revised on October 05, 2025**
 
-This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**our**'), describes how and why we might access, collect, store, use, and/or share ('**process**') your personal information when you use our services ('***Services**'), including when you:
+This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**our**'), describes how and why we might access, collect, store, use, and/or share ('**process**') your personal information when you use our services ('**Services**'), including when you:
 * Visit our website at [doc.bomnipotent.de](https://doc.bomnipotent.de), or any website of ours that links to this Pricacy Notice
 * Engage with us in other related ways, including any sales, marketing or events
 **Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at [info@wwh-soft.com](mailto:info@wwh-soft.com).
@@ -23,21 +23,29 @@ This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**
 
 **This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our [table of contents](#table-of-contents) below to find the section you are looking for.**
 
-**What personal information do we process?** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use.
+**What personal information do we process?**
+When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use.
 
-**Do we process any sensitive personal information?** Some of the information may be considered 'special' or 'sensitive' in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information.
+**Do we process any sensitive personal information?**
+Some of the information may be considered 'special' or 'sensitive' in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information.
 
-**Do we collect any information from third parties?** We do not collect any information from third parties.
+**Do we collect any information from third parties?**
+We do not collect any information from third parties.
 
-**How do we process your information?** We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so.
+**How do we process your information?**
+We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so.
 
-**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific parties.
+**In what situations and with which parties do we share personal information?**
+We may share information in specific situations and with specific parties.
 
-**How do we keep your information safe?** We have adequate organisational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorised third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information.
+**How do we keep your information safe?**
+We have adequate organisational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorised third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information.
 
-**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information.
+**What are your rights?**
+Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information.
 
-**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us via [info@wwh-soft.com](mailto:info@wwh-soft.com). We will consider and act upon any request in accordance with applicable data protection laws.
+**How do you exercise your rights?**
+The easiest way to exercise your rights is by contacting us via [info@wwh-soft.com](mailto:info@wwh-soft.com). We will consider and act upon any request in accordance with applicable data protection laws.
 
 
 ## TABLE OF CONTENTS
@@ -60,40 +68,50 @@ This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**
 
 ### Personal information you disclose to us
 
-**In Short:** *We collect personal information that you provide to us.*
+**In Short:**
+*We collect personal information that you provide to us.*
 
 We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.
 
-**Personal Information Provided by You.**  The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
+**Personal Information Provided by You.**
+The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
+* Names
 * email addresses
 
-**Sensitive Information.** We do not process sensitive information.
+**Sensitive Information.**
+We do not process sensitive information.
+
+**Appointment & Meeting Information**
+When you use our website’s booking function (via [Vyte](https://www.vyte.in)), we collect personal information you provide to schedule a meeting -- typically your name, email address, and any optional message or topic you enter. We also collect the date and time of the meeting. That booking data is also synchronized with our [Klender](https://www.klender.de/) calendar to determine availability, and to make the appointment. The meeting is then conducted via our self-hosted [Jitsi Meet](https://jitsi.org/) instance, hosted under [meet.wwh-soft.com](https://meet.wwh-soft.com/). Meeting participation metadata (e.g. join time, possibly IP addresses) may also be logged by the Jitsi system for operational, security or diagnostic purposes. These logs are automatically rotated and **not** evaluated systematically.
 
 All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
 
 ## 2. HOW DO WE PROCESS YOUR INFORMATION?
 
-**In Short:** *We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.*
+**In Short:**
+*We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.*
 
 **We process your personal information for a variety of reasons, depending on how you interact with our Services, including:**
 * **To respond to user inquiries/offer support to users.** We may process your information to respond to your inquiries and solve any potential issues you might have with the requested service.
+* **To schedule and facilitate online meetings with users.** We may process your information to coordinate online meetings that you schedule with us.
 * **To save or protect an individual's vital interest.**  We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
 
 ## 3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
 
-**In Short:** *We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e. legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or fulfil our contractual obligations, to protect your rights, or to fulfil our legitimate business interests.*
+**In Short:**
+*We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e. legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or fulfil our contractual obligations, to protect your rights, or to fulfil our legitimate business interests.*
 
- ### If you are located in the EU or UK, this section applies to you.
+### If you are located in the EU or UK, this section applies to you.
 
 The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:
 * **Consent.** We may process your information if you have given us permission (i.e. consent) to use your personal information for a specific purpose. You can withdraw your consent at any time.
-* **Performance of a Contract.**  We may process your personal information when we believe it is necessary to fulfil our contractual obligations to you, including providing our Services or at your request prior to entering into a contract with you.
-* **Legal Obligations.**  We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
-* **Vital Interests.**  We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
+* **Performance of a Contract.** We may process your personal information when we believe it is necessary to fulfil our contractual obligations to you, including providing our Services or at your request prior to entering into a contract with you.
+* **Legal Obligations.** We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
+* **Vital Interests.** We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
 
 ### If you are located in Canada, this section applies to you.
 
-We may process your information if you have given us specific permission (i.e. express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e. implied consent). You can withdraw your consent at any time.
+We may process your information if you have given us specific permission (i.e. express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e. implied consent). You can withdraw your consent at any time.
 
 In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example:
 * If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way
@@ -110,34 +128,44 @@ In some exceptional cases, we may be legally permitted under applicable law to p
 
 ## 4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
 
-**In Short:** *We may share information in specific situations described in this section and/or with the following third parties.*
+**In Short:**
+*We may share information in specific situations described in this section and/or with the following third parties.*
 
 We may need to share your personal information in the following situations:
+* **IONOS.** We use [IONOS](https://www.ionos.com/) for web hosting. You can find their privacy policy [here](https://www.ionos.com/terms-gtc/privacy-policy). The server contains logs of your interactions with any websites and services hosted there, including all subdomains of wwh-soft.com and bomnipotent.de.
+* **Vyte.** For appointment scheduling, we use [Vyte](https://www.vyte.in) as a third-party service. You can find their privacy policy [here](https://www.vyte.in/en/privacy-policy).
+* **Klender.** For calendar management, we use [Klender](https://www.klender.de) as a third-party service. You can find their privacy policy [here](https://www.klender.de/datenschutz).
 * **Business Transfers.** We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
 
 ## 5. HOW LONG DO WE KEEP YOUR INFORMATION?
 
-**In Short:** *We keep your information for as long as necessary to fulfil the purposes outlined in this Privacy Notice unless otherwise required by law.*
+**In Short:**
+*We keep your information for as long as necessary to fulfil the purposes outlined in this Privacy Notice unless otherwise required by law.*
 
-We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).
+We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). This includes data required to schedule and facilitate online meetings.
 
 When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymise such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.
 
 ## 6. HOW DO WE KEEP YOUR INFORMATION SAFE?
 
-**In Short:** *We aim to protect your personal information through a system of organisational and technical security measures.*
+**In Short:**
+*We aim to protect your personal information through a system of organisational and technical security measures.*
 
-We have implemented appropriate and reasonable technical and organisational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorised third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Although we will do our best to protect your personal information, transmission of personal information to and from our Services is at your own risk. You should only access the Services within a secure environment.
+We have implemented appropriate and reasonable technical and organisational security measures designed to protect the security of any personal information we process. All websites and services offering an HTTP connection are automatically redirected to HTTPS to ensure secure transmission of your data. Services that go beyond static websites refuse unencrypted connections altogether. This includes our self-hosted Jitsi Meet instance for online meetings. Videoconferencing data is transmitted via a secure WebRTC connection. In case of only 2 participants, Jitsi automatically establishes a direct peer-to-peer connection, further minimising data exchange via the server.
+
+However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorised third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Although we will do our best to protect your personal information, transmission of personal information to and from our Services is at your own risk. You should only access the Services within a secure environment.
 
 ## 7. DO WE COLLECT INFORMATION FROM MINORS?
 
-**In Short:** *We do not knowingly collect data from or market to children under 18 years of age.*
+**In Short:**
+*We do not knowingly collect data from or market to children under 18 years of age.*
 
 We do not knowingly collect, solicit data from, or market to children under 18 years of age, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18, please contact us at [info@wwh-soft.com](mailto:info@wwh-soft.com).
 
 ## 8. WHAT ARE YOUR PRIVACY RIGHTS?
 
-**In Short:** *Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.*
+**In Short:**
+*Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.*
 
 In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section '[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#13-how-can-you-contact-us-about-this-notice)' below.
 
@@ -147,7 +175,8 @@ If you are located in the EEA or UK and you believe we are unlawfully processing
 
 If you are located in Switzerland, you may contact the [Federal Data Protection and Information Commissioner](https://www.edoeb.admin.ch/edoeb/en/home.html).
 
-**Withdrawing your consent:**  If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section '[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#13-how-can-you-contact-us-about-this-notice)' below.
+**Withdrawing your consent:**
+If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section '[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#13-how-can-you-contact-us-about-this-notice)' below.
 
 However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.
 
@@ -161,7 +190,8 @@ California law requires us to let you know how we respond to web browser DNT sig
 
 ## 10. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
 
-**In Short:** *If you are a resident of California, Colorado, Connecticut, Delaware, Florida, Indiana, Iowa, Kentucky, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Tennessee, Texas, Utah, or Virginia, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.*
+**In Short:**
+*If you are a resident of California, Colorado, Connecticut, Delaware, Florida, Indiana, Iowa, Kentucky, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Tennessee, Texas, Utah, or Virginia, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. More information is provided below.*
 
 ### Categories of Personal Information We Collect
 
@@ -213,7 +243,7 @@ You have rights under certain US state data protection laws. However, these righ
 * **Right to access** your personal data
 * **Right to correct** inaccuracies in your personal data
 * **Right to request** the deletion of your personal data
-* **Right to obtain a copy** of the personal data you previously shared with us
+* **Right to obtain a copy** of the personal data you previously shared with us
 * **Right to non-discrimination** for exercising your rights
 * **Right to opt out** of the processing of your personal data if it is used for targeted advertising (or sharing as defined under California’s privacy law), the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ('profiling')
 
@@ -247,7 +277,8 @@ California Civil Code Section 1798.83, also known as the 'Shine The Light' law, 
 
 ## 11. DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?
 
-**In Short:** *You may have additional rights based on the country you reside in.*
+**In Short:**
+*You may have additional rights based on the country you reside in.*
 
 ### Australia and New Zealand
 
@@ -271,19 +302,20 @@ If you are unsatisfied with the manner in which we address any complaint with re
 
 [The Information Regulator (South Africa)](https://inforegulator.org.za/)
 
-General enquiries: [enquiries@inforegulator.org.za](mailto:enquiries@inforegulator.org.za)
+General enquiries: [enquiries@inforegulator.org.za](mailto:enquiries@inforegulator.org.za)
 
-Complaints (complete POPIA/PAIA form 5): [PAIAComplaints@inforegulator.org.za](mailto:PAIAComplaints@inforegulator.org.za) & [POPIAComplaints@inforegulator.org.za](mailto:POPIAComplaints@inforegulator.org.za)
+Complaints (complete POPIA/PAIA form 5): [PAIAComplaints@inforegulator.org.za](mailto:PAIAComplaints@inforegulator.org.za) & [POPIAComplaints@inforegulator.org.za](mailto:POPIAComplaints@inforegulator.org.za)
 
 ## 12. DO WE MAKE UPDATES TO THIS NOTICE?
 
-**In Short:** *Yes, we will update this notice as necessary to stay compliant with relevant laws.*
+**In Short:**
+*Yes, we will update this notice as necessary to stay compliant with relevant laws.*
 
 We may update this Privacy Notice from time to time. The updated version will be indicated by an updated 'Revised' date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.
 
 ## 13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
 
-If you have questions or comments about this notice, you may contact our Data Protection Officer (DPO) by email at [info@wwh-soft.com](mailto:info@wwh-soft.com), or contact us by post at:
+If you have questions or comments about this notice, you may contact our Data Protection Officer (DPO) by email at [info@wwh-soft.com](mailto:info@wwh-soft.com), or contact us by post at:
 
 Weichwerke Heidrich Software
 
@@ -298,3 +330,4 @@ Germany
 ## 14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
 
 Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please contact us at [info@wwh-soft.com](mailto:info@wwh-soft.com).
+
