@@ -55,17 +55,22 @@ defaultContentLanguage = 'en'
   pre = '<i class="fab fa-docker"></i> '
   name = 'Get the container'
   url = 'https://hub.docker.com/u/wwhsoft'
-  weight = 101
+  weight = 110
+[[languages.en.menu.shortcuts]]
+  pre = '<i class="fa-solid fa-calendar-days"></i> '
+  name = 'Book a videocall'
+  url = 'https://www.vyte.in/wwh-soft/bomnipotent'
+  weight = 120
 [[languages.en.menu.shortcuts]]
   pre = '<i class="fa-brands fa-github"></i> '
   name = 'Report an issue'
   url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
-  weight = 102
+  weight = 130
 [[languages.en.menu.shortcuts]]
   pre = '<i class="fa-brands fa-linkedin"></i> '
   name = 'Read Marketing'
   url = 'https://www.linkedin.com/company/weichwerke-heidrich-software'
-  weight = 103
+  weight = 140
 
 
 [[languages.de.menu.shortcuts]]
@@ -77,17 +82,22 @@ defaultContentLanguage = 'en'
   pre = '<i class="fab fa-docker"></i> '
   name = 'Container nutzen'
   url = 'https://hub.docker.com/u/wwhsoft'
-  weight = 101
+  weight = 110
+[[languages.de.menu.shortcuts]]
+  pre = '<i class="fa-solid fa-calendar-days"></i> '
+  name = 'Videocall buchen'
+  url = 'https://www.vyte.in/wwh-soft/bomnipotent'
+  weight = 120
 [[languages.de.menu.shortcuts]]
   pre = '<i class="fa-brands fa-github"></i> '
   name = 'Problem melden'
   url = 'https://github.com/Weichwerke-Heidrich-Software/bomnipotent_doc/issues'
-  weight = 102
+  weight = 130
 [[languages.de.menu.shortcuts]]
   pre = '<i class="fa-brands fa-linkedin"></i> '
   name = 'Marketing lesen'
   url = 'https://www.linkedin.com/company/weichwerke-heidrich-software'
-  weight = 103
+  weight = 140
 
 [outputs]
   # activate the feature to print whole chapters
