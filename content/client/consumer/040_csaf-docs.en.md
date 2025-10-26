@@ -77,3 +77,9 @@ This is especially useful if you want to use the contents of this CSAF doc in a 
 {{< exist-subcommand-en >}}
 
 {{< example csaf_exist >}}
+
+## Match
+
+To find out if the server hosts any BOM documents containing components that are affected by locally available advisories, you can call the "csaf match" command and provide one or more paths to CSAF documents. BOMnipotent then requests all accessible BOM documents from the server and matches their components against all provided CSAF documents:
+
+{{< example "csaf_match" "1.2.0" >}}

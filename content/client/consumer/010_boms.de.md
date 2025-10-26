@@ -65,3 +65,9 @@ Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterve
 {{< exist-subcommand-de >}}
 
 {{< example bom_exist >}}
+
+## Zuordnung
+
+Um Herauszufinden, ob der Server CSAF Dokumente hostet, welche Komponenten in Ihren Assets betreffen, können Sie den "bom match" Befehl rufen und einen oder mehr Pfade zu BOM Dokumenten übergeben. BOMnipotent erfragt daraufhin alle CSAF Dokumente vom Server und vergleicht diese mit allen Komponenten in allen übergebenen BOMs:
+
+{{< example "bom_match" "1.2.0" >}}
