@@ -1,1 +1,1 @@
-bomnipotent_client session status -j
+bomnipotent_client -o raw session status -j

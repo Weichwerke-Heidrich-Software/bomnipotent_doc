@@ -5,4 +5,7 @@
 │ Best Vendor's Your Project │ Your Project │ 1.0.0       │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
 │  v1.0.0                    │              │             │ Rustls network-reachable p │                │ ry                         │           │
 │                            │              │             │ anic                       │                │                            │           │
+│ rustls Version 0.23.15     │ rustls       │ 0.23.15     │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│                            │              │             │ Rustls network-reachable p │                │ ry                         │           │
+│                            │              │             │ anic                       │                │                            │           │
 ╰────────────────────────────┴──────────────┴─────────────┴────────────────────────────┴────────────────┴────────────────────────────┴───────────╯

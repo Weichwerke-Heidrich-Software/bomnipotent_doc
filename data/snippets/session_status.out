@@ -1,3 +1,4 @@
+
 domain = "bomnipotent_server_of_your_choice"
 user = "user@example.com"
 output_mode = "Normal"
