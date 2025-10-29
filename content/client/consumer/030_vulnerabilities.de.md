@@ -34,3 +34,9 @@ Das CSAF-Dokument ist ein entscheidender Bestandteil, da es Ihnen als Nutzer des
 {{< exist-subcommand-de >}}
 
 {{< example vuln_exist >}}
+
+## Analysieren
+
+Das Ausführen des Befehls "vulnerability analyze" mit einem oder meheren Dateipfaden zu gültigen CycloneDX Dateien stellt die (kombinierten) Sicherheitslücken dieser BOMs tabellarisch dar:
+
+{{< example "vuln_analyze" "1.2.0" >}}

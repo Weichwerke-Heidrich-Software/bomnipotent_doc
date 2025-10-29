@@ -83,3 +83,13 @@ Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skri
 Um Herauszufinden, ob der Server BOM Dokumente hostet, welche Komponenten enthalten, die von lokal verfügbaren Advisories betroffen sind, können Sie den "csaf match" Befehl ausführen und einen oder mehr Pfade zu CSAF Dokumenten übergeben. BOMnipotent erfragt daraufhin alle BOM Dokumente vom Server und vergleicht deren Komponenten mit allen übergebenen CSAF Dokumenten:
 
 {{< example "csaf_match" "1.2.0" >}}
+
+## Analysieren
+
+Das Ausführen des Befehls "csaf analyze" mit einem oder meheren Dateipfaden zu gültigen CSAF Dateien stellt die Metadaten dieser Dokumente tabellarisch dar:
+
+{{< example "csaf_analyze" "1.2.0" >}}
+
+Der Befehl führt eine komplette [Validitätsprüfung](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#61-mandatory-tests) der CSAF Dokumente durch und kann somit unter anderem genutzt werden, um Abweichungen vom Standard zu entdecken:
+
+{{< example "csaf_analyze_invalid" "1.2.0" >}}

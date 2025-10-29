@@ -26,3 +26,9 @@ Der Befehl akzeptiert die optionalen Filter "name", "vulnerability", "status" un
 Um Herauszufinden, ob der Server BOM Dokumente hostet, welche Komponenten enthalten, die von lokal verfügbaren Advisories betroffen sind, können Sie den "csaf match" Befehl rufen und einen oder mehrere Pfade zu CSAF Dokumenten übergeben. BOMnipotent erfragt daraufhin alle BOM Dokumente vom Server und vergleicht deren Komponenten mit allen übergebenen CSAF Dokumenten:
 
 {{< example "csaf_match" "1.2.0" >}}
+
+## Analysieren
+
+Das Ausführen des Befehls "product analyze" mit einem oder meheren Dateipfaden zu gültigen CSAF Dateien stellt die (kombinierten) Produkte tabellarisch dar, die von diesen Dokumenten behandelt werden:
+
+{{< example "product_analyze" "1.2.0" >}}
