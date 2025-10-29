@@ -70,3 +70,9 @@ This is especially useful if you want to use the contents of this BOM in a scrip
 To find out if the server hosts any CSAF documents that concern any component of your assets, you can call the "bom match" command and provide one or more paths to BOM documents. BOMnipotent then requests all accessible CSAF documents from the server and matches them against all components in all provided BOMs:
 
 {{< example "bom_match" "1.2.0" >}}
+
+## Analyze
+
+Running the command "bom analyze" and providing it with one or more filepaths to valid CycloneDX files displays the metadata of these BOMs:
+
+{{< example "bom_analyze" "1.2.0" >}}

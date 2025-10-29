@@ -56,7 +56,7 @@ Sie können den Inhalt einer einzelnen BOM direkt in die Konsole ausgeben lassen
 
 {{< example bom_get >}}
 
-Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterverwenden wollen. Falls sie zum Beispiel nach [Schwachstellen in der Lieferkette](/de/integration/grype/) schauen wollen, können sie folgendes rufen:
+Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterverwenden wollen. Falls sie zum Beispiel nach [Schwachstellen in der Lieferkette](/de/integration/grype/) schauen wollen, können sie folgendes ausführen:
 
 {{< example bom_get_grype >}}
 
@@ -66,8 +66,14 @@ Das ist besonder praktisch falls Sie den Inhalt der BOM in einem Skript weiterve
 
 {{< example bom_exist >}}
 
-## Zuordnung
+## Zuordnen
 
-Um Herauszufinden, ob der Server CSAF Dokumente hostet, welche Komponenten in Ihren Assets betreffen, können Sie den "bom match" Befehl rufen und einen oder mehr Pfade zu BOM Dokumenten übergeben. BOMnipotent erfragt daraufhin alle CSAF Dokumente vom Server und vergleicht diese mit allen Komponenten in allen übergebenen BOMs:
+Um Herauszufinden, ob der Server CSAF Dokumente hostet, welche Komponenten in Ihren Assets betreffen, können Sie den "bom match" Befehl ausführen und einen oder mehr Pfade zu BOM Dokumenten übergeben. BOMnipotent erfragt daraufhin alle CSAF Dokumente vom Server und vergleicht diese mit allen Komponenten in allen übergebenen BOMs:
 
 {{< example "bom_match" "1.2.0" >}}
+
+## Analysieren
+
+Das Ausführen des Befehls "bom analyze" mit einem oder meheren Dateipfaden zu gültigen CycloneDX Dateien stellt die Metadaten dieser BOMs tabellarisch dar:
+
+{{< example "bom_analyze" "1.2.0" >}}

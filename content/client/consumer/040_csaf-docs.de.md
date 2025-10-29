@@ -77,3 +77,9 @@ Das ist besonder praktisch falls Sie den Inhalt des CSAF Dokuments in einem Skri
 {{< exist-subcommand-de >}}
 
 {{< example csaf_exist >}}
+
+## Zuordnen
+
+Um Herauszufinden, ob der Server BOM Dokumente hostet, welche Komponenten enthalten, die von lokal verfügbaren Advisories betroffen sind, können Sie den "csaf match" Befehl ausführen und einen oder mehr Pfade zu CSAF Dokumenten übergeben. BOMnipotent erfragt daraufhin alle BOM Dokumente vom Server und vergleicht deren Komponenten mit allen übergebenen CSAF Dokumenten:
+
+{{< example "csaf_match" "1.2.0" >}}
