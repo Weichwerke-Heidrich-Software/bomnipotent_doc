@@ -1,1 +1,1 @@
-bomnipotent_client session status --json
+bomnipotent_client --output-mode=raw session status --json

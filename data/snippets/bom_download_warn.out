@@ -3,3 +3,4 @@
 The existing BOM doc has name 'BEST%PROJECT' and version '3.1.4' while the new one has name 'Best Project' and version '3.1.4'.
 Note that to avoid shenangians with the filesystem, both are mapped to the same filename 'best_project_3.1.4.cdx.json'.
 Skipping download to prevent data loss.
+[INFO] Stored 0 BOM document(s) under '/home/boms'.

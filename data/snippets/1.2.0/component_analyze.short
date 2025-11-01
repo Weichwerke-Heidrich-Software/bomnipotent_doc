@@ -1,0 +1,1 @@
+bomnipotent_client comp analyze /home/your_project/sbom.cdx.json | awk 'NR <= 16'
