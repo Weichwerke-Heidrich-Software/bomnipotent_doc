@@ -43,7 +43,7 @@ If the user has not yet verified their email address, the server denies the appr
 
 {{< example user_approve_unverified >}}
 
-Analogously, you can decide agains allowing this user any special access:
+Analogously, you can decide against allowing this user any special access:
 
 {{< example user_deny >}}
 
