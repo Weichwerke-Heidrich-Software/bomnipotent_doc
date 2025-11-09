@@ -22,4 +22,4 @@ Der widerrufene Schlüssel wird in der Datenbank behalten. Das stellt sicher, da
 
 Nachdem Sie einen Schlüssel widerrufen haben, sollten Sie ihn von Ihrem Dateisystem löschen. Sie finden seinen Speicherort in den Session Daten:
 
-{{< example session_status >}}
+{{< example "session_status_revoked_key" >}}

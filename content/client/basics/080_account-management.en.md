@@ -22,4 +22,4 @@ The revoked key is kept in the database. This makes sure that it can not be used
 
 Afer having revoked a key, you should delete it from your file system. You can find its location in the session data:
 
-{{< example session_status >}}
+{{< example "session_status_revoked_key" >}}

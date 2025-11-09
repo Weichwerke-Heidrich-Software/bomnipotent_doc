@@ -1,0 +1,4 @@
+[INFO] Reading public key from '/home/keys/stored_public_key.pem'.
+[ERROR] Received response:
+409 Conflict
+The entry already exists in the database.

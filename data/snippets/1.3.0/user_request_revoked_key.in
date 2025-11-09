@@ -1,1 +1,1 @@
-bomnipotent_client user request user@example.com
+bomnipotent_client user request user@example.com /home/keys/stored_public_key.pem
