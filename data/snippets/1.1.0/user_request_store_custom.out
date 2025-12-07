@@ -1,4 +1,3 @@
-[INFO] All requests are unauthenticated: No username was provided for signing request.
 [INFO] Generating new key pair.
 [INFO] Storing secret key to '/home/ci_cd_robot_secret_key.pem' and public key to '/home/ci_cd_robot_public_key.pem'.
 [INFO] All requests are unauthenticated: No username was provided for signing request.
