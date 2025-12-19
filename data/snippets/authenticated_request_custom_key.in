@@ -1,1 +1,1 @@
-bomnipotent_client --domain=bomnipotent_server_of_your_choice --user=other_user@example.com --secret-key=/home/keys/stored_secret_key.pem whoami
+bomnipotent_client --domain=bomnipotent_server_of_your_choice --user=other_user@example.com --secret-key=/home/keys/stored_secret_key.pem who-am-i

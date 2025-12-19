@@ -10,6 +10,7 @@ echo "= Generating short command variants ="
 declare -A OPTION_MAP=(
   [component]=comp
   [vulnerability]=vuln
+  [who-am-i]=whoami
   [--after]=-a
   [--before]=-b
   [--cpe]=-c

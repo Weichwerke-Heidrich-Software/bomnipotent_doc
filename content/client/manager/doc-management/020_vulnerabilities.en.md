@@ -17,7 +17,7 @@ Using the BOMnipotent Client, you can directly print the contents of a BOM and p
 
 {{< example bom_get_grype_output >}}
 
-This will check the software components agains several databases and add the result to the CycloneDX. It then stores all that in a file called "vuln.cdx.json" (or whichever other name you provide).
+This will check the software components against several databases and add the result to the CycloneDX. It then stores all that in a file called "vuln.cdx.json" (or whichever other name you provide).
 
 > Grype currently has a small [known bug](https://github.com/anchore/grype/issues/2418) that makes it forget the version of the main component when it adds the vulnerabilities. This is a bit problematic because BOMnipotent needs the version to uniquely identify a product. One possible workaround is to re-add the version to the document, for example via `jq '.metadata.component.version = "<VERSION>"' "vuln.cdx.json" > "vuln_with_version.cdx.json"`. Starting with BOMnipotent v0.3.1 you can instead directly provide the version during the vulnerability upload, as described below.
 

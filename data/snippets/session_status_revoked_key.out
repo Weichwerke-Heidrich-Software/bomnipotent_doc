@@ -1,0 +1,4 @@
+[INFO] 
+domain = "bomnipotent_server_of_your_choice"
+user = "other_user@example.com"
+secret_key_path = "/home/keys/stored_secret_key.pem"
