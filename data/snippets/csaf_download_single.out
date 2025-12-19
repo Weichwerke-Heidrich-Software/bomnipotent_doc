@@ -1,2 +1,2 @@
-[INFO] Storing CSAF document under '/home/csaf'.
+[WARN] CSAF IDs are unique. Ignoring TLP 'amber' and year '2025' in upstream path.
 [INFO] Stored 1 CSAF document(s) under '/home/csaf'.
