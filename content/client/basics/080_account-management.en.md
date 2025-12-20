@@ -1,5 +1,6 @@
 +++
 title = "Account Management"
+description = "Guide to revoking compromised user keys: use 'user revoke key', mark keys REVOKED, prevent requests, find session data and delete local key."
 slug = "account-management"
 weight = 80
 +++

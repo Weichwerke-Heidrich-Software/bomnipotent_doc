@@ -1,5 +1,6 @@
 +++
 title = "Benutzerkonto Verwaltung"
+description = "Anleitung zum Widerruf von Nutzer-Schlüsseln: Schlüsselstatus auf REVOKED setzen, in Datenbank vermerken und Session-Dateien sicher entfernen."
 slug = "account-management"
 weight = 80
 +++
