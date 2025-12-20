@@ -9,7 +9,7 @@ description = "Learn how to authenticate with BOMnipotent Client using your emai
 
 Once your account (meaning your username and public key) is approved, you can provide your username to Bomnipotent Client to make a request that can be authenticated by the server:
 
-{{< example authenticated_request >}}
+{{< example "authenticated_request" "1.1.0" >}}
 
 BOMnipotent Client then automatically reads your secret key and uses it for authentication.
 
@@ -17,6 +17,6 @@ BOMnipotent Client then automatically reads your secret key and uses it for auth
 
 If you are not storing your keys in the default user location, you have to tell BOMnipotent Client the path to it via a command line option:
 
-{{< example authenticated_request_custom_key >}}
+{{< example "authenticated_request_custom_key" "1.1.0" >}}
 
 To avoid providing three extra arguments to every single request, you can instead store this data in a [User Session](/client/basics/user-session/).

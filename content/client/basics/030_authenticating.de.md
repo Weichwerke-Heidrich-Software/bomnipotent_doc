@@ -9,7 +9,7 @@ description = "Authentifizierung mit BOMnipotent Client: Nutzeraccount-Antrag, B
 
 Sobald Ihr Account (also ihr Nutzername und ihr öffentlicher Schlüssel) bestätigt ist, können Sie BOMnipotent Client Ihren Nutzernamen mitgeben um eine authentifizierte Anfrage an den Server zu stellen:
 
-{{< example authenticated_request >}}
+{{< example "authenticated_request" "1.1.0" >}}
 
 BOMnipotent Client ließt dann automatisch Ihren geheimen Schlüssel und nutzt ihn zur Authentifizierung.
 
@@ -17,6 +17,6 @@ BOMnipotent Client ließt dann automatisch Ihren geheimen Schlüssel und nutzt i
 
 Falls Sie Ihren Schlüssel nicht im üblichen Nutzerordner speichern, müssen Sie BOMnipotent Client den Pfad per Kommandozeilenoption angeben:
 
-{{< example authenticated_request_custom_key >}}
+{{< example "authenticated_request_custom_key" "1.1.0" >}}
 
 Um diese drei zusätzlichen Argumente bei jeder einzelnen Anfrage zu vermeiden, können Sie die Daten stattdessen in einer [Nutzersitzung](/de/client/basics/user-session/) speichern.
