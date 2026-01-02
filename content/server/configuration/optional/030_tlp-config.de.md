@@ -46,7 +46,7 @@ Es empfiehlt sich, eine TLP-Klassifizierung zu definieren, auf die BOMnipotent f
 default_tlp = "amber"
 ```
 
-> Die Deserialisierung gibt Ihnen etwas Spielraum: Sie berücksichtigt die Groß-/Kleinschreibung nicht und das Präfix „TLP:“ ist optional. Die Werte „amber“, „AMBER“, „tlp:amber“ und „TLP:AMBER“ werden alle als {{<tlp-amber>}} erkannt.
+> Die Deserialisierung gibt Ihnen etwas Spielraum: Sie berücksichtigt die Groß-/Kleinschreibung nicht und das Präfix "TLP:" ist optional. Die Werte "amber", "AMBER", "tlp:amber" und "TLP:AMBER" werden alle als {{<tlp-amber>}} erkannt.
 
 Wenn Sie kein Standard-TLP-Label angeben und BOMnipotent auf ein unbeschriftetes Dokument stößt, wird standardmäßig {{<tlp-red>}} verwendet und eine Warnung ausgegeben.
 
