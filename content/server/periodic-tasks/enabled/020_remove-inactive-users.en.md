@@ -6,7 +6,7 @@ weight = 20
 
 This tasks checks the user database for entries that have been expired for more than 30 days, and removes them.
 
-This ensures that you do not store identifiable data like email addresses longer than is required. This is a central credo of the European Union's [General Data Protection Regulation](https://gdpr-info.eu/) (GDPR).
+This ensures that you do not store personally identifiable data like email addresses longer than is required. This is a central credo of the European Union's [General Data Protection Regulation](https://gdpr-info.eu/) (GDPR).
 
 > [!NOTE] Stay compliant
 > If you provide your services in the European Union, you need to comply with the GDPR. Do not turn off this periodic task without a backup process for cleaning your database.
