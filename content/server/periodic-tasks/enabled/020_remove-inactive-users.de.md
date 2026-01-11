@@ -11,7 +11,7 @@ Dies stellt sicher, dass Sie persönlich identifizierbaren Daten wie Emailadress
 > [!NOTE] Bleiben Sie konform
 > Falls Sie Ihre Dienste in der Europäischen Union anbieten müssen sie DSGVO-konform sein. Schalten sie diese zyklische Aufgabe nicht aus, ohne einen anderen Prozess zu haben um Ihre Datenbank aufzuräumen.
 
-Der Name dieser Aufgabe ist "remove_inactive_users", und sie akzeptiert die folgenden [Konfigurationen](/server/periodic-tasks/configuring-tasks/):
+Der Name dieser Aufgabe ist "remove_inactive_users". Sie akzeptiert die folgenden [Konfigurationen](/de/server/periodic-tasks/configuring-tasks/):
 ```toml
 [[tasks]]
 name = "remove_inactive_users"

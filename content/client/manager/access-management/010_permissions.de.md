@@ -54,3 +54,4 @@ Diese Berechtigung ist erforderlich, um [Benutzer anzuzeigen, oder ihre Anfragen
 BOMnipotent kennt die feststehende Rolle "admin". Diese Rolle verfügt stets über alle Berechtigungen, die Benutzern erteilt werden können. Darüber hinaus gibt es einige Aufgaben, die nur von Benutzern mit der Administratorrolle ausgeführt werden können:
 – Nur Administratoren können die Administratorrolle anderen Benutzern [zuweisen oder entziehen](/de/client/manager/access-management/role-assignment/). Ein [spezieller temporärer Administratormechanismus](/de/server/setup/admin/) ermöglicht die Erstellung des ersten Administrators für einen neu erstellten BOMnipotent Server.
 – Nur Administratoren können den Abonnementschlüssel für eine BOMnipotent Server Instanz [(de)aktivieren](/de/client/manager/subscription/).
+- Nur Administratoren können [Sicherungen der Datenbank](/de/client/manager/backup-management/) erstellen und wiederherstellen.

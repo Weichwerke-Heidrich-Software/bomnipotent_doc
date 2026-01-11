@@ -11,7 +11,7 @@ This ensures that you do not store personally identifiable data like email addre
 > [!NOTE] Stay compliant
 > If you provide your services in the European Union, you need to comply with the GDPR. Do not turn off this periodic task without a backup process for cleaning your database.
 
-The name of this task is "remove_inactive_users", and it accepts the following [configurations](/server/periodic-tasks/configuring-tasks/):
+The name of this task is "remove_inactive_users". It accepts the following [configurations](/server/periodic-tasks/configuring-tasks/):
 ```toml
 [[tasks]]
 name = "remove_inactive_users"
