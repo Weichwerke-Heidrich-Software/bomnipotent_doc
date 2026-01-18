@@ -1,2 +1,0 @@
-bomnipotent_client user-role add example_robot bom_manager;
-bomnipotent_client user-role add example_robot vuln_manager;
