@@ -42,6 +42,8 @@ Dies speichert die CSAF-Dokumente im angegebenen Ordner ("/home/csaf"in diesem B
 
 Beginnend mit Version 1.3.0 kann hierfür ein beliebiger Server angegeben werden, welcher als [CSAF Provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider) agiert.
 
+{{< example "csaf_download_other" "1.3.0" >}}
+
 > Die Dateinamen der CSAF-Dokumente folgen einem vom [OASIS Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename) vorgegebenen Namensschema: Die IDs werden in Kleinbuchstaben umgewandelt, und die meisten Sonderzeichen werden durch einen Unterstrich '_' ersetzt. Das bedeutet, dass theoretisch verschiedene CSAF-Dokumente zum selben Dateipfad führen könnten. In einem solchen Fall zeigt BOMnipotent einen Fehler an, anstatt eine Datei stillschweigend zu überschreiben.
 
 Der Client lädt auch mehrere Dateien herunter, die ein Hash und den Dateinamen der gehashten Datei enthalten.

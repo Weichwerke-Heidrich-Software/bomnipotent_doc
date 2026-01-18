@@ -73,6 +73,8 @@ To find out if the server hosts any CSAF documents that concern any component of
 
 Beginning with version 1.3.0, an arbitrary Server acting as a [CSAF provider](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#722-role-csaf-provider) can be used as an endpoint.
 
+{{< example "bom_match_other" "1.3.0" >}}
+
 ## Analyze
 
 Running the command "bom analyze" and providing it with one or more filepaths to valid CycloneDX files displays the metadata of these BOMs:
