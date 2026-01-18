@@ -12,7 +12,7 @@ disableSeoHiddenPages = true
 
 *Originally powered by [Termly](https://termly.io)*
 
-**Last updated/revised on October 05, 2025**
+**Last updated/revised on January 18, 2026**
 
 This Privacy Notice for Weichwerke Heidrich Software ('**we**', '**us**', or '**our**'), describes how and why we might access, collect, store, use, and/or share ('**process**') your personal information when you use our services ('**Services**'), including when you:
 * Visit our website at [doc.bomnipotent.de](https://doc.bomnipotent.de), or any website of ours that links to this Pricacy Notice
@@ -73,6 +73,8 @@ The easiest way to exercise your rights is by contacting us via [info@wwh-soft.c
 
 We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.
 
+All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
+
 **Personal Information Provided by You.**
 The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
 * Names
@@ -82,9 +84,13 @@ The personal information that we collect depends on the context of your interact
 We do not process sensitive information.
 
 **Appointment & Meeting Information**
-When you use our website’s booking function (via [Vyte](https://www.vyte.in)), we collect personal information you provide to schedule a meeting -- typically your name, email address, and any optional message or topic you enter. We also collect the date and time of the meeting. That booking data is also synchronized with our [Klender](https://www.klender.de/) calendar to determine availability, and to make the appointment. The meeting is then conducted via our self-hosted [Jitsi Meet](https://jitsi.org/) instance, hosted under [meet.wwh-soft.com](https://meet.wwh-soft.com/). Meeting participation metadata (e.g. join time, possibly IP addresses) may also be logged by the Jitsi system for operational, security or diagnostic purposes. These logs are automatically rotated and **not** evaluated systematically.
+When you use our website’s booking function (via [Vyte](https://www.vyte.in)), we collect personal information you provide to schedule a meeting -- typically your name, email address, and any optional message or topic you enter. We also collect the date and time of the meeting. That booking data is also synchronized with our [Klender](https://www.klender.de/) calendar to determine availability, and to make the appointment.
 
-All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
+The meeting itself is typically conducted via Google Meet ([https://meet.google.com](https://meet.google.com)). If Google Meet is used, Google may collect meeting metadata (for example participant names, email addresses, IP addresses, and connection times) and may process or store meeting content in accordance with Google's privacy policies — please review [their privacy notices](https://support.google.com/a/answer/7582940?hl=en#zippy=%2Cprivacy-compliance) if you have concerns.
+
+Alternatively, meetings can be conducted via our self-hosted Jitsi Meet instance ([https://meet.wwh-soft.com](https://meet.wwh-soft.com/)). Jitsi may log participation metadata (e.g. join time and IP addresses) for operational, security, or diagnostic purposes; these logs are automatically rotated and are **not** systematically reviewed.
+
+The meetings may not be recorded or automatically transcribed.
 
 ## 2. HOW DO WE PROCESS YOUR INFORMATION?
 
