@@ -21,7 +21,7 @@ Sobald eine SBOM vorliegt, ist das Scannen auf Schwachstellen sehr einfach:
 
 {{< example grype >}}
 
-Beim Ausführen dieses Befehls überprüft Grype  [mehrere Schwachstellendatenbanken](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) auf Übereinstimmungen mit den im SBOM angegebenen Komponenten. Die Option 'fail-on' sorgt dafür, dass das Programm mit einem Fehlercode ungleich null beendet wird, falls eine Schwachstelle mit mindestens der angegebenen Schwere 'low' gefunden wird.
+Beim Ausführen dieses Befehls überprüft Grype  [mehrere Schwachstellendatenbanken](https://oss.anchore.com/docs/reference/grype/data-sources/) auf Übereinstimmungen mit den im SBOM angegebenen Komponenten. Die Option 'fail-on' sorgt dafür, dass das Programm mit einem Fehlercode ungleich null beendet wird, falls eine Schwachstelle mit mindestens der angegebenen Schwere 'low' gefunden wird.
 
 Die Syntax zum Exportieren eines Schwachstellenberichts, der von BOMnipotent verarbeitet werden kann, ist ähnlich wie bei Syft:
 

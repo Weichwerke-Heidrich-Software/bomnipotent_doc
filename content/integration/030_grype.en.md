@@ -21,7 +21,7 @@ With an SBOM at hand, scanning for vulnerabilities is very easy:
 
 {{< example grype >}}
 
-When running this command, Grype checks [several vulnerability databases](https://github.com/anchore/grype?tab=readme-ov-file#grypes-database) for matches with the components provided in the sbom. The 'fail-on' option specifies that it exits with a non-zero error code if any with severity 'low' or higher is discovered.
+When running this command, Grype checks [several vulnerability databases](https://oss.anchore.com/docs/reference/grype/data-sources/) for matches with the components provided in the sbom. The 'fail-on' option specifies that it exits with a non-zero error code if any with severity 'low' or higher is discovered.
 
 The syntax to export a vulnerability report consumable by BOMnipotent is similar to Syft:
 
