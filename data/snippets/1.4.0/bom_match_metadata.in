@@ -1,0 +1,1 @@
+bomnipotent_client bom match --provider-metadata other_csaf_provider/obscure/path/to/provider-metadata.json /home/your_project/sbom.cdx.json

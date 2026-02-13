@@ -75,6 +75,12 @@ Beginning with version 1.3.0, an arbitrary Server acting as a [CSAF provider](ht
 
 {{< example "bom_match_other" "1.3.0" >}}
 
+The CSAF standard makes several suggestions where the provider metadata should be hosted, and how it can be found. However, some providers still decide to host it somewhere else. To make interaction with these possible as well, the provider metadata url can be explicitly provided as an argument:
+
+{{< example "bom_match_metadata" "1.4.0" >}}
+
+This skips any further lookups, effectively ignoring the "--domain" argument.
+
 ## Analyze
 
 Running the command "bom analyze" and providing it with one or more filepaths to valid CycloneDX files displays the metadata of these BOMs:

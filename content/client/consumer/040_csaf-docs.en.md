@@ -44,6 +44,12 @@ Beginning with version 1.3.0, an arbitrary Server acting as a [CSAF provider](ht
 
 {{< example "csaf_download_other" "1.3.0" >}}
 
+The CSAF standard makes several suggestions where the provider metadata should be hosted, and how it can be found. However, some providers still decide to host it somewhere else. To make interaction with these possible as well, the provider metadata url can be explicitly provided as an argument:
+
+{{< example "csaf_download_metadata" "1.4.0" >}}
+
+This skips any further lookups, effectively ignoring the "--domain" argument.
+
 > The filenames of CSAF documents follow a naming scheme defined by the [OASIS standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#51-filename): The ids are converted into lowercase, and most special characters are replaced by an underscore '_'. This means that, in principle, different CSAF documents could lead to the same filepath. In that case, BOMnipotent will display an error instead of silently overwriting a file.
 
 The client also downloads several files containing a hash and the filename of the hashed file.

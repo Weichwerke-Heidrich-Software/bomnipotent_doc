@@ -30,6 +30,7 @@ declare -A OPTION_MAP=(
   [--output]=-o
   [--output-mode]=-o
   [--overwrite]=-o
+  [--provider-metadata]=-m
   [--permission]=-p
   [--purl]=-p
   [--robot]=-r
