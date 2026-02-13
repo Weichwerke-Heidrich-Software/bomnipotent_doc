@@ -1,2 +1,2 @@
-[INFO] Received GET request from 172.20.0.4 to /user/verify
+[INFO] Received GET request from 172.20.0.5 to /user/verify
 [INFO] Email verification successful for admin@example.com

@@ -3,8 +3,7 @@
 │ Username          │ Role                     │ Last Updated            │
 ├───────────────────┼──────────────────────────┼─────────────────────────┤
 │ admin@example.com │ admin                    │ 2025-01-01 10:11:12 UTC │
-│ example_robot     │ bom_manager              │ 2025-01-01 10:11:12 UTC │
-│ example_robot     │ vuln_manager             │ 2025-01-01 10:11:12 UTC │
+│ example_robot     │ robot                    │ 2025-01-01 10:11:12 UTC │
 │ user@example.com  │ rick_role                │ 2025-01-01 10:11:12 UTC │
 │ user@example.com  │ this_role_does_not_exist │ 2025-01-01 10:11:12 UTC │
 ╰───────────────────┴──────────────────────────┴─────────────────────────╯

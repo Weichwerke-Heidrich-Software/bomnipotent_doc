@@ -2,6 +2,6 @@
 ╭──────────────┬────────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬──────────────────╮
 │ Product Name │ Version    │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessments │
 ├──────────────┼────────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼──────────────────┤
-│ Your Project │ 2025-11-09 │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ Default │                  │
+│ Your Project │ 2026-02-13 │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default │                  │
 │              │            │                     │ anic in `Acceptor::accept` │       │          │         │                  │
 ╰──────────────┴────────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴──────────────────╯

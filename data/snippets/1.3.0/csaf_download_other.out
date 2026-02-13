@@ -1,4 +1,5 @@
 [INFO] Found provider metadata at URL: https://other_csaf_provider/.well-known/csaf/provider-metadata.json
 [INFO] Retrieving CSAF documents from ROLIE feed at https://other_csaf_provider//some-white-rolie-dir/some-feed.json.
+[INFO] Found 1 entries in ROLIE feed at https://other_csaf_provider//some-white-rolie-dir/some-feed.json.
 [INFO] Downloading CSAF document from ROLIE entry with ID 'WID-SEC-W-2024-0268'.
 [INFO] Stored 1 CSAF document(s) under '/home/csaf'.
