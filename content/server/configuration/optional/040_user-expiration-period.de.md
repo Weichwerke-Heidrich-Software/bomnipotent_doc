@@ -2,7 +2,7 @@
 title = "Benutzergültigkeitszeitraum"
 slug = "user-expiration-period"
 weight = 40
-description = "Konfigurieren Sie den Ablaufzeitraum von Benutzerschlüsseln in BOMnipotent."
+description = "Konfigurieren Sie den Ablaufzeitraum von Benutzerschlüsseln, sowie den Zeitraum, nach dem abgelaufene Nutzer aus der Datenbank gelöscht werden."
 +++
 
 Wenn eine Anfrage für ein neues [Benutzerkonto](/de/client/basics/account-creation/) gestellt wird, wird ein öffentlicher Schlüssel in der Datenbank hinterlegt.

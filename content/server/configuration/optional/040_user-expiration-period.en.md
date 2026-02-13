@@ -2,7 +2,7 @@
 title = "User Expiration"
 slug = "user-expiration-period"
 weight = 40
-description = "Learn how to configure the user expiration period in BOMnipotent."
+description = "Learn how to configure the user expiration period as well as the period until expired users are removed from the database."
 +++
 
 When a request for a new [user account](/client/basics/account-creation/) is made, it deposits a public key in the database.

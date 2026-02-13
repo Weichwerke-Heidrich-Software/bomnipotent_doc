@@ -2,7 +2,7 @@
 title = "Port Binding"
 slug = "port-binding"
 weight = 60
-description = "Learn how to configure BOMnipotent's HTTP and HTTPS port bindings."
+description = "Learn how to configure BOMnipotent's HTTP and HTTPS port bindings to seamlessly integrate into your setup environment."
 +++
 
 While IP addresses are used to identify your server on the internet, ports are used to identify individual services running on it. Upon startup, BOMnipotent offers one or two services: An HTTP service for unencrypted communication, an HTTPS service for encrypted communication, or both.
