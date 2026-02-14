@@ -20,8 +20,14 @@ Um die generierten Schlüssel nicht aus dem etwas versteckten Nutzerordner herau
 
 {{< example "user_request_store_custom" "1.1.0" >}}
 
-Ein plausibles Setup ist, dem Roboternutzer Rollen mit den Berechtigungen {{<bom-management-de>}} und {{<vuln-management-de>}} zu geben, sodass er BOMs hochladen und Sicherheitslücken aktualisieren kann:
+Nun benötigt der Roboter die Berechtigungen um BOMs hochzuladen, Sicherheitslücken zu aktualisieren, und CSAF Dokumente zu lesen aber nicht zu modifizieren. Beginnend mit Version 1.4.0 gibt es hierfür die praktische Rolle "robot", welche genau diese Berechtigungen enthält:
 
-{{< example user_role_add_robot >}}
+{{< example "add_robot_role" "1.4.0" >}}
+
+Beachten Sie, dass diese Rolle Lesezugriff auf die CSAF Dokumente *aller* Produkte enthält:
+
+{{< example "robot_role_permissions" "1.4.0" >}}
+
+Sie können die Berechtigungen natürlich nach Belieben anpassen.
 
 Nun können Sie die Zugangsdaten Ihres Roboters in Ihrer [CI/CD](/de/integration/ci-cd/) Pipeline verwenden.

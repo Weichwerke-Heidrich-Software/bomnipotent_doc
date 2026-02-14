@@ -20,8 +20,14 @@ In ordner not to have to fish the generated keys from the somewhat hidden user f
 
 {{< example "user_request_store_custom" "1.1.0" >}}
 
-A plausible setup is to give the robot user roles with the permissions {{<bom-management-en>}} and {{<vuln-management-en>}}, enabling them to upload BOMs and update vulnerabilities:
+Now the robot requires permissions to upload BOMs, update vulnerabilities and to read but not modify CSAF documents Beginning with version 1.4.0, a convenience role "robot" grants these permissions:
 
-{{< example user_role_add_robot >}}
+{{< example "add_robot_role" "1.4.0" >}}
+
+Note that this role grants read access to the CSAF documents of *all* products:
+
+{{< example "robot_role_permissions" "1.4.0" >}}
+
+You can of course change these permissions as you please.
 
 Now you can use your robot's credentials in your [CI/CD](/integration/ci-cd/) pipeline.

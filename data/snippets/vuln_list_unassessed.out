@@ -3,7 +3,7 @@
 ╭──────────────┬─────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬───────────┬──────────────────╮
 │ Product Name │ Version │ Vulnerability       │ Description                │ Score │ Severity │ TLP       │ CSAF Assessments │
 ├──────────────┼─────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼───────────┼──────────────────┤
-│ Best Project │ 3.1.4   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │       │ medium   │ TLP:GREEN │                  │
+│ Best Project │ 3.1.4   │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ TLP:GREEN │                  │
 │              │         │                     │ anic in `Acceptor::accept` │       │          │           │                  │
 ╰──────────────┴─────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴───────────┴──────────────────╯
 [ERROR] Found 1 unassessed vulnerabilities.

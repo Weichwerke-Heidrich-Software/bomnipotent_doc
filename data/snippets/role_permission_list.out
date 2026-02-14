@@ -1,11 +1,14 @@
 [INFO] In addition to the roles listed here, the 'admin' role exists and has all permissions.
 [INFO] 
-╭──────────────┬─────────────────┬─────────────────────────╮
-│ Role         │ Permission      │ Last Updated            │
-├──────────────┼─────────────────┼─────────────────────────┤
-│ bom_manager  │ BOM_MANAGEMENT  │ 2025-01-01 10:11:12 UTC │
-│ csaf_manager │ CSAF_MANAGEMENT │ 2025-01-01 10:11:12 UTC │
-│ role_manager │ ROLE_MANAGEMENT │ 2025-01-01 10:11:12 UTC │
-│ user_manager │ USER_MANAGEMENT │ 2025-01-01 10:11:12 UTC │
-│ vuln_manager │ VULN_MANAGEMENT │ 2025-01-01 10:11:12 UTC │
-╰──────────────┴─────────────────┴─────────────────────────╯
+╭──────────────┬───────────────────┬─────────────────────────╮
+│ Role         │ Permission        │ Last Updated            │
+├──────────────┼───────────────────┼─────────────────────────┤
+│ bom_manager  │ BOM_MANAGEMENT    │ 2025-01-01 10:11:12 UTC │
+│ csaf_manager │ CSAF_MANAGEMENT   │ 2025-01-01 10:11:12 UTC │
+│ robot        │ BOM_MANAGEMENT    │ 2025-01-01 10:11:12 UTC │
+│ robot        │ PRODUCT_ACCESS(*) │ 2025-01-01 10:11:12 UTC │
+│ robot        │ VULN_MANAGEMENT   │ 2025-01-01 10:11:12 UTC │
+│ role_manager │ ROLE_MANAGEMENT   │ 2025-01-01 10:11:12 UTC │
+│ user_manager │ USER_MANAGEMENT   │ 2025-01-01 10:11:12 UTC │
+│ vuln_manager │ VULN_MANAGEMENT   │ 2025-01-01 10:11:12 UTC │
+╰──────────────┴───────────────────┴─────────────────────────╯

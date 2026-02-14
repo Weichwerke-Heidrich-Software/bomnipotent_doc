@@ -76,6 +76,12 @@ Beginnend mit Version 1.3.0 kann hierfür ein beliebiger Server angegeben werden
 
 {{< example "bom_match_other" "1.3.0" >}}
 
+Der CSAF Standard macht mehrere Vorschläge, wo die Provider Metadata gehostet werden sollte, und wie sie gefunden werden kann. Manche Provider haben sich dennoch entschieden, sie an einer andereren Stelle zu hosten. Um auch mit diesen die Interoperabilität zu ermöglichen, kann die Provider Metadata URL explizit als Argument angegeben werden:
+
+{{< example "bom_match_metadata" "1.4.0" >}}
+
+Damit werden jegliche weitere Suchen überschrieben, und das "--domain" Argument somit effektiv ignoriert.
+
 ## Analysieren
 
 Das Ausführen des Befehls "bom analyze" mit einem oder meheren Dateipfaden zu gültigen CycloneDX Dateien stellt die Metadaten dieser BOMs tabellarisch dar:

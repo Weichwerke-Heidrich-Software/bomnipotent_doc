@@ -1,12 +1,13 @@
----
-title: Seite konnte nicht gefunden werden
-description: "Die Seite scheint nicht zu existieren."
-build:
-  list: never
-robots: noindex
-imageEffects:
-  lightbox: false
----
++++
+title = "Seite konnte nicht gefunden werden"
+description = "Die Seite scheint nicht zu existieren."
+robots = "noindex"
+weight = 0
+[build]
+list = "never"
+[imageEffects]
+lightbox = false
++++
 
 ![Fehler 404 im BOMnipotent Branding](/images/bomnipotent_404_banner.svg)
 

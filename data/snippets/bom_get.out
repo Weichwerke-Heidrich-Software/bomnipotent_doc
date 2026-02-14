@@ -11,6 +11,6 @@
           "type": "application",
           "author": "anchore",
           "name": "syft",
-          "version": "1.40.1"
+          "version": "1.42.0"
         }
       ]

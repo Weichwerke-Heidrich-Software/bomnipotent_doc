@@ -8,19 +8,9 @@ description = "Konfigurieren Sie den Ablaufzeitraum von Benutzerschlüsseln, sow
 Wenn eine Anfrage für ein neues [Benutzerkonto](/de/client/basics/account-creation/) gestellt wird, wird ein öffentlicher Schlüssel in der Datenbank hinterlegt.
 
 Dieser Schlüssel hat ein Ablaufdatum, nach dem er nicht mehr akzeptiert wird. Dieses können Sie sich anzeigen lassen:
-```
-./bomnipotent_client user list
-```
-``` {wrap="false" title="output"}
-╭───────────────────┬──────────┬───────────────────────────┬───────────────────────────╮
-│ User Email        │ Status   │ Expires                   │ Last Updated              │
-├───────────────────┼──────────┼───────────────────────────┼───────────────────────────┤
-│ info@wwh-soft.com │ APPROVED │ 2026-03-03 11:30:15.62432 │ 2025-03-02 11:47:38.51048 │
-│                   │          │ 5 UTC                     │ 5 UTC                     │
-╰───────────────────┴──────────┴───────────────────────────┴───────────────────────────╯
-```
+{{< example user_list >}}
 
-Standardmäßig ist der Schlüssel nach der Anforderung etwas mehr als ein Jahr lang gültig. Diese Zeit kann mit dem Parameter "expiration_period" konfiguriert werden, welche sich unter "[user]" befindet. Als Werte akzeptiert er einen Zeitraum im menschenlesbaren Format „<Zahl> <Einheit>“, wobei „<Einheit>“ die englische Zeitangabe "year", "month", "week", "day" oder deren Pluralvarianten sein kann.
+Standardmäßig ist der Schlüssel nach der Anforderung etwas mehr als ein Jahr lang gültig. Diese Zeit kann mit dem Parameter "expiration_period" konfiguriert werden, welche sich unter "[user]" befindet. Als Werte akzeptiert er einen Zeitraum im menschenlesbaren Format "\<Zahl\> \<Einheit\>", wobei "\<Einheit\>" die englische Zeitangabe "year", "month", "week", "day" oder deren Pluralvarianten sein kann.
 {{< tabs >}}
 {{% tab title="Default" %}}
 ```toml
@@ -60,7 +50,7 @@ Das Ändern dieser Konfiguration **hat keine** Auswirkungen auf die Ablaufdaten 
 
 ## Löschzeitraum
 
-Um Ihre Datenbank sauber und Ihr System DSGVO-konform zu halten, werden Nutzer, die für mehr als 30 Tage abgelaufen sind, ganz aus der Datenbank gelöscht.
+Um Ihre Datenbank sauber und Ihr System DSGVO-konform zu halten, werden Nutzer, die für mehr als 30 Tage abgelaufen sind, von der zyklischen Aufgabe ["remove_inactive_users"](/de/server/periodic-tasks/enabled/remove-inactive-users/) ganz aus der Datenbank entfernt.
 
 Dieser Zeitraum lässt sich über den "removal_period" Parameter anpassen, welcher ebenfalls unter "[user]" zu finden ist:
 ```toml

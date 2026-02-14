@@ -53,11 +53,11 @@ Im Jahr 2023, als [Version 6 / RFC 9580](https://www.rfc-editor.org/rfc/rfc9580)
 
 [Secure Multipurpose Internet Mail Extensions](https://de.wikipedia.org/wiki/S/MIME) (S/MIME) ist wie OpenPGP ein *Standard*, der primär auf die Ende-zu-Ende-Verschlüsselung von E-Mails abzielt. Die beiden Standards verfügen über ähnliche Funktionen, sind aber *nicht* interoperabel.
 
-Der wichtigste konzeptionelle Unterschied zwischen S/MIME und OpenPGP liegt in der Beantwortung der Frage: „Kann ich diesem öffentlichen Schlüssel vertrauen?“
+Der wichtigste konzeptionelle Unterschied zwischen S/MIME und OpenPGP liegt in der Beantwortung der Frage: "Kann ich diesem öffentlichen Schlüssel vertrauen?"
 
-S/MIME basiert auf [X.509-Zertifikaten](https://de.wikipedia.org/wiki/X.509), die eine „Vertrauenskette“ bilden. Den Anfang dieser Kette bildet eine *zentrale* Zertifizierungsstelle, die mit einem auf Ihrem Computer gespeicherten öffentlichen Schlüssel verknüpft ist. Diese Zertifizierungsstelle signiert andere Zertifikate (in der Regel gegen Bezahlung und Vorlage eines Ausweises) und signalisiert Ihrem Computer damit, dass er ihnen vertraut. Da Ihr Computer der Zertifizierungsstelle vertraut, vertraut er auch diesen signierten Zertifikaten.
+S/MIME basiert auf [X.509-Zertifikaten](https://de.wikipedia.org/wiki/X.509), die eine "Vertrauenskette" bilden. Den Anfang dieser Kette bildet eine *zentrale* Zertifizierungsstelle, die mit einem auf Ihrem Computer gespeicherten öffentlichen Schlüssel verknüpft ist. Diese Zertifizierungsstelle signiert andere Zertifikate (in der Regel gegen Bezahlung und Vorlage eines Ausweises) und signalisiert Ihrem Computer damit, dass er ihnen vertraut. Da Ihr Computer der Zertifizierungsstelle vertraut, vertraut er auch diesen signierten Zertifikaten.
 
-OpenPGP hingegen nutzt ein „Vertrauensnetz“. Jeder kann die Authentizität anderer bestätigen. Wenn genügend Personen, denen Ihr Computer vertraut, ein bestimmtes Zertifikat signiert haben, kann Ihr Computer entscheiden, diesem Zertifikat ebenfalls zu vertrauen.
+OpenPGP hingegen nutzt ein "Vertrauensnetz". Jeder kann die Authentizität anderer bestätigen. Wenn genügend Personen, denen Ihr Computer vertraut, ein bestimmtes Zertifikat signiert haben, kann Ihr Computer entscheiden, diesem Zertifikat ebenfalls zu vertrauen.
 
 > Im Kontext der E-Mail-Verschlüsselung ist S/MIME eine absolut valide Alternative zu OpenPGP, insbesondere für Unternehmen. BOMnipotent benötigt jedoch OpenPGP-Schlüssel.
 

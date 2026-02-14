@@ -54,3 +54,4 @@ This permission is required to [approve, deny or view](/client/manager/access-ma
 BOMnipotent knows one hardcoded special role called "admin". This role always has all permissions that can be given to users. Additionally, there are some tasks that can only be done by a user with the admin role:
 - Only admins can [give or remove](/client/manager/access-management/role-assignment/) the admin role to or from other users. A special [tmp admin mechanism](/server/setup/admin/) exists to create the first admin for a freshly created BOMnipotent Server.
 - Only admins can [(de)activate the subscription key](/client/manager/subscription/) for a BOMnipotent Server instances.
+- Only admins can create and restore [database backups](/client/manager/backup-management/).

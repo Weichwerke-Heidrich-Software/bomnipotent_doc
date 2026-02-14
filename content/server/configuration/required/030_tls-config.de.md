@@ -41,8 +41,8 @@ Da BOMnipotent dem Secure-by-Default Prinzip folgt, fordert es von Ihnen mindest
 ```toml
 [tls]
 allow_http = false # Optional, ist standardmäßig false
-certificate_chain_path = „your-chain.crt“
-secret_key_path = „your-key.pem“
+certificate_chain_path = "your-chain.crt"
+secret_key_path = "your-key.pem"
 ```
 
 Die Angabe der TLS-Zertifikatpfade ist *erforderlich*, falls HTTP nicht erlaubt ist (da der Server sonst keine Verbindung anbieten könnte), und *optional*, falls HTTP ausdrücklich erlaubt ist, indem [allow_http](#allow_http) auf true gesetzt wird. Wenn Sie entweder den [certificate_chain_path](#certificate_chain_path) oder den [secret_key_path](#secret_key_path) festlegen, müssen Sie auch den jeweils anderen Wert festlegen. Darüber hinaus prüft der Server, ob Zertifikat und Schlüssel zusammenpassen.
@@ -79,7 +79,7 @@ MC4CAQAwBQYDK2VwBCIEIHru40FLuqgasPSWDuZhc5b2EhCGGcVC+j3DuAqiw0/m
 
 Ebenso muss der "certificate_chain_path" auf eine Datei verweisen, die durch BOMnipotent Server gelesen werden kann. Ein typischer Speicherort ist:
 ```toml
-certificate_chain_path = „/etc/ssl/certs/<Ihre-Domain>-fullchain.crt“
+certificate_chain_path = "/etc/ssl/certs/<Ihre-Domain>-fullchain.crt"
 ```
 
 Die Kette muss alle Zertifikate in der Vertrauenskette zusammengefügt enthalten, **beginnend** mit dem Zertifikat für **Ihren Server** und **endend** mit der **Stammzertifizierungsstelle**.

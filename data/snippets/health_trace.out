@@ -3,7 +3,7 @@
 [TRACE] Concatenated message for hash:
 [TRACE] Armored signature:
 [TRACE] Resolve: bomnipotent_server_of_your_choice:443
-[TRACE] Try connect TcpStream to 172.20.0.3:443
+[TRACE] Try connect TcpStream to 172.20.0.4:443
 [TRACE] Try wrap in TLS
 [TRACE] Sending ClientHello Message {
 [TRACE] 4745 5420 2f68 6561 6c74 6820 4854 5450  GET./health.HTTP

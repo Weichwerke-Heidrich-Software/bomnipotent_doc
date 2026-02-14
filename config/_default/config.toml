@@ -54,7 +54,7 @@ defaultContentLanguage = 'en'
 [[languages.en.menu.shortcuts]]
   pre = '<i class="fab fa-docker"></i> '
   name = 'Get the container'
-  url = 'https://hub.docker.com/u/wwhsoft'
+  url = 'https://hub.docker.com/r/wwhsoft/bomnipotent_server'
   weight = 110
 [[languages.en.menu.shortcuts]]
   pre = '<i class="fa-solid fa-calendar-days"></i> '

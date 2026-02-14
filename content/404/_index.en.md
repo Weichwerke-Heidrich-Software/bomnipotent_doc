@@ -1,12 +1,13 @@
----
-title: Requested page could not be found
-description: "You seem to have followed a broken link."
-build:
-  list: never
-robots: noindex
-imageEffects:
-  lightbox: false
----
++++
+title = "Requested page could not be found"
+description = "You seem to have followed a broken link."
+robots = "noindex"
+weight = 0
+[build]
+list = "never"
+[imageEffects]
+lightbox = false
++++
 
 ![Error 404 in BOMnipotent branding](/images/bomnipotent_404_banner.svg)
 

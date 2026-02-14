@@ -67,7 +67,7 @@ Dadurch wird der Container gestartet und verbindet sich mit Port 465 (dem Standa
 
 Die Änderung Ihrer Compose-Datei ist jedoch noch nicht abgeschlossen!
 
-Unter „Netzwerke“ müssen Sie das SMTP-Netzwerk angeben:
+Unter "Netzwerke" müssen Sie das SMTP-Netzwerk angeben:
 ``` YAML
   bomnipotent_server:
     container_name: bomnipotent_server

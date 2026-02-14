@@ -20,9 +20,9 @@ Clients like Mozilla Thunderbird are usually very good at deducing the required 
 
 ## Communication via SMTP Relay
 
-If you have more than one service that sends email it can be benficial to locally run an SMTP relay station. It offers a single endpoint for your setup to communicate with the mail server.
+If you have more than one service that sends email, it can be beneficial to locally run an SMTP relay station. It offers a single endpoint for your setup to communicate with the mail server.
 
-There are several docker containers that offer SMTP relay functionality. This tutorial focuses on [crazymax/msmtpd](https://github.com/crazy-max/docker-msmtpd), because it has the best security posture among the lightweight solutions.
+There are several Docker containers that offer SMTP relay functionality. This tutorial focuses on [crazymax/msmtpd](https://github.com/crazy-max/docker-msmtpd), because it has the best security posture among the lightweight solutions.
 
 ### Running Relay via Docker Compose
 
@@ -63,7 +63,7 @@ Add the following service to your compose.yaml file:
     restart: unless-stopped
 ```
 
-This will spin up the container, connecting to Port 465 (the default for SMTPS protocol) of the SMTP Host, encrypting with TLS and not STARTTLS. It will listen on port 2500, which is not obvious from the input but the default behaviour of msmtp.
+This will spin up the container, connecting to port 465 (the default for SMTPS protocol) of the SMTP Host, encrypting with TLS and not STARTTLS. It will listen on port 2500, which is not obvious from the input but the default behaviour of msmtp.
 
 The modification of your compose file is not yet done, though!
 
@@ -75,7 +75,7 @@ networks:
     name: smtp_network
 ```
 
-You also need to add the network to any container that is supposed to contact it. You may also want for these containers to depend on the smtp_relay, so that they don't start before the relay station is ready:
+You also need to add the network to any container that is supposed to contact it. You may also want these containers to depend on the smtp_relay, so that they don't start before the relay station is ready:
 ``` yaml
   bomnipotent_server:
     container_name: bomnipotent_server
@@ -136,7 +136,8 @@ docker run --detach -p 2500:2500 --name smtp_relay \
     -e SMTP_DOMAIN=localhost \
     crazymax/msmtpd
 ```
-This does basically the same as the section suggested for the compose file. You again need to replace the values for TZ, SMTP_HOST, SMTP_USER and SMTP_FROM  with the ones for your email provider.
+
+This basically does the same as the section suggested for the compose file. You again need to replace the values for TZ, SMTP_HOST, SMTP_USER, and SMTP_FROM with the ones for your email provider.
 
 The command above exposes the port 2500 to localhost, which is why your BOMnipotent config needs to be as follows:
 ``` toml

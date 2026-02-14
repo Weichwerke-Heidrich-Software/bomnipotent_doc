@@ -8,19 +8,10 @@ description = "Learn how to configure the user expiration period as well as the 
 When a request for a new [user account](/client/basics/account-creation/) is made, it deposits a public key in the database.
 
 This key has an expiration data, after which it is not accepted anymore. This can be seen by calling:
-```
-./bomnipotent_client user list
-```
-``` {wrap="false" title="output"}
-╭───────────────────┬──────────┬───────────────────────────┬───────────────────────────╮
-│ User Email        │ Status   │ Expires                   │ Last Updated              │
-├───────────────────┼──────────┼───────────────────────────┼───────────────────────────┤
-│ info@wwh-soft.com │ APPROVED │ 2026-03-03 11:30:15.62432 │ 2025-03-02 11:47:38.51048 │
-│                   │          │ 5 UTC                     │ 5 UTC                     │
-╰───────────────────┴──────────┴───────────────────────────┴───────────────────────────╯
-```
 
-By default, the key is valid for a little over a year after it was requested. This time can be configured with the "expiration_period" parameter, which is located under "[user]". As values it accepts a time period in the human readable format "<number> <unit>", where "<unit>" can be any of "year", "month", "week", "day", or their plural variants.
+{{< example user_list >}}
+
+By default, the key is valid for a little over a year after it was requested. This time can be configured with the "expiration_period" parameter, which is located under "[user]". As values it accepts a time period in the human readable format "\<number\> \<unit\>", where "\<unit\>" can be any of "year", "month", "week", "day", or their plural variants.
 {{< tabs >}}
 {{% tab title="default time" %}}
 ```toml
@@ -60,7 +51,7 @@ Changing this configuration **does not** affect the expiration dates of existing
 
 ## Removal Period
 
-To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database.
+To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database by the periodic task ["remove_inactive_users"](/server/periodic-tasks/enabled/remove-inactive-users/).
 
 This time period is configurable with the "removal_period" parameter, which is also found under "[user]":
 ```toml
