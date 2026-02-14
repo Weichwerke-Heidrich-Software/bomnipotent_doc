@@ -2,6 +2,7 @@
 title = "Remove inactive Users"
 slug = "remove-inactive-users"
 weight = 20
+description = "Periodic task to remove inactive users after 30+ days, automating user-data cleanup and GDPR-compliant retention policies."
 +++
 
 This tasks checks the user database for entries that have been expired for more than 30 days, and removes them.

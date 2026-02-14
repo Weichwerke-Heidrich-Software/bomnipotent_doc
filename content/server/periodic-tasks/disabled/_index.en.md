@@ -1,6 +1,7 @@
 +++
 title = "Disabled by Default"
 weight = 30
+description = "List of periodic tasks disabled by default in Bomnipotent; enable them by adding their names to Config.toml."
 +++
 
 This section describes periodic tasks that are not enabled by default.

@@ -2,6 +2,7 @@
 title = "Aufgaben konfigurieren"
 slug = "configuring-tasks"
 weight = 10
+description = "Anleitung: Zyklische Aufgaben des BOMnipotent Server in der Config.toml konfigurieren — Perioden, Aktivierung und Hot-Reloading erklärt."
 +++
 
 Angefangen mit Version 1.4.0 von BOMnipotent Server können die Parameter von zyklischen Aufgaben in der [Config.toml](/server/configuration/config-file/) Datei konfiguriert werden. Diese werden in den "[[tasks]]" Abschnitten spezifiziert:

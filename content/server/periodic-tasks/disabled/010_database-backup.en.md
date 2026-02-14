@@ -2,6 +2,7 @@
 title = "Database Backup"
 slug = "database-backup"
 weight = 10
+description = "Create a full backup of the BOMnipotent database to be able to restore it at a later point."
 +++
 
 This task creates a full backup of the database and stores it to an SQL file.

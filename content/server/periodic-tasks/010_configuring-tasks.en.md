@@ -2,6 +2,7 @@
 title = "Configuring Tasks"
 slug = "configuring-tasks"
 weight = 10
+description = "Configure BOMnipotent Server periodic tasks in Config.toml: set task name, period, enabled, human-readable intervals and hot reload scheduling."
 +++
 
 Beginning with version 1.4.0 of BOMnipotent Server, the parameters of periodic tasks can be configured in the [Config.toml](/server/configuration/config-file/) file. They are specified in the "[[tasks]]" sections:

@@ -2,6 +2,7 @@
 title = "Backup Management"
 slug = "backup-management"
 weight = 40
+description = "BOMnipotent Client backup management: manually create and completely restore database backups."
 +++
 
 Regularly backing up a database is an important step in any cyber resilience strategy. BOMnipotent's main mechanism for this is a [periodic backup task](/server/periodic-tasks/disabled/database-backup) that can and should be enabled in the configuration.

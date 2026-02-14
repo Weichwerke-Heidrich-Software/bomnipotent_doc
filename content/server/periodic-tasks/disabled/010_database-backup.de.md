@@ -2,6 +2,7 @@
 title = "Datenbanksicherung"
 slug = "database-backup"
 weight = 10
+description = "Erstellen Sie eine vollständige Sicherung ihrer BOMnipotent Datenbank um sie zu einem späteren Zeitpunkt wiederherstellen zu können."
 +++
 
 Diese Aufgabe erstellt eine vollständige Sicherung der Datenbank und speichert sie als SQL Datei.

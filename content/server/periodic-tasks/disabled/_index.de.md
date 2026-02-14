@@ -1,6 +1,7 @@
 +++
 title = "Standardmäßig ausgeschaltet"
 weight = 30
+description = "Zyklische Aufgaben, die standardmäßig ausgeschaltet sind; in der Config.toml per Aufgabenname aktivieren."
 +++
 
 Dieser Abschnitt beschreibt zyklische Aufgaben, welche standardmäßig nicht eingeschaltet sind.

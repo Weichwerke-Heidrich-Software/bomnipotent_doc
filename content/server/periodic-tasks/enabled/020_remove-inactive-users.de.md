@@ -2,6 +2,7 @@
 title = "Remove inactive Users"
 slug = "remove-inactive-users"
 weight = 20
+description = "Automatische Entfernung inaktiver Nutzer aus der Datenbank nach 30 Tagen, um DSGVO-konform zu bleiben."
 +++
 
 Diese Aufgabe überprüft die Nutzer Datenbank auf Einträge die länger als 30 Tage abgelaufen sind, und entfernt sie.

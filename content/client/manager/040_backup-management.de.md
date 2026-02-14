@@ -2,6 +2,7 @@
 title = "Sicherungsverwaltung"
 slug = "backup-management"
 weight = 40
+description = "Sicherungsverwaltung für BOMnipotent: Manuelles Erstellen und Wiederherstellen von Datenbank-Backups."
 +++
 
 Eine Datenbank regelmäßig zu sichern ist ein wichtiger Schritt in jeder Cyber-Resilienz-Strategie. BOMnipotents hauptsächlicher Mechanismus um dies zu tun ist eine [zyklische Sicherungsaufgabe](/de/server/periodic-tasks/disabled/database-backup), welche in der Konfiguration aktiviert werden kann.

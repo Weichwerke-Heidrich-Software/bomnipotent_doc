@@ -2,6 +2,7 @@
 title = "Check for Updates"
 slug = "check-for-updates"
 weight = 10
+description = "Periodic task to check BOMnipotent Server updates online, logging INFO for available updates and WARN for unsupported versions."
 +++
 
 This task queries [www.bomnipotent.de](https://www.bomnipotent.de/downloads) to check if a new version of BOMnipotent Server is available. It prints a log with INFO level if the server can be updated, and a log with WARN level if your version is no longer supported.

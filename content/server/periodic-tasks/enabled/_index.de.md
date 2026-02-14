@@ -1,6 +1,7 @@
 +++
 title = "Standardmäßig eingeschaltet"
 weight = 20
+description = "Übersicht standardmäßig aktivierter zyklischer Aufgaben mit Anleitung zur Anpassung oder Deaktivierung via Config.toml."
 +++
 
 Dieser Abschnitt beschreibt zyklische Aufgaben, welche standardmäßig aktiviert sind und somit täglich ausgeführt werden.
