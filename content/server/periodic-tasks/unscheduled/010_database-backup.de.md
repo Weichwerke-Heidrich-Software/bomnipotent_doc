@@ -13,7 +13,7 @@ Der Name dieser Aufgabe lautet "database_backup". Sie akzeptiert die folgenden [
 name = "database_backup"
 directory = "/etc/bomnipotent_server/backups/"
 period = "1 day" # Optional
-enabled = true # Optional
+scheduled = true # Optional
 ```
 
 > [!IMPORTANT]

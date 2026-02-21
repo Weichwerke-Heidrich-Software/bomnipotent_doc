@@ -13,7 +13,7 @@ The name of this task is "database_backup", and it accepts the following [config
 name = "database_backup"
 directory = "/etc/bomnipotent_server/backups/"
 period = "1 day" # Optional
-enabled = true # Optional
+scheduled = true # Optional
 ```
 
 > [!IMPORTANT]

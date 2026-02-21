@@ -12,5 +12,5 @@ Der Name dieser Aufgabe ist "check_for_updates". Sie akzeptiert die folgenden [K
 [[tasks]]
 name = "check_for_updates"
 period = "1 day" # Optional
-enabled = true # Optional
+scheduled = true # Optional
 ```
