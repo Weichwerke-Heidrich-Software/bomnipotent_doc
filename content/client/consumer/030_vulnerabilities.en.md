@@ -11,6 +11,10 @@ To dispaly a list of known vulnerabilities accessible to you, call:
 
 {{< example vuln_list >}}
 
+For even more details, add the "--full" flag:
+
+{{< example "vuln_list_full" "1.5.0" >}}
+
 The output contains an ID for the vulnerability, a description, and a [CVSS value](https://www.first.org/cvss/) and/or severity if available. It also contains a [TLP Classification](https://www.first.org/tlp/) derived from that of the affected product, and ideally a [CSAF Assessment](https://www.csaf.io/) by the vendor.
 
 The list can be filtered by name and/or version of the affected product:

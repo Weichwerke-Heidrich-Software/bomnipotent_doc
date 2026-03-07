@@ -19,6 +19,7 @@ declare -A OPTION_MAP=(
   [--expired]=-e
   [--fail-on]=-f # This is grype syntax
   [--filename]=-f
+  [--full]=-f
   [--help]=-h
   [--id]=-i
   [--json]=-j

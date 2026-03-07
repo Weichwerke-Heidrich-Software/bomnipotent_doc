@@ -11,6 +11,10 @@ Um eine Liste bekannter, Ihnen zugänglicher Sicherheitslücken anzuzeigen, rufe
 
 {{< example vuln_list >}}
 
+Um mehr Details zu sehen, fügen Sie die "--full" Flag hinzu:
+
+{{< example "vuln_list_full" "1.5.0" >}}
+
 Die Ausgabe enthält eine ID für die Sicherheitslücke, eine Beschreibung sowie, und, falls verfügbar, einen  [CVSS Wert](https://www.first.org/cvss/) und/oder eine Schweregrad-Einstufung. Zudem enthält sie eine [TLP Klassifizierung](https://www.first.org/tlp/), welche sich von der des betroffenen Produkts ableitet, und idealerweise eine [CSAF Bewertung](https://www.csaf.io/) durch den Anbieter.
 
 Die Liste kann nach Name und/oder Version des betroffenen Produkts gefiltert werden:
