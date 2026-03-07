@@ -1,7 +1,15 @@
 [INFO] 
-╭──────────────┬────────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬──────────────────╮
-│ Product Name │ Version    │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ CSAF Assessments │
-├──────────────┼────────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼──────────────────┤
-│ Your Project │ 2026-02-13 │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default │                  │
-│              │            │                     │ anic in `Acceptor::accept` │       │          │         │                  │
-╰──────────────┴────────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴──────────────────╯
+╭──────────────┬────────────┬───────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬──────────────────────┬──────────────────╮
+│ Product Name │ Version    │ Component │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ Source               │ CSAF Assessments │
+├──────────────┼────────────┼───────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼──────────────────────┼──────────────────┤
+│ Your Project │ 2026-03-07 │           │ GHSA-65p9-r9h6-22vj │ AWS-LC has Timing Side-Cha │ 8.2   │ high     │ Default │ github-language-rust │                  │
+│              │            │           │                     │ nnel in AES-CCM Tag Verifi │       │          │         │                      │                  │
+│              │            │           │                     │ cation                     │       │          │         │                      │                  │
+│ Your Project │ 2026-03-07 │           │ GHSA-hfpc-8r3f-gw53 │ AWS-LC has PKCS7_verify Si │ 7.5   │ high     │ Default │ github-language-rust │                  │
+│              │            │           │                     │ gnature Validation Bypass  │       │          │         │                      │                  │
+│ Your Project │ 2026-03-07 │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default │ github-language-rust │                  │
+│              │            │           │                     │ anic in `Acceptor::accept` │       │          │         │                      │                  │
+│ Your Project │ 2026-03-07 │           │ GHSA-vw5v-4f2q-w9xf │ AWS-LC has PKCS7_verify Ce │ 8.7   │ high     │ Default │ github-language-rust │                  │
+│              │            │           │                     │ rtificate Chain Validation │       │          │         │                      │                  │
+│              │            │           │                     │  Bypass                    │       │          │         │                      │                  │
+╰──────────────┴────────────┴───────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴──────────────────────┴──────────────────╯
