@@ -2,9 +2,10 @@
 title = "CSAFs Herunterladen"
 slug = "download_csafs"
 weight = 20
+description = "Prüfen Sie zyklisch externe CSAF Provider, und eröffnen damit einen neuen Pfad, um BOMs mit Sicherheitslücken anzureichern."
 +++
 
-Diese Aufgabe lädt CSAF Dokumente von einer externen Quelle, vergleicht diese mit den Komponenten aller gespeicherten BOMs, und erstellt neue Sicherheitslückeneinträge basierend auf den Ergebnissen.
+Diese Aufgabe lädt CSAF Dokumente von einer externen Quelle, vergleicht diese mit den Komponenten aller gespeicherten BOMs, und erstellt neue [Sicherheitslückeneinträge](/de/client/manager/doc-management/vulnerabilities/#aktualisieren-klassifizierter-sicherheitslücken) basierend auf den Ergebnissen.
 
 Der Name dieser Aufgabe lautet "download_csafs". Sie akzeptiert die folgenden [Konfigurationen](/de/server/periodic-tasks/configuring-tasks/):
 ```toml

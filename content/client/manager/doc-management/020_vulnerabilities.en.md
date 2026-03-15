@@ -54,7 +54,17 @@ You can only update vulnerabilities for a BOM that exists on the server:
 
 ## Updating Classified Vulnerabilities
 
-TODO
+Some vendors, especially in the industry sector, do not typically make their vulnerabilities publicly available right away. This makes sense: As soon as a vulnerability is publicly known, it can be exploited. Instead, the vendors typically inform their customers of actions they have to take, and publicise the incident only after a grace period.
+
+The CSAF standard was developed to automate this process. Vendors upload CSAF documents on their CSAF server, which can then be periodically queried by the customers.
+
+Beginning with version 1.5.0, BOMnipotent supports the ["download_csafs"](/server/periodic-tasks/unscheduled/download_csafs/) periodic task. It downloads CSAF documents from an external CSAF provider, matches them agains the components of all stored BOMs, and creates new vulnerability entries based on those matches.
+
+CSAF documents contain an affection status for their products, which determines whether or not a vulnerability has to be created for the component. The stati "first_affected", "last_affected", "known_affected" and "under_investigation" create a vulnerability entry, while the stati "fixed", "first_fixed", "known_not_affected" and "recommended" do not.
+
+The resulting vulnerability is itself classified. Because it is a combination of a BOM and a CSAF document, which may in general have different classifications, the stricter of the two TLP labels is used. If both documents do not provide a classification, the [default TLP Label](/server/configuration/optional/tlp-config/) is used.
+
+The task can be configured several times, allowing to independently query all distinct vendors of your used components.
 
 ## Listing
 
