@@ -11,7 +11,20 @@ Ein zentraler Bestandteil der Lieferkettensicherheit ist der Abgleich des Inhalt
 
 ## Erkennen
 
-BOMnipotent erkennt selbst keine neuen Schwachstellen. Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype/). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
+Hersteller verteilen Sicherheitslücken in ihren Produkten über eine Vielzahl von Kanälen:
+- Das [Open Source Vulnerability (OSV) format](https://ossf.github.io/osv-schema/) wird als Standard von Google entwickelt. Mehrere Datenbanken implementieren is, allen voran die [OSV database](https://osv.dev/).
+- Die [National Vulnerability Database (NVD)](https://nvd.nist.gov/) bietet eine REST API.
+- Die [European Union Vulnerabilty Database (EUVD)](https://euvd.enisa.europa.eu/) bietet eine andere REST API.
+- Öffentliche GitHub Repositories haben einen [Security Advisories Abschnitt](https://docs.github.com/en/code-security/concepts/vulnerability-reporting-and-management/about-repository-security-advisories).
+- Jedes sinnvolle CSAF Dokument bezieht sich auf mindestens eine Sicherheitslücke.
+
+Es gibt eine wichtige Unterscheidung zwischen dem letzten und den anderen Fällen: CSAF Dokumente können über ein TLP Label klassifiziert werden, während alle anderen Sicherheitslücken öffentlich verfügbare Informationen sind. Aus diesem Grund sind viele Datenbanken großartige Werkzeuge im Zusammenhang mit Open Source Abhängigkeiten, bei denen Sicherheitslücken in der Regel öffentlich verfügbar gemacht werden, während sie beim Prüfen von Closed Source Produkten an ihre Grenzen stoßen.
+
+BOMnipotent unterstützt beide Arten von Quellen über unterschiedliche Mechanismen.
+
+## Aktualisieren öffentlicher Sicherheitslücken
+
+Ein Tool, das in Kombination mit BOMnipotent verwendet werden kann, ist [grype](https://github.com/anchore/grype/). Es verwendet eine BOM als Eingabe und erstellt eine Liste der Schwachstellen als Ausgabe. Das [grype-Tutorial](/de/integration/grype/) enthält weitere Informationen zur Verwendung. Es können aber auch andere Tools verwendet werden, solange sie Output im [CycloneDX JSON Format](https://cyclonedx.org/) erstellen können.
 
 Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und an grype weiterleiten.
 
@@ -20,8 +33,6 @@ Mit dem BOMnipotent-Client können Sie den Inhalt einer BOM direkt ausgeben und 
 Dadurch werden die Softwarekomponenten anhand mehrerer Datenbanken geprüft und die Ergebnisse in das CycloneDX eingepflegt. Anschließend werden alle Ergebnisse in einer Datei namens "vuln.cdx.json" (oder einem anderen von Ihnen angegebenen Namen) gespeichert.
 
 > Grype hat derzeit einen kleinen [bekannten Fehler](https://github.com/anchore/grype/issues/2418), der dazu führt, dass die Version der Hauptkomponente beim Hinzufügen der Schwachstellen vergessen wird. Dies ist problematisch, da BOMnipotent die Version zur eindeutigen Identifizierung eines Produkts benötigt. Eine mögliche Problemumgehung besteht darin, die Version erneut zum Dokument hinzuzufügen, beispielsweise über `jq '.metadata.component.version = "<VERSION>"' "vuln.cdx.json" > "vuln_with_version.cdx.json"`. Ab BOMnipotent v0.3.1 können Sie die Version stattdessen direkt beim Hochladen der Schwachstelle angeben, wie unten beschrieben.
-
-## Aktualisieren
 
 Der Befehl zum Aktualisieren der mit einer BOM verknüpften Schwachstellen lautet:
 
@@ -38,6 +49,10 @@ Schwachstellen sollten regelmäßig aktualisiert werden. Dadurch werden alle vor
 Sie können Schwachstellen nur für eine BOM aktualisieren, die auf dem Server vorhanden ist:
 
 {{< example vuln_update_nonexistent >}}
+
+## Aktualisieren klassifizierter Sicherheitslücken
+
+TODO
 
 ## Auflisten
 
