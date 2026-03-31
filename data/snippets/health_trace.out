@@ -2,7 +2,7 @@
 [TRACE] Using platform's default root certificates.
 [TRACE] Concatenated message for hash:
 [TRACE] Armored signature:
-[TRACE] Resolve: bomnipotent_server_of_your_choice:443
+[TRACE] Resolve: bomnipotent-server-of-your-choice:443
 [TRACE] Try connect TcpStream to 172.20.0.4:443
 [TRACE] Try wrap in TLS
 [TRACE] Sending ClientHello Message {

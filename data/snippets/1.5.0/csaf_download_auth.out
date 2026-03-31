@@ -1,0 +1,9 @@
+[INFO] Found provider metadata at URL: https://other-csaf-provider/.well-known/csaf/provider-metadata.json
+[INFO] Retrieving CSAF documents from ROLIE feed at https://other-csaf-provider/some-white-rolie-dir/some-feed.json.
+[INFO] Skipping CSAF document with ID 'wwh_core_utils_advisory' from ROLIE feed because it is already in the current inventory.
+[INFO] Found 0 new entries in ROLIE feed at https://other-csaf-provider/some-white-rolie-dir/some-feed.json.
+[INFO] Retrieving CSAF documents from ROLIE feed at https://other-csaf-provider/some-amber-rolie-dir/some-feed.json.
+[INFO] Found 1 new entries in ROLIE feed at https://other-csaf-provider/some-amber-rolie-dir/some-feed.json.
+[INFO] Downloading 0 of 1...
+[INFO] Downloading CSAF document from ROLIE entry with ID 'some_amber_advisory'.
+[INFO] Stored 1 CSAF document(s) under '/home/csaf'.

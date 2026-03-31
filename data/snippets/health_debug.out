@@ -6,5 +6,5 @@
 [DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "69", "date": "Wed, 01 Jan 2025 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
 [DEBUG] No additional log messages received.
 [DEBUG] Call<Cleanup>
-[DEBUG] Pool gone: PoolKey { scheme: "https", authority: bomnipotent_server_of_your_choice, proxy: None }
-[INFO] The service at https://bomnipotent_server_of_your_choice/ is healthy.
+[DEBUG] Pool gone: PoolKey { scheme: "https", authority: bomnipotent-server-of-your-choice, proxy: None }
+[INFO] The service at https://bomnipotent-server-of-your-choice/ is healthy.
