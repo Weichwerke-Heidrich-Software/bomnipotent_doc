@@ -44,6 +44,14 @@ Beginnend mit Version 1.3.0 kann hierfür ein beliebiger Server angegeben werden
 
 {{< example "csaf_download_other" "1.3.0" >}}
 
+Viele CSAF Provider schützen den Zugriff auf CSAF Dokumente mit einer TLP Klassifizierung, welche nicht {{<tlp-white>}}/{{<tlp-clear>}} ist, über Mutual Transport Layer Security (mTLS). Hierbei wird dem Client ein TLS Zertifikat zusammen mit einem geheimen Schlüssel ausgestellt, welches der Client bei Anfragen nutzen kann, um sich zu authentifizieren.
+
+Beginnend mit Version 1.5.0 können Sie dem Client eine Zertifikatskette und den zugehörigen geheimen Schlüssel mitgeben:
+
+{{< example "csaf_download_auth" "1.5.0" >}}
+
+> Die "Zertifikatskette" enthält das Client Zertifikat und das Zertifikat der Autorität, welches dieses signiert hat. Die Reihenfolge ist dabei aufsteigend, beginnt also mit dem Client Zertifikat.
+
 Der CSAF Standard macht mehrere Vorschläge, wo die Provider Metadata gehostet werden sollte, und wie sie gefunden werden kann. Manche Provider haben sich dennoch entschieden, sie an einer andereren Stelle zu hosten. Um auch mit diesen die Interoperabilität zu ermöglichen, kann die Provider Metadata URL explizit als Argument angegeben werden:
 
 {{< example "csaf_download_metadata" "1.4.0" >}}

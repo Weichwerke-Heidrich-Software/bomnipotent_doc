@@ -13,6 +13,7 @@ declare -A OPTION_MAP=(
   [who-am-i]=whoami
   [--after]=-a
   [--before]=-b
+  [--client-cert]=-c
   [--cpe]=-c
   [--csaf]=-c
   [--domain]=-d
