@@ -2,5 +2,5 @@
 [INFO] Retrieving CSAF documents from ROLIE feed at https://other-csaf-provider/some-white-rolie-dir/some-feed.json.
 [INFO] Found 1 new entries in ROLIE feed at https://other-csaf-provider/some-white-rolie-dir/some-feed.json.
 [INFO] Downloading 0 of 1...
-[INFO] Downloading CSAF document from ROLIE entry with ID 'wwh_core_utils_advisory'.
+[INFO] Downloading CSAF document from ROLIE entry with ID 'some_white_advisory'.
 [INFO] Stored 1 CSAF document(s) under '/home/csaf'.

@@ -1,1 +1,1 @@
-bomnipotent_client -d other-csaf-provider -c /home/client.chain.pem /home/client.key.pem csaf download /home/csaf
+bomnipotent_client -d other-csaf-provider -c /home/keys/client.chain.pem /home/keys/client.key.pem csaf download /home/csaf

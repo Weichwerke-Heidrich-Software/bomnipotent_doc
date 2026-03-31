@@ -2,21 +2,12 @@
 ╭──────────────┬─────────┬─────────────────────┬───────────┬────────────────────────────╮
 │ Product Name │ Version │ Vulnerability       │ TLP       │ CSAF Assessments           │
 ├──────────────┼─────────┼─────────────────────┼───────────┼────────────────────────────┤
-│ Best Project │ 3.1.4   │ GHSA-65p9-r9h6-22vj │ TLP:GREEN │                            │
-│ Best Project │ 3.1.4   │ GHSA-hfpc-8r3f-gw53 │ TLP:GREEN │                            │
 │ Best Project │ 3.1.4   │ GHSA-qg5g-gv98-5ffh │ TLP:GREEN │                            │
-│ Best Project │ 3.1.4   │ GHSA-vw5v-4f2q-w9xf │ TLP:GREEN │                            │
-│ Your Project │ 1.0.0   │ GHSA-65p9-r9h6-22vj │ Default   │                            │
-│ Your Project │ 1.0.0   │ GHSA-hfpc-8r3f-gw53 │ Default   │                            │
 │ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ Default   │ known_affected, according  │
 │              │         │                     │           │ to ghsa-qg5g-gv98-5ffh_adv │
 │              │         │                     │           │ isory                      │
-│ Your Project │ 1.0.0   │ GHSA-vw5v-4f2q-w9xf │ Default   │                            │
-│ Your Project │ 1.1.0   │ GHSA-65p9-r9h6-22vj │ Default   │                            │
-│ Your Project │ 1.1.0   │ GHSA-hfpc-8r3f-gw53 │ Default   │                            │
 │ Your Project │ 1.1.0   │ GHSA-qg5g-gv98-5ffh │ Default   │ fixed, according to ghsa-q │
 │              │         │                     │           │ g5g-gv98-5ffh_advisory, re │
 │              │         │                     │           │ commended, according to gh │
 │              │         │                     │           │ sa-qg5g-gv98-5ffh_advisory │
-│ Your Project │ 1.1.0   │ GHSA-vw5v-4f2q-w9xf │ Default   │                            │
 ╰──────────────┴─────────┴─────────────────────┴───────────┴────────────────────────────╯
