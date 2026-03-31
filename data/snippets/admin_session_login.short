@@ -1,1 +1,1 @@
-bomnipotent_client -d bomnipotent_server_of_your_choice -u admin@example.com session login
+bomnipotent_client -d bomnipotent-server-of-your-choice -u admin@example.com session login

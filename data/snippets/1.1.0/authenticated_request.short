@@ -1,1 +1,1 @@
-bomnipotent_client -d bomnipotent_server_of_your_choice -u user@example.com whoami
+bomnipotent_client -d bomnipotent-server-of-your-choice -u user@example.com whoami
