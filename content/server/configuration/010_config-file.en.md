@@ -75,4 +75,4 @@ db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/b
 
 BOMnipotent Server supports reading variables from a .env file. If a file with that exact name, ".env", is located next to your config file, the server will try to evaluate it before loading the config.
 
-Changing the .env file while BOMnipotent Server is running will trigger a hot reloading and a re-evaluation of both the .env and the config file.
+Changing the .env file while BOMnipotent Server is running will trigger a hot reloading and a re-evaluation of both the .env and the config file. However, because the hot reloading is based on a serialisation of the final configuration, and because secrets like passwords are serialised as "***", changing a secret will *not* trigger a hot reloading.
