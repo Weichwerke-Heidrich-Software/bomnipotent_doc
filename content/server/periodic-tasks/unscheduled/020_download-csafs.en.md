@@ -1,6 +1,6 @@
 +++
 title = "Download CSAFs"
-slug = "download_csafs"
+slug = "download-csafs"
 weight = 20
 description = "Periodically query external CSAF providers, opening up a new path to enrich BOMs with vulnerabilities."
 +++

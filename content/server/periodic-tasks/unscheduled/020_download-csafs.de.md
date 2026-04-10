@@ -1,6 +1,6 @@
 +++
 title = "CSAFs Herunterladen"
-slug = "download_csafs"
+slug = "download-csafs"
 weight = 20
 description = "Prüfen Sie zyklisch externe CSAF Provider, und eröffnen damit einen neuen Pfad, um BOMs mit Sicherheitslücken anzureichern."
 +++

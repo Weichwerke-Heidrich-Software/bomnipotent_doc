@@ -56,7 +56,7 @@ Manche Anbieter, insbesondere im Industriesektor, veröffentlichen ihre Sicherhe
 
 Der CSAF-Standard wurde entwickelt, um diesen Prozess zu automatisieren. Anbieter laden CSAF-Dokumente auf ihren CSAF-Server hoch, die dann regelmäßig von den Kunden abgefragt werden können.
 
-Ab Version 1.5.0 unterstützt BOMnipotent die zyklische Aufgabe ["download_csafs"](/server/periodic-tasks/unscheduled/download_csafs/). Diese lädt CSAF-Dokumente von einem externen CSAF-Anbieter herunter, gleicht sie mit den Komponenten aller gespeicherten BOMs ab und erstellt basierend auf diesen Übereinstimmungen neue Sicherheitslückeneinträge.
+Ab Version 1.5.0 unterstützt BOMnipotent die zyklische Aufgabe ["download_csafs"](/server/periodic-tasks/unscheduled/download-csafs/). Diese lädt CSAF-Dokumente von einem externen CSAF-Anbieter herunter, gleicht sie mit den Komponenten aller gespeicherten BOMs ab und erstellt basierend auf diesen Übereinstimmungen neue Sicherheitslückeneinträge.
 
 CSAF-Dokumente enthalten einen Status für die betroffenen Produkte, der festlegt, ob für die jeweilige Komponente eine Sicherheitslücke erstellt werden muss. Die Stati "first_affected", "last_affected", "known_affected" und "under_investigation" erzeugen einen Eintrag für eine Sicherheitslücke, während die Stati "fixed", "first_fixed", "known_not_affected" und "recommended" dies nicht tun.
 

@@ -58,7 +58,7 @@ Some vendors, especially in the industry sector, do not typically make their vul
 
 The CSAF standard was developed to automate this process. Vendors upload CSAF documents on their CSAF server, which can then be periodically queried by the customers.
 
-Beginning with version 1.5.0, BOMnipotent supports the ["download_csafs"](/server/periodic-tasks/unscheduled/download_csafs/) periodic task. It downloads CSAF documents from an external CSAF provider, matches them agains the components of all stored BOMs, and creates new vulnerability entries based on those matches.
+Beginning with version 1.5.0, BOMnipotent supports the ["download_csafs"](/server/periodic-tasks/unscheduled/download-csafs/) periodic task. It downloads CSAF documents from an external CSAF provider, matches them agains the components of all stored BOMs, and creates new vulnerability entries based on those matches.
 
 CSAF documents contain an affection status for their products, which determines whether or not a vulnerability has to be created for the component. The stati "first_affected", "last_affected", "known_affected" and "under_investigation" create a vulnerability entry, while the stati "fixed", "first_fixed", "known_not_affected" and "recommended" do not.
 
