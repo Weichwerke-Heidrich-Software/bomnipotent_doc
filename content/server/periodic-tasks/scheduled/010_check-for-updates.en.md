@@ -12,5 +12,5 @@ The name of this task is "check_for_updates". It accepts the following [configur
 [[tasks]]
 name = "check_for_updates"
 period = "1 day" # Optional
-enabled = true # Optional
+scheduled = true # Optional
 ```

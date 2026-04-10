@@ -1,1 +1,1 @@
-bomnipotent_client -d other_csaf_provider csaf download /home/csaf
+bomnipotent_client -d other-csaf-provider csaf download /home/csaf

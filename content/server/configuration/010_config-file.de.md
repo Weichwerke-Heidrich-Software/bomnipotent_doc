@@ -75,4 +75,4 @@ db_url = "postgres://bomnipotent_user:${BOMNIPOTENT_DB_PW}@bomnipotent_db:5432/b
 
 BOMnipotent Server unterstützt das Lesen von Variablen aus einer .env Datei. Wenn sich eine Datei mit genau diesem Namen, ".env", neben Ihrer Konfigurationsdatei befindet, versucht der Server, sie auszuwerten, bevor die Konfiguration geladen wird.
 
-Das Ändern der .env-Datei während der Ausführung des BOMnipotent-Servers löst ein Hot Reloading und eine Neuauswertung sowohl der .env- als auch der Konfigurationsdatei aus.
+Das Ändern der .env-Datei während der Ausführung des BOMnipotent-Servers löst ein Hot Reloading und eine Neuauswertung sowohl der .env- als auch der Konfigurationsdatei aus. Da das Hot Reloading allerdings auf der Serialisierung der finalen Konfiguration basiert, und da Geheimnisse wie Passwörter als "***" serialisiert werden, löst das Ändern eines Geheimnisses *kein* Hot Reloading aus.

@@ -44,6 +44,14 @@ Beginning with version 1.3.0, an arbitrary Server acting as a [CSAF provider](ht
 
 {{< example "csaf_download_other" "1.3.0" >}}
 
+Many CSAF providers protect access to CSAF documents with a TLP classification other than {{<tlp-white>}}/{{<tlp-clear>}} by using Mutual Transport Layer Security (mTLS). This involves issuing a TLS certificate to the client along with a secret key, which the client can use to authenticate itself during requests.
+
+Beginning with version 1.5.0, you can provide the client with a certificate chain and the corresponding secret key:
+
+{{< example "csaf_download_auth" "1.5.0" >}}
+
+> The "certificate chain" contains the client certificate and the certificate of the authority that signed it. The order is ascending, starting with the client certificate.
+
 The CSAF standard makes several suggestions where the provider metadata should be hosted, and how it can be found. However, some providers still decide to host it somewhere else. To make interaction with these possible as well, the provider metadata URL can be explicitly provided as an argument:
 
 {{< example "csaf_download_metadata" "1.4.0" >}}

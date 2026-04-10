@@ -1,1 +1,1 @@
-bomnipotent_client --domain=bomnipotent_server_of_your_choice user request user@example.com
+bomnipotent_client --domain=bomnipotent-server-of-your-choice user request user@example.com

@@ -17,7 +17,7 @@ Der Name dieser Aufgabe ist "remove_inactive_users". Sie akzeptiert die folgende
 [[tasks]]
 name = "remove_inactive_users"
 period = "1 day" # Optional
-enabled = true # Optional
+scheduled = true # Optional
 ```
 
 Die Zeit bis ein abgelaufener Nutzer entfernt wird kann im Abschnitt ["[user]"](/server/configuration/optional/user-expiration-period/#removal-period) konfiguriert werden.

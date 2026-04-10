@@ -1,1 +1,1 @@
-bomnipotent_client --domain other_csaf_provider bom match /home/your_project/sbom.cdx.json
+bomnipotent_client --domain other-csaf-provider bom match /home/your_project/sbom.cdx.json

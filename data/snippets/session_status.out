@@ -1,4 +1,4 @@
-domain = "bomnipotent_server_of_your_choice"
+domain = "bomnipotent-server-of-your-choice"
 user = "user@example.com"
 output_mode = "Normal"
 secret_key_path = "/home/some_secret_key.pem"

@@ -4,12 +4,14 @@
 |       |-- ghsa-qg5g-gv98-5ffh_advisory.json
 |       |-- ghsa-qg5g-gv98-5ffh_advisory.json.asc
 |       |-- ghsa-qg5g-gv98-5ffh_advisory.json.sha256
-|       `-- ghsa-qg5g-gv98-5ffh_advisory.json.sha512
+|       |-- ghsa-qg5g-gv98-5ffh_advisory.json.sha512
+|       |-- some_amber_advisory.json
+|       |-- some_amber_advisory.json.asc
+|       `-- some_amber_advisory.json.sha256
 `-- white
-    `-- 2024
-        |-- wid-sec-w-2024-0268.json
-        |-- wid-sec-w-2024-0268.json.asc
-        |-- wid-sec-w-2024-0268.json.sha256
-        `-- wid-sec-w-2024-0268.json.sha512
+    `-- 2025
+        |-- some_white_advisory.json
+        |-- some_white_advisory.json.asc
+        `-- some_white_advisory.json.sha256
 
-5 directories, 8 files
+5 directories, 10 files

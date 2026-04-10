@@ -2,7 +2,7 @@
 title = "Configuring Tasks"
 slug = "configuring-tasks"
 weight = 10
-description = "Configure BOMnipotent Server periodic tasks in Config.toml: set task name, period, enabled, human-readable intervals and hot reload scheduling."
+description = "Configure BOMnipotent Server periodic tasks in Config.toml: set task name, period, scheduled, human-readable intervals and hot reloading."
 +++
 
 Beginning with version 1.4.0 of BOMnipotent Server, the parameters of periodic tasks can be configured in the [Config.toml](/server/configuration/config-file/) file. They are specified in the "[[tasks]]" sections:
@@ -12,7 +12,7 @@ Beginning with version 1.4.0 of BOMnipotent Server, the parameters of periodic t
 [[tasks]]
 name = "<name>"
 period = "<period>"
-enabled = true # Optional, true is the default.
+scheduled = true # Optional, true is the default.
 # possibly more parameters
 
 [[tasks]]
@@ -32,10 +32,10 @@ The period may be specified in a human-readable format, for example "2 days" or 
 
 > BOMnipotent does not stop you from choosing a ridiculously short period like "1 ms". However, tasks are designed with periods of hours in mind, not milliseconds. There is no guarantee that a task is run exactly when it is due. Any periods below one hour will likely just unnecessarily consume power and flood the logs.
 
-Some periodic tasks are [enabled](/server/periodic-tasks/enabled/) by default, others are [not](/server/periodic-tasks/disabled/). Whether or not they are scheduled can be controlled with the "enabled" parameter. When specifying any parameters for a task, "enabled" defaults to true: Providing the "name" parameter alone is enough to enable a default-disabled task. On the other hand, only explicitly setting "enabled" to false will prevent a default-enabled task from running.
+Some periodic tasks are [scheduled](/server/periodic-tasks/scheduled/) by default, others are [not](/server/periodic-tasks/unscheduled/). Whether or not they are scheduled can be controlled with the "scheduled" parameter. When specifying any parameters for a task, "scheduled" defaults to true: Providing the "name" parameter alone is enough to scheduled a task that is by default not scheduled. On the other hand, only explicitly setting "scheduled" to false will prevent a default-scheduled task from running.
 
-[Default-enabled](/server/periodic-tasks/enabled/) tasks come with default parameters. If you specify parameters in the Config.toml file, the default parameters are overridden.
+[Default-scheduled](/server/periodic-tasks/scheduled/) tasks come with default parameters. If you specify parameters in the Config.toml file, the default parameters are overridden.
 
-After a server boot or reboot, all enabled periodic tasks are run as soon as the database is ready.
+After a server boot or reboot, all scheduled periodic tasks are run as soon as the database is ready.
 
-Periodic tasks support hot reloading of the configuration. Changing the Config.toml file while the server is running means that they are rescheduled according to the new parameters. If a previously disabled task is enabled, it is run directly after the configuration has been reloaded. The same is true when periods are shortened such that the next due time lies in the past.
+Periodic tasks support hot reloading of the configuration. Changing the Config.toml file while the server is running means that they are rescheduled according to the new parameters. If a previously unscheduled task is marked as scheduled, it is run directly after the configuration has been reloaded. The same is true when periods are shortened such that the next due time lies in the past.
