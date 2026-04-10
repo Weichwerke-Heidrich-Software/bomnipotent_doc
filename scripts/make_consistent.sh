@@ -35,16 +35,20 @@ get_slug_from_file() {
 check_slug_consistency() {
     slug=$1
     if echo $slug | grep "_" > /dev/null; then
-        echo "Warning: Slug $slug contains underscore"
+        echo "Error: Slug '$slug' contains underscore"
+        exit 1
     fi
     if echo $slug | grep " " > /dev/null; then
-        echo "Warning: Slug $slug contains space"
+        echo "Error: Slug '$slug' contains space"
+        exit 1
     fi
     if echo $slug | grep -E "[A-Z]" > /dev/null; then
-        echo "Warning: Slug $slug contains uppercase letters"
+        echo "Error: Slug '$slug' contains uppercase letters"
+        exit 1
     fi
     if echo $slug | grep -E "[^a-z0-9-]" > /dev/null; then
-        echo "Warning: Slug $slug contains invalid characters"
+        echo "Error: Slug '$slug' contains invalid characters"
+        exit 1
     fi
 }
 
