@@ -9,6 +9,13 @@ Ein [Common Security Advisory Framework](https://www.csaf.io/) (CSAF)-Dokument i
 
 > Für CSAF-Interaktionen, die über das Lesen hinausgehen, benötigen Sie die Berechtigung {{<csaf-management-de>}}. Im Abschnitt über die [Verwaltung von Zugriffsrechten](/de/client/manager/access-management/) wird beschrieben, wie diese erteilt wird.
 
+## Generieren
+
+{{< example "generate_csaf_not_affected" "1.6.0" >}}
+{{< example "generate_csaf_affected" "1.6.0" >}}
+{{< example "generate_csaf_no_title" "1.6.0" >}}
+{{< example "generate_csaf_globbing" "1.6.0" >}}
+
 ## Hochladen
 
 Um ein CSAF-Dokument hochzuladen, rufen Sie
