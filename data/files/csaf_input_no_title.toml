@@ -1,7 +1,7 @@
-vuln = "todo"
-details = "todo"
+vuln = "GHSA-qg5g-gv98-5ffh"
+details = "The vulnerable code is not used."
 
 [[products]]
-name = "todo"
-version = "1.2.3"
+name = "Your Project"
+version = "1.0.0"
 status = "known_not_affected"

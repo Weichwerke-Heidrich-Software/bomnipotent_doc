@@ -1,16 +1,16 @@
-title = "TODO" # Optional
-vuln = "todo"
-details = "todo"
-tlp = "AMBER+STRICT" # Optional
+title = "Considerable concern" # Optional
+vuln = "GHSA-qg5g-gv98-5ffh"
+details = "This vulnerability can be exploited and results in a DoS Attack."
+tlp = "AMBER" # Optional
 
 [[products]]
-name = "todo"
-version = "1.2.3"
+name = "Your Project"
+version = "1.0.0"
 status = "known_affected"
 
 [[products]]
-name = "todo"
-version = "1.2.4"
+name = "Your Project"
+version = "1.1.0"
 status = "known_not_affected"
 
 [remediation]
