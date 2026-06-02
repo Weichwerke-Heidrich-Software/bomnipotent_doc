@@ -18,6 +18,9 @@
     {{ $extension = index $parts (sub (len $parts) 1) }}
 {{ end }}
 
+<div class="tab-nav">
+    <span class="tab-nav-text" style="font-size: 90%;">{{ $name }}</span>
+</div>
 <div class="tab-content-container">
     <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
         <div class="tab-content-text">
