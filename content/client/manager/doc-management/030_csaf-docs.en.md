@@ -11,9 +11,20 @@ A [Common Security Advisory Framework](https://www.csaf.io/) (CSAF) document is 
 
 ## Generating
 
+{{< file "csaf_input_not_affected.toml" >}}
+
 {{< example "generate_csaf_not_affected" "1.6.0" >}}
+
+{{< file "csaf_input_affected.toml" >}}
+
 {{< example "generate_csaf_affected" "1.6.0" >}}
+
+{{< file "csaf_input_no_title.toml" >}}
+
 {{< example "generate_csaf_no_title" "1.6.0" >}}
+
+{{< file "csaf_input_globbing.toml" >}}
+
 {{< example "generate_csaf_globbing" "1.6.0" >}}
 
 ## Uploading

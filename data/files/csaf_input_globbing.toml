@@ -1,0 +1,11 @@
+vuln = "todo"
+details = "todo"
+
+[[products]]
+name = "todo"
+version = "1.2.4"
+status = "recommended"
+
+[[products]]
+name = "todo"
+status = "known_not_affected"

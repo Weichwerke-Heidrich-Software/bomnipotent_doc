@@ -1,0 +1,9 @@
+title = "TODO" # Optional
+vuln = "todo"
+details = "todo"
+tlp = "AMBER+STRICT" # Optional
+
+[[products]]
+name = "todo"
+version = "1.2.3"
+status = "known_not_affected"

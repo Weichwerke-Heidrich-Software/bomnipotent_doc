@@ -1,0 +1,19 @@
+title = "TODO" # Optional
+vuln = "todo"
+details = "todo"
+tlp = "AMBER+STRICT" # Optional
+
+[[products]]
+name = "todo"
+version = "1.2.3"
+status = "known_affected"
+
+[[products]]
+name = "todo"
+version = "1.2.4"
+status = "known_not_affected"
+
+[remediation]
+category = "vendor_fix"
+details = "Update to the latest version."
+url = "https://www.example.com" # Optional
