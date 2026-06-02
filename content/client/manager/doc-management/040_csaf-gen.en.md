@@ -40,7 +40,7 @@ The CSAF is generated and directly uploaded to the server.
 
 ## Affected Product
 
-If at least one product version is affected by a vulnerability, the CSAF standard requires you to specify remediations:
+If at least one product version is affected by a vulnerability, the CSAF standard requires you to specify a remediation:
 
 {{< file "csaf_input_affected.toml" >}}
 
@@ -53,8 +53,6 @@ If at least one product version is affected by a vulnerability, the CSAF standar
 The rest of the workflow remains the same.
 
 {{< example "generate_csaf_affected" "1.6.0" >}}
-
-The status is correctly displayed.
 
 {{< example "show_effect_affected" "1.6.0" >}}
 
