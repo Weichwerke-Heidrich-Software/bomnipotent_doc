@@ -1,3 +1,4 @@
+title = "No need to worry" # Optional
 vuln = "GHSA-qg5g-gv98-5ffh"
 details = "The vulnerable code is not used."
 tlp = "AMBER" # Optional, but recommended
