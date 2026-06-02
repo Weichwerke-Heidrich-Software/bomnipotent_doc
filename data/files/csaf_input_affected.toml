@@ -1,7 +1,7 @@
 title = "Considerable concern" # Optional
 vuln = "GHSA-qg5g-gv98-5ffh"
 details = "This vulnerability can be exploited and results in a DoS Attack."
-tlp = "AMBER" # Optional
+tlp = "AMBER" # Optional, but recommended
 
 [[products]]
 name = "Your Project"
