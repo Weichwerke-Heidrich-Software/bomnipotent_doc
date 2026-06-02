@@ -7,29 +7,14 @@ description = "Learn how to manage CSAF documents with BOMnipotent Client, inclu
 
 A [Common Security Advisory Framework](https://www.csaf.io/) (CSAF) document is a vendor's response to a newly discovered vulnerability. It is a machine-readable format to spread information on how a user of your product should react: Do they need to update to a newer version? Do they need to modify a configuration? Is your product even truly affected, or does it maybe never call the affected part of the vulnerable library?
 
+> [!INFO]
+> Beginning with version 1.6.0 of BOMnipotent, you can use it to [generate CSAF documents](/client/manager/doc-management/csaf-gen). While this method does not offer the full flexibility that Secvisogram does, it requires *much* less input and is sufficient for most use-cases.
+
 > For CSAF interactions beyond reading, you need the {{<csaf-management-en>}} permission. The section about [Access Management](/client/manager/access-management/) describes how it is granted.
-
-## Generating
-
-{{< file "csaf_input_not_affected.toml" >}}
-
-{{< example "generate_csaf_not_affected" "1.6.0" >}}
-
-{{< file "csaf_input_affected.toml" >}}
-
-{{< example "generate_csaf_affected" "1.6.0" >}}
-
-{{< file "csaf_input_no_title.toml" >}}
-
-{{< example "generate_csaf_no_title" "1.6.0" >}}
-
-{{< file "csaf_input_globbing.toml" >}}
-
-{{< example "generate_csaf_globbing" "1.6.0" >}}
 
 ## Uploading
 
-To upload a CSAF document, call
+To upload an existing CSAF document from your file system, call
 
 {{< example csaf_upload >}}
 

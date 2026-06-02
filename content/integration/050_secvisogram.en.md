@@ -10,7 +10,7 @@ The [Common Security Advisory Framework](https://www.csaf.io/) (CSAF) is a machi
 The [CSAF Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html) by OASIS Open aims to cover a very wide range of scenarios. As such, it can be very overwhelming at first. This page serves to highlight the key components a CSAF document requires, and to offer a practical guide to get started right away.
 
 > [!INFO]
-> Beginning with version 1.6.0 of BOMnipotent, you can use it to [generate CSAF documents](/client/manager/doc-management/csaf-docs/#generating). While this method does not offer the full flexibility that Secvisogram does, it requires *much* less input and is sufficient for most use-cases.
+> Beginning with version 1.6.0 of BOMnipotent, you can use it to [generate CSAF documents](/client/manager/doc-management/csaf-gen). While this method does not offer the full flexibility that Secvisogram does, it requires *much* less input and is sufficient for most use-cases.
 
 ## Secvisogram
 
