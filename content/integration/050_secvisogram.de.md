@@ -9,6 +9,9 @@ Das [Common Security Advisory Framework](https://www.csaf.io/) (CSAF) ist ein ma
 
 Der [CSAF-Standard](https://docs.oasis-open.org/csaf/csaf/v2.0/cs02/csaf-v2.0-cs02.html) von OASIS Open deckt ein sehr breites Spektrum an Szenarien ab. Aus diesem Grunde kann er zunächst sehr überwältigend sein. Diese Seite zeigt die wichtigsten Komponenten eines CSAF-Dokuments und bietet einen praktischen Leitfaden für den sofortigen Einstieg.
 
+> [!INFO]
+> Beginnend mit Version 1.6.0 von BOMnipotent können Sie das Programm nutzen, um [CSAF Dokumente zu generieren](/de/client/manager/doc-management/csaf-gen). Diese Methode bietet zwar nicht die volle Flexibilität von Secvisogram, benötigt allerdings *deutlich* weniger Eingaben und ist für die meisten Use-Cases ausreichend.
+
 ## Secvisogram
 
 CSAF-Dokumente sind Dateien im JSON-Format, die einem bestimmten Schema folgen. Daher können sie grundsätzlich mit jedem Texteditor erstellt werden. CSAF-Dokumente müssen jedoch eine Vielzahl von Regeln einhalten, die jeder CSAF-Anbieter (und das schließt BOMnipotent mit ein) überprüfen muss.

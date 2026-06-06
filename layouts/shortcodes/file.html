@@ -1,0 +1,40 @@
+{{ $name := .Get 0 }}
+
+{{ $filePath := (printf "data/files/%s" $name) }}
+
+{{ if not (fileExists $filePath) }}
+    {{ errorf "File '%s' does not exist in data/files directory." $name }}
+{{ end }}
+
+{{ $fileContent := readFile $filePath }}
+
+{{ if eq (len $fileContent) 0 }}
+    {{ errorf "File '%s' is empty." $name }}
+{{ end }}
+
+{{ $extension := "" }}
+{{ $parts := split $name "." }}
+{{ if gt (len $parts) 1 }}
+    {{ $extension = index $parts (sub (len $parts) 1) }}
+{{ end }}
+
+<div class="tab-nav">
+    <span class="tab-nav-text" style="font-size: 90%;">{{ $name }}</span>
+</div>
+<div class="tab-content-container">
+    <div data-tab-item="output" class="tab-content tab-panel-style cstyle active code codify">
+        <div class="tab-content-text">
+            {{ if $extension }}
+                {{ partial "shortcodes/highlight.html" (dict
+                    "page"    .Page
+                    "content" $fileContent
+                    "type"    $extension
+                ) }}
+            {{ else }}
+                <div class="highlight wrap-code" dir="auto">
+                    <pre tabindex="0" class="pre-code"><code>{{ $fileContent }}</code></pre>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

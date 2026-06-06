@@ -1,0 +1,6 @@
+vuln = "GHSA-qg5g-gv98-5ffh"
+details = "The vulnerable code is not used."
+
+[[products]]
+name = "Your Project"
+status = "known_not_affected"

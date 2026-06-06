@@ -1,0 +1,13 @@
+title = "No need to worry" # Optional
+vuln = "GHSA-qg5g-gv98-5ffh"
+details = "The vulnerable code is not used."
+tlp = "AMBER" # Optional, but recommended
+
+[[products]]
+name = "Your Project"
+version = "1.1.0"
+status = "recommended"
+
+[[products]]
+name = "Your Project"
+status = "known_not_affected"

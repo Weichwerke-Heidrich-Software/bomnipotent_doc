@@ -2,21 +2,31 @@
 ╭──────────────┬────────────┬───────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬─────────┬──────────────────────┬──────────────────╮
 │ Product Name │ Version    │ Component │ Vulnerability       │ Description                │ Score │ Severity │ TLP     │ Source               │ CSAF Assessments │
 ├──────────────┼────────────┼───────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼─────────┼──────────────────────┼──────────────────┤
-│ Your Project │ 2026-03-31 │           │ GHSA-65p9-r9h6-22vj │ AWS-LC has Timing Side-Cha │ 8.2   │ high     │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-65p9-r9h6-22vj │ AWS-LC has Timing Side-Cha │ 8.2   │ high     │ Default │ github-language-rust │                  │
 │              │            │           │                     │ nnel in AES-CCM Tag Verifi │       │          │         │                      │                  │
 │              │            │           │                     │ cation                     │       │          │         │                      │                  │
-│ Your Project │ 2026-03-31 │           │ GHSA-9f94-5g5w-gf6r │ CRL Distribution Point Sco │ 7.4   │ high     │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-82j2-j2ch-gfr8 │ rustls-webpki: Denial of s │ 7.5   │ high     │ Default │ github-language-rust │                  │
+│              │            │           │                     │ ervice via panic on malfor │       │          │         │                      │                  │
+│              │            │           │                     │ med CRL BIT STRING         │       │          │         │                      │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-965h-392x-2mh5 │ webpki: Name constraints f │ 2.2   │ low      │ Default │ github-language-rust │                  │
+│              │            │           │                     │ or URI names were incorrec │       │          │         │                      │                  │
+│              │            │           │                     │ tly accepted               │       │          │         │                      │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-9f94-5g5w-gf6r │ CRL Distribution Point Sco │ 7.4   │ high     │ Default │ github-language-rust │                  │
 │              │            │           │                     │ pe Check Logic Error in AW │       │          │         │                      │                  │
 │              │            │           │                     │ S-LC                       │       │          │         │                      │                  │
-│ Your Project │ 2026-03-31 │           │ GHSA-hfpc-8r3f-gw53 │ AWS-LC has PKCS7_verify Si │ 7.5   │ high     │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-hfpc-8r3f-gw53 │ AWS-LC has PKCS7_verify Si │ 7.5   │ high     │ Default │ github-language-rust │                  │
 │              │            │           │                     │ gnature Validation Bypass  │       │          │         │                      │                  │
-│ Your Project │ 2026-03-31 │           │ GHSA-pwjx-qhcg-rvj4 │ webpki: CRLs not considere │ 4.4   │ medium   │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-pwjx-qhcg-rvj4 │ webpki: CRLs not considere │ 4.4   │ medium   │ Default │ github-language-rust │                  │
 │              │            │           │                     │ d authoritative by Distrib │       │          │         │                      │                  │
 │              │            │           │                     │ ution Point due to faulty  │       │          │         │                      │                  │
 │              │            │           │                     │ matching logic             │       │          │         │                      │                  │
-│ Your Project │ 2026-03-31 │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default │ github-language-rust │                  │
 │              │            │           │                     │ anic in `Acceptor::accept` │       │          │         │                      │                  │
-│ Your Project │ 2026-03-31 │           │ GHSA-vw5v-4f2q-w9xf │ AWS-LC has PKCS7_verify Ce │ 8.7   │ high     │ Default │ github-language-rust │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-vw5v-4f2q-w9xf │ AWS-LC has PKCS7_verify Ce │ 8.7   │ high     │ Default │ github-language-rust │                  │
 │              │            │           │                     │ rtificate Chain Validation │       │          │         │                      │                  │
 │              │            │           │                     │  Bypass                    │       │          │         │                      │                  │
+│ Your Project │ 2026-06-02 │           │ GHSA-xgp8-3hg3-c2mh │ webpki: Name constraints w │ 2.2   │ low      │ Default │ github-language-rust │                  │
+│              │            │           │                     │ ere accepted for certifica │       │          │         │                      │                  │
+│              │            │           │                     │ tes asserting a wildcard n │       │          │         │                      │                  │
+│              │            │           │                     │ ame                        │       │          │         │                      │                  │
 ╰──────────────┴────────────┴───────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴─────────┴──────────────────────┴──────────────────╯
