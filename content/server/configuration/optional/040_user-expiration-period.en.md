@@ -51,7 +51,7 @@ Changing this configuration **does not** affect the expiration dates of existing
 
 ## Removal Period
 
-To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database by the periodic task ["remove_inactive_users"](/server/periodic-tasks/enabled/remove-inactive-users/).
+To keep your database clean and your system GDPR compliant, users that have been expired for more than 30 days are completely removed from the database by the periodic task ["remove_inactive_users"](/server/periodic-tasks/scheduled/remove-inactive-users/).
 
 This time period is configurable with the "removal_period" parameter, which is also found under "[user]":
 ```toml

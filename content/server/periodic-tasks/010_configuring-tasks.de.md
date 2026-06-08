@@ -5,7 +5,7 @@ weight = 10
 description = "Anleitung: Zyklische Aufgaben des BOMnipotent Server in der Config.toml konfigurieren — Perioden, Aktivierung und Hot-Reloading erklärt."
 +++
 
-Angefangen mit Version 1.4.0 von BOMnipotent Server können die Parameter von zyklischen Aufgaben in der [Config.toml](/server/configuration/config-file/) Datei konfiguriert werden. Diese werden in den "[[tasks]]" Abschnitten spezifiziert:
+Angefangen mit Version 1.4.0 von BOMnipotent Server können die Parameter von zyklischen Aufgaben in der [Config.toml](/de/server/configuration/config-file/) Datei konfiguriert werden. Diese werden in den "[[tasks]]" Abschnitten spezifiziert:
 
 ```toml
 # ... anderer Inhalt
@@ -32,7 +32,7 @@ Die Zeitspanne kann im (englischen) menschenlesbaren Format spezifiziert werden,
 
 > BOMnipotent hält Sie nicht davon ab, eine albern kurze Zeitspanne wie "1 ms" festzulegen. Allerdings sind die Aufgaben mit Zeitspannen von Stunden im Kopf entwickelt worden, nicht Millisekunden. Es wird nicht garantiert, dass Aufgaben genau dann ausgeführt werden, wenn sie fällig sind. Zeitspannen unterhalb einer Stunden verbrauchen vermutlich nur unnötig Energie und fluten die Logs.
 
-Manche zyklischen Aufgaben sind standardmäßig [geplant](/de/server/periodic-tasks/scheduled/), andere [nicht](/server/periodic-tasks/unscheduled/). Ob sie in den Zeiplan eingereiht werden kann über den "scheduled" Parameter ausgesteuert werden. Falls irgendwelche Parameter für eine Aufgabe angegeben werden, wird für "scheduled" der Wert "true" angenommen: Alleine schon den "name" Parameter anzugeben reicht aus, um eine standardmäßig ungeplante Aufgabe einzuplanen. Auf der anderen Seite muss "scheduled" explizit auf "false" gesetzt werden, um eine standardmäßig geplante Aufgabe von der Planung auszuschließen.
+Manche zyklischen Aufgaben sind standardmäßig [geplant](/de/server/periodic-tasks/scheduled/), andere [nicht](/de/server/periodic-tasks/unscheduled/). Ob sie in den Zeiplan eingereiht werden kann über den "scheduled" Parameter ausgesteuert werden. Falls irgendwelche Parameter für eine Aufgabe angegeben werden, wird für "scheduled" der Wert "true" angenommen: Alleine schon den "name" Parameter anzugeben reicht aus, um eine standardmäßig ungeplante Aufgabe einzuplanen. Auf der anderen Seite muss "scheduled" explizit auf "false" gesetzt werden, um eine standardmäßig geplante Aufgabe von der Planung auszuschließen.
 
 [Standardmäßig geplante](/de/server/periodic-tasks/scheduled/) Aufgaben laufen mit Standard-Parametern. Falls Sie explizite Parameter in der Config.toml angeben, werden die Standard-Paramter damit überschrieben.
 

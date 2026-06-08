@@ -50,7 +50,7 @@ Das Ändern dieser Konfiguration **hat keine** Auswirkungen auf die Ablaufdaten 
 
 ## Löschzeitraum
 
-Um Ihre Datenbank sauber und Ihr System DSGVO-konform zu halten, werden Nutzer, die für mehr als 30 Tage abgelaufen sind, von der zyklischen Aufgabe ["remove_inactive_users"](/de/server/periodic-tasks/enabled/remove-inactive-users/) ganz aus der Datenbank entfernt.
+Um Ihre Datenbank sauber und Ihr System DSGVO-konform zu halten, werden Nutzer, die für mehr als 30 Tage abgelaufen sind, von der zyklischen Aufgabe ["remove_inactive_users"](/de/server/periodic-tasks/scheduled/remove-inactive-users/) ganz aus der Datenbank entfernt.
 
 Dieser Zeitraum lässt sich über den "removal_period" Parameter anpassen, welcher ebenfalls unter "[user]" zu finden ist:
 ```toml
