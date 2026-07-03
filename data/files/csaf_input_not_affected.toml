@@ -2,11 +2,14 @@ title = "No need to worry" # Optional
 vuln = "GHSA-qg5g-gv98-5ffh"
 details = "The vulnerable code is not used."
 tlp = "AMBER" # Optional, but recommended
+add_vendor_branch = false # Optional, defaults to true
 
 [[products]]
 name = "Your Project"
 version = "1.0.0" # Optional
 status = "known_not_affected"
+cpe = "cpe:2.3:a:me:your_product:1.0.0:*:*:*:*:*:*:*" # Optional
+purl = "pkg:generic/your_product@1.0.0" # Optional
 
 [[products]]
 name = "Your Project"
