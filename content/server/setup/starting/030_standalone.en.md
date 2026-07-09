@@ -67,7 +67,7 @@ docker run --name bomnipotent_db \
   -e POSTGRES_USER=bomnipotent_user \
   -e POSTGRES_PASSWORD=<your-password> \
   -p 5432:5432 \
-  -v pgdata:/var/lib/postgresql/data \
+  -v pgdata:/var/lib/postgresql \
   -d postgres:latest
 ```
 This creates a container named "bomnipotent_db", with a database also called "bomnipotent_db", a user called "bomnipotent_user", and a password that you need to set. It exposes port 5432 of the container, persists the data in a docker volume, and spins up the "postgres:latest" image in detached mode.

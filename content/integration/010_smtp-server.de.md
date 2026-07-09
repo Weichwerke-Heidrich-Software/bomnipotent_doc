@@ -68,7 +68,7 @@ Dadurch wird der Container gestartet und verbindet sich mit Port 465 (dem Standa
 Die Änderung Ihrer Compose-Datei ist jedoch noch nicht abgeschlossen!
 
 Unter "Netzwerke" müssen Sie das SMTP-Netzwerk angeben:
-``` YAML
+``` yaml
   bomnipotent_server:
     container_name: bomnipotent_server
     depends_on:
@@ -80,7 +80,7 @@ Unter "Netzwerke" müssen Sie das SMTP-Netzwerk angeben:
 ```
 
 Sie müssen das Netzwerk außerdem jedem Container hinzufügen, der es kontaktieren soll. Sie können diese Container auch vom SMTP-Relay abhängig machen, damit sie nicht gestartet werden, bevor die Relay Station bereit ist:
-``` YAML
+``` yaml
   bomnipotent_server:
     container_name: bomnipotent_server
     depends_on:

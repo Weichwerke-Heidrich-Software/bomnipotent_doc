@@ -196,7 +196,7 @@ services:
     restart: always
     volumes:
       # Mounten Sie das Volume für die dauerhafte Datenspeicherung
-      - bomnipotent_data:/var/lib/postgresql/data
+      - bomnipotent_data:/var/lib/postgresql
 
   bomnipotent_server:
     # Name des Servercontainers
@@ -308,7 +308,7 @@ services:
       - bomnipotent_network
     restart: always
     volumes:
-      - bomnipotent_data:/var/lib/postgresql/data
+      - bomnipotent_data:/var/lib/postgresql
 
   bomnipotent_server:
     container_name: bomnipotent_server
