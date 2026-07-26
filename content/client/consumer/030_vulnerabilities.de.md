@@ -31,7 +31,7 @@ Statt einem Severity Rating kann hierbei auch ein CVSS Score angegeben werden:
 
 {{< example "min_score" "1.7.0" >}}
 
-> Falls für die Lücke sowohl Severity Rating als auch Score angegeben sind, wird in diesem Fall der Vergleich mit dem Score priorisiert, da er potenziell genauer ist. In allen anderen Fällen werden Score und Rating vor dem Vergleich nach der [CVSS v4.0 Ratings Tabelle](https://nvd.nist.gov/vuln-metrics/cvss) ineinander umgerechnet.
+> Falls für die Lücke sowohl Severity Rating als auch Score angegeben sind, entscheidet der Eingabetyp (Rating oder Score), welcher Wert für den Vergleich herangezogen wird. Falls nur eins von beidem vorliegt und es sich von dem Eingabetypen unterscheidet, wird vor dem Vergleich nach der [CVSS v4.0 Ratings Tabelle](https://nvd.nist.gov/vuln-metrics/cvss) ineinander umgerechnet.
 
 Um nur diejenigen Sicherheitslücken anzuzeigen, welche noch nicht durch ein CSAF Advisory abgedeckt sind, rufen Sie:
 

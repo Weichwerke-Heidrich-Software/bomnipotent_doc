@@ -31,7 +31,7 @@ Instead of a severity rating you can use a CVSS score here:
 
 {{< example "min_score" "1.7.0" >}}
 
-> If the vulnerability has a rating as well as a score, comparing to the score is prioritised in this case, because it is potentially more precise. In all other cases score and rating are converted into each other via the [CVSS v4.0 Ratings Table](https://nvd.nist.gov/vuln-metrics/cvss) before comparison.
+> If the vulnerability has a rating as well as a score, the input type (rating or score) decides, which value is used for the comparison. If only one of the two is stored and it is a different kind than the input, then it is converted according to the [CVSS v4.0 Ratings Table](https://nvd.nist.gov/vuln-metrics/cvss) before comparison.
 
 To display only those vulnerabilities that are not yet covered by a CSAF advisory, call:
 
