@@ -25,11 +25,11 @@ The list can be filtered by name and/or version of the affected product:
 
 It is also possible to show only vulnerabilities with a minimal severity:
 
-{{< example "min_severity" "1.7.0" >}}
+{{< example "min_rating" "1.7.0" >}}
 
 Instead of a severity rating you can use a CVSS score here:
 
-{{< example "min_rating" "1.7.0" >}}
+{{< example "min_score" "1.7.0" >}}
 
 > If the vulnerability has a rating as well as a score, comparing to the score is prioritised in this case, because it is potentially more precise. In all other cases score and rating are converted into each other via the [CVSS v4.0 Ratings Table](https://nvd.nist.gov/vuln-metrics/cvss) before comparison.
 

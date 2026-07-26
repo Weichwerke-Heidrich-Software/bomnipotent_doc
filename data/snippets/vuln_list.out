@@ -2,11 +2,27 @@
 ╭──────────────┬─────────┬─────────────────────┬───────────┬────────────────────────────╮
 │ Product Name │ Version │ Vulnerability       │ TLP       │ CSAF Assessments           │
 ├──────────────┼─────────┼─────────────────────┼───────────┼────────────────────────────┤
+│ Best Project │ 3.1.4   │ CVE-2024-99999      │ TLP:GREEN │                            │
 │ Best Project │ 3.1.4   │ GHSA-qg5g-gv98-5ffh │ TLP:GREEN │                            │
+│ Best Project │ 3.1.4   │ RUSTSEC-2024-9999   │ TLP:GREEN │                            │
+│ Your Project │ 1.0.0   │ CVE-2024-99999      │ Default   │ known_affected, according  │
+│              │         │                     │           │ to ghsa-qg5g-gv98-5ffh_adv │
+│              │         │                     │           │ isory                      │
 │ Your Project │ 1.0.0   │ GHSA-qg5g-gv98-5ffh │ Default   │ known_affected, according  │
 │              │         │                     │           │ to ghsa-qg5g-gv98-5ffh_adv │
 │              │         │                     │           │ isory                      │
+│ Your Project │ 1.0.0   │ RUSTSEC-2024-9999   │ Default   │ known_affected, according  │
+│              │         │                     │           │ to ghsa-qg5g-gv98-5ffh_adv │
+│              │         │                     │           │ isory                      │
+│ Your Project │ 1.1.0   │ CVE-2024-99999      │ Default   │ fixed, according to ghsa-q │
+│              │         │                     │           │ g5g-gv98-5ffh_advisory, re │
+│              │         │                     │           │ commended, according to gh │
+│              │         │                     │           │ sa-qg5g-gv98-5ffh_advisory │
 │ Your Project │ 1.1.0   │ GHSA-qg5g-gv98-5ffh │ Default   │ fixed, according to ghsa-q │
+│              │         │                     │           │ g5g-gv98-5ffh_advisory, re │
+│              │         │                     │           │ commended, according to gh │
+│              │         │                     │           │ sa-qg5g-gv98-5ffh_advisory │
+│ Your Project │ 1.1.0   │ RUSTSEC-2024-9999   │ Default   │ fixed, according to ghsa-q │
 │              │         │                     │           │ g5g-gv98-5ffh_advisory, re │
 │              │         │                     │           │ commended, according to gh │
 │              │         │                     │           │ sa-qg5g-gv98-5ffh_advisory │

@@ -1,1 +1,1 @@
-bomnipotent_client vuln list -m medium
+bomnipotent_client vuln list -m high -n "Best Project" -f
