@@ -3,7 +3,7 @@
 │ Full Product Name          │ BOM Name     │ BOM Version │ Vulnerability       │ Status             │ CSAF ID                    │ TLP       │
 ├────────────────────────────┼──────────────┼─────────────┼─────────────────────┼────────────────────┼────────────────────────────┼───────────┤
 │ Tremendous Vendor Your Pro │ Your Project │ 1.0.0       │ GHSA-qg5g-gv98-5ffh │ known_not_affected │ your_project_ghsa-qg5g-gv9 │ TLP:AMBER │
-│ ject 1.0.0                 │              │             │                     │                    │ 8-5ffh_2026-07-26          │           │
+│ ject 1.0.0                 │              │             │                     │                    │ 8-5ffh_2026-01-01          │           │
 │ Tremendous Vendor Your Pro │ Your Project │ 1.1.0       │ GHSA-qg5g-gv98-5ffh │ recommended        │ your_project_ghsa-qg5g-gv9 │ TLP:AMBER │
-│ ject 1.1.0                 │              │             │                     │                    │ 8-5ffh_2026-07-26          │           │
+│ ject 1.1.0                 │              │             │                     │                    │ 8-5ffh_2026-01-01          │           │
 ╰────────────────────────────┴──────────────┴─────────────┴─────────────────────┴────────────────────┴────────────────────────────┴───────────╯
