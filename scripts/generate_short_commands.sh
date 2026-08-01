@@ -27,6 +27,7 @@ declare -A OPTION_MAP=(
   [--json]=-j
   [--log-level]=-l
   [--log-file]=-f
+  [--min-severity]=-m
   [--name]=-n
   [--name-overwrite]=-n
   [--on-existing]=-o

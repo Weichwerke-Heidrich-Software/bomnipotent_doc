@@ -17,9 +17,21 @@ For even more details, add the "--full" flag:
 
 The output contains an ID for the vulnerability, a description, and a [CVSS value](https://www.first.org/cvss/) and/or severity if available. It also contains a [TLP Classification](https://www.first.org/tlp/) derived from that of the affected product, and ideally a [CSAF Assessment](https://www.csaf.io/) by the vendor.
 
+## Triage
+
 The list can be filtered by name and/or version of the affected product:
 
 {{< example vuln_filtered_list >}}
+
+It is also possible to show only vulnerabilities with a minimal severity:
+
+{{< example "min_rating" "1.7.0" >}}
+
+Instead of a severity rating you can use a CVSS score here:
+
+{{< example "min_score" "1.7.0" >}}
+
+> If the vulnerability has a rating as well as a score, the input type (rating or score) decides, which value is used for the comparison. If only one of the two is stored and it is a different kind than the input, then it is converted according to the [CVSS v4.0 Ratings Table](https://nvd.nist.gov/vuln-metrics/cvss) before comparison.
 
 To display only those vulnerabilities that are not yet covered by a CSAF advisory, call:
 

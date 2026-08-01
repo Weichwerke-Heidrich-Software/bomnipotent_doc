@@ -2,10 +2,20 @@
 ╭────────────────────────────┬──────────────┬─────────────┬────────────────────────────┬────────────────┬────────────────────────────┬───────────╮
 │ Full Product Name          │ BOM Name     │ BOM Version │ Vulnerability              │ Status         │ CSAF ID                    │ TLP       │
 ├────────────────────────────┼──────────────┼─────────────┼────────────────────────────┼────────────────┼────────────────────────────┼───────────┤
+│ Best Vendor's Your Project │ Your Project │ 1.0.0       │ CVE-2024-99999             │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │              │             │ More issues in a dependenc │                │ ry                         │           │
+│                            │              │             │ y.                         │                │                            │           │
 │ Best Vendor's Your Project │ Your Project │ 1.0.0       │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
 │  v1.0.0                    │              │             │ Rustls network-reachable p │                │ ry                         │           │
 │                            │              │             │ anic                       │                │                            │           │
+│ Best Vendor's Your Project │ Your Project │ 1.0.0       │ RUSTSEC-2024-9999          │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│  v1.0.0                    │              │             │ The issues never end.      │                │ ry                         │           │
+│ rustls Version 0.23.15     │ rustls       │ 0.23.15     │ CVE-2024-99999             │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│                            │              │             │ More issues in a dependenc │                │ ry                         │           │
+│                            │              │             │ y.                         │                │                            │           │
 │ rustls Version 0.23.15     │ rustls       │ 0.23.15     │ GHSA-qg5g-gv98-5ffh        │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
 │                            │              │             │ Rustls network-reachable p │                │ ry                         │           │
 │                            │              │             │ anic                       │                │                            │           │
+│ rustls Version 0.23.15     │ rustls       │ 0.23.15     │ RUSTSEC-2024-9999          │ known_affected │ ghsa-qg5g-gv98-5ffh_adviso │ TLP:AMBER │
+│                            │              │             │ The issues never end.      │                │ ry                         │           │
 ╰────────────────────────────┴──────────────┴─────────────┴────────────────────────────┴────────────────┴────────────────────────────┴───────────╯

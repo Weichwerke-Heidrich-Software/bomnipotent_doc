@@ -17,9 +17,21 @@ Um mehr Details zu sehen, fügen Sie die "--full" Flag hinzu:
 
 Die Ausgabe enthält eine ID für die Sicherheitslücke, eine Beschreibung sowie, und, falls verfügbar, einen  [CVSS Wert](https://www.first.org/cvss/) und/oder eine Schweregrad-Einstufung. Zudem enthält sie eine [TLP Klassifizierung](https://www.first.org/tlp/), welche sich von der des betroffenen Produkts ableitet, und idealerweise eine [CSAF Bewertung](https://www.csaf.io/) durch den Anbieter.
 
+## Triage
+
 Die Liste kann nach Name und/oder Version des betroffenen Produkts gefiltert werden:
 
 {{< example vuln_filtered_list >}}
+
+Auch ist es möglich, nur Sicherheitslücken anzuzeigen, welche mindestens einen gewissen Schweregrad haben:
+
+{{< example "min_rating" "1.7.0" >}}
+
+Statt einem Severity Rating kann hierbei auch ein CVSS Score angegeben werden:
+
+{{< example "min_score" "1.7.0" >}}
+
+> Falls für die Lücke sowohl Severity Rating als auch Score angegeben sind, entscheidet der Eingabetyp (Rating oder Score), welcher Wert für den Vergleich herangezogen wird. Falls nur eins von beidem vorliegt und es sich von dem Eingabetypen unterscheidet, wird vor dem Vergleich nach der [CVSS v4.0 Ratings Tabelle](https://nvd.nist.gov/vuln-metrics/cvss) ineinander umgerechnet.
 
 Um nur diejenigen Sicherheitslücken anzuzeigen, welche noch nicht durch ein CSAF Advisory abgedeckt sind, rufen Sie:
 

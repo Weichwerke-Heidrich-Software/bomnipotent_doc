@@ -2,13 +2,30 @@
 ╭──────────────┬─────────┬───────────┬─────────────────────┬────────────────────────────┬───────┬──────────┬───────────┬──────────────────────┬────────────────────────────╮
 │ Product Name │ Version │ Component │ Vulnerability       │ Description                │ Score │ Severity │ TLP       │ Source               │ CSAF Assessments           │
 ├──────────────┼─────────┼───────────┼─────────────────────┼────────────────────────────┼───────┼──────────┼───────────┼──────────────────────┼────────────────────────────┤
+│ Best Project │ 3.1.4   │           │ CVE-2024-99999      │ More issues in a dependenc │       │ high     │ TLP:GREEN │ github-language-rust │                            │
+│              │         │           │                     │ y.                         │       │          │           │                      │                            │
 │ Best Project │ 3.1.4   │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ TLP:GREEN │ github-language-rust │                            │
 │              │         │           │                     │ anic in `Acceptor::accept` │       │          │           │                      │                            │
+│ Best Project │ 3.1.4   │           │ RUSTSEC-2024-9999   │ The issues never end.      │ 5.3   │ medium   │ TLP:GREEN │ github-language-rust │                            │
+│ Your Project │ 1.0.0   │           │ CVE-2024-99999      │ More issues in a dependenc │       │ high     │ Default   │ github-language-rust │ known_affected, according  │
+│              │         │           │                     │ y.                         │       │          │           │                      │ to ghsa-qg5g-gv98-5ffh_adv │
+│              │         │           │                     │                            │       │          │           │                      │ isory                      │
 │ Your Project │ 1.0.0   │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default   │ github-language-rust │ known_affected, according  │
 │              │         │           │                     │ anic in `Acceptor::accept` │       │          │           │                      │ to ghsa-qg5g-gv98-5ffh_adv │
 │              │         │           │                     │                            │       │          │           │                      │ isory                      │
+│ Your Project │ 1.0.0   │           │ RUSTSEC-2024-9999   │ The issues never end.      │ 5.3   │ medium   │ Default   │ github-language-rust │ known_affected, according  │
+│              │         │           │                     │                            │       │          │           │                      │ to ghsa-qg5g-gv98-5ffh_adv │
+│              │         │           │                     │                            │       │          │           │                      │ isory                      │
+│ Your Project │ 1.1.0   │           │ CVE-2024-99999      │ More issues in a dependenc │       │ high     │ Default   │ github-language-rust │ fixed, according to ghsa-q │
+│              │         │           │                     │ y.                         │       │          │           │                      │ g5g-gv98-5ffh_advisory, re │
+│              │         │           │                     │                            │       │          │           │                      │ commended, according to gh │
+│              │         │           │                     │                            │       │          │           │                      │ sa-qg5g-gv98-5ffh_advisory │
 │ Your Project │ 1.1.0   │           │ GHSA-qg5g-gv98-5ffh │ rustls network-reachable p │ 6.9   │ medium   │ Default   │ github-language-rust │ fixed, according to ghsa-q │
 │              │         │           │                     │ anic in `Acceptor::accept` │       │          │           │                      │ g5g-gv98-5ffh_advisory, re │
+│              │         │           │                     │                            │       │          │           │                      │ commended, according to gh │
+│              │         │           │                     │                            │       │          │           │                      │ sa-qg5g-gv98-5ffh_advisory │
+│ Your Project │ 1.1.0   │           │ RUSTSEC-2024-9999   │ The issues never end.      │ 5.3   │ medium   │ Default   │ github-language-rust │ fixed, according to ghsa-q │
+│              │         │           │                     │                            │       │          │           │                      │ g5g-gv98-5ffh_advisory, re │
 │              │         │           │                     │                            │       │          │           │                      │ commended, according to gh │
 │              │         │           │                     │                            │       │          │           │                      │ sa-qg5g-gv98-5ffh_advisory │
 ╰──────────────┴─────────┴───────────┴─────────────────────┴────────────────────────────┴───────┴──────────┴───────────┴──────────────────────┴────────────────────────────╯
