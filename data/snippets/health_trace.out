@@ -6,5 +6,5 @@
 [TRACE] Try connect TcpStream to 172.1.2.3:443
 [TRACE] Try wrap in TLS
 [TRACE] Sending ClientHello Message {
-[TRACE] 4745 5420 2f68 6561 6c74 6820 4854 5450  GET./health.HTTP
-[TRACE] 2f31 2e31 0d0a 6163 6365 7074 3a20 2a2f  /1.1..accept:.*/
+[TRACE] We got ServerHello ServerHelloPayload {
+[TRACE] EarlyData rejected

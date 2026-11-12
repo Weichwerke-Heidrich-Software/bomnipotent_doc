@@ -1,6 +1,6 @@
-[DEBUG] Not resuming
-[DEBUG] TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
-[DEBUG] ALPN protocol is None
+[DEBUG] Wrapped TLS
+[DEBUG] Call<SendRequest>
+[DEBUG] Request { method: GET, uri: https://bomnipotent-server-of-your-choice/******, version: HTTP/1.1, headers: {"accept": "*/*", "host": "bomnipotent-server-of-your-choice", "user-agent": "BOMnipotent", "<NOTICE>": "4 HEADERS ARE REDACTED"} }
 [DEBUG] Call<RecvResponse>
 [DEBUG] Call<RecvBody>
 [DEBUG] Response { status: 200, version: HTTP/1.1, headers: {"content-type": "text/plain; charset=utf-8", "content-length": "69", "date": "Wed, 01 Jan 2026 10:11:12 GMT", "<NOTICE>": "2 HEADERS ARE REDACTED"} }
