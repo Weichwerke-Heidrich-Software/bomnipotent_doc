@@ -79,5 +79,6 @@ UR2E5r7Tm4kfrMWSmf/ktEIvmQM=
 
 | **Name** | **Referenz** | **Sicherheitslücke** | **Datum** |
 |:---|:---|:---|:---|
+|kta1kri|https://github.com/kta1kri|Die signierten Daten in vom Client geschickten HTTP Anfragen beinhalteten nicht die URL. Bösartige Server konnten die Anfragen an andere Endpunkte weiterleiten.|06.11.2026|
 
 Weichwerke Heidrich Software dankt allen, die Sicherheitslücken gemeldet haben, einschließlich denjenigen, die anonym bleiben möchten.

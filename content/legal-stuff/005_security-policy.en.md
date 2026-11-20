@@ -79,5 +79,6 @@ UR2E5r7Tm4kfrMWSmf/ktEIvmQM=
 
 | **Name** | **Reference** | **Vulnerability** | **Date** |
 |:---|:---|:---|:---|
+|kta1kri|https://github.com/kta1kri|The signed data in the HTTP requests made by the client did not include the URL. Malicious servers could replay requests to other endpoints.|2026-11-06|
 
 Weichwerke Heidrich Software extends their gratitude to everyone who has disclosed vulnerabilities to them, including those who prefer to remain anonymous.
